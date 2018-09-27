@@ -1,19 +1,10 @@
 {
-    "id": "2dc690b0-32ab-4d1e-bfcd-6a797ccc15e6",
+    "id": "fc537314-66a6-48ad-8467-fcbf24d7a74b",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_player",
+    "name": "obj_obstacle",
     "eventList": [
-        {
-            "id": "5c474070-9492-4130-9767-b1b470f654a8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "2dc690b0-32ab-4d1e-bfcd-6a797ccc15e6"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
