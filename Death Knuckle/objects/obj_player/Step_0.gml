@@ -92,16 +92,9 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
   while place_meeting(x,y+ySpd, obj_obstacle) do {
     i++;
     if i > 15 then break;
-    if ySpd > 0 {
-		ySpd --;
-		jump = false;
-		timeOnCieling = 0;}
-    else if ySpd < 0 { 
-		ySpd ++;
-		timeOnCieling++;
-			if timeOnCieling >=10 then jumpPower = grav;
-	}
-
+    if ySpd > 0 then ySpd --;
+    else if ySpd < 0 then ySpd ++;
+    jump = false;
   }
   i = 0;
   while place_meeting(x + xSpd,y, obj_obstacle) do {
@@ -114,18 +107,10 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
   while place_meeting(x+xSpd,y+ySpd, obj_obstacle) do {
     i++;
     if i > 15 then break;
-    if xSpd > 0 then xSpd --;
-    else xSpd ++;
-    if ySpd > 0 {
-		ySpd --;
-		jump = false;
-		timeOnCieling = 0;}
-    else if ySpd < 0 { 
-		ySpd ++;
-		timeOnCieling++;
-			if timeOnCieling >=10 then jumpPower = grav;
-	}
-
+    //if xSpd > 0 then xSpd --;
+    //else xSpd ++;
+    if ySpd > 0 then ySpd --;
+    else ySpd ++;
   }
 }
 

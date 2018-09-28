@@ -14,6 +14,6 @@ attacking = false;
 usingArrowKeys = false;
 jumpPowerPerGravity=2.5
 
-timeOnCieling=0
+
 
 lastFacing = 0
