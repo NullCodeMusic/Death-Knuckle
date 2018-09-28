@@ -286,6 +286,25 @@
             }
         },
         {
+            "Key": "94da2721-8349-47f6-b1d7-b619ef686dda",
+            "Value": {
+                "id": "414364d8-a129-4826-887e-00cdf4b3e9bd",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/pf_missile\/pf_missile.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "968466ad-42a5-4f84-a01f-58696f065448",
             "Value": {
                 "id": "e44f788f-0520-4182-8b27-e65c27e8a888",
@@ -572,7 +591,7 @@
         }
     ],
     "script_order": [
-        
+        "94da2721-8349-47f6-b1d7-b619ef686dda"
     ],
     "tutorial": ""
 }
