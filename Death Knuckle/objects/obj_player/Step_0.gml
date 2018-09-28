@@ -125,10 +125,12 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
 		timeOnCieling++;
 			if timeOnCieling >=10 then jumpPower = grav;
 	}
+	
+	
 
   }
 }
-
+if ySpd > 0 then jump = true
 
 x = x + xSpd;
 y = y + ySpd;
@@ -158,7 +160,7 @@ fistID.distance = (point_distance(x,y,mousex,mousey)/(fistID.time/2))
 
 
 
-
+if keyboard_check_pressed(ord("R")) then room_restart()
 
 
 

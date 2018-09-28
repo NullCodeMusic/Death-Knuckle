@@ -13,7 +13,7 @@ grav = 15;
 attacking = false;
 usingArrowKeys = false;
 jumpPowerPerGravity=2.5
-
+jumpPower = 0
 timeOnCieling=0
 
 lastFacing = 0
