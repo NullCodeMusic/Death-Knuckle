@@ -6,15 +6,12 @@
 //if i = 0 {
 	//image_angle = 180+image_angle 
 //} 
-
+direction = image_angle
 if tick < 0 {
 	direction = point_direction(x,y,obj_player.x,obj_player.y)
 	speed = -tick
-	image_angle = direction +180
 }
-else {
-	speed = tick
-	direction = image_angle}
+else speed = tick
 hspeed = round(hspeed)
 vspeed = round(vspeed)
 //x=x+xx
@@ -23,8 +20,7 @@ vspeed = round(vspeed)
 
 
 tick= tick - distance/time
-//if tick <= -distance {
-if place_meeting(x,y,obj_player) && tick< 0{
+if tick <= -distance {
 obj_player.attacking = 0
 instance_destroy()
 }
