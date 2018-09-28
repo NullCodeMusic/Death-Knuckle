@@ -58,6 +58,25 @@
             }
         },
         {
+            "Key": "062a3cbe-f74b-464f-a2cf-1134ed643c93",
+            "Value": {
+                "id": "212075bd-e59a-4a3c-94f9-7a862e812035",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_arcFist\/obj_arcFist.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0a56d677-c980-40d9-9457-aebc59d6292c",
             "Value": {
                 "id": "5bdc354d-5fd1-4375-9d5d-d39dbfd620d9",
