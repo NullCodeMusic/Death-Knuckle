@@ -495,6 +495,25 @@
             }
         },
         {
+            "Key": "e4df73c8-ad5b-4071-ba31-238e14a7e801",
+            "Value": {
+                "id": "5327ebc6-36b2-4508-82f1-aa919f1ec184",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/curve_point\/curve_point.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e87b4ccd-88a4-428b-a115-b095fe79b1f0",
             "Value": {
                 "id": "9ca04294-4911-4f21-b3de-227724a55927",
@@ -610,7 +629,8 @@
         }
     ],
     "script_order": [
-        "94da2721-8349-47f6-b1d7-b619ef686dda"
+        "94da2721-8349-47f6-b1d7-b619ef686dda",
+        "e4df73c8-ad5b-4071-ba31-238e14a7e801"
     ],
     "tutorial": ""
 }
