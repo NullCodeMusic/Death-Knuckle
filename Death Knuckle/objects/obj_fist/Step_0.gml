@@ -21,8 +21,11 @@ vspeed = round(vspeed)
 //y=y+yy
 
 
-
+if tick > 0 {
 tick= tick - distance/time
+} else {
+tick = tick - distance *0.2	
+}
 //if tick <= -distance {
 if place_meeting(x,y,obj_player) && tick< 0{
 obj_player.attacking = 0

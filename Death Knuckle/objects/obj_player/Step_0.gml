@@ -1,16 +1,68 @@
 // obj_player step
+
+
+
+//														Charge and attack
+/*mouse_check_button(mb_left) and*/
+if attacking = true and !instance_exists(obj_fist){
+	timeHeld = timeHeld + 1
+}
+if mouse_check_button_released(mb_left) && timeHeld>29{
+	if !instance_exists(obj_fist){
+	mousex = mouse_x ;
+	mousey = mouse_y;
+	mouseAngle = point_direction(x,y,mousex,mousey);
+	fistID = instance_create_depth(x,y,-1, obj_fist);
+
+	fistID.dir = mouseAngle
+	fistID.spd = 10
+	fistID.image_angle = mouseAngle;
+	fistID.time = 40
+	distPercentage = timeHeld/60
+	if distPercentage > 1 then distPercentage = 1
+	Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
+	if Dist > maxDist then Dist = maxDist
+	fistID.tick = Dist
+	fistID.distance = Dist
+	timeHeld = 0
+	}
+}else if mouse_check_button_pressed(mb_left) and attacking = false
+{
+	attacking = true;
+	timeHeld = 0
+}else if attacking = true && !mouse_check_button(mb_left) && timeHeld >29 {
+	if !instance_exists(obj_fist){
+	mousex = mouse_x ;
+	mousey = mouse_y;
+	mouseAngle = point_direction(x,y,mousex,mousey);
+	fistID = instance_create_depth(x,y,-1, obj_fist);
+
+	fistID.dir = mouseAngle
+	fistID.spd = 10
+	fistID.image_angle = mouseAngle;
+	fistID.time = 40
+	distPercentage = timeHeld/60
+	if distPercentage > 1 then distPercentage = 1
+	Dist = (point_distance(x,y,x+maxDist,x+maxDist)/((fistID.time/2)))*(distPercentage)
+	if Dist > maxDist then Dist = maxDist
+	fistID.tick = Dist
+	fistID.distance = Dist
+	timeHeld = 0
+	}
+}
+
+
+
 //                                                        get movement
 xSpd = 0
 ySpd = 0
-
-
 
 if usingArrowKeys = false {
   dirMove= keyboard_check(ord(rightKey)) - keyboard_check(ord(leftKey));
   
   if keyboard_check(ord(rightKey)) || keyboard_check(ord(leftKey)){
 		//if moveTimeHeld < 50 then moveTimeHeld = moveTimeHeld +1;
-		if moveTimeHeld < 5 moveTimeHeld ++
+		if moveTimeHeld < 8 moveTimeHeld ++
 	} else if moveTimeHeld > 0 then moveTimeHeld = moveTimeHeld -1;
 	
   if jump = false && (keyboard_check_pressed(ord(upKey)) || keyboard_check_pressed(vk_space)) {
@@ -51,19 +103,26 @@ switch (moveTimeHeld)
   case 0:
 	spd = 0; break;
   case 1:
-    spd = 3; break;
+    spd = 2; break;
   case 2:
-    spd = 4; break;
+    spd = 2; break;
   case 3:
     spd = 5; break;
   case 4:
-    spd = 9; break;
+    spd = 5; break;
   case 5:
+    spd =7; break;
+  case 6:
+    spd =7; break;
+  case 7:
+    spd =9; break;
+  case 8:
     spd =10; break;
 }
 
-
-
+if timeHeld!=0{
+	if spd > chargeMaxSpd then spd = chargeMaxSpd
+}
 xSpd = dirMove * spd
 
 if dirMove !=0 {
@@ -76,7 +135,7 @@ xSpd = lastFacing * spd
 ySpd = grav;
 
 if jump = true{
-if jumpPower != -round(grav*jumpPowerPerGravity) then jumpPower --;
+if jumpPower != 0 then jumpPower--//-round(grav*jumpPowerPerGravity) then jumpPower --;
 
 
   
@@ -114,8 +173,8 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
   while place_meeting(x+xSpd,y+ySpd, obj_obstacle) do {
     i++;
     if i > 15 then break;
-    if xSpd > 0 then xSpd --;
-    else xSpd ++;
+    //if xSpd > 0 then xSpd --;
+    //else xSpd ++;
     if ySpd > 0 {
 		ySpd --;
 		jump = false;
@@ -137,26 +196,7 @@ y = y + ySpd;
 // attack
 
 
-if mouse_check_button_pressed(mb_left)
 
-if attacking = false{
-
-attacking = true;
-mousex = mouse_x ;
-mousey = mouse_y;
-mouseAngle = point_direction(x,y,mousex,mousey);
-
-fistID = instance_create_depth(x,y,-1, obj_fist);
-
-fistID.dir = mouseAngle
-fistID.spd = 10
-fistID.image_angle = mouseAngle;
-fistID.time = 40
-fistID.tick = (point_distance(x,y,mousex,mousey)/(fistID.time/2))
-fistID.distance = (point_distance(x,y,mousex,mousey)/(fistID.time/2))
-
-
-}
 
 
 

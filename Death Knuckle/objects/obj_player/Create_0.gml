@@ -9,11 +9,13 @@ spd = 1;
 jumpTime = 0;
 jump = false;
 moveTimeHeld = 0;
-grav = 15;
+grav = 20;
 attacking = false;
 usingArrowKeys = false;
-jumpPowerPerGravity=2.5
+jumpPowerPerGravity=2
 jumpPower = 0
 timeOnCieling=0
-
+maxDist = 400
+chargeMaxSpd = 6
 lastFacing = 0
+timeHeld = 0
