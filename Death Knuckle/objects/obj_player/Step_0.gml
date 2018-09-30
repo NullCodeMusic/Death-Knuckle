@@ -175,8 +175,46 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
 
   }
   i = 0;
+  
+  
+  if place_meeting(x+xSpd,y,obj_obstacle){
+	if xSpd > 0{
+		for (b=1;b<46;b=b+1){
+			hspeed = xSpd
+			vspeed = ySpd
+			direction= b
+	
+			if !place_meeting(x+hspeed,y+vspeed,obj_obstacle) {
+				xSpd = floor(hspeed)
+				ySpd = floor(vspeed)
+			}
+			hspeed = 0
+			vspeed = 0
+	}
+	} else if xSpd <0 {
+		for (b=180;b>(180-46);b=b-1){
+			hspeed = xSpd
+			vspeed = ySpd
+			direction= b
+	
+			if !place_meeting(x+hspeed,y+vspeed,obj_obstacle) {
+				xSpd = round(hspeed)
+				ySpd = round(vspeed)
+			}
+			hspeed = 0
+			vspeed = 0
+		}
+	}
+  }
+  
+  
+  
+  
   while place_meeting(x + xSpd,y, obj_obstacle) do {
     i++;
+	
+	
+	
     if i > 15 then break;
     if xSpd > 0 then xSpd --;
     else xSpd ++;
@@ -184,6 +222,7 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
   i = 0
   while place_meeting(x+xSpd,y+ySpd, obj_obstacle) do {
     i++;
+	
     if i > 15 then break;
     //if xSpd > 0 then xSpd --;
     //else xSpd ++;
@@ -196,13 +235,11 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
 		timeOnCieling++;
 			if timeOnCieling >=10 then jumpPower = grav;
 	}
-	
-	
-
   }
 }
 if ySpd > 0 then jump = true
-
+xSpd = round(xSpd)
+ySpd = round(ySpd)
 x = x + xSpd;
 y = y + ySpd;
 // attack
