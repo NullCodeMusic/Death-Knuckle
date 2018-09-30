@@ -57,7 +57,10 @@ if mouse_check_button_released(mb_left) && timeHeld>29{
 // arc attack
 if attacking = false{
 	if mouse_check_button_released(mb_right){
-	instance_create_depth(x,y,-1,obj_arcFist)	
+	fistID = instance_create_depth(x,y,-1,obj_arcFist)	
+	fistID.tick = 60
+	fistID.time = 60
+	fistID.distance = 10
 	}
 }
 

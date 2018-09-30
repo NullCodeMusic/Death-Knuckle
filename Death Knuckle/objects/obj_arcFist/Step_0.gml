@@ -17,7 +17,11 @@ if tick < 0 {
 else {
 	speed = tick
 	image_angle=direction
-	curve_point(mouse_x,mouse_y,1)}
+	curve_point(mouse_x,mouse_y,5)}
+	if round(x) = round(mouse_x) {
+		speed = 0
+		
+	}
 hspeed = round(hspeed)
 vspeed = round(vspeed)
 //x=x+xx

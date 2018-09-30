@@ -6,18 +6,35 @@ argument[2] curve amount
 
 */
 
-if(abs(direction-point_direction(x,y,argument[0],argument[1]))<=argument[2]){
+x2 = argument[0]
+y2 = argument[1]
+curve = argument[2]
 
-    direction = point_direction(x,y,argument[0],argument[1])
+if(abs(direction-point_direction(x,y,x2,y2))<=y2){
 
-}else{
-
-if(x<argument[0]){
-	if(direction>point_direction(x,y,argument[0],argument[1])){direction+=argument[2]}
-    if(direction<point_direction(x,y,argument[0],argument[1])){direction-=argument[2]}
+    direction = point_direction(x,y,x2,y2)
 
 }else{
-    if(direction>point_direction(x,y,argument[0],argument[1])){direction-=argument[2]}
-    if(direction<point_direction(x,y,argument[0],argument[1])){direction+=argument[2]}
+
+if(x<x2){
+	if(direction>point_direction(x,y,x2,y2)){
+		//direction+=curve
+		direction+=curve
+		//if(direction<point_direction(x,y,x2,y2)){
+		//	direction-=curve}
+		}
+    if(direction<point_direction(x,y,x2,y2)){
+		//direction-=curve
+		direction-=curve
+		}
+
+}else{
+    if(direction>point_direction(x,y,x2,y2)){
+		direction-=curve
+		}
+    if(direction<point_direction(x,y,x2,y2)){
+		direction+=curve
+		}
 }
 }
+
