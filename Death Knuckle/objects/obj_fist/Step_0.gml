@@ -25,7 +25,8 @@ vspeed = round(vspeed)
 if tick > 0 {
 tick= tick - distance/time
 } else {
-tick = tick - distance *0.2	
+	distance = point_distance(x,y,obj_player.x,obj_player.y)
+tick =  - distance *0.2	
 }
 //if tick <= -distance {
 if place_meeting(x,y,obj_player) && tick< 0{

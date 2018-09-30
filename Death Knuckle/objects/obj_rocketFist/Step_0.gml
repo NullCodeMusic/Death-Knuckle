@@ -9,28 +9,32 @@
 // !!!!!!!!!!!!
 // set image angle from the curve script 
 
-if tick < 0 {
+if tick <= 0 {
 	direction =point_direction(x,y,obj_player.x,obj_player.y)
 	speed = -tick
 	image_angle = direction +180
 }
-else {
-	speed = tick
+else if tick > 0 {
+	speed = spd + 0.1 * point_distance(x,y,mouse_x,mouse_y)
 	image_angle=direction
-	curve_point(mouse_x,mouse_y,5)}
-	if round(x) = round(mouse_x) {
-		speed = 0
-		
+	curve_point(mouse_x,mouse_y,5)
+		if place_meeting(x,y,obj_cursor) {
+			speed = 0
+		}
 	}
+	
+	
 hspeed = round(hspeed)
 vspeed = round(vspeed)
 //x=x+xx
 //y=y+yy
 
 if tick > 0 {
-tick= tick - distance/time
+tick= tick - 1
 } else {
-tick = tick - distance *0.2	
+	//if distance = 0 then 
+	distance = point_distance(x,y,obj_player.x,obj_player.y)
+tick = - distance* 0.1	
 }
 
 

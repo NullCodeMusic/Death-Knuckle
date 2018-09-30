@@ -2,7 +2,7 @@
     "id": "062a3cbe-f74b-464f-a2cf-1134ed643c93",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_arcFist",
+    "name": "obj_rocketFist",
     "eventList": [
         {
             "id": "3dccfe83-c2c5-4ade-89c4-a3721aa3219e",

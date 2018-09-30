@@ -21,3 +21,4 @@ lastFacing = 0
 timeHeld = 0
 attacking =false
 attacking2 = false
+rocketFist=1
