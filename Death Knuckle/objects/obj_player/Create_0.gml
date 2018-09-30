@@ -19,3 +19,5 @@ maxDist = 400
 chargeMaxSpd = 6
 lastFacing = 0
 timeHeld = 0
+attacking =false
+attacking2 = false

@@ -10,25 +10,28 @@
 // set image angle from the curve script 
 
 if tick < 0 {
-	direction = point_direction(x,y,obj_player.x,obj_player.y)
+	direction =point_direction(x,y,obj_player.x,obj_player.y)
 	speed = -tick
 	image_angle = direction +180
 }
 else {
 	speed = tick
-	direction = image_angle}
+	image_angle=direction
+	curve_point(mouse_x,mouse_y,1)}
 hspeed = round(hspeed)
 vspeed = round(vspeed)
 //x=x+xx
 //y=y+yy
 
-
-
-
-
+if tick > 0 {
 tick= tick - distance/time
+} else {
+tick = tick - distance *0.2	
+}
+
+
 //if tick <= -distance {
 if place_meeting(x,y,obj_player) && tick< 0{
-obj_player.attacking = 0
+obj_player.attacking2 = 0
 instance_destroy()
 }

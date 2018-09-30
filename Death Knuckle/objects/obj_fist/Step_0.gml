@@ -8,13 +8,14 @@
 //} 
 
 if tick < 0 {
-	direction = point_direction(x,y,obj_player.x,obj_player.y)
+	direction =point_direction(x,y,obj_player.x,obj_player.y)
+
 	speed = -tick
-	image_angle = direction +180
+	image_angle = direction + 180
 }
 else {
 	speed = tick
-	direction = image_angle}
+	image_angle =direction  }
 hspeed = round(hspeed)
 vspeed = round(vspeed)
 //x=x+xx

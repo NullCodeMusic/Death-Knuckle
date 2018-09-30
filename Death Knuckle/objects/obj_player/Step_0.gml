@@ -4,6 +4,9 @@
 
 //														Charge and attack
 /*mouse_check_button(mb_left) and*/
+
+if attacking2 = false{
+
 if attacking = true and !instance_exists(obj_fist){
 	timeHeld = timeHeld + 1
 }
@@ -16,7 +19,7 @@ if mouse_check_button_released(mb_left) && timeHeld>29{
 
 	fistID.dir = mouseAngle
 	fistID.spd = 10
-	fistID.image_angle = mouseAngle;
+	fistID.direction = mouseAngle;
 	fistID.time = 40
 	distPercentage = timeHeld/60
 	if distPercentage > 1 then distPercentage = 1
@@ -39,7 +42,7 @@ if mouse_check_button_released(mb_left) && timeHeld>29{
 
 	fistID.dir = mouseAngle
 	fistID.spd = 10
-	fistID.image_angle = mouseAngle;
+	fistID.direction = mouseAngle;
 	fistID.time = 40
 	distPercentage = timeHeld/60
 	if distPercentage > 1 then distPercentage = 1
@@ -50,8 +53,13 @@ if mouse_check_button_released(mb_left) && timeHeld>29{
 	timeHeld = 0
 	}
 }
-
-
+}
+// arc attack
+if attacking = false{
+	if mouse_check_button_released(mb_right){
+	instance_create_depth(x,y,-1,obj_arcFist)	
+	}
+}
 
 //                                                        get movement
 xSpd = 0
