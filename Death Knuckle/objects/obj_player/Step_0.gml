@@ -230,16 +230,10 @@ while place_meeting(x+xSpd, y+ySpd, obj_obstacle) or place_meeting(x+xSpd,y, obj
 		timeOnCieling++;
 			if timeOnCieling >=10 then jumpPower = grav;
 	}
-  }
-  
-  while place_meeting(x+xSpd,y+ySpd, obj_obstacle) do {
-    
-   if xSpd > 0 then xSpd --;
+	
+	if xSpd > 0 then xSpd --;
     else xSpd ++;
   }
-  
-  
-  
 }
 if ySpd > 0 then jump = true
 xSpd = round(xSpd)
