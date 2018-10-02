@@ -1,24 +1,26 @@
-// obj_player create
+/// @description Insert description here
+// You can write your code in this editor
 room_speed = 60
 upKey = "W";
 downKey = "S";
 leftKey = "A";
 rightKey = "D";
-usingArrowKeys = false;
-spd = 1;
-jumpTime = 0;
-jump = false;
-moveTimeHeld = 0;
-grav = 20;
-attacking = false;
-usingArrowKeys = false;
-jumpPowerPerGravity=2
-jumpPower = 0
-timeOnCieling=0
-maxDist = 400
-chargeMaxSpd = 6
-lastFacing = 0
+spd = 9
+ymom = 0
+ymax = 20
+jump = 20
+diagonal = 0
 timeHeld = 0
-attacking =false
-attacking2 = false
+lastxInput=1
+
+
+attacking = 0
+atkTimeHeld=0
+distPercentage=1
+maxDist=250
+fistTime = 30
+
+staggerTime = 0
+startingStaggerTime = 20
+//upgrades
 rocketFist=1

@@ -31,6 +31,11 @@ vspeed = round(vspeed)
 
 if tick > 0 {
 tick= tick - 1
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)){
+	speed = speed -1
+	if speed <0 {
+	speed = 0; break;}
+}
 } else {
 	//if distance = 0 then 
 	distance = point_distance(x,y,obj_player.x,obj_player.y)
@@ -40,6 +45,12 @@ tick = - distance* 0.1
 
 //if tick <= -distance {
 if place_meeting(x,y,obj_player) && tick< 0{
-obj_player.attacking2 = 0
+obj_player.attacking = 0
 instance_destroy()
 }
+
+
+
+
+
+
