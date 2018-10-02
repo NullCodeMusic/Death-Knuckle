@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// {
 if staggerTime>0 {
 staggerTime --
 attacking = -1
@@ -116,3 +117,12 @@ hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
+
+#region triggers
+
+if place_meeting(x,y,obj_trigger_horizPlayerFollow) then obj_cameraFollowing.horizFollowPlayer=1
+if place_meeting(x,y,obj_trigger_vertPlayerFollow) then obj_cameraFollowing.vertFollowPlayer=1
+
+#endregion
+
+//}
