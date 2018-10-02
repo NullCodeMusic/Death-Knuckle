@@ -18,7 +18,7 @@ attacking = 0
 atkTimeHeld=0
 distPercentage=1
 maxDist=250
-fistTime = 20
+fistTime = 30
 
 staggerTime = 0
 startingStaggerTime = 20
