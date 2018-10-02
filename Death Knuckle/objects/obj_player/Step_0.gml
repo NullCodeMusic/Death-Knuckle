@@ -18,7 +18,7 @@ if mouse_check_button_released(mb_left) && timeHeld>29{
 	fistID = instance_create_depth(x,y,-1, obj_fist);
 
 	fistID.dir = mouseAngle
-	fistID.spd = 10
+	fistID.spd = 30
 	fistID.direction = mouseAngle;
 	fistID.time = 40
 	distPercentage = timeHeld/60
@@ -32,7 +32,7 @@ if mouse_check_button_released(mb_left) && timeHeld>29{
 }else if mouse_check_button_pressed(mb_left) and attacking = false
 {
 	attacking = true;
-	timeHeld = 0
+	timeHeld = 29
 }else if attacking = true && !mouse_check_button(mb_left) && timeHeld >29 {
 	if !instance_exists(obj_fist){
 	mousex = mouse_x ;
