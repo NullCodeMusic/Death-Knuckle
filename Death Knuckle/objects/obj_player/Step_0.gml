@@ -12,7 +12,7 @@ attacking = -1
 
 if attacking = 1 and !instance_exists(obj_fist){
 	atkTimeHeld = atkTimeHeld + 1
-	show_debug_message("FAT");
+	show_debug_message("FIST ME");
 }
 if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the treshold needed
 	
@@ -38,7 +38,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 }else if mouse_check_button_pressed(mb_left) and attacking = 0
 {
 	attacking = 1;
-	atkTimeHeld = 20
+	atkTimeHeld = 29
 }else if attacking = 1 && !mouse_check_button(mb_left) && atkTimeHeld >29 {
 	if !instance_exists(obj_fist){
 	mousex = mouse_x ;
