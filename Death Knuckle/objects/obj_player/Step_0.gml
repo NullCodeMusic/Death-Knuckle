@@ -25,6 +25,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	fistID.dir = mouseAngle
 	fistID.spd = 30
 	fistID.direction = mouseAngle;
+	fistID.image_angle = mouseAngle;
 	fistID.time = fistTime
 	distPercentage = atkTimeHeld/60
 	if distPercentage > 1 then distPercentage = 1

@@ -23,7 +23,7 @@ else {
 
 
 if tick > 0 {
-tick= tick - distance/time
+tick= tick - 5*(40/distance)
 while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)){
 	tick = -1
 	speed = speed -1
@@ -39,4 +39,11 @@ if place_meeting(x,y,obj_player) && tick< 0{
 obj_player.attacking = 0
 if lifetime < 3 {obj_player.staggerTime = obj_player.startingStaggerTime}
 instance_destroy()
+}
+
+if frame1done = 0 then {
+frame1done = 1
+//x=x+hspeed
+//y=y+vspeed
+visible = 1
 }
