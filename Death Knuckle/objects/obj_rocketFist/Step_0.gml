@@ -49,9 +49,7 @@ obj_player.attacking = 0
 instance_destroy()
 }
 
-if(speed = 0){
-tick = 1
-}
+
 
 
 

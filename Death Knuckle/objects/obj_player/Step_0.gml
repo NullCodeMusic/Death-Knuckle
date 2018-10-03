@@ -12,7 +12,7 @@ attacking = -1
 
 if attacking = 1 and !instance_exists(obj_fist){
 	atkTimeHeld = atkTimeHeld + 1
-	show_debug_message("FIST ME");
+	show_debug_message("FIST");
 }
 if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the treshold needed
 	
@@ -20,8 +20,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	mousex = mouse_x ;
 	mousey = mouse_y;
 	mouseAngle = point_direction(x,y,mousex,mousey);
-	fistID = instance_create_depth(x,y,-1, obj_fist);
-
+	fistID = instance_create_depth(x,y,-1,obj_fist);
 	fistID.dir = mouseAngle
 	fistID.spd = 30
 	fistID.direction = mouseAngle;
@@ -44,15 +43,15 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	mousex = mouse_x ;
 	mousey = mouse_y;
 	mouseAngle = point_direction(x,y,mousex,mousey);
-	fistID = instance_create_depth(x,y,-1, obj_fist);
-
+	fistID = instance_create_depth(x,y,-1,obj_fist);
 	fistID.dir = mouseAngle
-	fistID.spd = 10
+	fistID.spd = 30
 	fistID.direction = mouseAngle;
-	fistID.time = 40
+	fistID.image_angle = mouseAngle;
+	fistID.time = fistTime
 	distPercentage = atkTimeHeld/60
 	if distPercentage > 1 then distPercentage = 1
-	Dist = (point_distance(x,y,x+maxDist,x+maxDist)/((fistID.time/2)))*(distPercentage)
+	Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
 	if Dist > maxDist then Dist = maxDist
 	fistID.tick = Dist
 	fistID.distance = Dist
@@ -69,9 +68,11 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 		else if mouse_check_button(mb_right) && attacking = 0{
 			attacking = 2 atkTimeHeld=20}
 		if mouse_check_button_released(mb_right) && attacking = 2 {
+			if(!instance_exists(obj_rocketFist)){
 		fistID = instance_create_depth(x,y,-1,obj_rocketFist)	
 		fistID.tick = 120
 		fistID.spd = 8
+			}
 		}
 	}
 
@@ -101,7 +102,7 @@ hspeed-= hspeed/abs(hspeed)
 
 #endregion
 
-yInput = -keyboard_check_pressed(ord(upKey))+keyboard_check(ord(downKey))
+yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+1,obj_obstacle))+keyboard_check(ord(downKey))
 if(yInput!=0){ymom=yInput*jump
 	}
 

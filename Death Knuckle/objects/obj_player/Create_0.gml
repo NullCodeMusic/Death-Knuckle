@@ -12,8 +12,6 @@ jump = 20
 diagonal = 0
 timeHeld = 0
 lastxInput=1
-
-
 attacking = 0
 atkTimeHeld=0
 distPercentage=1
