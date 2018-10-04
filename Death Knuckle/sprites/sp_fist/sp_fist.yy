@@ -2,7 +2,7 @@
     "id": "454169af-e531-4680-a385-4d63662fbe38",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite3",
+    "name": "sp_fist",
     "For3D": false,
     "HTile": false,
     "VTile": false,
