@@ -24,7 +24,7 @@ else {
 
 if tick > 0 {
 tick= tick - 5*(40/distance)
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)){
+while(place_meeting(x,y,obj_obstacle)){
 	tick = -1
 	speed = speed -1
 	if speed <0 || speed = 0{
