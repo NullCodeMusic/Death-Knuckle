@@ -5,26 +5,9 @@
 if obj_player.x - x != 0 {
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
 
-if abs(obj_player.x - x) < spd then spd = abs(obj_player.x - x) else spd = maxSpd
-spd = round(spd)
+if obj_player.x - x < spd then spd = obj_player.x - x
 
-if lastxInput != xInput && xInput != 0 && spd != 0{
-	tick --
-	spd = spd - tick
-} else if lastxInput != xInput && xInput != 0 && spd < maxSpd{
-	tick++
-	spd= spd +tick
-}
-else if lastxInput != xInput && xInput != 0 && spd = 0{
-lastxInput = xInput
-tick++
-spd = tick 
-}else if xInput !=0 then lastxInput = xInput
-
-if spd = maxSpd then tick = 0
-
-
-
+if xInput !=0 then lastxInput = xInput
 
 if(xInput!=0){
 timeHeld+=2
@@ -57,8 +40,7 @@ ymom=0
 if(ymom<=ymax){ymom++}
 
 while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0){
-//hspeed-= hspeed/abs(hspeed)
-//vspeed-= vspeed/abs(vspeed)
-spd -= spd/abs(spd)
+hspeed-= hspeed/abs(hspeed)
+vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
