@@ -17,7 +17,7 @@ atkTimeHeld=0
 distPercentage=1
 maxDist=250
 fistTime = 10
-
+global.fists = 0
 staggerTime = 0
 startingStaggerTime = 20
 //upgrades
