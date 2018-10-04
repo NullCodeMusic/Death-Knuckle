@@ -3,9 +3,13 @@
 //if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) { 
 //	lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}
 //xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
-if obj_player.x - x != 0 {
+if(instance_exists(obj_player)){
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
 
+hspeed +=xInput*0.5
+if(hspeed>=10){hspeed = 10}
+if(hspeed<=-10){hspeed = -10}
+/*
 if abs(obj_player.x - x) < spd then spd = abs(obj_player.x - x) else spd = maxSpd
 spd = round(spd)
 
@@ -36,17 +40,17 @@ if(timeHeld>=spd){timeHeld=spd }
 if(timeHeld<=0){timeHeld=0 }
 if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
-
-
+*/
+wall = false
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&diagonal = 0){
 hspeed-= hspeed/abs(hspeed)
-}
+wall = true}
 
 #endregion
 
-//yInput = -keyboard_check_pressed(ord(upKey))+keyboard_check(ord(downKey))
-//if(yInput!=0){ymom=yInput*jump
-//	}
+yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)*wall
+if(yInput!=0){ymom=yInput*jump
+}
 yInput = 0
 
 vspeed = ymom
