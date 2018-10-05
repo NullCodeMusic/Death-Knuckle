@@ -39,6 +39,25 @@
     },
     "resources": [
         {
+            "Key": "01ebb41a-9fa4-4439-8713-9a7fa6ddf0eb",
+            "Value": {
+                "id": "ee0a980a-2fba-4487-9c09-a732a56dc8c9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/DrawIfOnScreen\/DrawIfOnScreen.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0547f54c-51fd-433c-b9e1-d09652cc56ee",
             "Value": {
                 "id": "cfa5e102-fbd3-4b8d-86bb-d01863d11740",
@@ -321,6 +340,25 @@
                 ],
                 "resourcePath": "objects\/obj_player\/obj_player.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4114ae61-f38f-4277-84ef-d644f54261af",
+            "Value": {
+                "id": "14bb59a4-416e-41ba-944a-e403c0585de9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/DrawIfOnScreenStep\/DrawIfOnScreenStep.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1087,7 +1125,9 @@
     "script_order": [
         "94da2721-8349-47f6-b1d7-b619ef686dda",
         "e4df73c8-ad5b-4071-ba31-238e14a7e801",
-        "fd9a58a2-de38-4154-a81a-5c76f5ffe8a5"
+        "fd9a58a2-de38-4154-a81a-5c76f5ffe8a5",
+        "4114ae61-f38f-4277-84ef-d644f54261af",
+        "01ebb41a-9fa4-4439-8713-9a7fa6ddf0eb"
     ],
     "tutorial": ""
 }
