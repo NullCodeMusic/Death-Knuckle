@@ -3,7 +3,7 @@
 if(instance_exists(obj_player)){
 targ = obj_player
 if(mouse_check_button(mb_left)){click++}else{click=0}
-//if click>10 {click = 10}
+if click>10 {click = 12}
 x = targ.x-15 +random_range(-click,click)
 y = targ.y +random_range(-click,click)
 image_angle = point_direction(x,y,mouse_x,mouse_y)
