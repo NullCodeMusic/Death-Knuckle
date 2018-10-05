@@ -9,3 +9,4 @@ tick = 0
 maxSpd = 50
 lastxInput = 1
 jump = 20
+DrawIfOnScreen()
