@@ -96,7 +96,7 @@ if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
 
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&diagonal = 0){
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&diagonal = 0&& !place_meeting(x,y,obj_transObstacle)){
 hspeed-= hspeed/abs(hspeed)
 }
 
@@ -107,14 +107,14 @@ if(yInput!=0){ymom=yInput*jump
 	}
 
 vspeed = ymom
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
 
 if(ymom<=ymax){ymom++}
 
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 ymom=0
