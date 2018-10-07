@@ -97,7 +97,7 @@ else {hspeed = round(xInput*timeHeld)}
 
 if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
 	yy= vspeed
-	for (i=0;i<33;i=i+1){
+	for (i=0;i<17;i=i+1){
 		show_debug_message("meme"+ string(i))
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
@@ -137,5 +137,8 @@ if place_meeting(x,y,obj_trigger_horizPlayerFollow) then obj_cameraFollowing.hor
 if place_meeting(x,y,obj_trigger_vertPlayerFollow) then obj_cameraFollowing.vertFollowPlayer=1
 
 #endregion
+
+
+//global speed cap 
 
 //}

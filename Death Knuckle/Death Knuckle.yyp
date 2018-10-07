@@ -501,6 +501,14 @@
                 "resourcePath": "sprites\/spr_blackBackgroundTiled\/spr_blackBackgroundTiled.yy",
                 "resourceType": "GMSprite"
             }
+        },
+        {
+            "Key": "fe8623df-dde0-4f2c-9a55-3ba1f781a243",
+            "Value": {
+                "id": "9bd9f7fb-7717-42cb-8fb0-9cf921c81af7",
+                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
+                "resourceType": "GMTileSet"
+            }
         }
     ],
     "script_order": [
