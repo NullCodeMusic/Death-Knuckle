@@ -1,3 +1,5 @@
+DrawIfOnScreenStep()
+
 
 #region horizontal movement
 //if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) { 
