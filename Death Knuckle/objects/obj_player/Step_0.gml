@@ -108,7 +108,7 @@ hspeed-= hspeed/abs(hspeed)
 
 #endregion
 
-yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+1,obj_obstacle))+keyboard_check(ord(downKey))
+yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+abs(hspeed)+1,obj_obstacle))+keyboard_check(ord(downKey))
 if(yInput!=0){ymom=yInput*jump
 	}
 
