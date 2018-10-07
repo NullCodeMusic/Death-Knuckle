@@ -95,7 +95,13 @@ if(timeHeld<=0){timeHeld=0 }
 if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
-
+if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
+	yy= vspeed
+	for (i=0;i<33;i=i+1){
+		show_debug_message("meme"+ string(i))
+		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
+	}
+}
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&diagonal = 0&& !place_meeting(x,y,obj_transObstacle)){
 hspeed-= hspeed/abs(hspeed)
 }
@@ -106,6 +112,8 @@ yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+1,obj_obstacle))
 if(yInput!=0){ymom=yInput*jump
 	}
 
+
+
 vspeed = ymom
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
 vspeed-= vspeed/abs(vspeed)
@@ -113,6 +121,9 @@ ymom=0
 }
 
 if(ymom<=ymax){ymom++}
+
+
+
 
 while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
 hspeed-= hspeed/abs(hspeed)
