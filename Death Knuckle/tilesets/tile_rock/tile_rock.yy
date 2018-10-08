@@ -11,22 +11,22 @@
             "closed_edge": false,
             "name": "autotile_1",
             "tiles": [
-                11,
-                1,
-                2,
-                6,
-                13,
-                10,
-                3,
-                5,
-                14,
-                8,
-                12,
-                7,
                 16,
+                6,
+                7,
+                11,
+                18,
                 15,
+                8,
+                10,
+                19,
+                13,
                 17,
-                19
+                12,
+                21,
+                20,
+                22,
+                24
             ]
         }
     ],
@@ -38,7 +38,7 @@
             
         ]
     },
-    "out_columns": 4,
+    "out_columns": 5,
     "out_tilehborder": 2,
     "out_tilevborder": 2,
     "spriteId": "ab9cea0f-cab6-419f-b36e-b36453785623",
@@ -66,7 +66,12 @@
             16,
             17,
             18,
-            19
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
         ],
         "SerialiseFrameCount": 1
     },
@@ -74,11 +79,11 @@
         
     ],
     "tile_animation_speed": 15,
-    "tile_count": 20,
+    "tile_count": 25,
     "tileheight": 32,
     "tilehsep": 0,
     "tilevsep": 0,
     "tilewidth": 32,
     "tilexoff": 0,
-    "tileyoff": 32
+    "tileyoff": 0
 }
