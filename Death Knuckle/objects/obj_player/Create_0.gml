@@ -22,3 +22,6 @@ staggerTime = 0
 startingStaggerTime = 20
 //upgrades
 rocketFist=1
+hp = 100 + global.extraHPContainers * 50
+flash = 0
+invulTime = 0

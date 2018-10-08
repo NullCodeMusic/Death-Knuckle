@@ -34,7 +34,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	fistID.distance = Dist
 	atkTimeHeld = 0
 	}
-}else if mouse_check_button_pressed(mb_left) and attacking = 0
+}else if mouse_check_button(mb_left) and attacking = 0
 {
 	attacking = 1;
 	atkTimeHeld = 29
@@ -108,7 +108,7 @@ hspeed-= hspeed/abs(hspeed)
 
 #endregion
 
-yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+abs(hspeed)+1,obj_obstacle))+keyboard_check(ord(downKey))
+yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+abs(hspeed)+5,obj_obstacle))+keyboard_check(ord(downKey))
 if(yInput!=0){ymom=yInput*jump
 	}
 
@@ -138,7 +138,18 @@ if place_meeting(x,y,obj_trigger_vertPlayerFollow) then obj_cameraFollowing.vert
 
 #endregion
 
-
+#region getting hit
+if invulTime = 0{
+if place_meeting(x+hspeed,y+vspeed,parent_enemy){
+	if place_meeting(x+hspeed,y+vspeed,obj_enemy_warg) {
+		stagger = 10
+		flash = 1
+		hp = hp - 10
+		invulTime = 40
+	}
+}
+} else invulTime --
+#endregion
 //global speed cap 
 
 //}
