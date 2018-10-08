@@ -457,6 +457,25 @@
             }
         },
         {
+            "Key": "4a0696a5-c99e-4df5-ad3b-59cd138d7eda",
+            "Value": {
+                "id": "ca661a41-8e2a-43e6-a65b-b46400550616",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_DarkRoom\/obj_DarkRoom.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "57230d6b-ef25-46e3-bcba-c55014f82087",
             "Value": {
                 "id": "63ef2888-81cf-43a2-a2a6-56fc366bddd6",
@@ -852,6 +871,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/ledge\/ledge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b8e4c7b1-886f-47ee-8115-881531e65b87",
+            "Value": {
+                "id": "7f922799-07d9-49bd-bae2-eb8dda5aa945",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_darkRoom\/spr_darkRoom.yy",
                 "resourceType": "GMSprite"
             }
         },

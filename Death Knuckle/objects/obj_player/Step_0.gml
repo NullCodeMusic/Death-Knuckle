@@ -15,7 +15,7 @@ if attacking = 1 and !instance_exists(obj_fist){
 	show_debug_message("FIST");
 }
 if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the treshold needed
-	
+	if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
 	if(global.fists<5){
 	mousex = mouse_x ;
 	mousey = mouse_y;
@@ -34,11 +34,13 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	fistID.distance = Dist
 	atkTimeHeld = 0
 	}
+	}
 }else if mouse_check_button(mb_left) and attacking = 0
 {
 	attacking = 1;
 	atkTimeHeld = 29
 }else if attacking = 1 && !mouse_check_button(mb_left) && atkTimeHeld >29 {
+	if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
 	if(global.fists<5){
 	mousex = mouse_x ;
 	mousey = mouse_y;
@@ -56,6 +58,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	fistID.tick = Dist
 	fistID.distance = Dist
 	atkTimeHeld = 0
+	}
 	}
 }
 
