@@ -150,8 +150,14 @@ if place_meeting(x+hspeed,y+vspeed,parent_enemy){
 		hp = hp - 10
 		invulTime = 40
 	}
+}else flash = 0
+if flash =0 then image_alpha=1
+} else {
+	invulTime --
+	if flash = 1 {
+		if image_blend = c_white then image_blend = c_red else image_blend = c_white //image_color = 0 then image_alpha = 1 else image_alpha = 0
+	}
 }
-} else invulTime --
 #endregion
 //global speed cap 
 
