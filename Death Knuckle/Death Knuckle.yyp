@@ -666,6 +666,25 @@
             }
         },
         {
+            "Key": "8eca28c6-4062-40c0-a06e-50ae09cc9484",
+            "Value": {
+                "id": "2134cc66-89b4-4e60-bcaa-eeb6f932a95c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_stonetile1\/sp_stonetile1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "91e6823d-8222-4058-9f79-64df94de22d6",
             "Value": {
                 "id": "206d62f8-e683-4b9a-b83a-c844f628acec",
@@ -1252,6 +1271,25 @@
                 ],
                 "resourcePath": "objects\/obj_obstacle\/obj_obstacle.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fd4014fa-c7eb-4664-8008-c62e7175ed0b",
+            "Value": {
+                "id": "12d363ab-6600-4464-bf13-bcf1c3750f5f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "tilesets\/Tile_rock2\/Tile_rock2.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
