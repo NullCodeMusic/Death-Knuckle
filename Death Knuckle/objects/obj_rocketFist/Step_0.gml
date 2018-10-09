@@ -33,10 +33,17 @@ vspeed = round(vspeed)
 
 if tick > 0 {
 tick= tick - 1
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)||place_meeting(x+hspeed,y+vspeed,obj_interactableButton)){
+	if place_meeting(x+hspeed,y+vspeed,obj_interactableButton){ 
+	buttonID = instance_place(x+hspeed,y+vspeed,obj_interactableButton) 
+		if buttonID != 0 {
+		buttonID.activated=1}	
+	}
+	
 	speed = speed -1
 	if speed <0 {
 	speed = 0; break;}
+	
 }
 } else {
 	//if distance = 0 then 

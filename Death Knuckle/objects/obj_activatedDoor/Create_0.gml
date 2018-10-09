@@ -1,1 +1,2 @@
-startingSprite = sprite_index
+// SET keyID in the unique creation code
+

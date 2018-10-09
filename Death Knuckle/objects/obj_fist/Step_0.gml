@@ -28,12 +28,33 @@ y = y+vspeed
 if tick > 0 {
 tick= tick - 5*(40/distance)
 if frame1done=1 {
-while(place_meeting(x,y,obj_obstacle)){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)||place_meeting(x+hspeed,y+vspeed,obj_interactableButton)){
+	buttonID = instance_place(x+hspeed,y+vspeed,obj_interactableButton) 
+		if buttonID != 0 {
+		
+for (i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
+interactID = ds_list_find_value(obj_interactableController.interactableList,i)
+
+// dis code broke
+if keyID = interactID.keyID then interactID.activated = 1
+}
+
+		
+		
+		
+		
+		
+		
+		
+		}
 	tick = -1
 	speed = speed -1
 	if speed <0 || speed = 0{
 	speed = 0; break;}
 	if lifetime < 3 {tooEarly = 1}
+	if place_meeting(x,y,obj_interactableButton){ 
+		
+	}
 }
 }
 } else {
@@ -41,7 +62,7 @@ while(place_meeting(x,y,obj_obstacle)){
 tick =  - distance *0.2	
 }
 //if tick <= -distance {
-if place_meeting(x,y,obj_player) && tick< 0{
+if place_meeting(x+hspeed,y+vspeed,obj_player) && tick< 0{
 obj_player.attacking = 0
 if tooEarly = 1 {obj_player.staggerTime = obj_player.startingStaggerTime}
 instance_destroy()
