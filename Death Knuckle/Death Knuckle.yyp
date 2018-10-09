@@ -1027,6 +1027,25 @@
             }
         },
         {
+            "Key": "c2f46e24-0058-4ae4-933c-7e8a883175bf",
+            "Value": {
+                "id": "e6d6df3b-8196-4aa9-be08-c55cf658e737",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_stonetile11\/sp_stonetile11.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c664624e-5201-40cf-a081-ec0bde7fe2a4",
             "Value": {
                 "id": "6b16d658-dad1-4ff6-9f4f-02629cd8bd5e",
