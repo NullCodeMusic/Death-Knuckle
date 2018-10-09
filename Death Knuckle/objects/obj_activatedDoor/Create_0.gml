@@ -1,0 +1,1 @@
+startingSprite = sprite_index

@@ -178,7 +178,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": false,
+            "hierarchyVisible": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -208,7 +208,7 @@
             "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
-            "visible": false
+            "visible": true
         },
         {
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
@@ -1672,7 +1672,7 @@
             "grid_y": 32,
             "hierarchyFrozen": false,
             "hierarchyVisible": true,
-            "hspeed": 0,
+            "hspeed": 1,
             "htiled": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
@@ -1685,12 +1685,12 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "1a704899-85a5-4481-888e-3e52da88975c",
+            "spriteId": "a6d1ca0f-04f7-4af7-9f65-ec4b79338cbd",
             "stretch": false,
             "userdefined_animFPS": false,
             "userdefined_depth": false,
             "visible": true,
-            "vspeed": 0,
+            "vspeed": 1,
             "vtiled": true,
             "x": 0,
             "y": 0
