@@ -2,7 +2,7 @@
     "id": "4a36e8e3-4bd7-4fcb-922e-346f0f69d52f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_triggerArea",
+    "name": "obj_interactArea",
     "eventList": [
         {
             "id": "286c4b33-b1f1-4ced-b77d-55a0e7362722",
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "c90dc299-7ee5-48a6-bf18-0e750a0e0339",
+    "spriteId": "335a4360-d11f-43da-880a-3bec22a2935c",
     "visible": true
 }
