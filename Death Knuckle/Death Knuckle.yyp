@@ -495,6 +495,25 @@
             }
         },
         {
+            "Key": "4a36e8e3-4bd7-4fcb-922e-346f0f69d52f",
+            "Value": {
+                "id": "2013f1c4-7728-4866-9d25-60a3bf09345e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_triggerArea\/obj_triggerArea.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "57230d6b-ef25-46e3-bcba-c55014f82087",
             "Value": {
                 "id": "63ef2888-81cf-43a2-a2a6-56fc366bddd6",
@@ -530,6 +549,25 @@
                 ],
                 "resourcePath": "rooms\/rm_gameStart\/rm_gameStart.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "62f998d5-ec20-473d-a2af-910403bd42b1",
+            "Value": {
+                "id": "a8afaec1-78e9-4d8e-9e1f-200b466c6c68",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_interactableButton\/obj_interactableButton.yy",
+                "resourceType": "GMObject"
             }
         },
         {

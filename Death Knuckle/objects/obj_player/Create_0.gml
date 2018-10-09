@@ -31,3 +31,4 @@ setHitAnim=0
 
 
 boolcheck1=0
+depth = 0

@@ -11,3 +11,5 @@ image_alpha = 1-(instance_exists(obj_fist) or instance_exists(obj_rocketFist) )
 image_index = 1+(targ.x>mouse_x)
 depth= -5+(targ.x>mouse_x)*5
 }
+
+
