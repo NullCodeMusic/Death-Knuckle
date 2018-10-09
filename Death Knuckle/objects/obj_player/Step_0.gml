@@ -6,10 +6,11 @@ if staggerTime>0 {
 staggerTime --
 attacking = -1
 } else if attacking = -1 {attacking = 0}
+if invulTime>0 {invulTime--}
 
 #region attacks
 
-
+if staggerTime=0{
 if attacking = 1 and !instance_exists(obj_fist){
 	atkTimeHeld = atkTimeHeld + 1
 	show_debug_message("FIST");
@@ -78,6 +79,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 			}
 		}
 	}
+	}
 
 
 #endregion
@@ -85,9 +87,10 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 
 #region horizontal movement
 if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) { 
-	lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}
+	
+	if staggerTime = 0 {lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}}
 xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
-
+if staggerTime > 0 then xInput = -hitDirection
 if(xInput!=0){
 timeHeld+=2
 }else{
@@ -98,23 +101,28 @@ if(timeHeld<=0){timeHeld=0 }
 if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
-if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
+#region inital horiz collision 
+if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
 	yy= vspeed
 	for (i=0;i<17;i=i+1){
 		show_debug_message("meme"+ string(i))
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
 }
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&diagonal = 0&& !place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&& !place_meeting(x,y,obj_transObstacle)){
 hspeed-= hspeed/abs(hspeed)
 }
-
 #endregion
-
+#endregion
+#region vertical movement
+if place_meeting(x,y+abs(hspeed)+5,obj_obstacle) then extraFrames=50 else if extraFrames>0 then extraFrames--
 yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+abs(hspeed)+5,obj_obstacle))+keyboard_check(ord(downKey))
 if(yInput!=0){ymom=yInput*jump
+	if yInput <0 then extraFrames = 0
 	}
-
+	
+	if extraFrames>0 {yInput = -(keyboard_check_pressed(ord(upKey)))}
+if staggerTime>0 then yInput =0
 
 
 vspeed = ymom
@@ -126,14 +134,33 @@ ymom=0
 if(ymom<=ymax){ymom++}
 
 
-
+#region vetical collsion
 
 while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
+#endregion#
+#endregion
 
+#region getting hit
+if invulTime = 0{
+if place_meeting(x+hspeed,y+vspeed,parent_enemy){
+	if place_meeting(x+hspeed,y+vspeed,obj_enemy_warg) {
+		invulTime=40
+		staggerTime=20
+		image_index=sp_playerHurt
+		enemyid = instance_place(x+hspeed,y+vspeed,obj_enemy_warg)
+		hitDirection = enemyid/abs(enemyid)
+	}
+}//else flash = 0
+//if flash =0 then image_alpha=1
+//} //else {
+	//invulTime --
+	
+}
+#endregion
 #region triggers
 
 if place_meeting(x,y,obj_trigger_horizPlayerFollow) then obj_cameraFollowing.horizFollowPlayer=1
@@ -141,24 +168,12 @@ if place_meeting(x,y,obj_trigger_vertPlayerFollow) then obj_cameraFollowing.vert
 
 #endregion
 
-#region getting hit
-if invulTime = 0{
-if place_meeting(x+hspeed,y+vspeed,parent_enemy){
-	if place_meeting(x+hspeed,y+vspeed,obj_enemy_warg) {
-		stagger = 10
-		flash = 1
-		hp = hp - 10
-		invulTime = 40
-	}
-}else flash = 0
-if flash =0 then image_alpha=1
-} else {
-	invulTime --
-	if flash = 1 {
-		if image_blend = c_white then image_blend = c_red else image_blend = c_white //image_color = 0 then image_alpha = 1 else image_alpha = 0
-	}
-}
-#endregion
+
+
+
+
+
+
 //global speed cap 
 
 //}

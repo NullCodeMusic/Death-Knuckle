@@ -25,3 +25,5 @@ rocketFist=1
 hp = 100 + global.extraHPContainers * 50
 flash = 0
 invulTime = 0
+hitDirection = 0
+extraFrames=0

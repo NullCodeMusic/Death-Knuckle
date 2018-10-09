@@ -7,7 +7,7 @@ DrawIfOnScreenStep()
 //xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
 if(instance_exists(obj_player)){
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
-
+if xInput = 0 then xInput = 1
 hspeed +=xInput*0.5
 if(hspeed>=10){hspeed = 10}
 if(hspeed<=-10){hspeed = -10}
@@ -44,7 +44,7 @@ if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 */
 wall = false
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&diagonal = 0){
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 wall = true}
 
@@ -63,9 +63,11 @@ ymom=0
 
 if(ymom<=ymax){ymom++}
 
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 //spd -= spd/abs(spd)
 ymom=0
 }
+
+//show_debug_message(string(x)+" , "+string(y))
