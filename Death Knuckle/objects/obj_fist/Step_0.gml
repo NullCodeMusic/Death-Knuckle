@@ -9,7 +9,7 @@ DrawIfOnScreenStep()
 lifetime = lifetime +1
 if tick < 0 {
 	direction =point_direction(x,y,obj_player.x,obj_player.y)
-	
+	tick--
 	speed = -tick
 	image_angle = direction + 180
 }

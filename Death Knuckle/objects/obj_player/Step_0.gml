@@ -68,9 +68,10 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	if rocketFist =1 {
 		
 		if mouse_check_button(mb_right) && attacking =2 {
-			if atkTimeHeld < 59 { atkTimeHeld ++}}
+			//if atkTimeHeld < 59 { atkTimeHeld ++}
+			}
 		else if mouse_check_button(mb_right) && attacking = 0{
-			attacking = 2 atkTimeHeld=20}
+			attacking = 2 }
 		if mouse_check_button_released(mb_right) && attacking = 2 {
 			if(!instance_exists(obj_rocketFist)){
 		fistID = instance_create_depth(x,y,-1,obj_rocketFist)	
@@ -160,6 +161,8 @@ if place_meeting(x+hspeed,y+vspeed,parent_enemy){
 		setHitAnim = 1
 		enemyid = instance_place(x+hspeed,y+vspeed,obj_enemy_warg)
 		hitDirection = (enemyid.x-x)/abs(enemyid.x - x)
+		hp=hp-10
+		ymom=-10
 	}
 }//else flash = 0
 //if flash =0 then image_alpha=1
