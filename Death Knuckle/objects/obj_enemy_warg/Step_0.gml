@@ -6,8 +6,10 @@ DrawIfOnScreenStep()
 //	lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}
 //xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
 if(instance_exists(obj_player)){
+	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
-if xInput = 0 then xInput = 1
+} else xInput = 1
+
 hspeed +=xInput*0.5
 if(hspeed>=10){hspeed = 10}
 if(hspeed<=-10){hspeed = -10}
@@ -46,7 +48,8 @@ else {hspeed = round(xInput*timeHeld)}
 wall = false
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
-wall = true}
+wall = true
+}
 
 #endregion
 

@@ -27,3 +27,7 @@ flash = 0
 invulTime = 0
 hitDirection = 0
 extraFrames=0
+setHitAnim=0
+
+
+boolcheck1=0

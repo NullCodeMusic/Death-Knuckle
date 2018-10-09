@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if spd != 9 then spd = 9
 // {
 if staggerTime>0 {
 staggerTime --
@@ -90,7 +90,14 @@ if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) {
 	
 	if staggerTime = 0 {lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}}
 xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
-if staggerTime > 0 then xInput = -hitDirection
+if staggerTime > 0 {
+	xInput = -hitDirection
+	lastxInput= -hitDirection
+	if boolcheck1 = 0 {
+	timeHeld = 10
+	spd = 15
+	boolcheck1 =1 }
+} else boolcheck1=0
 if(xInput!=0){
 timeHeld+=2
 }else{
@@ -149,10 +156,10 @@ if invulTime = 0{
 if place_meeting(x+hspeed,y+vspeed,parent_enemy){
 	if place_meeting(x+hspeed,y+vspeed,obj_enemy_warg) {
 		invulTime=40
-		staggerTime=20
-		image_index=sp_playerHurt
+		staggerTime=10
+		setHitAnim = 1
 		enemyid = instance_place(x+hspeed,y+vspeed,obj_enemy_warg)
-		hitDirection = enemyid/abs(enemyid)
+		hitDirection = (enemyid.x-x)/abs(enemyid.x - x)
 	}
 }//else flash = 0
 //if flash =0 then image_alpha=1
