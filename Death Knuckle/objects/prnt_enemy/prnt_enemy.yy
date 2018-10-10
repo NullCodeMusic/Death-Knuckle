@@ -2,13 +2,13 @@
     "id": "305dfdcb-4fff-408c-8bb6-85492d9bddce",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "parent_enemy",
+    "name": "prnt_enemy",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "65c45ef5-3fd9-4bbc-98ad-e60d03ceaf0b",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

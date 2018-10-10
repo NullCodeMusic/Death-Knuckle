@@ -1,6 +1,11 @@
 DrawIfOnScreenStep()
 
 
+if staggerTime>0 {
+staggerTime --} 
+if invulTime>0{
+	invulTime--}
+
 #region horizontal movement
 //if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) { 
 //	lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}
@@ -10,9 +15,21 @@ if(instance_exists(obj_player)){
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
 } else xInput = 1
 
+if staggerTime > 0 {
+	xInput = -hitDirection
+	lastxInput= -hitDirection
+	if boolcheck1 = 0 {
+	timeHeld = 10
+	hspeed =xInput*20
+	if(hspeed>=10){hspeed -= 0.5}
+	if(hspeed<=-10){hspeed -= 0.5}
+	boolcheck1 =1 }
+} else {
+	boolcheck1=0
 hspeed +=xInput*0.5
 if(hspeed>=10){hspeed = 10}
 if(hspeed<=-10){hspeed = -10}
+}
 /*
 if abs(obj_player.x - x) < spd then spd = abs(obj_player.x - x) else spd = maxSpd
 spd = round(spd)

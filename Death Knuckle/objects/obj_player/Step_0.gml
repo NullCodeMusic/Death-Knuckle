@@ -5,7 +5,9 @@ if spd != 9 then spd = 9
 if staggerTime>0 {
 staggerTime --
 attacking = -1
-} else if attacking = -1 {attacking = 0}
+atkTimeHeld=0
+} else if attacking = -1 {attacking = 0
+	atkTimeHeld=0}
 if invulTime>0 {invulTime--}
 
 #region attacks
@@ -13,7 +15,7 @@ if invulTime>0 {invulTime--}
 if staggerTime=0{
 if attacking = 1 and !instance_exists(obj_fist){
 	atkTimeHeld = atkTimeHeld + 1
-	show_debug_message("FIST");
+	
 }
 if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the treshold needed
 	if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
@@ -113,7 +115,7 @@ else {hspeed = round(xInput*timeHeld)}
 if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
 	yy= vspeed
 	for (i=0;i<17;i=i+1){
-		show_debug_message("meme"+ string(i))
+		
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
 }
@@ -154,12 +156,12 @@ ymom=0
 
 #region getting hit
 if invulTime = 0{
-if place_meeting(x+hspeed,y+vspeed,parent_enemy){
-	if place_meeting(x+hspeed,y+vspeed,obj_enemy_warg) {
+if place_meeting(x,y,prnt_enemy){
+	if place_meeting(x,y,obj_enemy_warg) {
 		invulTime=40
 		staggerTime=10
 		setHitAnim = 1
-		enemyid = instance_place(x+hspeed,y+vspeed,obj_enemy_warg)
+		var enemyid = instance_place(x,y,obj_enemy_warg)
 		hitDirection = (enemyid.x-x)/abs(enemyid.x - x)
 		hp=hp-10
 		ymom=-10
