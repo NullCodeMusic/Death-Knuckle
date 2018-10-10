@@ -875,25 +875,6 @@
             }
         },
         {
-            "Key": "96e05815-1de7-4588-a0e9-b46e032d62a4",
-            "Value": {
-                "id": "7b967bd9-cd8a-4e8c-aa33-061dd0bcadf8",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "objects\/obj_playerHurt\/obj_playerHurt.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "a6d1ca0f-04f7-4af7-9f65-ec4b79338cbd",
             "Value": {
                 "id": "97e74dc4-3391-4df2-b482-8effe4fd2198",
