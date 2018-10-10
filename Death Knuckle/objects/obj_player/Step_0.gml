@@ -157,12 +157,15 @@ ymom=0
 #region getting hit
 if invulTime = 0{
 if place_meeting(x,y,prnt_enemy){
+	show_debug_message(string(x)+","+string(y))
+		show_debug_message(string(obj_enemy_warg.x)+","+string(obj_enemy_warg.y))
 	if place_meeting(x,y,obj_enemy_warg) {
 		invulTime=40
 		staggerTime=10
 		setHitAnim = 1
 		var enemyid = instance_place(x,y,obj_enemy_warg)
-		hitDirection = (enemyid.x-x)/abs(enemyid.x - x)
+		if (enemyid.x-x)!=0{
+		hitDirection = (enemyid.x-x)/abs(enemyid.x - x)} else hitDirection=0
 		hp=hp-10
 		ymom=-10
 	}

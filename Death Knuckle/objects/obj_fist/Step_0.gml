@@ -48,7 +48,7 @@ if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){
 if place_meeting(x,y,obj_enemy_warg){
-	var enemyID= instance_place(x,y,obj_enemy_warg)
+	 enemyID= instance_place(x,y,obj_enemy_warg)
 	object_get_name(enemyID)
 	if enemyID.invulTime<=0{
 		enemyID.staggerTime =10
@@ -65,7 +65,7 @@ if place_meeting(x,y,obj_enemy_warg){
 	speed = speed -1
 	if speed <0 || speed = 0{
 	speed = 0; }
-	if lifetime < 3 {tooEarly = 1}
+	//if lifetime < 3 {tooEarly = 1}
 
 }
 #endregion 
@@ -101,7 +101,7 @@ tick =  - distance *0.2
 //if tick <= -distance {
 if place_meeting(x+hspeed,y+vspeed,obj_player) && tick< 0{
 obj_player.attacking = 0
-if tooEarly = 1 {obj_player.staggerTime = obj_player.startingStaggerTime}
+//if tooEarly = 1 {obj_player.staggerTime = obj_player.startingStaggerTime}
 instance_destroy()
 }
 
