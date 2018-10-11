@@ -50,7 +50,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	mouseAngle = point_direction(x,y,mousex,mousey);
 	fistID = instance_create_depth(x,y,-1,obj_fist);
 	fistID.dir = mouseAngle
-	fistID.spd = 30
+	fistID.spd = 15
 	fistID.direction = mouseAngle;
 	fistID.image_angle = mouseAngle;
 	fistID.time = fistTime

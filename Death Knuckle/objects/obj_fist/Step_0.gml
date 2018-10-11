@@ -30,12 +30,12 @@ y = y+vspeed
 
 
 #region punchables
-if place_meeting(x,y,prnt_punchable){
+if place_meeting(x,y,prnt_punchable)&&tick>0{
 	
 #region hitting button
 
 if place_meeting(x,y,obj_interactableButton){
-	var buttonID = instance_place(x+hspeed,y+vspeed,obj_interactableButton) 
+	var buttonID = instance_place(x,y,obj_interactableButton) 
 for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
 show_debug_message(string(buttonID)+"button")
@@ -49,7 +49,7 @@ if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}
 if place_meeting(x,y,prnt_enemy){
 if place_meeting(x,y,obj_enemy_warg){
 	 enemyID= instance_place(x,y,obj_enemy_warg)
-	object_get_name(enemyID)
+	//object_get_name(enemyID)
 	if enemyID.invulTime<=0{
 		enemyID.staggerTime =10
 		enemyID.invulTime=5
@@ -61,6 +61,11 @@ if place_meeting(x,y,obj_enemy_warg){
 }
 }
 #endregion
+
+
+
+
+
 	tick = -1
 	speed = speed -1
 	if speed <0 || speed = 0{
@@ -71,6 +76,25 @@ if place_meeting(x,y,obj_enemy_warg){
 #endregion 
 
 
+
+#region breakables
+if place_meeting(x,y,prnt_breakable)&&tick>0{
+	if place_meeting(x,y,obj_breakableWall){
+	var doorID= instance_place(x,y,obj_breakableWall)
+	doorID.hits++
+	if doorID.hits >=3 {	
+	part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,10)		
+		instance_destroy(doorID)
+	} else{
+	//part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-2,doorID.x+2,doorID.y-2,doorID.y+2,ps_shape_ellipse,ps_distr_gaussian)
+	part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+	
+	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,3)	
+	}
+	}
+}
+#endregion
 
 
 
