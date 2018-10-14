@@ -34,3 +34,5 @@ while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&!place_meeting(x
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 }
+
+if hp <=0 KillMe()

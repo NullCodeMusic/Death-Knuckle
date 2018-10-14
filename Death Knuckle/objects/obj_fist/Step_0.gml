@@ -55,7 +55,8 @@ if place_meeting(x,y,obj_enemy_warg){
 		enemyID.invulTime=5
 		enemyID.ymom=-10
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
-		enemyID.hp -= obj_player.attackDamage
+		enemyID.hp -= floor(obj_player.attackDamage*(distance/obj_player.maxDist))
+		//enemyID.hp -= //obj_player.attackDamage
 		
 	}
 }

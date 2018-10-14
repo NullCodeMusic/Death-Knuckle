@@ -30,7 +30,7 @@ extraFrames=0
 setHitAnim=0
 
 
-attackDamage=10
+attackDamage=20 // full damage of a charged fist
 
 boolcheck1=0
 depth = 0
