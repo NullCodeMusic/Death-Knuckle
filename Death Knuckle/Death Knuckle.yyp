@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "64c12deb-9707-4706-8876-c9eea24ff086",
+            "Value": {
+                "id": "50f32f79-4763-4c47-9dd2-b1235df09943",
+                "resourcePath": "sprites\\spr_particle_sparks\\spr_particle_sparks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "65c45ef5-3fd9-4bbc-98ad-e60d03ceaf0b",
             "Value": {
                 "id": "b97b4966-3ff9-4ded-89f0-28ed962fd7c7",
@@ -443,6 +451,14 @@
             "Value": {
                 "id": "97e74dc4-3391-4df2-b482-8effe4fd2198",
                 "resourcePath": "sprites\/sprite13\/sprite13.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a7e914d6-c733-48d1-ba8b-bc5693679529",
+            "Value": {
+                "id": "e66c548a-8ac5-41ff-aaa4-2f371f684bb9",
+                "resourcePath": "sprites\\sp_conershrooms_huge\\sp_conershrooms_huge.yy",
                 "resourceType": "GMSprite"
             }
         },
