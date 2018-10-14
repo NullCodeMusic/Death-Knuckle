@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "9b1efb6f-6575-4fed-b6bc-0f1f02e97337",
+            "Value": {
+                "id": "f31496d4-fd92-470d-b805-52a8db20042a",
+                "resourcePath": "sprites\\spr_particle_sparks\\spr_particle_sparks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9b8f35ac-f294-41b5-931e-8acd8442a24a",
             "Value": {
                 "id": "33ff446e-ad1c-476f-a410-696f74759301",

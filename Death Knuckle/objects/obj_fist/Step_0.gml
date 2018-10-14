@@ -48,7 +48,7 @@ if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){
 if place_meeting(x,y,obj_enemy_warg){
-	 enemyID= instance_place(x,y,obj_enemy_warg)
+	 var enemyID= instance_place(x,y,obj_enemy_warg)
 	//object_get_name(enemyID)
 	if enemyID.invulTime<=0{
 		enemyID.staggerTime =10
@@ -57,6 +57,8 @@ if place_meeting(x,y,obj_enemy_warg){
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
 		enemyID.hp -= floor(obj_player.attackDamage*(distance/obj_player.maxDist))
 		//enemyID.hp -= //obj_player.attackDamage
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,enemyID.x-enemyID.sprite_width/2,enemyID.x+enemyID.sprite_width/2,enemyID.y-enemyID.sprite_height/2,enemyID.y+enemyID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypSparks,2)	
 		
 	}
 }
