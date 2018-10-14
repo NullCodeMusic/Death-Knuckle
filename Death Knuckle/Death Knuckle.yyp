@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "6ab5fc14-dbed-4978-812a-98225b32640d",
+            "Value": {
+                "id": "85e96b52-db9c-4bbe-95e8-07029a143102",
+                "resourcePath": "sprites\\sp_bottomsrooms\\sp_bottomsrooms.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7a0d91e1-ad09-4827-b8f9-50adb29b972f",
             "Value": {
                 "id": "82e08908-46a7-4a65-8c0a-ac10cf3ecd5f",
@@ -483,6 +491,14 @@
             "Value": {
                 "id": "7f922799-07d9-49bd-bae2-eb8dda5aa945",
                 "resourcePath": "sprites\/spr_darkRoom\/spr_darkRoom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b96d511d-0ba5-4aaa-9dd5-b2a94a05f0b4",
+            "Value": {
+                "id": "b6313aa8-572c-4999-8dfe-b42db42d516c",
+                "resourcePath": "sprites\\sp_sideshrooms\\sp_sideshrooms.yy",
                 "resourceType": "GMSprite"
             }
         },
