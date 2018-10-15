@@ -10,9 +10,7 @@ part_type_life(global.partTypRubble,15,25)
 
 global.partTypSparks = part_type_create()
 part_type_sprite(global.partTypSparks,spr_particle_sparks,true,true,false)
-part_type_gravity(global.partTypSparks,0.25,270)
 part_type_direction(global.partTypSparks,0,180, 0,0);
 part_type_orientation(global.partTypSparks,0,0,0,0,true)
 
-part_type_speed(global.partTypSparks,10,13,0,0);
 part_type_life(global.partTypSparks,13,20)
