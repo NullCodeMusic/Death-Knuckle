@@ -169,9 +169,7 @@ if place_meeting(x,y,prnt_enemy){
 		hp=hp-10
 		ymom=-10
 	}
-}
-
-//else flash = 0
+}//else flash = 0
 //if flash =0 then image_alpha=1
 //} //else {
 	//invulTime --

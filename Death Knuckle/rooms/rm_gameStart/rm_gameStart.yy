@@ -7,8 +7,7 @@
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "901c4ee1-b98a-48ed-9bac-8cc55f3ae09b",
-        "34dae788-e2ce-44af-a035-d33790b7b9d7"
+        "901c4ee1-b98a-48ed-9bac-8cc55f3ae09b"
     ],
     "IsDnD": false,
     "layers": [
@@ -26,8 +25,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_586DEFD2","id": "901c4ee1-b98a-48ed-9bac-8cc55f3ae09b","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_586DEFD2","objId": "23d8308e-f938-468b-a933-a4f22045881f","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 288,"y": 288},
-{"name": "inst_69F79494","id": "34dae788-e2ce-44af-a035-d33790b7b9d7","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_69F79494","objId": "012b5c7f-46b4-4c32-9dc9-1168d12e8c61","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 544,"y": 288}
+{"name": "inst_586DEFD2","id": "901c4ee1-b98a-48ed-9bac-8cc55f3ae09b","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_586DEFD2","objId": "23d8308e-f938-468b-a933-a4f22045881f","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 288,"y": 288}
             ],
             "layers": [
 

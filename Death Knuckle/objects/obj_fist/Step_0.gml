@@ -30,12 +30,12 @@ y = y+vspeed
 
 
 #region punchables
-if place_meeting(x,y,prnt_punchable)&&tick>0{
+if place_meeting(x,y,prnt_punchable){
 	
 #region hitting button
 
 if place_meeting(x,y,obj_interactableButton){
-	var buttonID = instance_place(x,y,obj_interactableButton) 
+	var buttonID = instance_place(x+hspeed,y+vspeed,obj_interactableButton) 
 for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
 show_debug_message(string(buttonID)+"button")
@@ -45,23 +45,6 @@ if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}
 	}
 	}
 #endregion
-
-
-if place_meeting(x,y,obj_breakableDoor){
-var doorID = instance_place(x,y,obj_breakableDoor)	
-//doorID.hits=50-1
-
-
-rubblePartSys = part_system_create()
-
-rubbleEmitter = part_emitter_create(rubblePartSys);
-part_emitter_region(rubbleEmitter, global.rubblePartType, doorID.x-1, doorID.x+1, doorID.y+1, doorID.y-1, ps_shape_ellipse, ps_distr_gaussian)
-part_emitter_burst(rubblePartSys,rubbleEmitter,global.rubblePartType,1)
-part_emitter_destroy( rubblePartSys, rubbleEmitter )
-part_emitter_destroy_all(rubblePartSys)
-}
-
-
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){
 if place_meeting(x,y,obj_enemy_warg){
