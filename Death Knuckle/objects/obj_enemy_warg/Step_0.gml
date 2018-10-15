@@ -90,4 +90,7 @@ vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
 
+if hp <=0 KillMe()
+
+
 //show_debug_message(string(x)+" , "+string(y))

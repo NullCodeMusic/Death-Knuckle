@@ -15,7 +15,7 @@ if(instance_exists(argument[3])){
 targ = argument[3]
 
 if(argument[0]){
-    direction = direction-180
+    direction = direction+180 
     tick = 0
 }
 
