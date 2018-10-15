@@ -84,18 +84,26 @@ part_emitter_region(global.partSys,global.partEmtSmallBurst,enemyID.x-enemyID.sp
 #region breakables
 if place_meeting(x,y,prnt_breakable)&&tick>0{
 	if place_meeting(x,y,obj_breakableWall){
-	var doorID= instance_place(x,y,obj_breakableWall)
-	doorID.hits++
-	if doorID.hits >=3 {	
-	part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
-	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,10)		
-		instance_destroy(doorID)
-	} else{
-	//part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-2,doorID.x+2,doorID.y-2,doorID.y+2,ps_shape_ellipse,ps_distr_gaussian)
-	part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+		var doorID= instance_place(x,y,obj_breakableWall)
+		doorID.hits++
+		if doorID.hits >=3 {	
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,100)		
+			instance_destroy(doorID)
+		} else{
+		//part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-2,doorID.x+2,doorID.y-2,doorID.y+2,ps_shape_ellipse,ps_distr_gaussian)
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
 	
-	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,3)	
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,4)	
+		}
 	}
+}
+if place_meeting(x,y,prnt_scruff){
+	if place_meeting(x,y,obj_breakablePlantFloor){
+		var plantID = instance_place(x,y,obj_breakablePlantFloor)
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,plantID.x-plantID.sprite_width/2,plantID.x+plantID.sprite_width/2,plantID.y-plantID.sprite_height/2,plantID.y+plantID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,5)		
+			instance_destroy(plantID)
 	}
 }
 #endregion

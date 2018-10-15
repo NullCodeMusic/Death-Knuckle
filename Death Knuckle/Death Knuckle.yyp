@@ -438,6 +438,25 @@
             }
         },
         {
+            "Key": "387ca025-84af-42b3-b904-bf3080e8dc6a",
+            "Value": {
+                "id": "299cddad-5d38-4f0c-9ee7-13303ceeeb62",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/prnt_scruff\/prnt_scruff.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3de54f86-0b82-4b50-bd2f-1997647da709",
             "Value": {
                 "id": "eb695959-8b43-47ed-ba71-e68bef7caaee",
@@ -666,6 +685,25 @@
             }
         },
         {
+            "Key": "68ae2859-caf5-4e5e-96e0-dcc9b0a0cfdd",
+            "Value": {
+                "id": "41ac5a44-61c6-44bd-ba5b-3dfc71a57002",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_breakablePlantFloor\/obj_breakablePlantFloor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6a3982b3-7a33-4ad9-8814-7e231664ce5f",
             "Value": {
                 "id": "abe65ab8-c2e3-4f36-9992-08362338b5d9",
@@ -738,6 +776,25 @@
                     "default"
                 ],
                 "resourcePath": "objects\/obj_trigger_horizPlayerFollow\/obj_trigger_horizPlayerFollow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7e42f0f5-7704-46f4-a76c-029c5fc40383",
+            "Value": {
+                "id": "5046f6fc-1011-4be2-8d0f-581ae57c9bd6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_breakablePlantWall\/obj_breakablePlantWall.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1651,6 +1708,25 @@
                 ],
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f66ecb68-7818-4bc4-9fee-2223eb8c6762",
+            "Value": {
+                "id": "4bf5d08a-9ec6-47ed-9d62-00b40d7a6e36",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_particle_plantRubble\/spr_particle_plantRubble.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

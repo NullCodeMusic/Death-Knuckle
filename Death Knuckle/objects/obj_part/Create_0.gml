@@ -14,3 +14,10 @@ part_type_direction(global.partTypSparks,0,180, 0,0);
 //part_type_orientation(global.partTypSparks,0,0,0,0,true)
 
 part_type_life(global.partTypSparks,13,20)
+
+global.partTypPlantRubble = part_type_create()
+part_type_sprite(global.partTypPlantRubble,spr_particle_plantRubble,false,false,true)
+part_type_direction(global.partTypPlantRubble,0,180, 0,0);
+part_type_gravity(global.partTypPlantRubble,0.30,270)
+part_type_speed(global.partTypPlantRubble,4,6,0,0);
+part_type_life(global.partTypPlantRubble,15,40)
