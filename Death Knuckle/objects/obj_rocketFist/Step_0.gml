@@ -18,12 +18,32 @@ if tick <= 0 {
 }
 else if tick > 0 {
 	
-	speed = spd + 0.1 * point_distance(x,y,mouse_x,mouse_y)
+	if(instance_exists(obj_player)){
 	
-	image_angle=direction
-	curve_point(mouse_x,mouse_y,5)
-	if point_distance(x,y,mouse_x,mouse_y) < spd {
-		speed = 0
+xInput = (mouse_x - x)/(abs(mouse_x - x))*accl
+yInput = (mouse_y - y)/(abs(mouse_y - y))*accl
+
+}
+
+hspeed+=xInput
+vspeed+=yInput
+
+if(hspeed>0){hspeed = min(15,hspeed)}else{hspeed = max(-15,hspeed)}
+if(vspeed>0){vspeed = min(15,vspeed)}else{vspeed = max(-15,vspeed)}
+
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&& !place_meeting(x,y,obj_transObstacle)){
+hspeed-= hspeed/abs(hspeed)
+}
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+vspeed-= vspeed/abs(vspeed)
+}
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+hspeed-= hspeed/abs(hspeed)
+vspeed-= vspeed/abs(vspeed)
+}
+	if point_distance(x,y,mouse_x,mouse_y) <= 15 {
+		hspeed = 0
+		vspeed = 0
 	
 	}
 		//if place_meeting(x,y,obj_cursor) {
@@ -32,7 +52,7 @@ else if tick > 0 {
 		//}
 	}
 	
-	
+image_angle = direction
 //hspeed = round(hspeed)
 //vspeed = round(vspeed)
 //x=x+xx
