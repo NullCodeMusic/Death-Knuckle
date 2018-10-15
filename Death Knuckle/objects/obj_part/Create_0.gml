@@ -21,3 +21,4 @@ part_type_direction(global.partTypPlantRubble,0,180, 0,0);
 part_type_gravity(global.partTypPlantRubble,0.30,270)
 part_type_speed(global.partTypPlantRubble,4,6,0,0);
 part_type_life(global.partTypPlantRubble,15,40)
+part_type_size(global.partTypPlantRubble,1,1.5,-0.03,0)
