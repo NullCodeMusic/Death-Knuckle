@@ -53,6 +53,14 @@ vspeed-= vspeed/abs(vspeed)
 	}
 	
 image_angle = direction
+
+if(abs(mouse_x - x)<=threshwobble){ hspeed = hspeed/dewobble
+	round(hspeed)
+	}
+if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
+	round(vspeed)
+	}
+
 //hspeed = round(hspeed)
 //vspeed = round(vspeed)
 //x=x+xx
