@@ -13,5 +13,5 @@ boolcheck1=0
 staggerTime=0
 invulTime=0
 
-hp=40
+hp=20
 DrawIfOnScreen()
