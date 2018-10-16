@@ -193,6 +193,13 @@ part_emitter_region(global.partSys,global.partEmtStream,x-sprite_width/2,x+sprit
 	part_emitter_burst(global.partSys,global.partEmtStream,global.partTypMenacing,1)
 }
 }
+
+#region easter eggs
+if keyboard_check_pressed(ord("J")) { jojosmode = !jojosmode
+if jojosmode=0 then part_type_sprite(global.partTypFistTrail,spr_particle_fistTrail,1,1,0)
+}
+#endregion
+
 //global speed cap 
 
 //}
