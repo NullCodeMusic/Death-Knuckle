@@ -267,6 +267,25 @@
             }
         },
         {
+            "Key": "1c2663b5-e897-48a1-a130-b141d35a969d",
+            "Value": {
+                "id": "3b394229-8ef2-4b01-9d03-88f208512bfe",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_continuegame\/sp_continuegame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1d3be7f6-f804-4150-a368-65f90faace75",
             "Value": {
                 "id": "a0592a91-4872-4545-9c0f-4543c33cf0d0",
@@ -415,6 +434,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_squarePercise\/spr_squarePercise.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "29252f31-2edb-4a57-b999-78e37a380444",
+            "Value": {
+                "id": "d2678ebc-ff7b-4837-8e90-6ed08e8bf0a0",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_newgame\/sp_newgame.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -685,6 +723,25 @@
             }
         },
         {
+            "Key": "59e87d4d-b7ab-4629-8cd0-f65fdda94ff5",
+            "Value": {
+                "id": "5ee8c308-0dae-4f5d-8cb7-81a48663c846",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_title\/sp_title.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5d18b786-d7f7-4f96-96dd-853af0ee983d",
             "Value": {
                 "id": "22c32d72-482c-452d-9274-1577a80fb6d2",
@@ -701,6 +758,25 @@
                 ],
                 "resourcePath": "rooms\/rm_gameStart\/rm_gameStart.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "61cba476-db25-4172-9686-7f5086f8a69e",
+            "Value": {
+                "id": "85f18529-2590-44ed-9d74-c94358a42917",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_options\/sp_options.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1784,6 +1860,25 @@
                 ],
                 "resourcePath": "views\/dc867d93-8997-4a06-baef-78a1f40b98d8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dcee564c-210c-463f-a711-1f0944e93b20",
+            "Value": {
+                "id": "f81ee209-7549-4d21-94aa-85b8d5cfe294",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_fullscreen\/sp_fullscreen.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
