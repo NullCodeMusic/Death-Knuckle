@@ -29,6 +29,16 @@ part_type_size(global.partTypFistTrail,1,1,-0.03,0)
 part_type_life(global.partTypFistTrail,15,20)
 part_type_speed(global.partTypFistTrail,1,2,0,0)
 
+global.partTypEnemyRubble = part_type_create()
+part_type_sprite(global.partTypEnemyRubble,spr_square,1,1,0)
+part_type_life(global.partTypEnemyRubble,15,20)
+part_type_gravity(global.partTypEnemyRubble,0.25,270)
+part_type_direction(global.partTypEnemyRubble,0,180, 0,0);
+part_type_speed(global.partTypEnemyRubble,6,7,0,0);
+
+
+
+
 global.partEmtStream = part_emitter_create(global.partSys)
 
 global.partTypMenacing = part_type_create()

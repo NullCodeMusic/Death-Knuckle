@@ -90,7 +90,7 @@ vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
 
-if hp <=0 KillMe()
+if hp <=0 KillMe(spr_part_wargRubble)
 
 
 //show_debug_message(string(x)+" , "+string(y))

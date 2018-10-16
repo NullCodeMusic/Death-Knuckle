@@ -704,6 +704,25 @@
             }
         },
         {
+            "Key": "522aaef5-e330-4fe8-9251-9aa4ca2b5e25",
+            "Value": {
+                "id": "2f0de010-d5c4-401a-8842-e6ef611882db",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_part_wargRubble\/spr_part_wargRubble.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "57230d6b-ef25-46e3-bcba-c55014f82087",
             "Value": {
                 "id": "63ef2888-81cf-43a2-a2a6-56fc366bddd6",
