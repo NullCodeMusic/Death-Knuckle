@@ -42,8 +42,10 @@ hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 }
 	if point_distance(x,y,mouse_x,mouse_y) <= 15 {
+		/*
 		hspeed = 0
-		vspeed = 0
+		vspeed =0
+		*/
 	
 	}
 		//if place_meeting(x,y,obj_cursor) {
