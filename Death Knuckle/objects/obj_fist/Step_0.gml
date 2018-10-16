@@ -12,10 +12,17 @@ if tick < 0 {
 	tick--
 	speed = -tick
 	image_angle = direction + 180
+	
 }
 else {
 	speed = tick
-	image_angle =direction  }
+	image_angle =direction  
+	if obj_player.jojosmode=1 then part_type_sprite(global.partTypFistTrail,sp_fist,0,0,0)
+	part_type_orientation(global.partTypFistTrail,0,0,0,0,true)
+	part_type_direction(global.partTypFistTrail,image_angle,image_angle,0,0)
+	part_emitter_region(global.partSys,global.partEmtSmallBurst,x-sprite_width/2,x+sprite_width/2,y-sprite_height/2,y+sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypFistTrail,1)
+	}
 //hspeed = round(hspeed)
 //vspeed = round(vspeed)
 //x=x+xx
@@ -114,7 +121,6 @@ if tick > 0 {
 tick= tick - 5*(40/distance)
 if frame1done=1 {
 while(place_meeting(x,y,obj_obstacle)){
-	
 
 	tick = -1
 	speed = speed -1

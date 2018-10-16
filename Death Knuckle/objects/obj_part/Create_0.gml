@@ -22,3 +22,18 @@ part_type_gravity(global.partTypPlantRubble,0.30,270)
 part_type_speed(global.partTypPlantRubble,4,6,0,0);
 part_type_life(global.partTypPlantRubble,15,40)
 part_type_size(global.partTypPlantRubble,1,1.5,-0.03,0)
+
+global.partTypFistTrail = part_type_create()
+part_type_sprite(global.partTypFistTrail,spr_particle_fistTrail,true,true,false)
+part_type_size(global.partTypFistTrail,1,1,-0.03,0)
+part_type_life(global.partTypFistTrail,15,20)
+part_type_speed(global.partTypFistTrail,1,2,0,0)
+
+global.partEmtStream = part_emitter_create(global.partSys)
+
+global.partTypMenacing = part_type_create()
+part_type_sprite(global.partTypMenacing,spr_menacing,0,0,0)
+part_type_alpha2(global.partTypMenacing,1,0)
+part_type_direction(global.partTypMenacing,70,110,0.25,-2)
+part_type_speed(global.partTypMenacing,1,2,-0.05,1)
+part_type_life(global.partTypMenacing,30,40)

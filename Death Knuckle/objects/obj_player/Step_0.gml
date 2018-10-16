@@ -185,12 +185,14 @@ if place_meeting(x,y,obj_trigger_vertPlayerFollow) then obj_cameraFollowing.vert
 
 #endregion
 
-
-
-
-
-
-
+if jojosmode =1 {
+borg++ 
+if borg = 8 then {
+borg = 0
+part_emitter_region(global.partSys,global.partEmtStream,x-sprite_width/2,x+sprite_width/2,y+sprite_height/2,y-sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+	part_emitter_burst(global.partSys,global.partEmtStream,global.partTypMenacing,1)
+}
+}
 //global speed cap 
 
 //}

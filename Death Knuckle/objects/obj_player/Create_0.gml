@@ -33,3 +33,7 @@ setHitAnim=0
 attackDamage=20 // full damage of a charged fist
 
 boolcheck1=0
+
+
+borg = 0
+jojosmode = 0
