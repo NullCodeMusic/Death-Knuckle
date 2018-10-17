@@ -96,6 +96,25 @@
             }
         },
         {
+            "Key": "08a9cbd6-cfad-4327-92d7-5370741e71b7",
+            "Value": {
+                "id": "ff0e3655-21ec-45c1-b449-77c694b0b056",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_breakableWall4Blocks\/spr_breakableWall4Blocks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "092f0468-eeb1-45b3-b800-16284ee4454b",
             "Value": {
                 "id": "9a3cffac-05f0-4dd1-8fa3-d09c40f38d1a",
@@ -1027,6 +1046,25 @@
             }
         },
         {
+            "Key": "7effd9a6-95ca-4d02-a9fc-ab5135db7505",
+            "Value": {
+                "id": "41793257-9eda-4253-afc7-78321334822f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_eat_pant\/spr_eat_pant.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "860f4c9c-1319-4904-a60a-caed9ed1c566",
             "Value": {
                 "id": "c28a8c7e-1fe1-459a-a13c-4565551c7290",
@@ -1578,6 +1616,25 @@
             }
         },
         {
+            "Key": "c6132124-c53d-4ad6-a9c7-c8b8052d140c",
+            "Value": {
+                "id": "4baaba09-dbe2-44bb-b00a-fd454d9c17fd",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_breakableWall3blocks\/spr_breakableWall3blocks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c664624e-5201-40cf-a081-ec0bde7fe2a4",
             "Value": {
                 "id": "6b16d658-dad1-4ff6-9f4f-02629cd8bd5e",
@@ -1746,6 +1803,25 @@
                 ],
                 "resourcePath": "views\/d2a6f13b-b8c6-4a29-a3c9-30c0082c4527.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d392608b-c705-43bb-acc3-5993d4e23324",
+            "Value": {
+                "id": "048f4a77-d303-44bc-ad1a-8955c2bbd0a3",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_breakableWall4Block\/obj_breakableWall4Block.yy",
+                "resourceType": "GMObject"
             }
         },
         {

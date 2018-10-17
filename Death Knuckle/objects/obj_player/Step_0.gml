@@ -93,6 +93,7 @@ if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) {
 	
 	if staggerTime = 0 {lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}}
 xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
+if hp<=0 then xInput = 0
 if staggerTime > 0 {
 	xInput = -hitDirection
 	lastxInput= -hitDirection
@@ -106,6 +107,7 @@ timeHeld+=2
 }else{
 timeHeld--
 }
+
 if(timeHeld>=spd){timeHeld=spd }
 if(timeHeld<=0){timeHeld=0 }
 if xInput = 0{hspeed = round(lastxInput*timeHeld)}
@@ -127,6 +129,7 @@ hspeed-= hspeed/abs(hspeed)
 #region vertical movement
 if place_meeting(x,y+abs(hspeed)+5,obj_obstacle) then extraFrames=50 else if extraFrames>0 then extraFrames--
 yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+abs(hspeed)+5,obj_obstacle))+keyboard_check(ord(downKey))
+if hp<=0 then yInput =0
 if(yInput!=0){ymom=yInput*jump
 	if yInput <0 then extraFrames = 0
 	}
@@ -199,6 +202,8 @@ if keyboard_check_pressed(ord("J")) { jojosmode = !jojosmode
 if jojosmode=0 then part_type_sprite(global.partTypFistTrail,spr_particle_fistTrail,1,1,0)
 }
 #endregion
+
+
 
 //global speed cap 
 
