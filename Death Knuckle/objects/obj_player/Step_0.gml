@@ -128,7 +128,7 @@ hspeed-= hspeed/abs(hspeed)
 #endregion
 #region vertical movement
 if place_meeting(x,y+abs(hspeed)+5,obj_obstacle) then extraFrames=50 else if extraFrames>0 then extraFrames--
-yInput = -(keyboard_check_pressed(ord(upKey))*place_meeting(x,y+abs(hspeed)+5,obj_obstacle))+keyboard_check(ord(downKey))
+yInput = -(keyboard_check_pressed(ord(upKey))*(place_meeting(x,y+abs(hspeed)+5,obj_obstacle))+place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))+keyboard_check(ord(downKey))
 if hp<=0 then yInput =0
 if(yInput!=0){ymom=yInput*jump
 	if yInput <0 then extraFrames = 0
@@ -140,6 +140,11 @@ if staggerTime>0 then yInput =0
 
 vspeed = ymom
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+vspeed-= vspeed/abs(vspeed)
+ymom=0
+}
+
+while(place_meeting(x,y+vspeed,obj_jumpThru)&&vspeed!=0&&!place_meeting(x,y,obj_jumpThru)&&y<obj_jumpThru.y){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }

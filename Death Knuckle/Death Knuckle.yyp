@@ -2053,25 +2053,6 @@
             }
         },
         {
-            "Key": "eb888982-da31-4569-8cc8-9cfb6879bb06",
-            "Value": {
-                "id": "02050e06-200b-4ea9-b75a-ec1b4756ae5c",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "objects\/obj_transObstacle\/obj_transObstacle.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "eceab66c-40fb-4a7e-88d0-bc23110379dd",
             "Value": {
                 "id": "90c2d32a-453f-45fd-9110-037d97b47bf2",
