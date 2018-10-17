@@ -12,9 +12,11 @@ if invulTime>0{
 //xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
 if(instance_exists(obj_player)){
 	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
+		distanceToPlayer = abs(obj_player.x-x)
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
 } else xInput = 1
-
+// add a range if distance to player is less than a threshold then move quickly and jump
+// otherwise then just inch twords the player
 if staggerTime > 0 {
 	xInput = -hitDirection
 	lastxInput= -hitDirection
