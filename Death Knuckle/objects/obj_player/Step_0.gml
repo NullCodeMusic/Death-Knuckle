@@ -114,21 +114,21 @@ if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
 #region inital horiz collision 
-if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 	yy= vspeed
 	for (i=0;i<17;i=i+1){
 		
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
 }
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&& !place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 }
 #endregion
 #endregion
 #region vertical movement
 if place_meeting(x,y+abs(hspeed)+5,obj_obstacle) then extraFrames=50 else if extraFrames>0 then extraFrames--
-yInput = -(keyboard_check_pressed(ord(upKey))*(place_meeting(x,y+abs(hspeed)+5,obj_obstacle))+place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))+keyboard_check(ord(downKey))
+yInput = -(keyboard_check_pressed(ord(upKey))*(place_meeting(x,y+abs(hspeed)+5,obj_obstacle) + place_meeting(x,y+abs(hspeed)+5,obj_jumpThru)))+keyboard_check(ord(downKey))
 if hp<=0 then yInput =0
 if(yInput!=0){ymom=yInput*jump
 	if yInput <0 then extraFrames = 0
@@ -139,7 +139,7 @@ if staggerTime>0 then yInput =0
 
 
 vspeed = ymom
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
@@ -154,7 +154,7 @@ if(ymom<=ymax){ymom++}
 
 #region vetical collsion
 
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0&&!place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 ymom=0
@@ -171,14 +171,12 @@ if place_meeting(x,y,prnt_enemy){
 	// arg 2 = stagger time
 	// arg 3 damage to hp
 	// arg 4 ymom 
-	if place_meeting(x,y,obj_enemy_warg) {
+	var hitID=instance_nearest(x,y,prnt_enemy)
+	var hitDT = hitID.damage
+	var hitKB = hitID.knockback
+	var hitST = hitID.stagger
+		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
 
-		EnemyCollision(obj_enemy_warg,40,10,10,10)
-	}
-	if place_meeting(x,y,obj_enemy_bug) {
-
-		EnemyCollision(obj_enemy_bug,40,5,8,6)
-	}
 }//else flash = 0
 //if flash =0 then image_alpha=1
 //} //else {
