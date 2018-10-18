@@ -13,5 +13,9 @@ boolcheck1=0
 staggerTime=0
 invulTime=0
 
+damage = 10
+knockback = 10
+stagger = 10
+
 hp=20
 DrawIfOnScreen()
