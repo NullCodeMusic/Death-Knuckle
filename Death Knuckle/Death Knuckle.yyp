@@ -1103,6 +1103,25 @@
             }
         },
         {
+            "Key": "87ce66b8-8e33-4d04-9a59-6e0ef296b33b",
+            "Value": {
+                "id": "27147b70-b993-41a0-a110-b55d59e84323",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_part_bugRubble\/spr_part_bugRubble.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "88491ce3-7238-476d-a375-ef8befc05b52",
             "Value": {
                 "id": "c6282d8a-75a6-4709-ad9b-0006e6b977ff",
