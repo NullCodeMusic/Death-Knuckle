@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if hp<=0 then staggerTime = 1
 if spd != 9 then spd = 9
 // {
 if staggerTime>0 {
