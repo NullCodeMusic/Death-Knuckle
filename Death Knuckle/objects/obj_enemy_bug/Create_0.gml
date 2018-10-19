@@ -5,3 +5,4 @@ tick = 0
 damage = 10
 knockback = 10
 stagger = 10
+hp = 10

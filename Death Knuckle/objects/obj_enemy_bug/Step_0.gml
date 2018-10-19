@@ -24,13 +24,13 @@ vspeed+=yInput
 if(hspeed>0){hspeed = min(15,hspeed)}else{hspeed = max(-15,hspeed)}
 if(vspeed>0){vspeed = min(15,vspeed)}else{vspeed = max(-15,vspeed)}
 
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&& !place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 }
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 }
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&!place_meeting(x,y,obj_transObstacle)){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 }
