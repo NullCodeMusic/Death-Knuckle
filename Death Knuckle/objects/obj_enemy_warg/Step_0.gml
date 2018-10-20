@@ -6,6 +6,8 @@ staggerTime --}
 if invulTime>0{
 	invulTime--}
 
+
+
 #region horizontal movement
 //if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) { 
 //	lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}
@@ -22,15 +24,17 @@ if staggerTime > 0 {
 	lastxInput= -hitDirection
 	if boolcheck1 = 0 {
 	timeHeld = 10
-	hspeed =xInput*20
+	hspeed =xInput*15
+	
 	if(hspeed>=10){hspeed -= 0.5}
 	if(hspeed<=-10){hspeed -= 0.5}
 	boolcheck1 =1 }
 } else {
 	boolcheck1=0
-hspeed +=xInput*0.5
-if(hspeed>=10){hspeed = 10}
-if(hspeed<=-10){hspeed = -10}
+	if distanceToPlayer<300 then hspeed += xInput*0.5
+	else hspeed +=xInput*1.5
+if(hspeed>=13){hspeed = 13}
+if(hspeed<=-13){hspeed = -13}
 }
 /*
 if abs(obj_player.x - x) < spd then spd = abs(obj_player.x - x) else spd = maxSpd
@@ -72,7 +76,12 @@ wall = true
 
 #endregion
 
+
+
 yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)*wall
+if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<230&&distanceToPlayer>200{
+	yInput = -1
+}
 if(yInput!=0){ymom=yInput*jump
 }
 yInput = 0
