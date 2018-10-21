@@ -128,7 +128,7 @@ hspeed-= hspeed/abs(hspeed)
 #endregion
 #endregion
 #region vertical movement
-if place_meeting(x,y+abs(hspeed),obj_obstacle) || place_meeting(x,y+abs(hspeed),obj_jumpThru) then extraFrames=5
+if(place_meeting(x,y+abs(hspeed)+5,obj_obstacle) or place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))then extraFrames=5
 else if extraFrames>0 then extraFrames--
 yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0)+keyboard_check(ord(downKey)))
 if hp<=0 then yInput =0
