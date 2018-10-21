@@ -165,7 +165,7 @@ ymom=0
 
 #region getting hit
 if invulTime = 0{
-if place_meeting(x,y,prnt_enemy){
+if place_meeting(x,y,prnt_enemy) || place_meeting(x,y,obj_killzone){
 	
 	// argument 0 = obj_enemy_yaddayadda
 	// arg 1 = invul time
