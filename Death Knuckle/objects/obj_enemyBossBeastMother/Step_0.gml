@@ -5,12 +5,7 @@
 //in a stampede, forcing the player to get to the 2nd level
 //attack 4: if player is standing on the platform the beast can't get to, it smashes through the platfrom from below, launching the player up and damaging them if they land on the beast
 DrawIfOnScreenStep()
-if staggerTime>0 {
-staggerTime --} 
-if invulTime>0{
-	invulTime--}
-if wallSlamTime>0{
-	wallSlamTime--}
+
 
 //phase 0 
 switch (phase){
@@ -21,25 +16,15 @@ case 0: //start
 	obj_player.staggerTime=1
 	break;
 case 1: //running into walls
-#region xinput
-	if(instance_exists(obj_player)){
-		if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
-			distanceToPlayer = abs(obj_player.x-x)
-	xInput = (obj_player.x - x)/(abs(obj_player.x - x))
-	if staggerTime>0&&wallSlamTime<=0 then lastxInput=xInput}
-	} else xInput = 1
-#endregion
-#region yinput
-	yInput=0
 
+if(instance_exists(obj_player)){
+	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
+		distanceToPlayer = abs(obj_player.x-x)
+xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
+} else xInput = 1
 
-if(yInput!=0){ymom=yInput*jump
+	break;
 }
-yInput = 0
-if wallSlamTime>0{
-	xInput=lastxInput
-}
-#endregion
 
 
 
@@ -47,10 +32,10 @@ if wallSlamTime>0{
 
 
 
-
-
-
-
+if staggerTime>0 {
+staggerTime --} 
+if invulTime>0{
+	invulTime--}
 
 
 
@@ -61,7 +46,6 @@ if wallSlamTime>0{
 //		distanceToPlayer = abs(obj_player.x-x)
 //xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
 //} else xInput = 1
-
 
 if staggerTime > 0 {
 	xInput = -hitDirection
@@ -81,23 +65,24 @@ if(hspeed>=13){hspeed = 13}
 if(hspeed<=-13){hspeed = -13}
 }
 
-if(place_meeting(x+hspeed,y,obj_boss1Wall)){
-	if wallSlamTime>0 {
-xInput=lastxInput
-hspeed = 0
-}
-	while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
-		hspeed-= hspeed/abs(hspeed)
-	}
-	wallSlamTime=20
-	
-}
-
+wall = false
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
+wall = true
 }
+
 #endregion
-#region vertical movement
+
+
+
+yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)*wall
+if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<230&&distanceToPlayer>200{
+	yInput = -1
+}
+if(yInput!=0){ymom=yInput*jump
+}
+yInput = 0
+
 vspeed = ymom
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
@@ -112,14 +97,8 @@ vspeed-= vspeed/abs(vspeed)
 //spd -= spd/abs(spd)
 ymom=0
 }
-#endregion
 
-
-
-if hp <=0 {
-hp = 40
-phase++
-}
+if hp <=0 KillMe(spr_part_wargRubble)
 
 
 
