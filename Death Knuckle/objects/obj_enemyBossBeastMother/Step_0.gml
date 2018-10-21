@@ -4,3 +4,15 @@
 //attack 3: Beast summons a horde of beasts to swarm the bottom floor of the arena
 //in a stampede, forcing the player to get to the 2nd level
 //attack 4: if player is standing on the platform the beast can't get to, it smashes through the platfrom from below, launching the player up and damaging them if they land on the beast
+
+//phase 0 
+switch (phase){
+case 0: //start
+	if startingFrames = 0 { phase = 1;break;}
+	startingFrames --;
+	//set the sprite to be screeching or something and do some visual effects
+	obj_player.staggerTime=1
+	break;
+case 1: //running into walls
+	break;
+}

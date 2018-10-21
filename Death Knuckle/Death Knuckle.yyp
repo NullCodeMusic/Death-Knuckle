@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "8997ada6-b335-4190-9a4c-968f50838847",
+            "Value": {
+                "id": "ec5a071a-7274-42c3-9ade-b5030fa8bd23",
+                "resourcePath": "objects\\obj_boss1Wall\\obj_boss1Wall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8acd5591-1650-4eb7-8e6c-1ce3e1caa9c8",
             "Value": {
                 "id": "dcdc7571-f693-4e3e-ac2a-d531ace98d15",
