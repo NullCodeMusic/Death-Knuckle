@@ -130,7 +130,7 @@ hspeed-= hspeed/abs(hspeed)
 #region vertical movement
 if(place_meeting(x,y+abs(hspeed)+5,obj_obstacle) or place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))then extraFrames=5
 else if extraFrames>0 then extraFrames--
-yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0)+keyboard_check(ord(downKey)))
+yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
 if hp<=0 then yInput =0
 if(yInput!=0){ymom=yInput*jump}
 	//if yInput <0 then extraFrames = 0
@@ -166,8 +166,7 @@ ymom=0
 
 #region getting hit
 if invulTime = 0{
-if place_meeting(x,y,prnt_enemy) || place_meeting(x,y,obj_killzone){
-	
+if place_meeting(x,y,prnt_enemy){
 	// argument 0 = obj_enemy_yaddayadda
 	// arg 1 = invul time
 	// arg 2 = stagger time
@@ -179,7 +178,9 @@ if place_meeting(x,y,prnt_enemy) || place_meeting(x,y,obj_killzone){
 	var hitST = hitID.stagger
 		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
 
-}//else flash = 0
+}
+if(place_meeting(x,y,obj_killzone)){hp =0}
+//else flash = 0
 //if flash =0 then image_alpha=1
 //} //else {
 	//invulTime --
