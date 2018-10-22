@@ -17,5 +17,8 @@ damage = 10
 knockback = 10
 stagger = 10
 
+atkAnim=0
+maxAtkAnim=2
+
 hp=20
 DrawIfOnScreen()

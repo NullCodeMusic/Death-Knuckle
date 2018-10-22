@@ -10,3 +10,5 @@ hp = 10
 
 staggerTime=0
 invulTime=0
+atkAnim=0
+maxAtkAnim=2

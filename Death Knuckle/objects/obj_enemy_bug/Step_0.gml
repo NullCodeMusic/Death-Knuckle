@@ -8,6 +8,12 @@ staggerTime --}
 if invulTime>0{
 	invulTime--}
 
+if atkAnim>0{
+	atkAnim--
+sprite_index=sp_bugAtk
+image_speed=1
+} else sprite_index=sp_bug
+
 /*
     argument[0] bounce condition
     argument[1] inaccuracy
