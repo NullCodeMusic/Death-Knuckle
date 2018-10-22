@@ -176,6 +176,7 @@ if place_meeting(x,y,prnt_enemy){
 	var hitDT = hitID.damage
 	var hitKB = hitID.knockback
 	var hitST = hitID.stagger
+	hitID.atkAnim=hitID.maxAtkAnim
 		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
 
 }

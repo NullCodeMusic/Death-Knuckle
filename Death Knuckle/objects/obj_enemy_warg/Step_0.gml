@@ -6,7 +6,11 @@ staggerTime --}
 if invulTime>0{
 	invulTime--}
 
-
+if atkAnim>0{
+	atkAnim--
+sprite_index=sp_wargAtk
+image_speed=1
+} else sprite_index=sp_warg
 
 #region horizontal movement
 
