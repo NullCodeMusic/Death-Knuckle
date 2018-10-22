@@ -31,11 +31,11 @@ part_type_speed(global.partTypFistTrail,1,2,0,0)
 
 global.partTypEnemyRubble = part_type_create()
 part_type_sprite(global.partTypEnemyRubble,spr_square,1,1,0)
-part_type_life(global.partTypEnemyRubble,15,20)
+part_type_life(global.partTypEnemyRubble,30,50)
 part_type_gravity(global.partTypEnemyRubble,0.25,270)
 part_type_direction(global.partTypEnemyRubble,0,180, 0,0);
 part_type_speed(global.partTypEnemyRubble,6,7,0,0);
-
+part_type_size(global.partTypEnemyRubble,0.5,1,0.01,0)
 
 
 
