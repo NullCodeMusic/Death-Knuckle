@@ -39,6 +39,7 @@ part_type_size(global.partTypEnemyRubble,0.5,1,0.01,0)
 
 
 
+
 global.partEmtStream = part_emitter_create(global.partSys)
 
 global.partTypMenacing = part_type_create()

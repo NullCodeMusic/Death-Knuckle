@@ -53,3 +53,6 @@ vspeed-= vspeed/abs(vspeed)
 }
 
 if hp <=0 KillMe(spr_part_bugRubble)
+
+hspeed = round(hspeed)
+vspeed = round(vspeed)

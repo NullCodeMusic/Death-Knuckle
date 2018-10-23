@@ -17,7 +17,7 @@ image_speed=1
 if(instance_exists(obj_player)){
 	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
 		distanceToPlayer = abs(obj_player.x-x)
-xInput = (obj_player.x - x)/(abs(obj_player.x - x))}
+xInput = (obj_player.x - x)/(abs(obj_player.x - x))*0.5}
 } else xInput = 1
 
 if staggerTime > 0 {
@@ -34,8 +34,8 @@ if staggerTime > 0 {
 	boolcheck1=0
 	if distanceToPlayer<300 then hspeed += xInput*0.5
 	else hspeed +=xInput*1.5
-if(hspeed>=13){hspeed = 13}
-if(hspeed<=-13){hspeed = -13}
+if(hspeed>=10){hspeed = 10}
+if(hspeed<=-10){hspeed = -10}
 }
 
 wall = false
