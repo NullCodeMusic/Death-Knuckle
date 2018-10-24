@@ -8,6 +8,9 @@ x=xOrigin
 hp = 20
 
 }
+if(abs(obj_cameraPlace.x-x)>=532){
+hspeed = 0
+}
 #endregion
 
 if staggerTime>0 {
