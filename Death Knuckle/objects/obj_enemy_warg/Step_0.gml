@@ -1,5 +1,17 @@
 DrawIfOnScreenStep()
 
+#region reset
+if(abs(xOrigin-obj_cameraPlace.x)>=700){
+
+
+x=xOrigin
+hp = 20
+
+}
+if(abs(obj_cameraPlace.x-x)>=532){
+hspeed = 0
+}
+#endregion
 
 if staggerTime>0 {
 staggerTime --} 
@@ -27,13 +39,12 @@ if staggerTime > 0 {
 	timeHeld = 10
 	hspeed =xInput*15
 	
-	if(hspeed>=10){hspeed -= 0.5}
-	if(hspeed<=-10){hspeed -= 0.5}
+
 	boolcheck1 =1 }
 } else {
 	boolcheck1=0
 	if distanceToPlayer<300 then hspeed += xInput*0.5
-	else hspeed +=xInput*1.5
+	else hspeed +=xInput*3/floor(distanceToPlayer/100)
 if(hspeed>=10){hspeed = 10}
 if(hspeed<=-10){hspeed = -10}
 }

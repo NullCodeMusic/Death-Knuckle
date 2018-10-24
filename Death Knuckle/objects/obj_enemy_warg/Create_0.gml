@@ -13,6 +13,8 @@ boolcheck1=0
 staggerTime=0
 invulTime=0
 
+xOrigin = x
+
 damage = 10
 knockback = 10
 stagger = 10
