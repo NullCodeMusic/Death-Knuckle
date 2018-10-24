@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+#region reset
+if(abs(xOrigin-obj_cameraPlace.x)>=700){
+
+
+x=xOrigin
+hp = 20
+
+}
+#endregion
+
 DrawIfOnScreenStep()
 
 if staggerTime>0 {

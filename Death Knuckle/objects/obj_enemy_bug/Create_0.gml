@@ -6,7 +6,9 @@ accl = 0.3
 damage = 10
 knockback = 10
 stagger = 10
-hp = 10
+hp = 5
+
+xOrigin=x
 
 staggerTime=0
 invulTime=0
