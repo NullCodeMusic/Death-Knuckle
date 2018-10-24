@@ -44,13 +44,13 @@ if place_meeting(x,y,prnt_punchable)&&tick>0{
 if place_meeting(x,y,obj_interactableButton){
 	var buttonID = instance_place(x,y,obj_interactableButton) 
 for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
-var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
-show_debug_message(string(buttonID)+"button")
-show_debug_message(string(interactID)+"interact")
+	var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
+	show_debug_message(string(buttonID)+"button")
+	show_debug_message(string(interactID)+"interact")
 
-if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}		
+	if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}		
 	}
-	}
+}
 #endregion
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){

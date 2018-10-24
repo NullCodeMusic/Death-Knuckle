@@ -1,3 +1,3 @@
-x= 1152/2
-y= 648/2
+x= camera_get_view_width(view_camera[0])/2
+y= camera_get_view_height(view_camera[0])/2
 room_speed=20

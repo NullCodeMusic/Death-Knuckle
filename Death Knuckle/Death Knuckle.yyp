@@ -1502,6 +1502,25 @@
             }
         },
         {
+            "Key": "a609259c-ac2b-4420-8b8a-cf050c2d54f2",
+            "Value": {
+                "id": "e4b332e7-d17d-4628-83a4-43fb50759860",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_checkpointList\/obj_checkpointList.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a6d1ca0f-04f7-4af7-9f65-ec4b79338cbd",
             "Value": {
                 "id": "97e74dc4-3391-4df2-b482-8effe4fd2198",
@@ -1974,6 +1993,25 @@
                 ],
                 "resourcePath": "views\/d2a6f13b-b8c6-4a29-a3c9-30c0082c4527.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d313339e-2f0c-42ca-b884-194cf370b5b0",
+            "Value": {
+                "id": "d0ecf5df-f1ec-438e-a030-bd25a9d1506e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_checkpoint\/obj_checkpoint.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-if hp<=0 then staggerTime = 1
+if hp<=0 then {staggerTime = 1
+room_goto(rm_DeathAnimation)
+}
 if spd != 9 then spd = 9
 // {
 if staggerTime>0 {
@@ -211,7 +213,13 @@ if jojosmode=0 then part_type_sprite(global.partTypFistTrail,spr_particle_fistTr
 #endregion
 
 
-
+if place_meeting(x,y,obj_checkpoint){
+show_debug_message("saved")
+ini_open("save.data")
+		ini_write_real("data","checkpoint",instance_place(x,y,obj_checkpoint).pointID)
+		ini_write_string("data","roomName",string(room))
+ini_close()
+}
 //global speed cap 
 
 //}
