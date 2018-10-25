@@ -6,9 +6,9 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 319,
+    "bbox_bottom": 137,
     "bbox_left": 24,
-    "bbox_right": 319,
+    "bbox_right": 255,
     "bbox_top": 0,
     "bboxmode": 0,
     "colkind": 1,
@@ -50,7 +50,7 @@
                     "LayerId": "c4b90b50-9bcf-4583-9968-18a12062ed08"
                 },
                 {
-                    "id": "b8ec4e59-6634-4262-aee3-bbe16c3bbff3",
+                    "id": "62d3eba6-d4b8-4bb5-8b9f-229a9deb9f2b",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
                     "FrameId": "320efbec-8f4f-42c1-879c-6b497d705bbb",

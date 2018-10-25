@@ -3,7 +3,7 @@ DrawIfOnScreenStep()
 #region reset
 if(abs(xOrigin-obj_cameraPlace.x)>=700){
 
-
+y=yOrigin
 x=xOrigin
 hp = 20
 

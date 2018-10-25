@@ -14,7 +14,7 @@ staggerTime=0
 invulTime=0
 
 xOrigin = x
-
+yOrigin = y
 damage = 10
 knockback = 10
 stagger = 10
