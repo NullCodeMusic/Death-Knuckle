@@ -628,6 +628,25 @@
             }
         },
         {
+            "Key": "3fc8f909-591e-4db6-aedf-e02d06ea835c",
+            "Value": {
+                "id": "87789fe4-1973-4de6-a2a5-d3b524773b2e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_pickup_smallHealth\/obj_pickup_smallHealth.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4114ae61-f38f-4277-84ef-d644f54261af",
             "Value": {
                 "id": "14bb59a4-416e-41ba-944a-e403c0585de9",
