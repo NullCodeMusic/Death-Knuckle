@@ -185,7 +185,7 @@ if place_meeting(x,y,prnt_enemy){
 		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
 
 }
-if(place_meeting(x,y,obj_killzone)){hp =0}
+if(place_meeting(x,y,obj_killzone)){hp -=10}
 //else flash = 0
 //if flash =0 then image_alpha=1
 //} //else {
