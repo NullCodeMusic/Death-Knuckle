@@ -1,4 +1,4 @@
-DrawIfOnScreenStep()
+
 
 #region reset
 if(abs(xOrigin-obj_cameraPlace.x)>=700){

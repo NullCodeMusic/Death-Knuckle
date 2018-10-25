@@ -215,7 +215,7 @@ if jojosmode=0 then part_type_sprite(global.partTypFistTrail,spr_particle_fistTr
 }
 #endregion
 
-
+#region checkpoints
 if place_meeting(x,y,obj_checkpoint)&&keyboard_check_pressed(ord("E")){
 show_debug_message("saved")
 ini_open("save.data")
@@ -223,6 +223,22 @@ ini_open("save.data")
 		ini_write_string("data","roomName",string(room))
 ini_close()
 }
+#endregion
+
+#region pickups
+while place_meeting(x,y,prnt_pickup){
+	if place_meeting(x,y,obj_pickup_smallHealth){
+		var pickupID = instance_place(x,y,obj_pickup_smallHealth)
+		
+		hp = hp + 10
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width/2,pickupID.x+pickupID.sprite_width/2,pickupID.y-pickupID.sprite_height/2,pickupID.y+pickupID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,5)	
+		// make sure to change this if max hp is changed or the containers are changed
+		if hp > 100 + global.extraHPContainers *10 then hp = 100 + global.extraHPContainers*10
+		instance_destroy(pickupID)
+	}
+}
+#endregion
 //global speed cap 
 
 //}

@@ -5,5 +5,5 @@ y=global.deathy
  h = camera_get_view_height(view_camera[0])
  
  
- spd = 20
+ spd = 15
 room_speed=60

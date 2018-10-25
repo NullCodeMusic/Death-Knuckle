@@ -2,7 +2,7 @@
 //speed
 //image angle
 
-DrawIfOnScreenStep()
+
 //if i = 0 {
 	//image_angle = 180+image_angle 
 //} 
@@ -115,8 +115,10 @@ if place_meeting(x,y,prnt_scruff){
 		var plantID = instance_place(x,y,obj_breakablePlantFloor)
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,plantID.x-plantID.sprite_width/2,plantID.x+plantID.sprite_width/2,plantID.y-plantID.sprite_height/2,plantID.y+plantID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
 		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,5)		
-		with (instance_create_layer(plantID.x,plantID.y,"pickups",obj_pickup_smallHealth)) {
+		if irandom(5) = 1 {//1 in 5 chance to spawn small healing pickup
+			with (instance_create_layer(plantID.x,plantID.y,"pickups",obj_pickup_smallHealth)) {
 		dir = plantID.image_xscale/abs(image_xscale)
+		}
 		}
 			instance_destroy(plantID)
 	}

@@ -2,7 +2,7 @@
 //speed
 //image angle
 
-DrawIfOnScreenStep()
+
 //if i = 0 {
 	//image_angle = 180+image_angle 
 //} 

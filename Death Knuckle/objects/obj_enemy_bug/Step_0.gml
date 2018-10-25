@@ -11,7 +11,7 @@ hp = 20
 }
 #endregion
 
-DrawIfOnScreenStep()
+
 
 if staggerTime>0 {
 staggerTime --} 
