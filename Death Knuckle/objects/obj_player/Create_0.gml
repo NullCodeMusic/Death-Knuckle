@@ -36,7 +36,7 @@ boolcheck1=0
 frame1done=0
 
 
-
+randomize()
 borg = 0
 jojosmode = 0
 

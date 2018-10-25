@@ -1,5 +1,5 @@
-x= camera_get_view_width(view_camera[0])/2
-y= camera_get_view_height(view_camera[0])/2
+x= global.deathx
+y=global.deathy
 
  w = camera_get_view_width(view_camera[0]) 
  h = camera_get_view_height(view_camera[0])

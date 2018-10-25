@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 if hp<=0 then {staggerTime = 1
+
+	global.deathx = x - (floor(x/1152)*1152)
+	global.deathy = y - (floor(y/672))
 room_goto(rm_DeathAnimation)
 }
 if spd != 9 then spd = 9
