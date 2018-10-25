@@ -213,7 +213,7 @@ if jojosmode=0 then part_type_sprite(global.partTypFistTrail,spr_particle_fistTr
 #endregion
 
 
-if place_meeting(x,y,obj_checkpoint){
+if place_meeting(x,y,obj_checkpoint)&&keyboard_check_pressed(ord("E")){
 show_debug_message("saved")
 ini_open("save.data")
 		ini_write_real("data","checkpoint",instance_place(x,y,obj_checkpoint).pointID)

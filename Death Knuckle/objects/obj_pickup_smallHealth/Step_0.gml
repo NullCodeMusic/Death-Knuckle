@@ -1,3 +1,9 @@
+
+
+hspeed = dir * spd
+spd = spd * .95
+if spd < 1 and spd > -1 then spd = 0
+
 #region inital horiz collision 
 if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 	yy= vspeed
