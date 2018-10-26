@@ -1,1 +1,1 @@
-room_goto_next()
+obj_fade.fade =1
