@@ -232,7 +232,7 @@ while place_meeting(x,y,prnt_pickup){
 		
 		hp = hp + 10
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width/2,pickupID.x+pickupID.sprite_width/2,pickupID.y-pickupID.sprite_height/2,pickupID.y+pickupID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
-		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,5)	
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,50000)	
 		// make sure to change this if max hp is changed or the containers are changed
 		if hp > 100 + global.extraHPContainers *10 then hp = 100 + global.extraHPContainers*10
 		instance_destroy(pickupID)

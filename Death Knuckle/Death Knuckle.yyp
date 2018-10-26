@@ -1440,7 +1440,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "objects\/obj_startGame\/obj_startGame.yy",
+                "resourcePath": "objects\/obj_continueStartGame1\/obj_continueStartGame1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1556,6 +1556,25 @@
                 ],
                 "resourcePath": "sprites\/sprite13\/sprite13.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a791352b-a822-4742-be77-6d41fb9bd8ae",
+            "Value": {
+                "id": "148c39e6-854a-4123-8441-56ab41634ce7",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_eraseGame1\/obj_eraseGame1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
