@@ -4,11 +4,16 @@
 #region reset
 if(abs(xOrigin-obj_cameraPlace.x)>=700){
 
-
+y=yOrigin
 x=xOrigin
 hp = 20
 
 }
+
+if(abs(obj_cameraPlace.x-x)>=532){
+hspeed = 0
+}
+
 #endregion
 
 

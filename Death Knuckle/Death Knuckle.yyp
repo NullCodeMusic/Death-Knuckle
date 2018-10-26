@@ -2167,6 +2167,25 @@
             }
         },
         {
+            "Key": "d6dcfd84-b68e-4ca2-8cb8-c52726431b5f",
+            "Value": {
+                "id": "84fc210b-133f-44be-a1a5-9351fbe32797",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_health\/sp_health.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d767c63e-3c9f-4716-be34-7a4642ed8e0c",
             "Value": {
                 "id": "dc0b20c1-4802-4451-9bb5-e9954514b5ef",

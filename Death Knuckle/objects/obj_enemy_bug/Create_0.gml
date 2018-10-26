@@ -9,6 +9,7 @@ stagger = 10
 hp = 5
 
 xOrigin=x
+yOrigin=y
 
 staggerTime=0
 invulTime=0
