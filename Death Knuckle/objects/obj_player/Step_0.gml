@@ -2,8 +2,10 @@
 // You can write your code in this editor
 if hp<=0 then {staggerTime = 1
 
-	global.deathx = x - (floor(x/1152)*1152)
-	global.deathy = y - (floor(y/672)*672)
+	global.deathx = (x - camera_get_view_x(view_camera[0]))
+	global.deathy = (y - camera_get_view_y(view_camera[0]))
+	//if place_meeting(x,y,obj_trigger_horizPlayerFollow) then global.deathx
+//if place_meeting(x,y,obj_trigger_vertPlayerFollow) then global.deathy=.5
 room_goto(rm_DeathAnimation)
 }
 if spd != 9 then spd = 9
@@ -232,7 +234,7 @@ while place_meeting(x,y,prnt_pickup){
 		
 		hp = hp + 10
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width/2,pickupID.x+pickupID.sprite_width/2,pickupID.y-pickupID.sprite_height/2,pickupID.y+pickupID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
-		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,50000)	
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,10)	
 		// make sure to change this if max hp is changed or the containers are changed
 		if hp > 100 + global.extraHPContainers *10 then hp = 100 + global.extraHPContainers*10
 		instance_destroy(pickupID)

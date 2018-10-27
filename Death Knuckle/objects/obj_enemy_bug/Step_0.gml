@@ -44,8 +44,8 @@ if(instance_exists(obj_player)){
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))
 yInput = (obj_player.y - y)/(abs(obj_player.y - y))
 if staggerTime>0 {
-xInput = -xInput *8
-yInput = -yInput *8
+xInput = -xInput 
+yInput = -yInput 
 }
 }
 

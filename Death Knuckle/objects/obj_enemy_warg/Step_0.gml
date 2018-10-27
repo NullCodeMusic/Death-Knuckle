@@ -14,7 +14,10 @@ hspeed = 0
 #endregion
 
 if staggerTime>0 {
-staggerTime --} 
+	staggerTime --
+	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
+		if abs(obj_player.x-x)>400 then jumpIn = 5} 
+	}
 if invulTime>0{
 	invulTime--}
 
@@ -24,6 +27,8 @@ sprite_index=sp_wargAtk
 image_speed=1
 } else sprite_index=sp_warg
 
+if jumpIn > -1{
+	jumpIn--}
 #region horizontal movement
 
 if(instance_exists(obj_player)){
@@ -58,11 +63,11 @@ wall = true
 #endregion
 
 
-
 yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)*wall
 if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<230&&distanceToPlayer>200{
 	yInput = -1
 }
+if place_meeting(x,y+1,obj_obstacle)&&(jumpIn=0) then yInput = -1
 if(yInput!=0){ymom=yInput*jump
 }
 yInput = 0

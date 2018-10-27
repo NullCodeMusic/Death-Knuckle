@@ -43,7 +43,7 @@ part_type_size(global.partTypEnemyRubble,0.5,1,0.01,0)
 global.partEmtStream = part_emitter_create(global.partSys)
 
 global.partTypMenacing = part_type_create()
-part_type_sprite(global.partTypMenacing,sprite51,1,1,0)
+part_type_sprite(global.partTypMenacing,spr_menacing,1,1,0)
 part_type_alpha2(global.partTypMenacing,1,0)
 part_type_direction(global.partTypMenacing,70,110,0.25,-2)
 part_type_speed(global.partTypMenacing,1,2,-0.05,1)

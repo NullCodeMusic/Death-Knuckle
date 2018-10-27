@@ -23,4 +23,5 @@ atkAnim=0
 maxAtkAnim=2
 
 hp=20
+jumpIn =-1
 DrawIfOnScreen()
