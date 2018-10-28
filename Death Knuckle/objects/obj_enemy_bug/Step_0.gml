@@ -27,6 +27,7 @@ if atkAnim>0{
 	atkAnim--
 sprite_index=sp_bugAtk
 image_speed=1
+staggerTime=15
 } else sprite_index=sp_bug
 
 /*
@@ -42,19 +43,49 @@ image_speed=1
 if(instance_exists(obj_player)){
 	
 xInput = (obj_player.x - x)/(abs(obj_player.x - x))
-yInput = (obj_player.y - y)/(abs(obj_player.y - y))
+yInput = (obj_player.y-40 - y)/(abs(obj_player.y-40 - y))
 if staggerTime>0 {
 xInput = -xInput 
-yInput = -yInput 
+//yInput = -yInput 
+
+//if (atkAnim>0) { 
+yInput = -2*abs(yInput)
+hspeed = -abs(hspeed)	
 }
+
 }
 
 hspeed+=xInput
 vspeed+=yInput
 
+hspeed = round(hspeed)
+vspeed = round(vspeed)
 
-if(hspeed>0){hspeed = min(10,hspeed)}else{hspeed = max(-10,hspeed)}
-if(vspeed>0){vspeed = min(10,vspeed)}else{vspeed = max(-10,vspeed)}
+while abs((hspeed*hspeed)+(vspeed*vspeed)) >0 && speed > sqrt(abs(hspeed*hspeed)+abs(vspeed*vspeed)){
+if hspeed != vspeed {
+	if hspeed > vspeed {
+		if speed > sqrt(abs(hspeed)^2+abs(vspeed)^2){
+			hspeed =hspeed -(hspeed/abs(hspeed))
+			}
+	}else {
+		if speed > sqrt(abs(hspeed)^2+abs(vspeed)^2){
+			vspeed =vspeed -(vspeed/abs(vspeed))
+			}
+	}
+} else {
+	if speed > sqrt(abs(hspeed)^2+abs(vspeed)^2){
+			vspeed =vspeed -(vspeed/abs(vspeed))
+			hspeed =hspeed -(hspeed/abs(hspeed))
+			}
+}
+if (abs(hspeed*hspeed)+abs(vspeed*vspeed)) <=0 then break;
+
+}
+
+
+
+if(hspeed>0){hspeed = min(maxSpd,hspeed)}else{hspeed = max(-maxSpd,hspeed)}
+if(vspeed>0){vspeed = min(maxSpd,vspeed)}else{vspeed = max(-maxSpd,vspeed)}
 
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
@@ -69,5 +100,3 @@ vspeed-= vspeed/abs(vspeed)
 
 if hp <=0 KillMe(spr_part_bugRubble)
 
-hspeed = round(hspeed)
-vspeed = round(vspeed)

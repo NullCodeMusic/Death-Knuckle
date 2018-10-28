@@ -100,6 +100,7 @@ if place_meeting(x,y,prnt_breakable)&&tick>0{
 	
 		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,4)	
 		}
+		tick = -1
 	}
 }
 if place_meeting(x,y,prnt_scruff){

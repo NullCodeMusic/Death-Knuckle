@@ -4,30 +4,34 @@
 //attack 3: Beast summons a horde of beasts to swarm the bottom floor of the arena
 //in a stampede, forcing the player to get to the 2nd level
 //attack 4: if player is standing on the platform the beast can't get to, it smashes through the platfrom from below, launching the player up and damaging them if they land on the beast
-DrawIfOnScreenStep()
+
 
 if atkAnim>0{
 		atkAnim--
-sprite_index=sp_bugAtk
+sprite_index=sp_wargAtk
 image_speed=1
-} else sprite_index=sp_bug
+} else sprite_index=sp_warg
 
 //phase 0 
 switch (phase){
+	#region start, case 0
 case 0: //start
 	if startingFrames = 0 { phase = 1;chargeWindup=40;break;}
 	startingFrames --;
 	//set the sprite to be screeching or something and do some visual effects
 	obj_player.staggerTime=1
 	break;
+	#endregion
+	
+	#region run into walls, case 1
 case 1: //running into walls
 // 40 frame windup
 //charges at player, when they hit stands in place and launches the player upwards
 xInput=0
 if chargeWindup <= 0{
 	damage = 10
-knockback = 50
-stagger = 10
+	knockback = 50
+	stagger = 10
 	if(instance_exists(obj_player)){
 		if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
 		//distanceToPlayer = abs(obj_player.x-x)
@@ -69,6 +73,8 @@ ymom=0
 }
 #endregion
 }
+#endregion
+	
 }
 
 

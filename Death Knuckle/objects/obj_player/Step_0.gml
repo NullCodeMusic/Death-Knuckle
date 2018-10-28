@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+mask_index = sp_player
+
 if hp<=0 then {staggerTime = 1
 
 	global.deathx = (x - camera_get_view_x(view_camera[0]))
@@ -185,6 +187,8 @@ if place_meeting(x,y,prnt_enemy){
 	var hitST = hitID.stagger
 	hitID.atkAnim=hitID.maxAtkAnim
 		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
+		
+			
 
 }
 if(place_meeting(x,y,obj_killzone)){hp -=10}

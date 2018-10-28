@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "b1459f80-cefe-404e-9bee-ed9476435a21",
+            "Value": {
+                "id": "5fe20fc4-7360-4896-b49e-192105f5825e",
+                "resourcePath": "scripts\\SpawnIfOnScreen\\SpawnIfOnScreen.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b1b1a6cd-ee8e-4b20-b570-692df55801d5",
             "Value": {
                 "id": "9bbb9131-587a-475c-ac98-fa697631bc0c",
@@ -924,6 +932,14 @@
                 "id": "25442aff-aba7-4808-95f3-b714c76f92c1",
                 "resourcePath": "scripts\/AplicationStarted\/AplicationStarted.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d4c67d82-2c5d-4f56-89e2-9e168536fd92",
+            "Value": {
+                "id": "9c2c234d-cfba-4b05-9cea-1e8ada1c29cb",
+                "resourcePath": "objects\\obj_trigger_summonBoss1\\obj_trigger_summonBoss1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1162,7 +1178,8 @@
         "d48e74f0-6af0-461f-ab9e-2f8c1fe3b7ef",
         "d48050bb-b618-46ff-94ca-375879591186",
         "4e64b054-977c-4c50-83db-391bb7203ab6",
-        "c2f6f75e-b05c-40b5-81d2-5b927acf4eca"
+        "c2f6f75e-b05c-40b5-81d2-5b927acf4eca",
+        "b1459f80-cefe-404e-9bee-ed9476435a21"
     ],
     "tutorial": ""
 }

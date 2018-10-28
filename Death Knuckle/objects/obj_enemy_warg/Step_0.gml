@@ -49,9 +49,12 @@ if staggerTime > 0 {
 } else {
 	boolcheck1=0
 	if distanceToPlayer<300 then hspeed += xInput*0.5
-	else hspeed +=xInput*3/floor(distanceToPlayer/100)
-if(hspeed>=10){hspeed = 10}
-if(hspeed<=-10){hspeed = -10}
+	else {
+	if abs(xInput*3/floor(distanceToPlayer/100)) < 1 then hspeed +=xInput
+	else { hspeed +=xInput*3/floor(distanceToPlayer/100)}
+	}
+if(hspeed>=14){hspeed = 14}
+if(hspeed<=-14){hspeed = -14}
 }
 
 wall = false
@@ -64,9 +67,12 @@ wall = true
 
 
 yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)*wall
-if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<230&&distanceToPlayer>200{
+//for (var n=1; n <jump;n++){
+if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<=abs(jump*(2*hspeed+jump)/2){
 	yInput = -1
+	
 }
+
 if place_meeting(x,y+1,obj_obstacle)&&(jumpIn=0) then yInput = -1
 if(yInput!=0){ymom=yInput*jump
 }
