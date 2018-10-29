@@ -1331,6 +1331,25 @@
             }
         },
         {
+            "Key": "90f49655-8e63-4846-b030-1a37686e89d4",
+            "Value": {
+                "id": "77db361f-70f0-4d13-b765-79466fed3aad",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_background1\/sp_background1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "91e6823d-8222-4058-9f79-64df94de22d6",
             "Value": {
                 "id": "206d62f8-e683-4b9a-b83a-c844f628acec",
