@@ -204,6 +204,10 @@ if(place_meeting(x,y,obj_killzone)){hp -=10}
 if place_meeting(x,y,obj_trigger_horizPlayerFollow) then obj_cameraFollowing.horizFollowPlayer=1
 if place_meeting(x,y,obj_trigger_vertPlayerFollow) then obj_cameraFollowing.vertFollowPlayer=1
 
+if place_meeting(x,y,obj_paralaxRoom) {
+	var roomID = instance_place(x,y,obj_paralaxRoom)	
+	roomID.is_colliding=1
+}
 #endregion
 
 if jojosmode =1 {

@@ -27,21 +27,26 @@ yInput = (mouse_y - y)/(abs(mouse_y - y))*accl
 
 hspeed+=xInput
 vspeed+=yInput
-hspeed = ceil(abs(hspeed)) * hspeed/abs(hspeed) 
-vspeed = ceil(abs(vspeed)) * vspeed/abs(vspeed) 
-//if(abs(mouse_x - x)<=threshwobble){ hspeed = hspeed/dewobble
-//	round(hspeed)
-//	}
-//if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
-//	round(vspeed)
-//	}
+//hspeed = ceil(abs(hspeed)) * hspeed/abs(hspeed) 
+//vspeed = ceil(abs(vspeed)) * vspeed/abs(vspeed) 
+
+//hspeed = round(hspeed)
+//vspeed = round(vspeed)
+
+if(abs(mouse_x - x)<=threshwobble){ hspeed = hspeed/dewobble
+	round(hspeed)
+	}
+if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
+	round(vspeed)
+	}
 	//					help me so mcyhsdafjsdalfkasdlkfasdjklfefafasdjkl;fsdafaksdfsadjfl;ksadfasdfsd
 if(hspeed>0){hspeed = min(15,hspeed)}else{hspeed = max(-15,hspeed)}
 if(vspeed>0){vspeed = min(15,vspeed)}else{vspeed = max(-15,vspeed)}
+
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
-vspeed-= vspeed/abs(vspeed)}
+vspeed=-vspeed}//-= vspeed/abs(vspeed)}
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)}
+hspeed=-hspeed}//-= hspeed/abs(hspeed)}
 
 
 
