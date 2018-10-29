@@ -165,7 +165,7 @@ if(ymom<=ymax){ymom++}
 
 #region vetical collsion
 
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&diagonal = 0){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 ymom=0

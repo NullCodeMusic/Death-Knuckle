@@ -27,20 +27,29 @@ yInput = (mouse_y - y)/(abs(mouse_y - y))*accl
 
 hspeed+=xInput
 vspeed+=yInput
-
+hspeed = ceil(abs(hspeed)) * hspeed/abs(hspeed) 
+vspeed = ceil(abs(vspeed)) * vspeed/abs(vspeed) 
+//if(abs(mouse_x - x)<=threshwobble){ hspeed = hspeed/dewobble
+//	round(hspeed)
+//	}
+//if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
+//	round(vspeed)
+//	}
+	//					help me so mcyhsdafjsdalfkasdlkfasdjklfefafasdjkl;fsdafaksdfsadjfl;ksadfasdfsd
 if(hspeed>0){hspeed = min(15,hspeed)}else{hspeed = max(-15,hspeed)}
 if(vspeed>0){vspeed = min(15,vspeed)}else{vspeed = max(-15,vspeed)}
-
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
-}
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
-vspeed-= vspeed/abs(vspeed)
-}
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
-vspeed-= vspeed/abs(vspeed)
-}
+vspeed-= vspeed/abs(vspeed)}
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+hspeed-= hspeed/abs(hspeed)}
+
+
+
+
+//while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
+//hspeed-= hspeed/abs(hspeed)
+//vspeed-= vspeed/abs(vspeed)
+//}
 	if point_distance(x,y,mouse_x,mouse_y) <= 15 {
 		/*
 		hspeed = 0
@@ -54,14 +63,9 @@ vspeed-= vspeed/abs(vspeed)
 		//}
 	}
 	
-image_angle = direction
 
-if(abs(mouse_x - x)<=threshwobble){ hspeed = hspeed/dewobble
-	round(hspeed)
-	}
-if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
-	round(vspeed)
-	}
+
+
 
 //hspeed = round(hspeed)
 //vspeed = round(vspeed)
@@ -207,31 +211,27 @@ if place_meeting(x,y,prnt_scruff){
 
 
 
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)||place_meeting(x+hspeed,y+vspeed,obj_interactableButton)){
-//#region hitting button
-
-//if place_meeting(x+hspeed,y+vspeed,obj_interactableButton){
-//	var buttonID = instance_place(x+hspeed,y+vspeed,obj_interactableButton) 
-//for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
-//var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
-//show_debug_message(string(buttonID)+"button")
-//show_debug_message(string(interactID)+"interact")
-
-//if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}		
-//	}
-//	}
-//#endregion
+//while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)){
+//	speed = speed -1
+//	if speed <0 {
+//	speed = 0; break;}
+//}
 
 
-	speed = speed -1
-	if speed <0 {
-	speed = 0; break;}
+//if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
+	//while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&(hspeed!=0&&vspeed!=0)){
+		//if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&(hspeed!=0&&vspeed!=0)) then hspeed-= hspeed/abs(hspeed)
+		//if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&(hspeed!=0&&vspeed!=0)) then vspeed-= vspeed/abs(vspeed)}
+	//while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+	//	hspeed-= hspeed/abs(hspeed)}
+	//while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+	//	vspeed-= vspeed/abs(vspeed)}
 	
-}
+//}
 } else {
 	//if distance = 0 then 
-	distance = point_distance(x,y,obj_player.x,obj_player.y)
-tick = - distance* 0.1	
+//	distance = point_distance(x,y,obj_player.x,obj_player.y)
+//tick = - distance* 0.1	
 }
 
 

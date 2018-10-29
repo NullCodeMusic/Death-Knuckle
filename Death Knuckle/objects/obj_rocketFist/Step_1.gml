@@ -4,3 +4,4 @@ targ = obj_player
 image_index = 1+(targ.x>mouse_x)
 depth= -5+(targ.x>mouse_x)*5
 }
+image_angle = direction
