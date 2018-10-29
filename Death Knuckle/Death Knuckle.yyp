@@ -2604,6 +2604,25 @@
             }
         },
         {
+            "Key": "f6098be3-20b3-439a-a855-12b620fbfff9",
+            "Value": {
+                "id": "52e99a53-ef56-4dfc-bbe8-0994f7a6d84c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_music\/obj_music.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f662dfb9-aae6-4c69-a3cb-481ff41216be",
             "Value": {
                 "id": "7f86e19c-2aab-4c88-89c9-2b895fea9188",
