@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_paralax1",
     "eventList": [
-        
+        {
+            "id": "7801b5a4-ff26-4999-b495-90b76576110b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "ff64dbb9-e64a-4903-8b48-fc98e947f0ba"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -24,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "1a704899-85a5-4481-888e-3e52da88975c",
     "visible": true
 }

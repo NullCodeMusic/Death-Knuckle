@@ -1027,6 +1027,25 @@
             }
         },
         {
+            "Key": "7522edcd-11d8-4009-8bcd-a9d3d7ec3a3f",
+            "Value": {
+                "id": "3916cb6e-d755-480f-9e02-a0a7e4c9d999",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_darkRoomCentered\/spr_darkRoomCentered.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7841689c-ef06-4c51-99ab-70e9bc2ce5db",
             "Value": {
                 "id": "e377627e-b36b-4cb3-a8f2-94980daee85c",
@@ -1844,6 +1863,25 @@
             }
         },
         {
+            "Key": "bd36469d-b588-4dd5-90b1-380cdd851615",
+            "Value": {
+                "id": "3bdd32a1-be4a-4ed4-ac99-e96bb5855ebd",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_paralax3\/obj_paralax3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2f46e24-0058-4ae4-933c-7e8a883175bf",
             "Value": {
                 "id": "e6d6df3b-8196-4aa9-be08-c55cf658e737",
@@ -2468,6 +2506,25 @@
                 ],
                 "resourcePath": "scripts\/curve_point\/curve_point.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e6c3f5f4-cb4a-4219-b0fb-ae9e1c3d824c",
+            "Value": {
+                "id": "338d81e2-a59e-4179-9f13-277f533ba306",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_paralax2\/obj_paralax2.yy",
+                "resourceType": "GMObject"
             }
         },
         {
