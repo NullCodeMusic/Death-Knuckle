@@ -51,10 +51,10 @@ hspeed=-hspeed}//-= hspeed/abs(hspeed)}
 
 
 
-//while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
-//hspeed-= hspeed/abs(hspeed)
-//vspeed-= vspeed/abs(vspeed)
-//}
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
+hspeed-= hspeed/abs(hspeed)
+vspeed-= vspeed/abs(vspeed)
+}
 	if point_distance(x,y,mouse_x,mouse_y) <= 15 {
 		/*
 		hspeed = 0
