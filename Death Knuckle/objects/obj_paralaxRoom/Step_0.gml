@@ -1,5 +1,5 @@
 
-if (is_colliding){
+if (is_colliding /2 = 5){
 
 var placex = (obj_player.x-x) / (sprite_width)
 var placey = (obj_player.y-y) / (sprite_height)
