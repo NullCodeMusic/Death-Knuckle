@@ -680,7 +680,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\/DrawIfOnScreenStep\/DrawIfOnScreenStep.yy",
+                "resourcePath": "scripts\/DrawIfOnScreenDraw\/DrawIfOnScreenDraw.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -1,2 +1,2 @@
-hborder = 10
-vborder = 10
+hborder = 20
+vborder = 20
