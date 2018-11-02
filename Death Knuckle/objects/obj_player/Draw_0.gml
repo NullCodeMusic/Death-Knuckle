@@ -13,5 +13,6 @@ if setHitAnim=1 && staggerTime>0{
 	
 	if(xInput!=0){sprite_index = sp_player_walk}else{sprite_index =sp_player}
 }
+
 draw_self()
 
