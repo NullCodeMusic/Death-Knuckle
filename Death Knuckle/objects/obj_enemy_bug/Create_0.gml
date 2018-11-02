@@ -17,3 +17,4 @@ atkAnim=0
 maxAtkAnim=2
 
 maxSpd=irandom_range(5,10)
+

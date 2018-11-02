@@ -7,3 +7,4 @@ ymax = 10
 hp = 100
 chargeWarmup = 40
 slowdown = 0
+

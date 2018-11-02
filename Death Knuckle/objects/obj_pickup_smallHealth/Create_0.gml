@@ -4,3 +4,5 @@ ymax = 20
 spd = irandom(10) +2
 
 DrawIfOnScreen()
+
+draw = 0

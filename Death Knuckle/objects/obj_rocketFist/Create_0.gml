@@ -3,5 +3,5 @@ time = 0
 distance = 0
 
 accl = 2
-dewobble = 1.1
+dewobble = 1.02
 threshwobble = 80

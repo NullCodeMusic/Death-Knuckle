@@ -15,6 +15,7 @@ if tick <= 0 {
 	tick--
 	speed = -tick
 	image_angle = direction +180
+	
 }
 else if tick > 0 {
 	
@@ -39,6 +40,7 @@ if(abs(mouse_x - x)<=threshwobble){ hspeed = hspeed/dewobble
 if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
 	round(vspeed)
 	}
+	if speed!=0 then lastImageAngle = direction
 	//					help me so mcyhsdafjsdalfkasdlkfasdjklfefafasdjkl;fsdafaksdfsadjfl;ksadfasdfsd
 if(hspeed>0){hspeed = min(15,hspeed)}else{hspeed = max(-15,hspeed)}
 if(vspeed>0){vspeed = min(15,vspeed)}else{vspeed = max(-15,vspeed)}
@@ -55,13 +57,18 @@ while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 }
-	if point_distance(x,y,mouse_x,mouse_y) <= 15 {
+
+
+	if point_distance(x,y,mouse_x,mouse_y) <= speed {
 		/*
 		hspeed = 0
 		vspeed =0
 		*/
-	
+	//hspeed = 0
+	//vspeed = 0
+	//image_angle = lastImageAngle
 	}
+	
 		//if place_meeting(x,y,obj_cursor) {
 		//if round(x)=round(mouse_x) &&round(y)=round(mouse_y){
 		//	speed = 0

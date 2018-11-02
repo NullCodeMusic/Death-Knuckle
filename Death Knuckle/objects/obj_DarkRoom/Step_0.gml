@@ -1,6 +1,6 @@
-if floor(x/1152) = floor(obj_player.x/1152) && floor(y/672) = floor(obj_player.y/672){
+if playerIn =1 {
 if image_alpha > 0 then image_alpha = image_alpha - 0.05 else image_alpha = 0
-
+playerIn = 0
 
 } else if image_alpha < 0.8 then image_alpha = image_alpha +0.02 else image_alpha=0.8
 
