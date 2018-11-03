@@ -100,3 +100,5 @@ vspeed-= vspeed/abs(vspeed)
 
 if hp <=0 KillMe(spr_part_bugRubble)
 
+
+if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
