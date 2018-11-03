@@ -250,10 +250,7 @@ while place_meeting(x,y,prnt_pickup){
 
 if place_meeting(x,y,obj_DarkRoom){
 var darkList = ds_list_create()
-instance_place_list(x,y,obj_DarkRoom,darkList,false)
-
-for(var i = 0;i<ds_list_size(darkList);i++)
-var darkID = ds_list_find_value(darkList,i)
+darkID = instance_place(x,y,obj_DarkRoom)
 darkID.playerIn =1	
 }
 //global speed cap 
