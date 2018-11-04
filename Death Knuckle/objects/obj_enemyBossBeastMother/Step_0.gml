@@ -33,7 +33,7 @@ if(hspeed<=-20){hspeed = -20}
 
 //hspeed collision
 while(place_meeting(x,y,obj_boss1Wall)&&hspeed!=0){
-hspeed= -hspeed
+hspeed-= hspeed/abs(hspeed)
 ymom = -10
 chargeWarmup=40
 slowdown =1
@@ -55,8 +55,10 @@ ymom=0
 }
 //momenutum
 if(ymom<=ymax){ymom++}
+
+
 //h and v speed collision
-while(place_meeting(x,y+vspeed,obj_obstacle)&&hspeed!=0){
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 //spd -= spd/abs(spd)
