@@ -117,20 +117,63 @@ vspeed=round(vspeed)
 //1.5 h -2 v 1
 //1 h 0 v 2
 //1.5 h 0 v 1
+
+
+/*
 show_debug_message("start h " + string(hspeed) +" v "+string(vspeed))
 
 
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
-vspeed-= vspeed/abs(vspeed)
+vspeed-= sign(vspeed)
 }
 show_debug_message("1 h " + string(hspeed) +" v "+string(vspeed))
 y+=vspeed
 while place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0{
 show_debug_message("2 h " + string(hspeed) +" v "+string(vspeed))
-while hspeed!=0{hspeed-= hspeed/abs(hspeed);show_debug_message("3 h " + string(hspeed) +" v "+string(vspeed));break;} 
+while hspeed!=0{hspeed-= sign(hspeed);show_debug_message("3 h " + string(hspeed) +" v "+string(vspeed));break;} 
 show_debug_message("4 h " + string(hspeed) +" v "+string(vspeed))
 }
-y-=vspeed
+y-=vspeed*/
+
+
+
+
+#region inital horiz collision 
+if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+	
+	for (i=0;i<32;i=i+1){
+		
+		if !place_meeting(x+hspeed,y+i,obj_obstacle) {y= y+i; break;} 
+	}
+}
+
+if (place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+	
+	for (i=0;i<32;i=i+1){
+		
+		if !place_meeting(x+i,y+vspeed,obj_obstacle) {x=x+i; break;} 
+	}
+}
+
+
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+hspeed-= hspeed/abs(hspeed)
+}
+#endregion
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+vspeed-= vspeed/abs(vspeed)
+}
+#region vetical collsion
+
+while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
+hspeed-= hspeed/abs(hspeed)
+vspeed-= vspeed/abs(vspeed)
+
+}
+#endregion#
+
+
+
 
 //while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 //hspeed-= hspeed/abs(hspeed)

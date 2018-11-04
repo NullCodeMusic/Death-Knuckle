@@ -124,7 +124,7 @@ if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
 #region inital horiz collision 
-if (place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
+if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 	yy= vspeed
 	for (i=0;i<17;i=i+1){
 		
