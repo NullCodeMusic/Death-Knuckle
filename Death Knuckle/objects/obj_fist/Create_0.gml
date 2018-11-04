@@ -7,4 +7,6 @@ frame1done=0
 tooEarly=0
 
 visible=0
+mask_index=sp_fist
+
 
