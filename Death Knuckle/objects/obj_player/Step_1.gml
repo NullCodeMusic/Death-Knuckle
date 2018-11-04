@@ -10,8 +10,8 @@ for (var i=0; i !=  ds_list_size(obj_checkpointList.checkpointList); i++){
 	if checkpointID.pointID = readPointID {
 		x=checkpointID.x
 		y=checkpointID.y
-		obj_cameraFollowing.x = obj_cameraPlace.x
-		obj_cameraFollowing.y = obj_cameraPlace.y
+		obj_cameraFollowing.xOrigin = checkpointID.x
+		obj_cameraFollowing.yOrigin = checkpointID.y
 	}
 }
 frame1done=1

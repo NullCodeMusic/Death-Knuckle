@@ -44,19 +44,120 @@ if(abs(mouse_y - y)<=threshwobble){ vspeed = vspeed/dewobble
 	//					help me so mcyhsdafjsdalfkasdlkfasdjklfefafasdjkl;fsdafaksdfsadjfl;ksadfasdfsd
 if(hspeed>0){hspeed = min(15,hspeed)}else{hspeed = max(-15,hspeed)}
 if(vspeed>0){vspeed = min(15,vspeed)}else{vspeed = max(-15,vspeed)}
+hspeed=round(hspeed)
+vspeed=round(vspeed)
+//while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+//vspeed-= vspeed/abs(vspeed)}
+//while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+//hspeed-= hspeed/abs(hspeed)}
+
+
+
+//while place_meeting(x+hspeed,y+vspeed,obj_obstacle){
+
+//	//y first
+//	if !place_meeting(x,y+vspeed,obj_obstacle){
+//		y+=vspeed
+//		while place_meeting(x+hspeed,y,obj_obstacle){
+//			hspeed -= hspeed/abs(hspeed)	
+//			show_debug_message("flag1")
+//		}
+//	y -= vspeed
+//	} else{
+	
+//	if place_meeting(x,y+vspeed,obj_obstacle){
+//	vspeed=-vspeed
+//	y+=vspeed
+//	while place_meeting(x+hspeed,y,obj_obstacle){
+//			hspeed -= hspeed/abs(hspeed)	
+//			show_debug_message("flag2")
+//		}
+//	y -= vspeed
+//	}
+	
+//	}
+	
+	
+//	//xfirst
+//	if !place_meeting(x+hspeed,y,obj_obstacle){
+//		x+=hspeed
+//		while place_meeting(x,y+vspeed,obj_obstacle){
+//		vspeed -=vspeed/abs(vspeed)	
+//		show_debug_message("flag3")
+//		}
+//	x-=hspeed
+//	} else {
+//	if place_meeting(x+hspeed,y,obj_obstacle){
+//	hspeed = -hspeed
+//	x+=hspeed
+//	while place_meeting(x,y+vspeed,obj_obstacle){
+//		vspeed -=vspeed/abs(vspeed)	
+//		show_debug_message("flag4")
+//		}
+//	x-=hspeed
+//	}
+//	}
+	
+//}
+
+
+
+
+
+
+	
+	//hsped
+//while place_meeting(x+hspeed,y,obj_obstacle){
+//hspeed -= hspeed/abs(hspeed)	
+//round(hspeed)
+//show_debug_message("1 h " + string(hspeed) +" v "+string(vspeed))
+//} 
+
+//1 h -2 v 2
+//1.5 h -2 v 1
+//1 h 0 v 2
+//1.5 h 0 v 1
+show_debug_message("start h " + string(hspeed) +" v "+string(vspeed))
+
 
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
-vspeed=-vspeed}//-= vspeed/abs(vspeed)}
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
-hspeed=-hspeed}//-= hspeed/abs(hspeed)}
-
-
-
-
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 }
+show_debug_message("1 h " + string(hspeed) +" v "+string(vspeed))
+y+=vspeed
+while place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0{
+show_debug_message("2 h " + string(hspeed) +" v "+string(vspeed))
+while hspeed!=0{hspeed-= hspeed/abs(hspeed);show_debug_message("3 h " + string(hspeed) +" v "+string(vspeed));break;} 
+show_debug_message("4 h " + string(hspeed) +" v "+string(vspeed))
+}
+y-=vspeed
+
+//while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+//hspeed-= hspeed/abs(hspeed)
+//}
+
+//x+=hspeed
+//while place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0{
+//show_debug_message("1 h " + string(hspeed) +" v "+string(vspeed))
+//while vspeed!=0{vspeed-= vspeed/abs(vspeed);show_debug_message("1.5 h " + string(hspeed) +" v "+string(vspeed));break;} 
+//show_debug_message("2 h " + string(hspeed) +" v "+string(vspeed))
+//}
+//x-=hspeed
+
+
+
+
+	//vsped
+	
+//while place_meeting(x,y+vspeed,obj_obstacle){
+//vspeed -= vspeed/abs(vspeed)	
+//show_debug_message("3 h " + string(hspeed) +" v "+string(vspeed))
+//}
+
+
+
+
+
 
 
 	if point_distance(x,y,mouse_x,mouse_y) <= speed {
