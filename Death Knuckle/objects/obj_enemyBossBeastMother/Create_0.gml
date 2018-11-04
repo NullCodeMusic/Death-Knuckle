@@ -8,3 +8,4 @@ hp = 100
 chargeWarmup = 40
 slowdown = 0
 
+bounce=0
