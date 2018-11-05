@@ -9,3 +9,7 @@ chargeWarmup = 40
 slowdown = 0
 
 bounce=0
+damage=10
+knockback = -10
+stagger=10
+maxAtkAnim=3

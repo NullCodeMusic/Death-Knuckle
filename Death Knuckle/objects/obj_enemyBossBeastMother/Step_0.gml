@@ -13,17 +13,22 @@
 #region move x
 if bounce =1 {
 bounce = 0
-hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*5
+hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*20
+} else {
+	hspeed -= hspeed/abs(hspeed)	
 }
 
 if chargeWarmup <=0 {
 	
 	hspeed += chargeInput*5 
+	if vspeed=0 && jump =1 { ymom = -15; jump = 0}
+	
 } else {
 chargeWarmup--	
 
 if chargeWarmup== 20{
 	chargeInput = (obj_player.x - x)/(abs(obj_player.x - x))
+	jump=1
 }
 }
 #endregion
@@ -38,8 +43,8 @@ while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
 hspeed-=hspeed/abs(hspeed)
 
 if hspeed = 0{
-ymom = -10
-chargeWarmup=50
+ymom = -15
+chargeWarmup=60
 bounce =1
 }
 }
@@ -57,16 +62,18 @@ vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
 //momenutum
-if(ymom<=ymax){ymom++}
+if ymom < -ymax then ymom ++
+//if(ymom<=ymax){ymom++}
 
 
 //h and v speed collision
 
 while(place_meeting(x,y+vspeed,obj_boss1Wall)){
 if hspeed!=0{hspeed= -hspeed/abs(hspeed)
-ymom = -10
-chargeWarmup=50
+ymom = -15
+chargeWarmup=60
 bounce=1
+ymom=0
 }
 if vspeed!=0{vspeed-= vspeed/abs(vspeed)}
 //spd -= spd/abs(spd)
