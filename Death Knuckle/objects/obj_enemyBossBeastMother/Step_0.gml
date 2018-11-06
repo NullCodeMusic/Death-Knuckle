@@ -1,13 +1,4 @@
-//jfkadjflkdfjkl;asaejklsfsdlk;jfsdjkl;
-#region determine xInput
 
-//if(instance_exists(obj_player)){
-//	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
-//		distanceToPlayer = abs(obj_player.x-x)
-//xInput = (obj_player.x - x)/(abs(obj_player.x - x))*0.5}
-//} else xInput = 1
-
-#endregion
 
 
 #region move x

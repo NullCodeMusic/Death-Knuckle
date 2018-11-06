@@ -25,3 +25,4 @@ maxAtkAnim=2
 hp=20
 jumpIn =-1
 
+mask_index=sp_warg
