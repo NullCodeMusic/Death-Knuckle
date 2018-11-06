@@ -6,7 +6,7 @@ if(abs(xOrigin-obj_cameraPlace.x)>=700){
 
 y=yOrigin
 x=xOrigin
-hp = 20
+hp = 5
 
 }
 
@@ -55,8 +55,8 @@ hspeed = -abs(hspeed)
 
 }
 
-hspeed+=xInput
-vspeed+=yInput
+hspeed+=xInput + irandom_range(-2.1,2.1)
+vspeed+=yInput + irandom_range(-2.1,2.1)
 
 hspeed = round(hspeed)
 vspeed = round(vspeed)
@@ -87,17 +87,32 @@ if (abs(hspeed*hspeed)+abs(vspeed*vspeed)) <=0 then break;
 if(hspeed>0){hspeed = min(maxSpd,hspeed)}else{hspeed = max(-maxSpd,hspeed)}
 if(vspeed>0){vspeed = min(maxSpd,vspeed)}else{vspeed = max(-maxSpd,vspeed)}
 
+var bounceh =0
+var bouncev =0
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
+bounceh=1
 }
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
+bouncev=1
 }
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
+y+=vspeed
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
-vspeed-= vspeed/abs(vspeed)
+bounceh=1
 }
+y-=vspeed
 
+x+=hspeed
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+vspeed-= vspeed/abs(vspeed)
+bouncev=1
+}
+x-=hspeed
+
+if (bounceh) then hspeed = -hspeed
+if (bouncev) then vspeed = -vspeed
 if hp <=0 KillMe(spr_part_bugRubble)
 
 

@@ -3,7 +3,7 @@ DrawIfOnScreen()
 ymom = 0
 xInput = 0
 yInput = 0
-ymax = 10
+ymax = 20
 hp = 100
 chargeWarmup = 40
 slowdown = 0
@@ -13,3 +13,9 @@ damage=10
 knockback = -10
 stagger=10
 maxAtkAnim=3
+jump=0
+
+chargemax=40
+
+staggerTime=0
+invulTime=0

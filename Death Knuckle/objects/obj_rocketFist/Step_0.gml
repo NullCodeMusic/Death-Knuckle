@@ -301,7 +301,7 @@ if place_meeting(x,y,prnt_enemy){
 		enemyID.invulTime=5
 		enemyID.ymom=-10
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
-		enemyID.hp -= floor(obj_player.attackDamage*(distance/obj_player.maxDist))
+		enemyID.hp -= floor(obj_player.attackDamage/3)
 		//enemyID.hp -= //obj_player.attackDamage
 
 }

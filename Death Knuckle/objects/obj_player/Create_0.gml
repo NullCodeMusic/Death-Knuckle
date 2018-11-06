@@ -40,5 +40,6 @@ randomize()
 borg = 0
 jojosmode = 0
 
+frame = 0
 
-
+frametimer = 5

@@ -12,6 +12,12 @@ for (var i=0; i !=  ds_list_size(obj_checkpointList.checkpointList); i++){
 		y=checkpointID.y
 		obj_cameraFollowing.xOrigin = checkpointID.x
 		obj_cameraFollowing.yOrigin = checkpointID.y
+		obj_cameraFollowing.x = checkpointID.x
+		obj_cameraFollowing.y = checkpointID.y
+		obj_cameraPlace.xOrigin = checkpointID.x
+		obj_cameraPlace.yOrigin = checkpointID.y
+		obj_cameraPlace.x = checkpointID.x
+		obj_cameraPlace.y = checkpointID.y
 	}
 }
 frame1done=1
