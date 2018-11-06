@@ -1844,6 +1844,25 @@
             }
         },
         {
+            "Key": "a92d0972-2fa7-4b18-95c7-94b46b9fcdcb",
+            "Value": {
+                "id": "a0d4a4e8-79e6-411a-a0b6-3ec8924064b5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "shaders\/BlackOutline\/BlackOutline.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "ab9cea0f-cab6-419f-b36e-b36453785623",
             "Value": {
                 "id": "a09cd58e-775f-463c-abfd-c9f51a77ebe0",

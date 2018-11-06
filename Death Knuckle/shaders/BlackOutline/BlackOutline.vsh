@@ -6,6 +6,8 @@ attribute vec3 in_Position;                  // (x,y,z)
 attribute vec4 in_Colour;                    // (r,g,b,a)
 attribute vec2 in_TextureCoord;              // (u,v)
 
+uniform float pixelH;
+uniform float pixelW;
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
@@ -16,4 +18,19 @@ void main()
     
     v_vColour = in_Colour;
     v_vTexcoord = in_TextureCoord;
+	
+	vec2 offsetx;
+	offsetx.x=pixelW;
+	vec2 offsety;
+	offsety.y = pixelH;
+	
+	float alpha = texture2d(gm_BaseTexture, v_vTexcoord).a;
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord+offsetx).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord-offsetx).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord+offsetx).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord-offsetx).a);
+	
+	gl_FragColor = v_vColour * texture2D(gm_BaseTexture,v_vTexcoord);
+	
+	gl_FragColor.a = alpha;
 }
