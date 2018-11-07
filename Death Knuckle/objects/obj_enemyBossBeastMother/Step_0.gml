@@ -4,7 +4,7 @@
 #region move x
 if bounce =1 {
 bounce = 0
-hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*20
+hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15
 } else {
 	if hspeed !=0 {hspeed -= sign(hspeed)}
 }
@@ -12,16 +12,23 @@ hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*20
 if chargeWarmup <=0 {
 	
 	hspeed += chargeInput*5 
-	if vspeed=0 && jump=1 &&place_meeting(x,y+1,obj_obstacle){ ymom = round(heightDif/13); jump = 0;}
+	if vspeed=0 && jump=1 &&place_meeting(x,y+1,obj_obstacle){ ymom = round(heightDif/12); jump = 0;}
 	
 } else {
-if place_meeting(x,y+1,obj_obstacle) then chargeWarmup--	
+if place_meeting(x,y+1,obj_obstacle)&&hspeed = 0 then chargeWarmup--	
 
 if chargeWarmup== 20{
-	chargeInput = (obj_player.x - x)/(abs(obj_player.x - x))
+	if obj_player.x = x then chargeInput = -1 else{
+	chargeInput = (obj_player.x - x)/(abs(obj_player.x - x))}
+	image_xscale = -sign(chargeInput)
 	heightDif = obj_player.y - y
 	jump=1
 	show_debug_message(heightDif)
+	
+} else if (chargeWarmup < 35 && chargeWarmup>20 && hspeed = 0){
+if obj_player.x = x then chargeInput = -1 else{
+	chargeInput = (obj_player.x - x)/(abs(obj_player.x - x))}
+	image_xscale = -sign(chargeInput)	
 }
 }
 #endregion
