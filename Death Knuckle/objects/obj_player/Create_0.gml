@@ -43,6 +43,8 @@ jojosmode = 0
 
 //shaders
 
-//upixelH = shader_get_uniform(shader_outline,"pixelH")
-//upixelW = shader_get_uniform(shader_outline,"pixelW")
 
+upixelH = shader_get_uniform(shader_Outline,"pixelH")
+upixelW = shader_get_uniform(shader_Outline,"pixelW")
+texelW = texture_get_texel_width(sprite_get_texture(sprite_index,0))
+texelH = texture_get_texel_height(sprite_get_texture(sprite_index,0))
