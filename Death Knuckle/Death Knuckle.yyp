@@ -647,6 +647,25 @@
             }
         },
         {
+            "Key": "34829921-8ad4-438f-aab3-2e4f335b26a5",
+            "Value": {
+                "id": "7740514d-51f5-42e6-b31f-baf9f40ae46d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\/34829921-8ad4-438f-aab3-2e4f335b26a5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "387ca025-84af-42b3-b904-bf3080e8dc6a",
             "Value": {
                 "id": "299cddad-5d38-4f0c-9ee7-13303ceeeb62",
@@ -1803,6 +1822,25 @@
                 ],
                 "resourcePath": "views\/a816b7f2-afb9-4ddc-a676-765ff9746a59.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a87eae45-6350-4a1a-b6d4-2bcb770103ad",
+            "Value": {
+                "id": "ac8abdc5-1a31-4dbb-8b87-b9adb0490ed1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_spikes\/sp_spikes.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

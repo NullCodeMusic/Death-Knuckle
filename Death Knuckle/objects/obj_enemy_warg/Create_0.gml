@@ -20,7 +20,7 @@ knockback = 10
 stagger = 10
 
 atkAnim=0
-maxAtkAnim=2
+maxAtkAnim=15
 
 hp=20
 jumpIn =-1
