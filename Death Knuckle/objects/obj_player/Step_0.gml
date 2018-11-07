@@ -229,6 +229,7 @@ ini_open("save.data")
 		ini_write_real("data","checkpoint",instance_place(x,y,obj_checkpoint).pointID)
 		ini_write_string("data","roomName",string(room))
 ini_close()
+hp = 100 + global.extraHPContainers * hpcontainervalue
 }
 #endregion
 

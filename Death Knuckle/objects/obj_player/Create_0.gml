@@ -21,8 +21,9 @@ global.fists = 0
 staggerTime = 0
 startingStaggerTime = 20
 //upgrades
+hpcontainervalue = 10
 rocketFist=1
-hp = 100 + global.extraHPContainers * 50
+hp = 100 + global.extraHPContainers * hpcontainervalue
 flash = 0
 invulTime = 0
 hitDirection = 0

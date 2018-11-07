@@ -26,8 +26,6 @@ hp=20
 jumpIn =-1
 
 mask_index=sp_warg
+lastYScale=1
+lastXScale=1
 
-upixelH = shader_get_uniform(BlackOutline,"pixelH")
-upixelW = shader_get_uniform(BlackOutline,"pixelW")
-texelW = texture_get_texel_width(sprite_get_texture(sprite_index,0));
-texelH = texture_get_texel_height(sprite_get_texture(sprite_index,0));
