@@ -2661,6 +2661,25 @@
             }
         },
         {
+            "Key": "e3918b99-85ae-4ace-a0fe-0c6bfa6cc566",
+            "Value": {
+                "id": "106af15c-17d4-41c3-9bba-8cafa577465f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "shaders\/shader_Outline\/shader_Outline.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "e4df73c8-ad5b-4071-ba31-238e14a7e801",
             "Value": {
                 "id": "5327ebc6-36b2-4508-82f1-aa919f1ec184",
