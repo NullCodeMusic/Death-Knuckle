@@ -1,7 +1,7 @@
 
 
 #region reset
-if(abs(xOrigin-obj_cameraPlace.x)>=700){
+if(abs(xOrigin-obj_cameraPlace.x)>=700&& !place_meeting(xOrigin,yOrigin,obj_obstacle)){
 
 y=yOrigin
 x=xOrigin
@@ -57,16 +57,14 @@ if(hspeed>=14){hspeed = 14}
 if(hspeed<=-14){hspeed = -14}
 }
 
-wall = false
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
-wall = true
+hspeed-= sign(hspeed)
 }
 
 #endregion
 
 
-yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)*wall
+yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)
 //for (var n=1; n <jump;n++){
 if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<=abs(jump*(2*hspeed+jump)/2){
 	yInput = -1
@@ -80,15 +78,15 @@ yInput = 0
 
 vspeed = ymom
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
-vspeed-= vspeed/abs(vspeed)
+vspeed-= sign(vspeed)
 ymom=0
 }
 
 if(ymom<=ymax){ymom++}
 
 while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
-vspeed-= vspeed/abs(vspeed)
+hspeed-= sign(hspeed)
+vspeed-= sign(vspeed)
 //spd -= spd/abs(spd)
 ymom=0
 }
