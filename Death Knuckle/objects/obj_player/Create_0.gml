@@ -41,4 +41,8 @@ randomize()
 borg = 0
 jojosmode = 0
 
+//shaders
+
+//upixelH = shader_get_uniform(shader_outline,"pixelH")
+//upixelW = shader_get_uniform(shader_outline,"pixelW")
 
