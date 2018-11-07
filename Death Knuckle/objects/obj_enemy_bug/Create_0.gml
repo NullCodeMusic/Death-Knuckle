@@ -14,7 +14,7 @@ yOrigin=y
 staggerTime=0
 invulTime=0
 atkAnim=0
-maxAtkAnim=2
+maxAtkAnim=15
 
 maxSpd=irandom_range(5,10)
 
