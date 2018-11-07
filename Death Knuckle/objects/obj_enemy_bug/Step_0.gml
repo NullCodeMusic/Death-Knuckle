@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 #region reset
-if(abs(xOrigin-obj_cameraPlace.x)>=700)&&!place_meeting(x,y,obj_cameraFollowing){
+if(!place_meeting(x,y,obj_cameraFollowing)){
 
 y=yOrigin
 x=xOrigin

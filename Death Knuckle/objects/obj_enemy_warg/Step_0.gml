@@ -1,7 +1,7 @@
 
 
 #region reset
-if(abs(xOrigin-obj_cameraPlace.x)>=700&& !place_meeting(xOrigin,yOrigin,obj_obstacle)){
+if(!place_meeting(x,y,obj_cameraFollowing)){
 
 y=yOrigin
 x=xOrigin
