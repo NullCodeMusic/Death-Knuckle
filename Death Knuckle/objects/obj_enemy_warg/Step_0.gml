@@ -83,14 +83,17 @@ ymom=0
 }
 
 if(ymom<=ymax){ymom++}
-
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
-hspeed-= sign(hspeed)
+x+=hspeed
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= sign(vspeed)
-//spd -= spd/abs(spd)
 ymom=0
 }
-
+x-=hspeed
+y+=vspeed
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+hspeed-= sign(hspeed)
+}
+y-=vspeed
 if hp <=0 KillMe(spr_part_wargRubble)
 
 
