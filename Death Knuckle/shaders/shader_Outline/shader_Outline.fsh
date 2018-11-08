@@ -23,11 +23,21 @@ void main()
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsety).a);
 	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety).a);
 	
+	vec2 offsetx1; 
+	vec2 offsety1;
+	// asdfjaslfaes ADD ONE TO MAKE A 2 pixel shader
+	
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsetx1).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsetx1).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord + offsety1).a);
+	alpha += ceil(texture2D(gm_BaseTexture,v_vTexcoord - offsety1).a);
+	
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 	
-	if (alpha == 0) {
-	gl_FragColor.rgb = gl_FragColor.rgb * vec3(0,0,1);	
-	}
+	//if (alpha == 0) {
+	//gl_FragColor.rgb = gl_FragColor.rgb * new vec3{2,0,1};	
+	//}
+	
 	gl_FragColor.a=alpha;
 	
 }
