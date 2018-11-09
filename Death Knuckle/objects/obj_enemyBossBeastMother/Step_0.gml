@@ -9,6 +9,8 @@ hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15
 	if hspeed !=0 {hspeed -= sign(hspeed)}
 }
 
+#region state1
+if state = 1{
 if chargeWarmup <=0 {
 	
 	hspeed += chargeInput*5 
@@ -32,7 +34,16 @@ if obj_player.x = x then chargeInput = -1 else{
 }
 }
 #endregion
+
+#endregion
+#region state 2
+} else if state = 2{
 	
+//some sort of thing that creates something on whatever layer the player's on (vertially)	
+	
+}
+#endregion
+
 	//cap speed
 if(hspeed>=20){hspeed = 20}
 if(hspeed<=-20){hspeed = -20}
