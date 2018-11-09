@@ -13,10 +13,7 @@ if setHitAnim=1 && staggerTime>0{
 	
 	if(xInput!=0){sprite_index = sp_player_walk}else{sprite_index =sp_player}
 }
-shader_set(shader_Outline)
 
-shader_set_uniform_f(upixelW,texelW)
-shader_set_uniform_f(upixelH,texelH)
 draw_self()
 
-shader_reset()
+

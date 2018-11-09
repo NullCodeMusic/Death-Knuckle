@@ -17,7 +17,7 @@ if chargeWarmup <=0 {
 } else {
 if place_meeting(x,y+1,obj_obstacle)&&hspeed = 0 then chargeWarmup--	
 
-if chargeWarmup== 20{
+if chargeWarmup== 1{
 	if obj_player.x = x then chargeInput = -1 else{
 	chargeInput = (obj_player.x - x)/(abs(obj_player.x - x))}
 	image_xscale = -sign(chargeInput)
@@ -39,11 +39,11 @@ if(hspeed<=-20){hspeed = -20}
 
 
 //hspeed collision
-while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
+while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0&&vspeed>-1){
 hspeed-=hspeed/abs(hspeed)
 
 if hspeed = 0{
-ymom = -12
+ymom = -10
 chargeWarmup=chargemax
 bounce =1
 }
@@ -67,7 +67,7 @@ if ymom < ymax then ymom ++
 
 
 //h and v speed collision
-
+x+=hspeed
 while(place_meeting(x,y+vspeed,obj_boss1Wall)){
 if hspeed!=0{hspeed= -hspeed/abs(hspeed)
 ymom = -12
@@ -79,6 +79,20 @@ if vspeed!=0{vspeed-= vspeed/abs(vspeed)}
 //spd -= spd/abs(spd)
 ymom=0
 }
+x-=hspeed
+
+y+=vspeed
+while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
+hspeed-=hspeed/abs(hspeed)
+
+if hspeed = 0{
+ymom = -12
+chargeWarmup=chargemax
+bounce =1
+}
+}
+y-=vspeed
+
 
 //death
 if hp <=0 KillMe(spr_part_wargRubble)
