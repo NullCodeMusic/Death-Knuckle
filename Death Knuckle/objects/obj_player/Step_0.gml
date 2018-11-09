@@ -257,3 +257,5 @@ darkID.playerIn =1
 //global speed cap 
 
 //}
+
+if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)
