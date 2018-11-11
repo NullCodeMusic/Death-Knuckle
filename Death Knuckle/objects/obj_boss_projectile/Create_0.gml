@@ -11,4 +11,4 @@ h=pointh*1.25
 time = 0
 dir = 1
 
-spd =	8
+spd =	30

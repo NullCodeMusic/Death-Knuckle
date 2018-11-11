@@ -2,7 +2,7 @@
     "id": "d07b3c13-d4dd-4459-a010-4c1433708fe5",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprLight",
+    "name": "spr_Light",
     "For3D": false,
     "HTile": false,
     "VTile": false,

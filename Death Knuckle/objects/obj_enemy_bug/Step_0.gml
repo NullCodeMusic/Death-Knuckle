@@ -2,12 +2,14 @@
 // You can write your code in this editor
 
 #region reset
-if(!place_meeting(x,y,obj_cameraFollowing)){
-
+if floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672){
+if place_meeting(x,y,obj_trigger_horizPlayerFollow) ||  place_meeting(x,y,obj_trigger_vertPlayerFollow) {
+	
+} else{
 y=yOrigin
 x=xOrigin
-hp = 5
-
+hp = 20
+}
 }
 
 if(abs(obj_cameraPlace.x-x)>=532){

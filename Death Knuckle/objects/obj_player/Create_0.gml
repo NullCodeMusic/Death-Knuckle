@@ -35,7 +35,7 @@ attackDamage=20 // full damage of a charged fist
 
 boolcheck1=0
 frame1done=0
-fadein = 60
+fadein = 80
 
 randomize()
 borg = 0

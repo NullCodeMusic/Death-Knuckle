@@ -229,6 +229,12 @@ ini_open("save.data")
 		ini_write_real("data","checkpoint",instance_place(x,y,obj_checkpoint).pointID)
 		ini_write_string("data","roomName",string(room))
 ini_close()
+if !instance_exists(obj_checkpointLight){
+var checkpointID = instance_place(x,y,obj_checkpoint)
+instance_create_depth(checkpointID.x,checkpointID.y,-1,obj_checkpointLight)	
+}
+
+
 hp = 100 + global.extraHPContainers * hpcontainervalue
 }
 #endregion
