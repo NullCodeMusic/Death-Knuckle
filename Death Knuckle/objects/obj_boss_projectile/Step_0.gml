@@ -1,10 +1,15 @@
-if h >0 then time ++ else time --
 
+	time = time +spd//abs(h)/(spd*sign(h))
 
+targety=  ((4*v)/(h*h))*(-time*(time-h +(pointh/2)*(v<0))) *-sign(v) 
+vspeed = round( targety+startingy -y)
 //y= startingy + ((4*v)/(h*h))*(time*(time-h))
-vspeed=  -((4*v)/(h*h))*(-2*time+h)
-hspeed = sign(time) // add a horizontal derivitive if you can
 
+ // add a horizontal derivitive if you can
 
+hspeed =round(  startingx+time -x)
 
+if abs(time) > abs(pointh) {
+instance_destroy()	
+}
 
