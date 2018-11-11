@@ -1,5 +1,5 @@
 
-	time = time +spd//abs(h)/(spd*sign(h))
+	time = time +spd*sign(h)//abs(h)/(spd*sign(h))
 
 targety=  ((4*v)/(h*h))*(-time*(time-h +(pointh/2)*(v<0))) *-sign(v) 
 vspeed = round( targety+startingy -y)
