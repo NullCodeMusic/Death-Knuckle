@@ -4,7 +4,12 @@
 #region move x
 if bounce =1 {
 bounce = 0
-hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15
+if obj_player.x != x{
+hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15} else{
+	var tempX = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])	
+hspeed = (tempX - x)/(abs(tempX - x))*15
+
+}
 } else {
 	if hspeed !=0 {hspeed -= sign(hspeed)}
 }
