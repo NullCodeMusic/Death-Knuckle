@@ -14,6 +14,7 @@ hspeed =round(  startingx+time -x)
 //image_index = ceil(abs(time)*FRAMES IN ANIMATION)/abs(pointh)
 // image_angle = direction
 if abs(time) > abs(pointh) {
+	instance_create_depth(x,y,-1,obj_boss_projectile_vert)
 instance_destroy()	
 }
 
