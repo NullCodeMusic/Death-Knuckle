@@ -1,4 +1,4 @@
-
+image_speed =0
 
 	if keyboard_check_pressed(vk_numpad1){
 	global.extraHPContainers = 0
