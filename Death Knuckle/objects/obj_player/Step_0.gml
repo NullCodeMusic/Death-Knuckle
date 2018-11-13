@@ -192,6 +192,18 @@ if place_meeting(x,y,prnt_enemy){
 
 }
 if(place_meeting(x,y,obj_killzone)){hp -=10}
+if(place_meeting(x,y,obj_boss_projectile_vert)){
+		invulTime = 60
+		staggerTime = 10
+		setHitAnim = 1
+		if place_meeting(x,y,obj_boss_projectile_vert){
+		var enemyid = instance_place(x,y,obj_boss_projectile_vert)
+		if (enemyid.x-x)!=0{
+			hitDirection = (enemyid.x-x)/abs(enemyid.x - x)} else hitDirection=0
+		hp=hp-20
+		ymom=ymom-15
+		}
+}
 //else flash = 0
 //if flash =0 then image_alpha=1
 //} //else {
