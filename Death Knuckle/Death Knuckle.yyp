@@ -1673,6 +1673,25 @@
             }
         },
         {
+            "Key": "97550447-773c-49c9-b95d-90a37e05a2e3",
+            "Value": {
+                "id": "31fe0e5f-df32-44ac-8a3b-1f1e94c619f5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_resetButton\/sp_resetButton.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "97e731cc-868b-4213-89c7-550dedee8e84",
             "Value": {
                 "id": "cca869fe-5ff3-43a2-a1e8-2068da22190c",
