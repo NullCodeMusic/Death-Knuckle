@@ -51,17 +51,27 @@ if irandom(4) =1 && chargeWarmup=chargemax-1 {
 #region state 2
 } else if state = 2{
 	
+	if obj_player.x != x{
+image_xscale =  sign((obj_player.x - x)/(abs(obj_player.x - x)))} else{
+	var tempX = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])	
+image_xscale = sign((tempX - x)/(abs(tempX - x)))
+
+}
+	
+	
 hspeed = hspeed - sign(hspeed)
- increment = (camera_get_view_width(view_camera[0])/2)/4 //8 sections on each side
+//if image_xscale > 1
+
+ var increment = (abs(x-obj_cameraFollowing.x)+camera_get_view_width(view_camera[0])/2)/8//8 sections on each side
 var dontuse = irandom_range(0,8)
- height = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])
- camX = camera_get_view_x(view_camera[0])
+ var height = camera_get_view_height(view_camera[0])/2
+ var camX = camera_get_view_x(view_camera[0])
 //set pointv and pointh
-	for ( i = 1;i<8;i++){
+	for ( var i = 1;i<8;i++){
 		if i != dontuse{
-		  tempID = instance_create_depth(x,y,-1,obj_boss_projectile)
+		  var tempID = instance_create_depth(x,y,-1,obj_boss_projectile)
 		tempID.pointv = height
-		tempID.pointh = camX+increment*i
+		tempID.pointh = increment*i * sign(image_xscale)
 		}
 	}
 }
