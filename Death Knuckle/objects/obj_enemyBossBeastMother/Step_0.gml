@@ -41,17 +41,35 @@ if obj_player.x = x then chargeInput = -1 else{
 #endregion
 
 #endregion
+
+
+if irandom(4) =1 && chargeWarmup=chargemax-1 { 
+	state = 2
+}
+
+
 #region state 2
 } else if state = 2{
 	
-//some sort of thing that creates something on whatever layer the player's on (vertially)	
-	
+hspeed = hspeed - sign(hspeed)
+ increment = (camera_get_view_width(view_camera[0])/2)/4 //8 sections on each side
+var dontuse = irandom_range(0,8)
+ height = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])
+ camX = camera_get_view_x(view_camera[0])
+//set pointv and pointh
+	for ( i = 1;i<8;i++){
+		if i != dontuse{
+		  tempID = instance_create_depth(x,y,-1,obj_boss_projectile)
+		tempID.pointv = height
+		tempID.pointh = camX+increment*i
+		}
+	}
 }
 #endregion
 
 	//cap speed
-if(hspeed>=20){hspeed = 20}
-if(hspeed<=-20){hspeed = -20}
+if(hspeed>=15){hspeed = 15}
+if(hspeed<=-15){hspeed = -15}
 
 
 //hspeed collision
