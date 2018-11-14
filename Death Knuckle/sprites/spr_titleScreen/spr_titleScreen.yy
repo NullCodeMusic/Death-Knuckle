@@ -6,9 +6,9 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 809,
+    "bbox_bottom": 0,
     "bbox_left": 0,
-    "bbox_right": 1439,
+    "bbox_right": 0,
     "bbox_top": 0,
     "bboxmode": 0,
     "colkind": 1,
@@ -48,6 +48,13 @@
                     "mvc": "1.0",
                     "FrameId": "9b7955f2-19d3-4b38-a371-13a100359b0b",
                     "LayerId": "e96da276-9578-4594-b0a5-da8701dd1824"
+                },
+                {
+                    "id": "c16c915a-272d-4a5b-aaa5-a03d739357dc",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "9b7955f2-19d3-4b38-a371-13a100359b0b",
+                    "LayerId": "8cff7637-3073-4a7e-8c4d-68dcc6827afe"
                 }
             ]
         }
@@ -57,6 +64,17 @@
     "height": 810,
     "layers": [
         {
+            "id": "8cff7637-3073-4a7e-8c4d-68dcc6827afe",
+            "modelName": "GMImageLayer",
+            "mvc": "1.0",
+            "SpriteId": "86b425df-e96f-4d14-9fc7-13ccbb86b09e",
+            "blendMode": 0,
+            "isLocked": false,
+            "name": "Layer 2",
+            "opacity": 100,
+            "visible": false
+        },
+        {
             "id": "e96da276-9578-4594-b0a5-da8701dd1824",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
@@ -65,7 +83,7 @@
             "isLocked": false,
             "name": "Layer 3",
             "opacity": 100,
-            "visible": true
+            "visible": false
         },
         {
             "id": "ef925ec5-2e01-47a7-a6e4-1bd8ded1755f",
@@ -76,7 +94,7 @@
             "isLocked": false,
             "name": "Layer 1",
             "opacity": 100,
-            "visible": true
+            "visible": false
         },
         {
             "id": "5ab5c844-1273-4c33-aea2-63c2cd7653b1",
@@ -87,7 +105,7 @@
             "isLocked": false,
             "name": "default",
             "opacity": 100,
-            "visible": true
+            "visible": false
         }
     ],
     "origin": 4,

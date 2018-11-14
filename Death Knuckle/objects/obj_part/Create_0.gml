@@ -48,3 +48,4 @@ part_type_alpha2(global.partTypMenacing,1,0)
 part_type_direction(global.partTypMenacing,70,110,0.25,-2)
 part_type_speed(global.partTypMenacing,1,2,-0.05,1)
 part_type_life(global.partTypMenacing,30,40)
+
