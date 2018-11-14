@@ -2,20 +2,20 @@
 // You can write your code in this editor
 
 #region reset
-if floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672){
-if place_meeting(x,y,obj_trigger_horizPlayerFollow) ||  place_meeting(x,y,obj_trigger_vertPlayerFollow) {
-	
-} else{
+
+if ((floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672)) && !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !place_meeting(x,y,obj_trigger_horizPlayerFollow)){
+//&& !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !if place_meeting(x,y,obj_trigger_horizPlayerFollow)){
+
 y=yOrigin
 x=xOrigin
 hp = 20
-}
-}
+
+
 
 if(abs(obj_cameraPlace.x-x)>=532){
 hspeed = 0
 }
-
+}
 #endregion
 
 

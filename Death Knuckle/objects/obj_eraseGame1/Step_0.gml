@@ -1,5 +1,13 @@
 image_speed =0
 
+if keyboard_check_pressed(ord("P")){
+presses ++	
+}
+if presses = 7 && pass = false{
+	if keyboard_check_pressed(ord("Q")) { pass = true
+	show_debug_message("Welcome back Master Wayne")}
+}
+if pass = true{
 	if keyboard_check_pressed(vk_numpad1){
 	global.extraHPContainers = 0
 ini_open("save.data")
@@ -24,7 +32,7 @@ ini_open("save.data")
 ini_close()
 show_debug_message("set to 3")
 }
-
+}
 
 
 
