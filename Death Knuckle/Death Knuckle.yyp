@@ -837,6 +837,25 @@
             }
         },
         {
+            "Key": "433cf310-bb77-485f-b1fc-721d41804bf1",
+            "Value": {
+                "id": "41499d06-3ca4-4812-8840-e4136f39c2e4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_metal\/sp_metal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "43a5ec38-0d61-4f73-bbe0-17372c558d41",
             "Value": {
                 "id": "f27896af-c8de-4ce1-b2e8-a5afd6203d90",
