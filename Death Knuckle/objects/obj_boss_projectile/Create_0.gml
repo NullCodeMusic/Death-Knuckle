@@ -3,7 +3,8 @@
 frame1 = 0
 
 
-
+time2 = 0
 time = 0
+angle = 0
 
 i=0

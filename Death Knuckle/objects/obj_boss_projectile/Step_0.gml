@@ -1,4 +1,4 @@
-i++
+i=i+.5
 image_angle+=i
 	time = time +abs(h)/(spd*sign(h))
 

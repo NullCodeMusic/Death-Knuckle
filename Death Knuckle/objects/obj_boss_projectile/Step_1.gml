@@ -10,5 +10,5 @@ h=pointh*1.25
 time = 0
 dir = 1
 
-spd =	60
+spd =	120
 frame1 = 1}
