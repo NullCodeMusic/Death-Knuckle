@@ -1,5 +1,5 @@
-
-image_angle+=15
+i++
+image_angle+=i
 	time = time +abs(h)/(spd*sign(h))
 
 targety=  ((4*v)/(h*h))*(-time*(time-h +(pointh/2)*(v<0))) *-sign(v) 
