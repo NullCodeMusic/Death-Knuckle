@@ -5,3 +5,5 @@ frame1 = 0
 
 
 time = 0
+
+i=0
