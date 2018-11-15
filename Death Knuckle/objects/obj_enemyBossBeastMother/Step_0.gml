@@ -6,7 +6,7 @@ if bounce =1 {
 bounce = 0
 if obj_player.x != x{
 hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15} else{
-	var tempX = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])	
+	var tempX = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2	
 hspeed = (tempX - x)/(abs(tempX - x))*15
 
 }
@@ -19,7 +19,7 @@ if state = 1{
 if chargeWarmup <=0 {
 	
 	hspeed += chargeInput*5 
-	if vspeed=0 && jump=1 &&place_meeting(x,y+1,obj_obstacle){ vspeed = round(heightDif/12); jump = 0;}
+	if vspeed=0 && jump=1 &&place_meeting(x,y+1,obj_obstacle){ ymom = round(heightDif/12); jump = 0;}
 	
 } else {
 if place_meeting(x,y+1,obj_obstacle)&&hspeed = 0 then chargeWarmup--	
@@ -51,8 +51,8 @@ chargeInput= sign((tempX - x)/(abs(tempX - x)))
 #endregion
 
 
-if irandom(4) =1 && chargeWarmup=chargemax-1 { 
-	state = 2
+if  chargeWarmup=chargemax-1 { 
+	if irandom(2) =2 then state = 2
 }
 
 
@@ -114,35 +114,43 @@ while(place_meeting(x,y+vspeed,obj_boss1Wall)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
+
+while(place_meeting(x,y,obj_boss1Wall)){
+x-= round(image_xscale)	
+}
 //momenutum
+if ymom < -ymax*1.25 then ymom = -ymax*1.25
 if ymom < ymax then ymom ++
 //if(ymom<=ymax){ymom++}
 
 
 //h and v speed collision
-x+=hspeed
-while(place_meeting(x,y+vspeed,obj_boss1Wall)){
-if hspeed!=0{hspeed= -hspeed/abs(hspeed)
-ymom = -12
-chargeWarmup=chargemax
-bounce=1
-ymom=0
-}
-if vspeed!=0{vspeed-= vspeed/abs(vspeed)}
-//spd -= spd/abs(spd)
-ymom=0
-}
-x-=hspeed
+//x+=hspeed
+//if (place_meeting(x,y+vspeed,obj_boss1Wall)){
+//	for (var i = 0; i <abs(vspeed)+1; i++){
+//if vspeed!=0{hspeed= -hspeed/abs(hspeed)
+//chargeWarmup=chargemax
+//bounce=1
+//ymom=0
+//break;
+//}
+//if vspeed!=0{vspeed-= vspeed/abs(vspeed)}
+////spd -= spd/abs(spd)
+//ymom=0
+//}
+//}
+//x-=hspeed
 
 y+=vspeed
 while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
-hspeed-=hspeed/abs(hspeed)
-
-if hspeed = 0{
-ymom = -12
+	//for (var i = 0; i < abs(hspeed)+1; i++){
+if hspeed != 0{hspeed-=hspeed/abs(hspeed)} else{
+//ymom = -12
 chargeWarmup=chargemax
 bounce =1
+break;
 }
+//}
 }
 y-=vspeed
 
@@ -150,4 +158,3 @@ y-=vspeed
 //death
 if hp <=0 KillMe(spr_part_wargRubble)
 
-show_debug_message(string(x) +"  "+ string(y))
