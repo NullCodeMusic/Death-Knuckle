@@ -77,6 +77,25 @@
             }
         },
         {
+            "Key": "04d32d91-4431-46f2-8d59-4b71745ac388",
+            "Value": {
+                "id": "88fd9d76-f631-428d-af6d-37a9e1017365",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_wargBoss\/sp_wargBoss.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0547f54c-51fd-433c-b9e1-d09652cc56ee",
             "Value": {
                 "id": "cfa5e102-fbd3-4b8d-86bb-d01863d11740",
