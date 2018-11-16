@@ -99,9 +99,10 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 
 
 #region horizontal movement
-if keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) { 
+if ((keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) )||(walljump=1)){ 
 	
 	if staggerTime = 0 {lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}}
+	
 xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
 if hp<=0 then xInput = 0
 if staggerTime > 0 {
@@ -123,6 +124,21 @@ if(timeHeld<=0){timeHeld=0 }
 if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
+if walljump &&walljumpframes>0 &&keyboard_check_pressed(ord(upKey)){
+
+
+lastxInput=-facingwall
+xInput=-facingwall
+jumpInput = -facingwall
+
+
+walljumptime=20
+}
+if walljumptime>0{
+walljumptime--
+
+hspeed = timeHeld*jumpInput
+}
 #region inital horiz collision 
 if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 	yy= vspeed
@@ -131,15 +147,24 @@ if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
 }
+if place_meeting(x,y+1,obj_obstacle) { walljumpframes=0;ignorewall=1}else ignorewall=0;//WHERE I LAST LEFT OFF FSDAFADJSKLFSDJFJAS;FJAS;LFJ;ADSLKFASDFSDFDSF
+if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&vspeed!=0&&ignorewall=0){
+	ymom=2
+walljump=1
+walljumpframes=5
+facingwall=sign(hspeed)
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
-}
+hspeed-= sign(hspeed)
+} 
+}else {walljump=0;if walljumpframes>0 { walljumpframes-- ymom=2;walljump=1}}
+if ignorewall=1 { walljumpframes=0}
 #endregion
 #endregion
 #region vertical movement
-if(place_meeting(x,y+abs(hspeed)+5,obj_obstacle) or place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))then extraFrames=5
-else if extraFrames>0 then extraFrames--
+if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||((walljump=1) && (walljumpframes>0))){ extraFrames=7
+	} else if extraFrames>0 { extraFrames--}
 yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
+if yInput !=0 then walljumpframes=0
 if hp<=0 then yInput =0
 if(yInput!=0){ymom=yInput*jump}
 	//if yInput <0 then extraFrames = 0
@@ -147,6 +172,7 @@ if(yInput!=0){ymom=yInput*jump}
 	
 	//if extraFrames>0 {yInput = -(keyboard_check_pressed(ord(upKey)))}
 if staggerTime>0 then yInput =0
+
 
 
 vspeed = ymom
@@ -275,5 +301,8 @@ darkID.playerIn =1
 //global speed cap 
 
 //}
+
+
+
 
 if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)

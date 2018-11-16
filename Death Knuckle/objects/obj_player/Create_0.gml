@@ -29,8 +29,13 @@ invulTime = 0
 hitDirection = 0
 extraFrames=0
 setHitAnim=0
-
-
+walljump=0 //unnesisary? remove?
+walljumptime=0
+walljumpframes=0
+ignorewall=0
+//lastxInput=0
+//xInput=0
+facingwall=0
 attackDamage=20 // full damage of a charged fist
 
 boolcheck1=0
