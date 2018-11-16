@@ -73,14 +73,18 @@ hspeed = hspeed - sign(hspeed)
  var increment = (abs(x-obj_cameraFollowing.x)+camera_get_view_width(view_camera[0])/2)/8//8 sections on each side
 var dontuse = irandom_range(0,8)
 var dontuse2 = irandom_range(0,8)
+var dontuse3 = irandom_range(0,8)
 while dontuse2 = dontuse {
 	var dontuse2 = irandom_range(0,8)
+}
+while dontuse3 = dontuse || dontuse3 = dontuse{
+var dontuse3 = irandom_range(0,8)	
 }
  var height = camera_get_view_height(view_camera[0])/2
  var camX = camera_get_view_x(view_camera[0])
 //set pointv and pointh
 	for ( var i = 1;i<8;i++){
-		if( (i != dontuse) && (i !=dontuse2)){
+		if( (i != dontuse) && (i !=dontuse2)&&(i!=dontuse3)){
 		  var tempID = instance_create_depth(x,y,-1,obj_boss_projectile)
 		tempID.pointv = height
 		tempID.pointh = increment*i * sign(image_xscale)
