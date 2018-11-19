@@ -9,7 +9,7 @@ factor= factor/1.25
 	time ++
 	if time > 60{
 	mask_index = spr_null
-	image_alpha/=1.01
+	image_alpha/=1.1
 	if image_alpha <0.1 then instance_destroy()
 	}
 }
