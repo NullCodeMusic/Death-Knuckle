@@ -133,7 +133,7 @@ xInput=-facingwall
 jumpInput = -facingwall
 
 
-walljumptime=20
+walljumptime=25
 }
 if walljumptime>0{
 walljumptime--
@@ -142,12 +142,10 @@ hspeed = timeHeld*jumpInput
 }
 
 
-if hspeed <0{ignorewall=1
-} else{
-	if place_meeting(x,y+1,obj_obstacle){ignorewall=1} else ignorewall=0
+if place_meeting(x,y+1,obj_obstacle)&&ignorewall!=0{ignorewall=1} else ignorewall=1
+if vspeed>0 then ignorewall=0
 	
 //if place_meeting(x,y+1,obj_obstacle) { walljumpframes=0;ignorewall=1}else ignorewall=0;//WHERE I LAST LEFT OFF FSDAFADJSKLFSDJFJAS;FJAS;LFJ;ADSLKFASDFSDFDSF
-}
 if ignorewall=1 { walljumpframes=0; }
 
 
@@ -165,19 +163,20 @@ if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0){
 walljump=1
 walljumpframes=5
 facingwall=sign(hspeed)
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
-hspeed-= sign(hspeed)
-} 
-}else {walljump=0;
+
+
+}/*else {walljump=0;
 	if walljumpframes>0 { walljumpframes-- ymom=2;
-		walljump=1
-		}}
+		walljump=1 fuk
+		}}*/
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+hspeed-= sign(hspeed)}
 
 #endregion
 #endregion
-show_debug_message(string(ignorewall))
+show_debug_message(string(ignorewall)) 
 #region vertical movement
-if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||((walljump=1) &&ignorewall=0&& (walljumpframes>0))){ extraFrames=7
+if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||(ignorewall=0&& (walljumpframes>0))){ extraFrames=7
 	} else if extraFrames>0 { extraFrames--}
 yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
 if yInput !=0 then walljumpframes=0
@@ -207,11 +206,7 @@ if(ymom<=ymax){ymom++}
 
 #region vetical collsion
 
-while(place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0){
-hspeed-= hspeed/abs(hspeed)
-vspeed-= vspeed/abs(vspeed)
-ymom=0
-}
+
 #endregion#
 #endregion
 
