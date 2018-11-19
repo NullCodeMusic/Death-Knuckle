@@ -5,7 +5,8 @@
 if bounce =1 {
 bounce = 0
 if obj_player.x != x{
-hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15} else{
+hspeed =  (obj_player.x - x)/(abs(obj_player.x - x))*15
+} else{
 	var tempX = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])/2	
 hspeed = (tempX - x)/(abs(tempX - x))*15
 
@@ -20,7 +21,8 @@ if chargeWarmup <=0 {
 	
 	hspeed += chargeInput*5 
 	if vspeed=0 && jump=1 &&place_meeting(x,y+1,obj_obstacle){ ymom = round(heightDif/12); jump = 0;}
-	
+	image_index = 0
+	image_speed = 1
 } else {
 if place_meeting(x,y+1,obj_obstacle)&&hspeed = 0 then chargeWarmup--	
 
