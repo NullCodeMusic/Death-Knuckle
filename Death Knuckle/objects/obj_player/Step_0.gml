@@ -99,7 +99,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 
 
 #region horizontal movement
-if ((keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) )||(walljump=1)){ 
+if ((keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) )||(walljump=1&&ignorewall=0)){ 
 	
 	if staggerTime = 0 {lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}}
 	
@@ -124,7 +124,7 @@ if(timeHeld<=0){timeHeld=0 }
 if xInput = 0{hspeed = round(lastxInput*timeHeld)}
 else {hspeed = round(xInput*timeHeld)}
 
-if walljump &&walljumpframes>0 &&keyboard_check_pressed(ord(upKey)){
+if walljump &&walljumpframes>0&&ignorewall=0 &&keyboard_check_pressed(ord(upKey)){
 
 
 lastxInput=-facingwall
@@ -147,8 +147,12 @@ if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
 }
+if hspeed <0{ignorewall=1
+} else{
 if place_meeting(x,y+1,obj_obstacle) { walljumpframes=0;ignorewall=1}else ignorewall=0;//WHERE I LAST LEFT OFF FSDAFADJSKLFSDJFJAS;FJAS;LFJ;ADSLKFASDFSDFDSF
-if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0&&vspeed!=0&&ignorewall=0){
+}
+if ignorewall=1 { walljumpframes=0}
+if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0){
 	ymom=2
 walljump=1
 walljumpframes=5
@@ -156,12 +160,16 @@ facingwall=sign(hspeed)
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= sign(hspeed)
 } 
-}else {walljump=0;if walljumpframes>0 { walljumpframes-- ymom=2;walljump=1}}
-if ignorewall=1 { walljumpframes=0}
+}else {walljump=0;
+	if walljumpframes>0 { walljumpframes-- ymom=2;
+		walljump=1
+		}}
+
 #endregion
 #endregion
+show_debug_message(string(ignorewall))
 #region vertical movement
-if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||((walljump=1) && (walljumpframes>0))){ extraFrames=7
+if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||((walljump=1) &&ignorewall=0&& (walljumpframes>0))){ extraFrames=7
 	} else if extraFrames>0 { extraFrames--}
 yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
 if yInput !=0 then walljumpframes=0
