@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+mask_index = sp_player
 if ignorewall=1 { walljumpframes=0}
 
 if hp<=0 then {staggerTime = 1
@@ -323,3 +323,4 @@ darkID.playerIn =1
 
 if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)
 
+show_debug_message(string(x)+"  "+string(y))
