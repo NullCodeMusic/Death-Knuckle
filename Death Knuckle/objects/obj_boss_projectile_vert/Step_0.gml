@@ -1,6 +1,6 @@
 
 
-if image_yscale < 3 {
+if image_yscale < 3.5 {
 	factor= factor +0.02
 	image_yscale= (image_yscale+factor)
 }else {
@@ -14,7 +14,7 @@ factor= factor/1.25
 }
 
 
-if image_xscale <2 then {
+if image_xscale <1.5 then {
 	xfactor = xfactor +0.1
 	image_xscale = image_xscale + xfactor
 }
