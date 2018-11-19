@@ -8,7 +8,8 @@ factor= factor/1.25
 	image_yscale= (image_yscale+factor)
 	time ++
 	if time > 60{
-	image_alpha=image_alpha-0.02
+	mask_index = spr_null
+	image_alpha/=1.1
 	if image_alpha <0.1 then instance_destroy()
 	}
 }
