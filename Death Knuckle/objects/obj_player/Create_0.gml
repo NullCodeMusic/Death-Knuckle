@@ -47,6 +47,6 @@ borg = 0
 jojosmode = 0
 
 
-
+mask_index = sp_player
 
 

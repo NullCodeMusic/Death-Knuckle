@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-mask_index = sp_player
+
+if ignorewall=1 { walljumpframes=0}
 
 if hp<=0 then {staggerTime = 1
 
@@ -139,6 +140,17 @@ walljumptime--
 
 hspeed = timeHeld*jumpInput
 }
+
+
+if hspeed <0{ignorewall=1
+} else{
+	if place_meeting(x,y+1,obj_obstacle){ignorewall=1} else ignorewall=0
+	
+//if place_meeting(x,y+1,obj_obstacle) { walljumpframes=0;ignorewall=1}else ignorewall=0;//WHERE I LAST LEFT OFF FSDAFADJSKLFSDJFJAS;FJAS;LFJ;ADSLKFASDFSDFDSF
+}
+if ignorewall=1 { walljumpframes=0; }
+
+
 #region inital horiz collision 
 if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 	yy= vspeed
@@ -147,11 +159,7 @@ if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
 	}
 }
-if hspeed <0{ignorewall=1
-} else{
-if place_meeting(x,y+1,obj_obstacle) { walljumpframes=0;ignorewall=1}else ignorewall=0;//WHERE I LAST LEFT OFF FSDAFADJSKLFSDJFJAS;FJAS;LFJ;ADSLKFASDFSDFDSF
-}
-if ignorewall=1 { walljumpframes=0}
+
 if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0){
 	ymom=2
 walljump=1
@@ -314,3 +322,4 @@ darkID.playerIn =1
 
 
 if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)
+
