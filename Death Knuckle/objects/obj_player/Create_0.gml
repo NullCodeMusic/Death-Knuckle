@@ -23,7 +23,7 @@ startingStaggerTime = 20
 //upgrades
 hpcontainervalue = 10
 rocketFist=1
-hp = 100 + global.extraHPContainers * hpcontainervalue
+
 flash = 0
 invulTime = 0
 hitDirection = 0
@@ -47,6 +47,11 @@ borg = 0
 jojosmode = 0
 
 
+ini_open("save.data")
+	 walljump = ini_read_real("unlocks","walljump",0)
+	 extraHPContainers = ini_write_real("unlocks","hpcontainers",0)
+ini_close()
 
 
+hp = 100 + extraHPContainers * hpcontainervalue
 

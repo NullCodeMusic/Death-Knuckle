@@ -21,7 +21,7 @@ stagger = 10
 
 atkAnim=0
 maxAtkAnim=15
-
+yInput=0
 hp=20
 jumpIn =-1
 

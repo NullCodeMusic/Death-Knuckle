@@ -130,7 +130,7 @@ if walljump &&walljumpframes>0&&ignorewall=0 &&keyboard_check_pressed(ord(upKey)
 
 lastxInput=-facingwall
 xInput=-facingwall
-jumpInput = -facingwall
+jumpInput = -facingwall*walljump
 
 
 walljumptime=25
@@ -158,7 +158,7 @@ if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 	}
 }
 
-if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0){
+if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0&&walljump=1){
 	ymom=2
 walljump=1
 walljumpframes=5
@@ -174,9 +174,9 @@ hspeed-= sign(hspeed)}
 
 #endregion
 #endregion
-show_debug_message(string(ignorewall)) 
+
 #region vertical movement
-if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||(ignorewall=0&& (walljumpframes>0))){ extraFrames=7
+if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||(ignorewall=0&&walljump=1&& (walljumpframes>0))){ extraFrames=7
 	} else if extraFrames>0 { extraFrames--}
 yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
 if yInput !=0 then walljumpframes=0
@@ -277,6 +277,8 @@ show_debug_message("saved" + string(instance_place(x,y,obj_checkpoint).pointID) 
 ini_open("save.data")
 		ini_write_real("data","checkpoint",instance_place(x,y,obj_checkpoint).pointID)
 		ini_write_string("data","roomName",string(room))
+		ini_write_string("unlocks","walljump",walljump)
+		ini_write_real("unlocks","hpcontainers",0)
 ini_close()
 if !instance_exists(obj_checkpointLight){
 var checkpointID = instance_place(x,y,obj_checkpoint)
@@ -284,7 +286,7 @@ instance_create_depth(checkpointID.x,checkpointID.y,-1,obj_checkpointLight)
 }
 
 
-hp = 100 + global.extraHPContainers * hpcontainervalue
+hp = 100 + extraHPContainers * hpcontainervalue
 }
 #endregion
 
@@ -297,7 +299,7 @@ while place_meeting(x,y,prnt_pickup){
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width/2,pickupID.x+pickupID.sprite_width/2,pickupID.y-pickupID.sprite_height/2,pickupID.y+pickupID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
 		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,10)	
 		// make sure to change this if max hp is changed or the containers are changed
-		if hp > 100 + global.extraHPContainers *10 then hp = 100 + global.extraHPContainers*10
+		if hp > 100 + extraHPContainers *10 then hp = 100 +extraHPContainers*10
 		instance_destroy(pickupID)
 	}
 }
@@ -318,4 +320,3 @@ darkID.playerIn =1
 
 if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)
 
-show_debug_message(string(x)+"  "+string(y))

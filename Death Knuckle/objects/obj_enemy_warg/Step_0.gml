@@ -1,4 +1,4 @@
-
+mask_index=sp_warg
 
 #region reset
 if floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672){
@@ -66,12 +66,22 @@ hspeed-= sign(hspeed)
 #endregion
 
 
-yInput = -((y-obj_player.y)>32)*place_meeting(x,y+1,obj_obstacle)
+
+//yInput = -place_meeting(x+hspeed,y,obj_obstacle)*place_meeting(x,y+1,obj_obstacle)
 //for (var n=1; n <jump;n++){
-if place_meeting(x,y+5,obj_obstacle)&&distanceToPlayer<=abs(jump*(2*hspeed+jump)/2){
-	yInput = -1
-	
-}
+
+//expectedDist = 0
+
+//for (var i = 1;i<19;i++){
+//expectedDist += max(abs(hspeed)+i,14)
+//}
+
+//if place_meeting(x,y+5,obj_obstacle)&&((distanceToPlayer<=expectedDist)&&(distanceToPlayer>=expectedDist)){
+//	//yInput = -1
+//	show_debug_message(string(expectedDist)+"  "+string(distanceToPlayer))
+//}
+//else 
+yInput = -(max((y-obj_player.y)>60,(place_meeting(x+hspeed,y,obj_obstacle)),(place_meeting(x+sign(hspeed),y,obj_obstacle)))*place_meeting(x,y+1,obj_obstacle))
 
 if place_meeting(x,y+1,obj_obstacle)&&(jumpIn=0) then yInput = -1
 if(yInput!=0){ymom=yInput*jump
