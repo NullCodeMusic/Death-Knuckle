@@ -315,7 +315,7 @@ darkID.playerIn =1
 
 //}
 
-
+//if place_meeting
 
 
 if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)
