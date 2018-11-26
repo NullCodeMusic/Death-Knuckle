@@ -3,4 +3,4 @@ startingx= x
 startingy=y
 xscl=0
 yscl=0
-spd=6
+spd=10

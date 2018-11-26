@@ -1193,7 +1193,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/sprite72\/sprite72.yy",
+                "resourcePath": "sprites\/spr_greenCircle\/spr_greenCircle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1936,6 +1936,25 @@
                 ],
                 "resourcePath": "sprites\/spr_squareR\/spr_squareR.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a22382ca-6368-42b6-bff4-b7ca2226e8c9",
+            "Value": {
+                "id": "bba527a9-19ca-48e5-b061-4ce23c119d60",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_usedHPContainer\/obj_usedHPContainer.yy",
+                "resourceType": "GMObject"
             }
         },
         {

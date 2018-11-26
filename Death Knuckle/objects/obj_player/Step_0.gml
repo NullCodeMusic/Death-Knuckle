@@ -206,8 +206,19 @@ if(ymom<=ymax){ymom++}
 
 #region vetical collsion
 
+// vert and horiz collision
+while place_meeting(x+hspeed,y+vspeed,obj_obstacle)&&hspeed!=0&&vspeed!=0{
+
+speed = round(speed -1)
+hspeed = floor(abs(hspeed))*sign(hspeed)
+vspeed = floor(abs(vspeed))*sign(vspeed)
+
+
+}
 
 #endregion#
+
+
 #endregion
 
 #region getting hit
@@ -300,6 +311,13 @@ while place_meeting(x,y,prnt_pickup){
 		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,10)	
 		// make sure to change this if max hp is changed or the containers are changed
 		if hp > 100 + extraHPContainers *10 then hp = 100 +extraHPContainers*10
+		instance_destroy(pickupID)
+	} else if place_meeting(x,y,obj_hpContainer){
+		var pickupID = instance_place(x,y,obj_hpContainer)
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width/2,pickupID.x+pickupID.sprite_width/2,pickupID.y-pickupID.sprite_height/2,pickupID.y+pickupID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,25)	
+		extraHPContainers++
+		instance_create_depth(pickupID.x,pickupID.y,-500,obj_usedHPContainer)
 		instance_destroy(pickupID)
 	}
 }

@@ -1,15 +1,17 @@
 mask_index=sp_warg
 
 #region reset
-if floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672){
-if place_meeting(x,y,obj_trigger_horizPlayerFollow) ||  place_meeting(x,y,obj_trigger_vertPlayerFollow) {
+
+ //|| place_meeting(x,y,obj_trigger_vertPlayerFollow) {
+	 // ||{
+		
+if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))||(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
 	
-} else{
 y=yOrigin
 x=xOrigin
 hp = 20
 }
-}
+
 if(abs(obj_cameraPlace.x-x)>=532){
 hspeed = -hspeed/2
 }
@@ -106,7 +108,11 @@ while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= sign(hspeed)
 }
 y-=vspeed
-if hp <=0 KillMe(spr_part_wargRubble)
+if hp <=0 {
+	if irandom(4)=3 then  instance_create_depth(-1,x,y,obj_pickup_smallHealth)
+	KillMe(spr_part_wargRubble)
+	
+}
 
 
 
