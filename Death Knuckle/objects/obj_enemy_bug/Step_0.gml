@@ -112,7 +112,10 @@ x-=hspeed
 
 if (bounceh) then hspeed = -hspeed
 if (bouncev) then vspeed = -vspeed
-if hp <=0 KillMe(spr_part_bugRubble)
+if hp <=0 {
+	if irandom(4)=3 then  instance_create_depth(-1,x,y,obj_pickup_smallHealth)
+	KillMe(spr_part_bugRubble)
+}
 
 
 if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
