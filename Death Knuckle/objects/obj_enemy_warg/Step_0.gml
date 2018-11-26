@@ -5,12 +5,7 @@ mask_index=sp_warg
  //|| place_meeting(x,y,obj_trigger_vertPlayerFollow) {
 	 // ||{
 		
-if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))||(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
-	
-y=yOrigin
-x=xOrigin
-hp = 20
-}
+
 
 if(abs(obj_cameraPlace.x-x)>=532){
 hspeed = -hspeed/2
@@ -114,7 +109,20 @@ if hp <=0 {
 	
 }
 
+if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))||(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
+	
+y=yOrigin
+x=xOrigin
+hp = 20
+hspeed=0
+vspeed=0
+}
 
-
+if !place_meeting(x+hspeed,y+vspeed,obj_cameraPlace){
+hspeed=0
+vspeed=0
+y=yOrigin
+x=xOrigin
+}
 if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
 //show_debug_message(string(x)+" , "+string(y))
