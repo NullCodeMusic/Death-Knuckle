@@ -7,5 +7,7 @@ if place_meeting(x,y,obj_cameraFollowing){
 	yscl = .4*sin((time*pi)/(8*spd))+1
 	xscl = .25*cos((time*pi)/(2*spd))+1
 	
+	bluralpha = sin((time*pi)/(5*spd))
+	
 	y = startingy+2*sin((time*pi)/(2*spd))+1
 }
