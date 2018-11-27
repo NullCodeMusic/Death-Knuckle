@@ -799,6 +799,25 @@
             }
         },
         {
+            "Key": "3910ddee-858b-45ee-b869-6dd583107b9c",
+            "Value": {
+                "id": "4c2ce84e-3c92-4882-8f83-cd3e7327b3ca",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_waterfall\/sp_waterfall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3de54f86-0b82-4b50-bd2f-1997647da709",
             "Value": {
                 "id": "eb695959-8b43-47ed-ba71-e68bef7caaee",
