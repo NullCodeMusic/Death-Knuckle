@@ -17,6 +17,6 @@ vertFollowPlayer = 0
 xOrigin = x +hspeed
 yOrigin = y +vspeed
 
-x -= (mouse_x - x )*0.015/// obj_cameraFollowing.sprite_width
-y -= (mouse_y - y)*0.015
+x -= (mouse_x - x )*0.03/// obj_cameraFollowing.sprite_width
+y -= (mouse_y - y)*0.03
 

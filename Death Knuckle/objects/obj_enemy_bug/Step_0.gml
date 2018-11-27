@@ -104,7 +104,8 @@ x-=hspeed
 if (bounceh) then hspeed = -hspeed
 if (bouncev) then vspeed = -vspeed
 if hp <=0 {
-	if irandom(4)=3 then  instance_create_depth(-1,x,y,obj_pickup_smallHealth)
+	if irandom(4)=3{ var pickup = instance_create_depth(-1,x,y,obj_pickup_smallHealth)
+	pickup.dir = irandom_range(-1,1)}
 	KillMe(spr_part_bugRubble)
 }
 
