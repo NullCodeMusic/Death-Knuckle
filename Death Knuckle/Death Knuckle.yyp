@@ -110,7 +110,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/sprite75\/sprite75.yy",
+                "resourcePath": "sprites\/sp_heart\/sp_heart.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -967,6 +967,25 @@
                 ],
                 "resourcePath": "objects\/prnt_draw\/prnt_draw.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "43bdfd4b-ce35-4612-a33f-6aa939e1c07e",
+            "Value": {
+                "id": "e3b822b6-ad0e-44e9-9104-ca7b7160f314",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_heartBlur\/sp_heartBlur.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
