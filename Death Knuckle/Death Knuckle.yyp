@@ -419,6 +419,25 @@
             }
         },
         {
+            "Key": "19fb0bd3-196d-46c6-88cf-2491476961ff",
+            "Value": {
+                "id": "215b0902-9219-40e2-baa5-fa07087a52ed",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_liquidFire\/sp_liquidFire.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1a704899-85a5-4481-888e-3e52da88975c",
             "Value": {
                 "id": "a3358f8d-9cdb-43c2-b016-c75e419a572a",
