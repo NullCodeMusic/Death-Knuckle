@@ -109,7 +109,8 @@ if hp <=0 {
 	KillMe(spr_part_bugRubble)
 }
 
-if ((floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672)) && !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !place_meeting(x,y,obj_trigger_horizPlayerFollow)){
+//if ((floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672)) && !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !place_meeting(x,y,obj_trigger_horizPlayerFollow)){
+if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))xor(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
 //&& !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !if place_meeting(x,y,obj_trigger_horizPlayerFollow)){
 
 y=yOrigin
@@ -120,10 +121,10 @@ hspeed=0
 vspeed=0
 
 }
-if !place_meeting(x+hspeed,y+vspeed,obj_cameraPlace){
-hspeed=0
-vspeed=0
-y=yOrigin
-x=xOrigin
-}
+//if !place_meeting(x+hspeed,y+vspeed,obj_cameraPlace){
+//hspeed=0
+//vspeed=0
+//y=yOrigin
+//x=xOrigin
+//}
 if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
