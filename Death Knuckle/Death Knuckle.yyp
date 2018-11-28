@@ -1388,6 +1388,25 @@
             }
         },
         {
+            "Key": "6fb97fa0-8149-4c67-9c93-5dd225f37281",
+            "Value": {
+                "id": "8bfd624b-025e-44da-9769-b7d52e5eed43",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_backgroundSmolFall\/sp_backgroundSmolFall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "71319f15-8e6b-4281-8821-cd8c0b7f16f5",
             "Value": {
                 "id": "44bc8e3f-8f75-4eff-aab7-f73155e97e9e",
