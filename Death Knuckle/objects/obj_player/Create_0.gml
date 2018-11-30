@@ -42,6 +42,10 @@ boolcheck1=0
 frame1done=0
 fadein = 80
 
+ticka=0
+tickb=0
+framerate=0
+
 randomize()
 borg = 0
 jojosmode = 0
@@ -49,7 +53,7 @@ jojosmode = 0
 
 ini_open("save.data")
 	 walljump = ini_read_real("unlocks","walljump",0)
-	 extraHPContainers = ini_write_real("unlocks","hpcontainers",0)
+	 extraHPContainers = ini_read_real("unlocks","hpcontainers",0)
 ini_close()
 
 

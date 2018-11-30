@@ -289,7 +289,8 @@ ini_open("save.data")
 		ini_write_real("data","checkpoint",instance_place(x,y,obj_checkpoint).pointID)
 		ini_write_string("data","roomName",string(room))
 		ini_write_string("unlocks","walljump",walljump)
-		ini_write_real("unlocks","hpcontainers",0)
+		ini_write_real("unlocks","hpcontainers",extraHPContainers)
+		//get number of health objects then make an array using their ID's and their uniqe ID's given in creation code
 ini_close()
 if !instance_exists(obj_checkpointLight){
 var checkpointID = instance_place(x,y,obj_checkpoint)
@@ -329,12 +330,20 @@ var darkList = ds_list_create()
 darkID = instance_place(x,y,obj_DarkRoom)
 darkID.playerIn =1	
 }
-//global speed cap 
-
-//}
-
-//if place_meeting
 
 
-if keyboard_check_pressed(ord("G")) then instance_create_depth(x,y,-1,obj_boss_projectile)
 
+
+
+//ticka++
+//if atkTimeHeld>29 && framerate >1 then framerate --
+//else if framerate <30 then framerate ++
+
+
+// if framerate=0&&frame!=0{
+// if ticka >= framerate {ticka=0;frame++;if frame=NUMBEROFSPRITES frame = 0}
+// switch(frame){
+// 1:
+// cursor_sprite = fjkdlsa;
+// break;
+// }
