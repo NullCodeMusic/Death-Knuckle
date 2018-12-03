@@ -42,6 +42,10 @@ boolcheck1=0
 frame1done=0
 fadein = 80
 
+cursorspeed=40
+frame=0
+cursortick=0
+
 ticka=0
 tickb=0
 framerate=0

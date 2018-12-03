@@ -290,6 +290,15 @@ ini_open("save.data")
 		ini_write_string("data","roomName",string(room))
 		ini_write_string("unlocks","walljump",walljump)
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
+		var HPstring=""
+		for(i=0;i< ds_list_size(obj_checkpointList.hpList);i++){
+			//var HPobject = ds_list_find_value(obj_checkpointList.hpList,i)
+			
+			HPstring=HPstring+string(ds_list_find_value(obj_checkpointList.hpList,i))+","//GetTHE PointID
+		}//each item in the list add to a string then save it   ds_list_add(obj_checkpointList.checkpointList,pickupID)
+		//var readPointID = ini_read_real("data","usedHPcontainers",0)
+		ini_write_string("data","usedHPcontainers",HPstring)
+		show_debug_message("saved HP" + HPstring)
 		//get number of health objects then make an array using their ID's and their uniqe ID's given in creation code
 ini_close()
 if !instance_exists(obj_checkpointLight){
@@ -315,6 +324,7 @@ while place_meeting(x,y,prnt_pickup){
 		instance_destroy(pickupID)
 	} else if place_meeting(x,y,obj_hpContainer){
 		var pickupID = instance_place(x,y,obj_hpContainer)
+		ds_list_add(obj_checkpointList.hpList,pickupID.pointID)
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width/2,pickupID.x+pickupID.sprite_width/2,pickupID.y-pickupID.sprite_height/2,pickupID.y+pickupID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
 		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypPlantRubble,25)	
 		extraHPContainers++
