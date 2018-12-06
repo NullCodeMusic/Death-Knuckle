@@ -21,30 +21,38 @@ for (var i=0; i !=  ds_list_size(obj_checkpointList.checkpointList); i++){
 	}
 }
 //Loads a string and for each characer, adds to a temporary string and adds it to the hplist until it reaches "," and stops at ""
-var loadString = ini_read_string("data","usedHPcontainers",HPstring)
+ini_open("save.data")
+var loadString = ini_read_string("data","usedHPcontainers",",")
 var singleInput =""
 for (i = 0; string_char_at(loadString,i)!="";i++){
 	
-	if string_char_at(loadString,i)=","{
+	if string_char_at(loadString,i)=","||string_char_at(loadString,i)=" "{
 		ds_list_add(obj_checkpointList.hpList,singleInput)
+		show_debug_message("loaded " +singleInput)
 		singleInput = ""
 		continue;	
 	} else{
 		singleInput+=string_char_at(loadString,i)	
+		show_debug_message("combined " +singleInput)
 	}
+	
 }
 
 
 
 //for each item in the list, checks all checkpoint items and deletes the ones on it
 for (var i=0; i <  ds_list_size(obj_checkpointList.hpList); i++){
+	show_debug_message("hpList "+string(ds_list_find_value(obj_checkpointList.hpList,i)))
 	
 	for (var ii =0; ii< ds_list_size(obj_checkpointList.allhpList);ii++){
+		show_debug_message("allHPlist "+string(ds_list_find_value(obj_checkpointList.allhpList,ii)))
 	var tempObj = ds_list_find_value(obj_checkpointList.allhpList,ii)
-	if tempObj.pointID = ds_list_find_value(obj_checkpointList.hpList,i){
+	//if variable_instance_exists(tempObj,obj_hpContainer){
+	show_debug_message("wants "+string(ds_list_find_value(obj_checkpointList.hpList,i)) + " got "+ string(tempObj.pointID))
+	if string(tempObj.pointID) = string(ds_list_find_value(obj_checkpointList.hpList,i)){
 	instance_destroy(tempObj)	
 	}
-	
+	//}
 	}
 	
 	

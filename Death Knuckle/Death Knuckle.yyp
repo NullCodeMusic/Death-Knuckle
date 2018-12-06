@@ -3649,6 +3649,25 @@
             }
         },
         {
+            "Key": "fab7b015-acd7-4c46-9e4e-d03d0abead25",
+            "Value": {
+                "id": "9523f04a-67cd-410d-9e00-116cd8288972",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_walljumpPowerup\/obj_walljumpPowerup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fc537314-66a6-48ad-8467-fcbf24d7a74b",
             "Value": {
                 "id": "a9c6295e-38aa-411c-897c-45486fcf2aa3",

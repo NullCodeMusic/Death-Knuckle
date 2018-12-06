@@ -15,7 +15,7 @@ stagger=10
 maxAtkAnim=3
 jump=0
 
-chargemax=30
+chargemax=60
 state=1
 staggerTime=0
 invulTime=0

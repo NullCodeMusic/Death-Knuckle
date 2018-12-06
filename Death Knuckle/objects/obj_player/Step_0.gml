@@ -330,6 +330,14 @@ while place_meeting(x,y,prnt_pickup){
 		extraHPContainers++
 		instance_create_depth(pickupID.x,pickupID.y,-500,obj_usedHPContainer)
 		instance_destroy(pickupID)
+	} else if place_meeting(x,y,obj_walljumpPowerup){
+		var pickupID = instance_place(x,y,obj_walljumpPowerup)
+		walljump=1
+		
+		part_emitter_region(global.partSys,global.partEmtSmallBurst,pickupID.x-pickupID.sprite_width*2,pickupID.x+pickupID.sprite_width*2,pickupID.y-pickupID.sprite_height*2,pickupID.y+pickupID.sprite_height*2,ps_shape_rectangle,ps_distr_linear)
+		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypSparks,25)
+		instance_destroy(pickupID)
+		
 	}
 }
 #endregion

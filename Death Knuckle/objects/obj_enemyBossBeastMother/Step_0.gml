@@ -134,23 +134,6 @@ if ymom < ymax then ymom ++
 //if(ymom<=ymax){ymom++}
 
 
-//h and v speed collision
-//x+=hspeed
-//if (place_meeting(x,y+vspeed,obj_boss1Wall)){
-//	for (var i = 0; i <abs(vspeed)+1; i++){
-//if vspeed!=0{hspeed= -hspeed/abs(hspeed)
-//chargeWarmup=chargemax
-//bounce=1
-//ymom=0
-//break;
-//}
-//if vspeed!=0{vspeed-= vspeed/abs(vspeed)}
-////spd -= spd/abs(spd)
-//ymom=0
-//}
-//}
-//x-=hspeed
-
 y+=vspeed
 while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
 	//for (var i = 0; i < abs(hspeed)+1; i++){
@@ -166,5 +149,7 @@ y-=vspeed
 
 
 //death
-if hp <=0 KillMe(spr_part_wargRubble)
+if hp <=0 {var pickup = instance_create_depth(x,y-50,-500,obj_walljumpPowerup);
+	KillMe(spr_part_wargRubble);
+	pickup.dir = irandom_range(-1,1)}
 

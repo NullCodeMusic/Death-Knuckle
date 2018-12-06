@@ -1,5 +1,5 @@
 
-if instance_exists(obj_enemyBossBeastMother) then activated = 0
+if instance_exists(obj_enemyBossBeastMother) then activated = 0 else activated = 1
 
 if activated = 0{
 	
