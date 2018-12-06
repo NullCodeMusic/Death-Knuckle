@@ -304,6 +304,8 @@ ini_close()
 if !instance_exists(obj_checkpointLight){
 var checkpointID = instance_place(x,y,obj_checkpoint)
 instance_create_depth(checkpointID.x,checkpointID.y,-1,obj_checkpointLight)	
+checkpointID.image_index = 1
+checkpointID.image_speed = 1
 }
 
 
