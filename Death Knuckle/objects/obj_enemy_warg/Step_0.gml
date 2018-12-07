@@ -110,20 +110,21 @@ if hp <=0 {
 	
 }
 
-if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))xor(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
-	
+if (!place_meeting(obj_cameraPlace.x,y,obj_cameraPlace)&&!place_meeting(x,y,obj_trigger_vertPlayerFollow))||(!place_meeting(x,obj_cameraPlace.y,obj_cameraPlace)&&!place_meeting(x,y,obj_trigger_horizPlayerFollow)){
 y=yOrigin
 x=xOrigin
 hp = 20
+
 hspeed=0
 vspeed=0
+
 }
 
-if !place_meeting(x+hspeed,y+vspeed,obj_cameraPlace){
-hspeed=0
-vspeed=0
-y=yOrigin
-x=xOrigin
-}
+//if !place_meeting(x+hspeed,y+vspeed,obj_cameraPlace){
+//hspeed=0
+//vspeed=0
+//y=yOrigin
+//x=xOrigin
+//}
 if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
 //show_debug_message(string(x)+" , "+string(y))

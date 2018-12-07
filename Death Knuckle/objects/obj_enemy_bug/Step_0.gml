@@ -110,9 +110,11 @@ if hp <=0 {
 }
 
 //if ((floor(x/1152) != floor(obj_player.x/1152) || floor(y/672) !=floor(obj_player.y/672)) && !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !place_meeting(x,y,obj_trigger_horizPlayerFollow)){
-if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))xor(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
+//if ((place_meeting(x,y,obj_trigger_horizPlayerFollow)&&(floor(y/672) !=floor(obj_player.y/672)))xor(place_meeting(x,y,obj_trigger_vertPlayerFollow)&&(floor(x/1152) != floor(obj_player.x/1152)))){
 //&& !place_meeting(x,y,obj_trigger_vertPlayerFollow) && !if place_meeting(x,y,obj_trigger_horizPlayerFollow)){
 
+//if ((!place_meeting(x,y,obj_cameraPlace)&&!place_meeting(x,y,obj_trigger_horizPlayerFollow))&&(floor(y/672) !=floor(obj_player.y/672)))or((!place_meeting(x,y,obj_cameraPlace)&&!place_meeting(x,y,obj_trigger_vertPlayerFollow))&&(floor(x/1152) != floor(obj_player.x/1152))){
+if (!place_meeting(obj_cameraPlace.x,y,obj_cameraPlace)&&!place_meeting(x,y,obj_trigger_vertPlayerFollow))||(!place_meeting(x,obj_cameraPlace.y,obj_cameraPlace)&&!place_meeting(x,y,obj_trigger_horizPlayerFollow)){
 y=yOrigin
 x=xOrigin
 hp = 5
