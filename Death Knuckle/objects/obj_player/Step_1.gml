@@ -48,6 +48,8 @@ for (var i=0; i <  ds_list_size(obj_checkpointList.hpList); i++){
 		show_debug_message("allHPlist "+string(ds_list_find_value(obj_checkpointList.allhpList,ii)))
 	var tempObj = ds_list_find_value(obj_checkpointList.allhpList,ii)
 	//if variable_instance_exists(tempObj,obj_hpContainer){
+	if tempObj=noone then break;
+	if ds_list_find_value(obj_checkpointList.hpList,i) = noone then break;
 	show_debug_message("wants "+string(ds_list_find_value(obj_checkpointList.hpList,i)) + " got "+ string(tempObj.pointID))
 	if string(tempObj.pointID) = string(ds_list_find_value(obj_checkpointList.hpList,i)){
 	instance_destroy(tempObj)	

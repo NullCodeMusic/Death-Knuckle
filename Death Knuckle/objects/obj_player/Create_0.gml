@@ -38,6 +38,10 @@ ignorewall=0
 facingwall=0
 attackDamage=20 // full damage of a charged fist
 
+
+
+
+
 boolcheck1=0
 frame1done=0
 fadein = 80
@@ -63,3 +67,5 @@ ini_close()
 
 hp = 100 + extraHPContainers * hpcontainervalue
 
+changingHPrange = 100+hpcontainervalue*extraHPContainers
+changingHP = 100+hpcontainervalue*extraHPContainers
