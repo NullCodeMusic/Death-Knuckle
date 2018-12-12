@@ -130,3 +130,6 @@ vspeed=0
 //x=xOrigin
 //}
 if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
+
+image_xscale = -sign(hspeed)
+if bounceh || bouncev then image_angle = sign(hspeed)
