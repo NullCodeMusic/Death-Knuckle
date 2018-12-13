@@ -131,5 +131,8 @@ vspeed=0
 //}
 if(obj_player.x>x){image_xscale = -1}else{image_xscale = 1}
 
+if hspeed!=0{
+
 image_xscale = -sign(hspeed)
-if bounceh || bouncev then image_angle = sign(hspeed)
+//if bounceh || bouncev then image_angle = sign(hspeed)
+} else image_xscale=1

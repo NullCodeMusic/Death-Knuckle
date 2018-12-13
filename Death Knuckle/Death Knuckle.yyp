@@ -1041,7 +1041,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "objects\/object59\/object59.yy",
+                "resourcePath": "objects\/obj_endgame\/obj_endgame.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1195,6 +1195,25 @@
                 ],
                 "resourcePath": "sprites\/spr_part_wargRubble\/spr_part_wargRubble.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "565a7680-2b32-42d9-90a7-9ce1ee38b083",
+            "Value": {
+                "id": "850fb12b-936c-4c0a-8827-ae2f6c311872",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "rooms\/rm_WinGame\/rm_WinGame.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -3361,6 +3380,25 @@
                 ],
                 "resourcePath": "views\/e87b4ccd-88a4-428b-a115-b095fe79b1f0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e9ac7cf2-1aed-4a1f-8e1a-54ae1e7b133b",
+            "Value": {
+                "id": "e1e89d3b-a065-4054-b37b-e62cfc3d808c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_wingame\/obj_wingame.yy",
+                "resourceType": "GMObject"
             }
         },
         {
