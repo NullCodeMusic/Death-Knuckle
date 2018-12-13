@@ -362,6 +362,25 @@
             }
         },
         {
+            "Key": "11aea555-4d06-4abf-b8f3-47e30a62ec82",
+            "Value": {
+                "id": "a739d81e-316b-4f75-80f2-b8659dd8e2ed",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sp_spooks\/sp_spooks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14d18232-5553-496f-a58b-c0ce28e200e9",
             "Value": {
                 "id": "25addc7e-1b18-4465-bd09-c4d282b2fe6e",
@@ -643,6 +662,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_squarePercise\/spr_squarePercise.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "289a3730-8c52-4c70-8b01-485cecf7025e",
+            "Value": {
+                "id": "c4d308df-6b09-4e35-aba7-ce144ad7c8aa",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/sprite90\/sprite90.yy",
                 "resourceType": "GMSprite"
             }
         },
