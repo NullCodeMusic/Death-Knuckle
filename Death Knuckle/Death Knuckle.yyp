@@ -3302,7 +3302,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_square1\/spr_square1.yy",
+                "resourcePath": "sprites\/spr_pushButton\/spr_pushButton.yy",
                 "resourceType": "GMSprite"
             }
         },
