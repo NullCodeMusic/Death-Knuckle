@@ -47,7 +47,7 @@ for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 	var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
 	show_debug_message(string(buttonID)+"button")
 	show_debug_message(string(interactID)+"interact")
-
+buttonID.activated=1
 	if buttonID.keyID = interactID.keyID {interactID.activated = 1; break;}		
 	}
 }
