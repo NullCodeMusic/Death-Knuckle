@@ -147,9 +147,13 @@ break;
 }
 y-=vspeed
 
+//emergency debug kill
+if keyboard_check(ord("J"))&&keyboard_check(ord("P")) then hp=hp-100
+
 
 //death
 if hp <=0 {var pickup = instance_create_depth(x,y-50,-500,obj_walljumpPowerup);
 	KillMe(spr_part_wargRubble);
 	pickup.dir = irandom_range(-1,1)}
+
 
