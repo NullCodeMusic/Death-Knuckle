@@ -7,6 +7,9 @@ image_speed = image_xscale*xInput
 
 
 
+draw_sprite_ext(spr_greenCircle,0,x,y,1,1,0,c_white,alphaHP)
+
+
 if setHitAnim=1 && staggerTime>0{
 	if sprite_index!=sp_playerHurt then sprite_index=sp_playerHurt
 } else {

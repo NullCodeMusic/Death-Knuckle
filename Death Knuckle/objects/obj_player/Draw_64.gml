@@ -1,5 +1,5 @@
-draw_healthbar(10,10,110+extraHPContainers*10,30,hp,c_black,c_red,c_green,1,1,1)
-draw_text(10,35,string(hp))
+//draw_healthbar(10,10,110+extraHPContainers*10,30,hp,c_black,c_red,c_green,1,1,1)
+draw_text(10,35,"HP:"+string(hp)+"/"+string(100+extraHPContainers*hpcontainervalue))
 
 var newhprange = 100+extraHPContainers*hpcontainervalue
 var newhp = hp

@@ -24,6 +24,9 @@ startingStaggerTime = 20
 hpcontainervalue = 10
 rocketFist=1
 
+alphaHP=0
+
+hpAlpha=0
 flash = 0
 invulTime = 0
 hitDirection = 0
