@@ -282,7 +282,8 @@ if place_meeting(x,y,prnt_punchable)&&tick>0{
 #region hitting button
 
 if place_meeting(x,y,obj_interactableButton){
-	var buttonID = instance_place(x,y,obj_interactableButton) 
+	var buttonID = instance_place(x,y,obj_interactableButton)
+	buttonID.activated=1
 for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 	var interactID = ds_list_find_value(obj_interactableController.interactableList,i)
 	show_debug_message(string(buttonID)+"button")

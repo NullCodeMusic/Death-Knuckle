@@ -19,7 +19,7 @@ hspeed-= hspeed/abs(hspeed)
 #region vertical movement
 
 vspeed = ymom
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0)||place_meeting(x,y+abs(hspeed),obj_jumpThru){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
@@ -39,5 +39,8 @@ hspeed-= hspeed/abs(hspeed)
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
+
+
+
 #endregion
 #endregion
