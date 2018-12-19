@@ -367,3 +367,13 @@ alphaHP += (hpAlpha-alphaHP)/8
 // cursor_sprite = fjkdlsa;
 // break;
 // }
+
+if place_meeting(x,y,obj_endgame) then room=rm_WinGame
+
+
+if keyboard_check_pressed(vk_escape) then game_end()
+
+if keyboard_check_pressed(ord("M")) { if window_get_fullscreen() then window_set_fullscreen(0)else window_set_fullscreen(1)}
+
+
+if keyboard_check(vk_up) {x+=(mouse_x-x)/2;y+=(mouse_y-y)/2}

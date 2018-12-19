@@ -26,6 +26,9 @@ rocketFist=1
 
 alphaHP=0
 
+audio_stop_all()
+
+
 hpAlpha=0
 flash = 0
 invulTime = 0

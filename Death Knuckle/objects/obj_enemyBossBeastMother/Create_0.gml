@@ -4,7 +4,7 @@ ymom = 0
 xInput = 0
 yInput = 0
 ymax = 20
-hp = 60
+hp = 50
 chargeWarmup = 50
 slowdown = 0
 
