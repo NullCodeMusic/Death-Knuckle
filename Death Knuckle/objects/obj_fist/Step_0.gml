@@ -57,12 +57,13 @@ for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 if place_meeting(x,y,prnt_enemy){
 	 var enemyID= instance_place(x,y,prnt_enemy)
 	//object_get_name(enemyID)
-	if enemyID.invulTime<=0{
+	if enemyID.invulTime<=0||place_meeting(x,y,obj_enemyBossBeastMother){
 		enemyID.staggerTime =10
 		enemyID.invulTime=5
 		enemyID.ymom=-10
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
 		enemyID.hp -= floor(obj_player.attackDamage*(distance/obj_player.maxDist)+2)
+		show_debug_message("hp"+string(enemyID.hp))
 		//enemyID.hp -= //obj_player.attackDamage
 
 }

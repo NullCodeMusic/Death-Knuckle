@@ -35,7 +35,8 @@ if chargeWarmup== 1{
 	show_debug_message(heightDif)
 	
 	
-	
+	if staggerTime>0 then staggerTime--
+	invulTime--
 	
 	
 	
@@ -156,4 +157,4 @@ if hp <=0 {var pickup = instance_create_depth(x,y-50,-500,obj_walljumpPowerup);
 	KillMe(spr_part_wargRubble);
 	pickup.dir = irandom_range(-1,1)}
 
-
+show_debug_message("HP"+string(hp))
