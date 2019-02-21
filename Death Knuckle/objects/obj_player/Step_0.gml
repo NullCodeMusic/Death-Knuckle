@@ -235,6 +235,7 @@ if place_meeting(x,y,prnt_enemy){
 	var hitST = hitID.stagger
 	hitID.atkAnim=hitID.maxAtkAnim
 		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
+		obj_cameraFollowing.screenshake = random_range(hitDT,hitDT+10)
 		
 			
 

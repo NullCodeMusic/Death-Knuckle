@@ -7,7 +7,7 @@
 	// arg 3 damage to hp
 	// arg 4 ymom 
 	
-
+	
 		invulTime = argument[1]
 		staggerTime = argument[2]
 		setHitAnim = 1

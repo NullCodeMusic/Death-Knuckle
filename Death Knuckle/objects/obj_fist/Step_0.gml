@@ -38,7 +38,7 @@ y = y+vspeed
 
 #region punchables
 if place_meeting(x,y,prnt_punchable)&&tick>0{
-	
+	obj_cameraFollowing.screenshake=3
 #region hitting button
 
 if place_meeting(x,y,obj_interactableButton){
@@ -55,6 +55,8 @@ for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 #endregion
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){
+	var damage =  floor(obj_player.attackDamage*(distance/obj_player.maxDist)+2)
+	
 	 var enemyID= instance_place(x,y,prnt_enemy)
 	//object_get_name(enemyID)
 	if enemyID.invulTime<=0||place_meeting(x,y,obj_enemyBossBeastMother){
@@ -62,8 +64,9 @@ if place_meeting(x,y,prnt_enemy){
 		enemyID.invulTime=5
 		enemyID.ymom=-10
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
-		enemyID.hp -= floor(obj_player.attackDamage*(distance/obj_player.maxDist)+2)
+		enemyID.hp -= damage
 		show_debug_message("hp"+string(enemyID.hp))
+		obj_cameraFollowing.screenshake = random_range(damage,damage+10)
 		//enemyID.hp -= //obj_player.attackDamage
 
 }
@@ -89,6 +92,7 @@ part_emitter_region(global.partSys,global.partEmtSmallBurst,enemyID.x-enemyID.sp
 
 #region breakables
 if place_meeting(x,y,prnt_breakable)&&tick>0{
+	obj_cameraFollowing.screenshake=3
 	if place_meeting(x,y,obj_breakableWall){
 		var doorID= instance_place(x,y,obj_breakableWall)
 		doorID.hits++
@@ -106,6 +110,7 @@ if place_meeting(x,y,prnt_breakable)&&tick>0{
 	}
 }
 if place_meeting(x,y,prnt_scruff){
+	obj_cameraFollowing.screenshake=3
 	if place_meeting(x,y,obj_breakablePlantFloor)&& !place_meeting(x,y,obj_breakablePlantWall){
 		var plantID = instance_place(x,y,obj_breakablePlantFloor)
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,plantID.x-plantID.sprite_width/2,plantID.x+plantID.sprite_width/2,plantID.y-plantID.sprite_height/2,plantID.y+plantID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)

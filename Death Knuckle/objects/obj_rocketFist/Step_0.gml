@@ -278,7 +278,7 @@ tick= tick - 1
 
 #region punchables
 if place_meeting(x,y,prnt_punchable)&&tick>0{
-	
+	obj_cameraFollowing.screenshake=3
 #region hitting button
 
 if place_meeting(x,y,obj_interactableButton){
@@ -303,6 +303,7 @@ if place_meeting(x,y,prnt_enemy){
 		enemyID.ymom=-10
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
 		enemyID.hp -= floor(obj_player.attackDamage/3)
+		obj_cameraFollowing.screenshake=floor(obj_player.attackDamage/3)
 		//enemyID.hp -= //obj_player.attackDamage
 
 }
@@ -344,6 +345,7 @@ if place_meeting(x,y,prnt_breakable)&&tick>0{
 	//}
 }
 if place_meeting(x,y,prnt_scruff){
+	obj_cameraFollowing.screenshake=3
 	if place_meeting(x,y,obj_breakablePlantFloor)&& !place_meeting(x,y,obj_breakablePlantWall){
 		var plantID = instance_place(x,y,obj_breakablePlantFloor)
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,plantID.x-plantID.sprite_width/2,plantID.x+plantID.sprite_width/2,plantID.y-plantID.sprite_height/2,plantID.y+plantID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)

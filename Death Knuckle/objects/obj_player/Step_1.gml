@@ -26,7 +26,7 @@ var loadString = ini_read_string("data","usedHPcontainers",",")
 var singleInput =""
 for (i = 0; string_char_at(loadString,i)!="";i++){
 	
-	if string_char_at(loadString,i)=","||string_char_at(loadString,i)=" "{
+	if string_char_at(loadString,i)=","{//||string_char_at(loadString,i)=" "
 		ds_list_add(obj_checkpointList.hpList,singleInput)
 		show_debug_message("loaded " +singleInput)
 		singleInput = ""

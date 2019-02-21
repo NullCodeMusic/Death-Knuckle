@@ -45,8 +45,14 @@ hspeed = -abs(hspeed)
 
 }
 
+
 hspeed+=xInput + irandom_range(-2.1,2.1)
 vspeed+=yInput + irandom_range(-2.1,2.1)
+
+if point_distance(x,y,obj_player.x,obj_player.y)>800 || !place_meeting(x,y,obj_cameraFollowing){
+hspeed=0
+vspeed=0
+}
 
 hspeed = round(hspeed)
 vspeed = round(vspeed)

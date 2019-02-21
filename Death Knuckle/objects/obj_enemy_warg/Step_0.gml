@@ -7,9 +7,9 @@ mask_index=sp_warg
 		
 
 
-if(abs(obj_cameraPlace.x-x)>=532){
-hspeed = -hspeed/2
-}
+//if(abs(obj_cameraPlace.x-x)>=532){
+//hspeed = -hspeed/2
+//}
 #endregion
 
 if staggerTime>0 {
@@ -33,7 +33,8 @@ if jumpIn > -1{
 if(instance_exists(obj_player)){
 	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
 		distanceToPlayer = abs(obj_player.x-x)
-xInput = (obj_player.x - x)/(abs(obj_player.x - x))*0.5}
+xInput = (obj_player.x - x)/(abs(obj_player.x - x))*0.5
+if distanceToPlayer>1152 then xInput=0}
 } else xInput = 1
 
 if staggerTime > 0 {

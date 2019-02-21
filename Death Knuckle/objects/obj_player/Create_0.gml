@@ -5,6 +5,11 @@ upKey = "W";
 downKey = "S";
 leftKey = "A";
 rightKey = "D";
+keyboard_set_map(vk_up,ord("W"))
+keyboard_set_map(vk_down,ord("S"))
+keyboard_set_map(vk_left,ord("A"))
+keyboard_set_map(vk_right,ord("D"))
+keyboard_set_map(vk_space,ord("W"))
 spd = 9
 ymom = 0
 ymax = 20
