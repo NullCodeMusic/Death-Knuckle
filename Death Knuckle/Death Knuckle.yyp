@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "1d4504a5-90dd-4e3a-bd47-e5be1168671e",
+            "Value": {
+                "id": "0594c66e-6982-4c29-8d88-bbc7373f2604",
+                "resourcePath": "sounds\\snd_woosh2\\snd_woosh2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "1f87211d-016b-4141-852a-cd4e916cfd90",
             "Value": {
                 "id": "3d45ed45-4c99-4ec0-8842-702467329e01",
@@ -799,6 +807,14 @@
             }
         },
         {
+            "Key": "8b801936-3408-4cdf-ae15-86204079c043",
+            "Value": {
+                "id": "44479e63-300a-4660-b959-545c13f5f4bd",
+                "resourcePath": "sounds\\snd_woosh\\snd_woosh.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8bb3e645-e11f-4cee-b8ed-e23e08bbe8eb",
             "Value": {
                 "id": "0db5763e-911f-4bf7-af4d-50166152add6",
@@ -1059,6 +1075,14 @@
             "Value": {
                 "id": "d3ace469-9de0-474b-9556-ad42dcef3082",
                 "resourcePath": "sprites\/ledge\/ledge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b662d614-a3e9-49f4-930a-190852e8f5c4",
+            "Value": {
+                "id": "13c4c886-6433-4c04-a9ca-13c3be2eed7f",
+                "resourcePath": "sprites\\sp_background3\\sp_background3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1372,6 +1396,14 @@
                 "id": "a3b445e0-1ee6-4871-9a1c-6f492a3fa305",
                 "resourcePath": "objects\/obj_bossDoor\/obj_bossDoor.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "da82b3dc-bd35-4c04-846f-e74db9a1eb66",
+            "Value": {
+                "id": "2af907b0-4300-4311-858f-d26a19f4d2ac",
+                "resourcePath": "sounds\\snd_fire\\snd_fire.yy",
+                "resourceType": "GMSound"
             }
         },
         {

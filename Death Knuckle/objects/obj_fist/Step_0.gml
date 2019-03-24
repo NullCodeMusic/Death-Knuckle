@@ -66,7 +66,7 @@ if place_meeting(x,y,prnt_enemy){
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
 		enemyID.hp -= damage
 		show_debug_message("hp"+string(enemyID.hp))
-		obj_cameraFollowing.screenshake = random_range(damage,damage+10)
+		obj_cameraFollowing.screenshake = random_range((damage)/3,(damage+10)/3)
 		//enemyID.hp -= //obj_player.attackDamage
 
 }

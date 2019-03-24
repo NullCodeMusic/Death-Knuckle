@@ -8,5 +8,6 @@ tooEarly=0
 
 visible=0
 mask_index=sp_fist
+audio_play_sound(snd_woosh,1,0)
 
 
