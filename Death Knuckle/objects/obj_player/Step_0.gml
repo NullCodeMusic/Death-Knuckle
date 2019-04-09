@@ -237,7 +237,8 @@ if place_meeting(x,y,prnt_enemy){
 		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
 		obj_cameraFollowing.screenshake = random_range(hitDT,hitDT+10)
 		
-			
+	audio_sound_pitch(snd_ouchie,1+random_range(-0.1,+0.1))
+	audio_play_sound(snd_ouchie,1,0)
 
 }
 if(place_meeting(x,y,obj_killzone)){hp -=10}

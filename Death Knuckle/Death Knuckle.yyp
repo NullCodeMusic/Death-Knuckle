@@ -1255,6 +1255,14 @@
             }
         },
         {
+            "Key": "cc6f76ca-c81d-460e-a1e3-29ebeca3e6f0",
+            "Value": {
+                "id": "ba8da93f-9e0f-41a4-8cae-1f6e5822dcb7",
+                "resourcePath": "sounds\\snd_ouchie\\snd_ouchie.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "88754f6b-6e38-40e5-baee-7f7cc2f15fb6",
