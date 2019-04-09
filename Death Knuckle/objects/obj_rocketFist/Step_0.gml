@@ -296,7 +296,12 @@ for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){
 	 var enemyID= instance_place(x,y,prnt_enemy)
-	//object_get_name(enemyID)
+	 
+	 if enemyID = instance_place(x,y,obj_enemy_warg){
+	audio_sound_pitch(snd_wargHurt,1+random_range(-0.2,+0.2))
+	audio_play_sound(snd_wargHurt,1,0)	
+	}
+
 	if enemyID.invulTime<=0{
 		enemyID.staggerTime =10
 		enemyID.invulTime=5
