@@ -1559,6 +1559,14 @@
             }
         },
         {
+            "Key": "ef1ce22b-a07d-4376-8f4d-fdeb6dc03a52",
+            "Value": {
+                "id": "05c65ad3-9ce6-42f8-b617-9ccb78408001",
+                "resourcePath": "sprites\\sp_tutoral\\sp_tutoral.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f27b7127-c300-47f2-88ae-6053693d2a73",
             "Value": {
                 "id": "51e9d955-eb64-41a2-bdc7-dfd506632eeb",
