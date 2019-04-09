@@ -471,14 +471,6 @@
             }
         },
         {
-            "Key": "433efa21-ea29-42c2-b6fe-b68d7d63bab8",
-            "Value": {
-                "id": "af2aae28-1e83-4a34-ac7a-7157538e4507",
-                "resourcePath": "sounds\\snd_wargHurt\\snd_wargHurt.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "43a5ec38-0d61-4f73-bbe0-17372c558d41",
             "Value": {
                 "id": "f27896af-c8de-4ce1-b2e8-a5afd6203d90",
