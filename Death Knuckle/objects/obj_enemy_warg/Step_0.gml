@@ -57,7 +57,7 @@ if(hspeed>=14){hspeed = 14}
 if(hspeed<=-14){hspeed = -14}
 }
 
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+while((place_meeting(x+hspeed,y,obj_obstacle)||place_meeting(x+hspeed,y,obj_enemyOnlyWall))&&hspeed!=0){
 hspeed-= sign(hspeed)
 }
 
@@ -87,20 +87,20 @@ if(yInput!=0){ymom=yInput*jump
 yInput = 0
 
 vspeed = ymom
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+while((place_meeting(x,y+vspeed,obj_enemyOnlyWall)||(place_meeting(x,y+vspeed,obj_obstacle)))&&vspeed!=0){
 vspeed-= sign(vspeed)
 ymom=0
 }
 
 if(ymom<=ymax){ymom++}
 x+=hspeed
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+while((place_meeting(x,y+vspeed,obj_obstacle)||place_meeting(x,y+vspeed,obj_enemyOnlyWall))&&vspeed!=0){
 vspeed-= sign(vspeed)
 ymom=0
 }
 x-=hspeed
 y+=vspeed
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+while((place_meeting(x+hspeed,y,obj_obstacle)||(place_meeting(x+hspeed,y,obj_enemyOnlyWall)))&&hspeed!=0){
 hspeed-= sign(hspeed)
 }
 y-=vspeed
