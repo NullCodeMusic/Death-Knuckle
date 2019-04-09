@@ -695,6 +695,14 @@
             }
         },
         {
+            "Key": "71e0c596-183f-4f11-b487-1a7f935fb20d",
+            "Value": {
+                "id": "da826b89-1e68-40fa-afa3-030adcb08479",
+                "resourcePath": "objects\\obj_enemyOnlyWall\\obj_enemyOnlyWall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "72f7249e-6462-457e-95c9-1bff74f7398a",
             "Value": {
                 "id": "0449949b-14ad-43ea-bea6-34a574fb31c4",

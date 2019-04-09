@@ -85,23 +85,23 @@ if(vspeed>0){vspeed = min(maxSpd,vspeed)}else{vspeed = max(-maxSpd,vspeed)}
 
 var bounceh =0
 var bouncev =0
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+while((place_meeting(x+hspeed,y,obj_obstacle)||place_meeting(x+hspeed,y,obj_enemyOnlyWall))&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 bounceh=1
 }
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+while((place_meeting(x,y+vspeed,obj_obstacle)||place_meeting(x,y+vspeed,obj_enemyOnlyWall))&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 bouncev=1
 }
 y+=vspeed
-while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+while((place_meeting(x+hspeed,y,obj_obstacle)||place_meeting(x+hspeed,y,obj_enemyOnlyWall))&&hspeed!=0){
 hspeed-= hspeed/abs(hspeed)
 bounceh=1
 }
 y-=vspeed
 
 x+=hspeed
-while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
+while((place_meeting(x,y+vspeed,obj_obstacle)||place_meeting(x,y+vspeed,obj_enemyOnlyWall))&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 bouncev=1
 }
