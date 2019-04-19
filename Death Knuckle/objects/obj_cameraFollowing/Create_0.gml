@@ -1,4 +1,5 @@
-spd = 10
+spd =10
+spd2= 30
 horizFollowPlayer = 0
 vertFollowPlayer = 0
 xOrigin = x

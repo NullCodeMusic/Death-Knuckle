@@ -22,21 +22,14 @@ for (var i=0; i !=  ds_list_size(obj_checkpointList.checkpointList); i++){
 }
 //Loads a string and for each characer, adds to a temporary string and adds it to the hplist until it reaches "," and stops at ""
 ini_open("save.data")
-var loadString = ini_read_string("data","usedHPcontainers",",")
-var singleInput =""
-for (i = 0; string_char_at(loadString,i)!="";i++){
-	
-	if string_char_at(loadString,i)=","{//||string_char_at(loadString,i)=" "
-		ds_list_add(obj_checkpointList.hpList,singleInput)
-		show_debug_message("loaded " +singleInput)
-		singleInput = ""
-		continue;	
-	} else{
-		singleInput+=string_char_at(loadString,i)	
-		show_debug_message("combined " +singleInput)
-	}
-	
-}
+
+ds_list_read(obj_checkpointList.hpList,ini_read_string("data","usedHPcontainers",""))
+
+ini_close()
+//change hp containers to read a compressed list and use the items on that list to destroy
+
+
+
 
 
 

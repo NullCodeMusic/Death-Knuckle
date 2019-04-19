@@ -1119,6 +1119,14 @@
             }
         },
         {
+            "Key": "b8260766-8aa2-4c69-8f2e-96bf72f9e0a1",
+            "Value": {
+                "id": "0ea052eb-0ec7-4e9f-a98d-21531505e743",
+                "resourcePath": "rooms\\rm_Cave2\\rm_Cave2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "b96d511d-0ba5-4aaa-9dd5-b2a94a05f0b4",
             "Value": {
                 "id": "b6313aa8-572c-4999-8dfe-b42db42d516c",

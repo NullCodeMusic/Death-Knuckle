@@ -5,5 +5,6 @@ xscl=0
 yscl=0
 spd=10
 bluralpha=0
-frame1=0
+
+
 //allhpList = ds_list_create()

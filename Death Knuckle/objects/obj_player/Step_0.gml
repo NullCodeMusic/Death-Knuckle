@@ -292,15 +292,8 @@ ini_open("save.data")
 		ini_write_string("data","roomName",string(room))
 		ini_write_string("unlocks","walljump",walljump)
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
-		var HPstring=""
-		for(i=0;i< ds_list_size(obj_checkpointList.hpList);i++){
-			//var HPobject = ds_list_find_value(obj_checkpointList.hpList,i)
-			
-			HPstring=HPstring+string(ds_list_find_value(obj_checkpointList.hpList,i))+","//GetTHE PointID
-		}//each item in the list add to a string then save it   ds_list_add(obj_checkpointList.checkpointList,pickupID)
-		//var readPointID = ini_read_real("data","usedHPcontainers",0)
-		ini_write_string("data","usedHPcontainers",HPstring)
-		show_debug_message("saved HP" + HPstring)
+		ini_write_string("data","usedHPcontainers",ds_list_write(obj_checkpointList.hpList))
+		hp = 100 + extraHPContainers * hpcontainervalue
 		//get number of health objects then make an array using their ID's and their uniqe ID's given in creation code
 ini_close()
 if !instance_exists(obj_checkpointLight){
@@ -348,7 +341,7 @@ while place_meeting(x,y,prnt_pickup){
 
 
 if place_meeting(x,y,obj_DarkRoom){
-var darkList = ds_list_create()
+//var darkList = ds_list_create()
 darkID = instance_place(x,y,obj_DarkRoom)
 darkID.playerIn =1	
 }
