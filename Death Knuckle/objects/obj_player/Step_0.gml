@@ -76,6 +76,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	}
 }
 
+#region Aiden's Grapple
 #region grapple fist
 if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 	
@@ -149,8 +150,14 @@ if grappled=1{
 }
 
 #endregion
+#endregion 
 
-
+#region Ryan's Grapple
+if(mouse_check_button_pressed(mb_right) && attacking = 0){
+	var grapID = instance_nearest(mouse_x,mouse_y,obj_grapplePoint)
+	grapID.grapTrig=1
+	}
+#endregion
 
 #region old rocketfist
 

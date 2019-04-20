@@ -1183,6 +1183,14 @@
             }
         },
         {
+            "Key": "c0e135f0-00e7-470a-82e2-c5b23b9ffcd9",
+            "Value": {
+                "id": "388d6fc0-e7ee-4a4e-b658-379d12fb8b8c",
+                "resourcePath": "objects\\obj_grapplePoint\\obj_grapplePoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2f46e24-0058-4ae4-933c-7e8a883175bf",
             "Value": {
                 "id": "e6d6df3b-8196-4aa9-be08-c55cf658e737",
