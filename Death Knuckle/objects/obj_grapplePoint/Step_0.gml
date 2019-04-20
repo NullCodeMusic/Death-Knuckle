@@ -30,3 +30,14 @@ obj_player.vspeed+=lengthdir_y(distSpeed-grapRadius,distAng)
 }
 }
 #endregion
+
+#region End Grapple
+
+if(grapToggle>0&&mouse_check_button_released(mb_right)){
+grapToggle=0
+obj_player.ymom=-abs(hAdd)*1.5
+obj_player.hspeed = hAdd*1.5
+hAdd=0
+}
+
+#endregion
