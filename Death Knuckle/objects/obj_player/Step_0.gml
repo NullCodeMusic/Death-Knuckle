@@ -76,25 +76,102 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	}
 }
 
-// arc attack
+#region grapple fist
+if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
+	
+	var targetSpot = instance_place(mouse_x,mouse_y,obj_grappleSpot)//checks for a grappleable thing
+	if targetSpot!=noone{
 
-	if rocketFist =1 {
+		attacking =2	
+		var grapplefist = instance_create_depth(x,y,-1,obj_grapplefist)
+		grapplefist.targetSpot=targetSpot
+		var grappleDir = point_direction(x,y,targetSpot.x,targetSpot.y)*pi/180
+		grappledir = -point_direction(x,y,targetSpot.x,targetSpot.y)+180
+		grapplefist.x += cos(grappleDir)*5
+		grapplefist.y += sin(grappleDir)*5
+		spdDecay=2
+	}
+	
+} else if attacking=2 && !mouse_check_button(mb_right) {//if let go
+obj_grapplefist.comeBack=1
+grappled=0
+hspeed=xtarg
+vspeed=ytarg
+//do something to make sure that the momentum carries
+ymom=-5
+}
+#endregion
+
+#region grappled
+
+if grappled=1{
+	var grappledirRad = grappledir*pi/180
+	var targGrappleX = obj_grapplefist.x + cos(grappledirRad)*grappledist
+	var targGrappleY = obj_grapplefist.y + sin(grappledirRad)*grappledist
+
+	
+	xtarg= (targGrappleX-x) /5
+	ytarg= (targGrappleY-y) /5
+	
+	if place_meeting(x+xtarg,y+ytarg,obj_obstacle){
+	grappled=0
+	obj_grapplefist.comeBack=1
+	hspeed=xtarg
+	vspeed=ytarg
+	}else{
+	x+=xtarg
+	y+=ytarg
+	}
+	var dirInput = -(-keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey)))
+	if dirInput!=0 then spdDecay=2
+	grapplespd+=(dirInput)+grapplegrav2
+	grapplespd=min(abs(grapplespd),10)*sign(grapplespd)
+	grapplegrav+=(90-grappledir)/180
+	grapplegrav=min(abs(grapplegrav),1)*sign(grapplegrav)
+	grapplegrav2+=grapplegrav
+	grapplegrav2=grapplegrav2/spdDecay
+	spdDecay+=0.01
+	
+
+	var possibledir = grappledir+grapplespd*2+(90-grappledir)/10*spdDecay
+	show_debug_message(string(grappledir)+string(possibledir))
+	if possibledir>180{possibledir=179}
+	if possibledir<0{possibledir=1}
+	if possibledir>180||possibledir<0{
 		
-		if mouse_check_button(mb_right) && attacking =2 {
-			//if atkTimeHeld < 59 { atkTimeHeld ++}
-			}
-		else if mouse_check_button(mb_right) && attacking = 0{
-			attacking = 2 }
-		if mouse_check_button_released(mb_right) && attacking = 2 {
-			if(!instance_exists(obj_rocketFist)){
-		fistID = instance_create_depth(x,y,-1,obj_rocketFist)	
-		fistID.tick = 120
-		fistID.spd = 8
-			}
-		}
+		grapplespd=grapplespd*2
 	}
+	
+	if possibledir>=0 && possibledir<=180{
+	grappledir	=possibledir
 	}
+	show_debug_message(string(grappledir)+string(possibledir))
+}
 
+#endregion
+
+
+
+#region old rocketfist
+
+	//if rocketFist =1 {
+		
+	//	if mouse_check_button(mb_right) && attacking =2 {
+	//		//if atkTimeHeld < 59 { atkTimeHeld ++}
+	//		}
+	//	else if mouse_check_button(mb_right) && attacking = 0{
+	//		attacking = 2 }
+	//	if mouse_check_button_released(mb_right) && attacking = 2 {
+	//		if(!instance_exists(obj_rocketFist)){
+	//	fistID = instance_create_depth(x,y,-1,obj_rocketFist)	
+	//	fistID.tick = 120
+	//	fistID.spd = 8
+	//		}
+	//	}
+	//}
+#endregion
+
+	}
 
 #endregion
 
@@ -105,7 +182,7 @@ if ((keyboard_check(ord(leftKey)) xor keyboard_check(ord(rightKey)) )||(walljump
 	if staggerTime = 0 {lastxInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))}}
 	
 xInput = -keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey))
-if hp<=0 then xInput = 0
+if hp<=0 || grappled=1 then xInput = 0
 if staggerTime > 0 {
 	xInput = -hitDirection
 	lastxInput= -hitDirection
@@ -150,7 +227,7 @@ if ignorewall=1 { walljumpframes=0; }
 
 
 #region inital horiz collision 
-if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
+if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&vspeed<5{//&&place_meeting(x,y+2,obj_obstacle)
 	yy= vspeed
 	for (i=0;i<17;i=i+1){
 		
@@ -180,7 +257,7 @@ if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspee
 	} else if extraFrames>0 { extraFrames--}
 yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
 if yInput !=0 then walljumpframes=0
-if hp<=0 then yInput =0
+if hp<=0||grappled=1 then yInput =0
 if(yInput!=0){ymom=yInput*jump}
 	//if yInput <0 then extraFrames = 0
 	//}

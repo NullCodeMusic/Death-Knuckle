@@ -30,10 +30,16 @@ hpcontainervalue = 10
 rocketFist=1
 
 alphaHP=0
-
+xtarg=0
+ytarg=0
 audio_stop_all()
-
-
+grapplegrav=0
+grapplegrav2=0
+spdDecay=1
+grappledist=200
+grappledir=0
+grapplespd=0
+grappled=0
 hpAlpha=0
 flash = 0
 invulTime = 0
