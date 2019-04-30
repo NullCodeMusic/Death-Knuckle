@@ -1,13 +1,13 @@
 if atkTimeHeld>0&&cursorspeed>1{
 cursorspeed --;	
 	
-} else if cursorspeed<5 cursorspeed++
+} else if cursorspeed<4 cursorspeed++
 
-if cursorspeed=5&&frame!=0{
+if cursorspeed=4&&frame!=0{
 cursortick++	
 }
 
-if cursortick<5 then cursortick++
+if cursortick<4 then cursortick++
 if cursortick>cursorspeed{
 	cursortick=2
 	frame++
@@ -26,4 +26,5 @@ if cursortick>cursorspeed{
 	}
 	
 }
+
 

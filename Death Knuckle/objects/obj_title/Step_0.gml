@@ -5,4 +5,13 @@ if timer > 0 then timer -- else image_speed =imgspd
 
 if keyboard_check_pressed(vk_escape) then game_end()
 
-if keyboard_check_pressed(ord("M")) { if window_get_fullscreen() then window_set_fullscreen(0)else window_set_fullscreen(1)}
+if keyboard_check_pressed(ord("M")) { 
+	
+	window_set_cursor(cr_none)
+	if window_get_fullscreen() then{ window_set_fullscreen(0)
+	room_set_viewport(room,0,1,0,0,1440,810)
+	} else {
+	window_set_fullscreen(1)
+	room_set_viewport(room,0,1,0,0,display_get_width(),display_get_height())
+	}
+}

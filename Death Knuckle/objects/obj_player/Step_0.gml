@@ -484,7 +484,25 @@ if place_meeting(x,y,obj_endgame) then room=rm_WinGame
 
 if keyboard_check_pressed(vk_escape) then game_end()
 
-if keyboard_check_pressed(ord("M")) { if window_get_fullscreen() then window_set_fullscreen(0)else window_set_fullscreen(1)}
+if keyboard_check_pressed(ord("M")) { 
+	
+	window_set_cursor(cr_none)
+	if window_get_fullscreen() then{ window_set_fullscreen(0)
+	room_set_viewport(room,0,1,0,0,1440,810)
+	} else {
+	window_set_fullscreen(1)
+	room_set_viewport(room,0,1,0,0,display_get_width(),display_get_height())
+	}
+}
 
 
+/*
+rm	The index of the room to set
+vind	The index of the view port to set
+vis	The visibility of the view port (true is visible, false is invisible)
+xport	The x position for the view port in the room
+yport	The y position of the view port in the room
+wport	The width (in pixels) of the view port
+hport	The height (in pixels) of the view port
+*/
 if keyboard_check(vk_up) {x+=(mouse_x-x)/2;y+=(mouse_y-y)/2}
