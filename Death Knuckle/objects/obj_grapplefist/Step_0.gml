@@ -1,8 +1,8 @@
 if comeBack=1 { 
 
 direction=point_direction(x,y,obj_player.x,obj_player.y)
-speed=point_distance(x,y,obj_player.x,obj_player.y)/2
-
+speed=point_distance(x,y,obj_player.x,obj_player.y)/(2-speedup/20)
+if speedup!=20 then speedup++
 if place_meeting(x,y,obj_player){
 obj_player.attacking=0
 instance_destroy()

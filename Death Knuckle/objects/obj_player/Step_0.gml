@@ -77,11 +77,36 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 }
 
 #region Aiden's Grapple
+
+#region momenutm for launching
+
+if momentumTime>0{
+	
+	var momentx = lengthdir_x(momentumSpd*momentumTime/80,momentumDir)
+	var momenty = lengthdir_y(momentumSpd*momentumTime/80,momentumDir)
+	show_debug_message(string(momentx)+" "+string(momenty)+" "+string(momentumDir))
+	if !place_meeting(x+momentx,y+momenty,obj_obstacle){
+	
+	x+=momentx
+	y+=momenty*(momentumTime/30)
+	
+	momentumTime--
+	} else {
+	momentumTime=0	
+	}
+}
+/*
+momenutmTime=0
+momenutmDir=0
+momentumSpd=0
+*/
+#endregion
 #region grapple fist
 if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 	
-	var targetSpot = instance_place(mouse_x,mouse_y,obj_grappleSpot)//checks for a grappleable thing
-	if targetSpot!=noone{
+	var targetSpot = instance_nearest(mouse_x,mouse_y,obj_grappleSpot)//checks for a grappleable thing
+	
+	if distance_to_object(targetSpot)<500{
 
 		attacking =2	
 		var grapplefist = instance_create_depth(x,y,-1,obj_grapplefist)
@@ -99,7 +124,11 @@ grappled=0
 hspeed=xtarg
 vspeed=ytarg
 //do something to make sure that the momentum carries
-ymom=-5
+	momentumSpd=point_distance(x,y,x+xtarg,y+ytarg)
+	momentumDir=point_direction(x,y,x+xtarg,y+ytarg)
+	
+	momentumTime=40
+ymom=0
 }
 #endregion
 
@@ -119,13 +148,16 @@ if grappled=1{
 	obj_grapplefist.comeBack=1
 	hspeed=xtarg
 	vspeed=ytarg
+		momentumSpd=point_distance(x,y,xtarg,ytarg)
+		momentumDir=point_direction(x,y,xtarg,ytarg)
+		momentumTime=20
 	}else{
 	x+=xtarg
 	y+=ytarg
 	}
 	var dirInput = -(-keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey)))
-	if dirInput!=0 then spdDecay=2
-	grapplespd+=(dirInput)+grapplegrav2
+	if dirInput!=0 then spdDecay= max(2,spdDecay-0.1)
+	grapplespd+=(dirInput)*1.2+grapplegrav2
 	grapplespd=min(abs(grapplespd),10)*sign(grapplespd)
 	grapplegrav+=(90-grappledir)/180
 	grapplegrav=min(abs(grapplegrav),1)*sign(grapplegrav)

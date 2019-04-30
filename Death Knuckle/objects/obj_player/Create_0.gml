@@ -29,6 +29,10 @@ startingStaggerTime = 20
 hpcontainervalue = 10
 rocketFist=1
 
+momentumTime=0
+momentumDir=0
+momentumSpd=0
+
 alphaHP=0
 xtarg=0
 ytarg=0

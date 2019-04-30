@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_grappleSpot",
     "eventList": [
-        
+        {
+            "id": "ccf603d7-0e9b-4eb9-8f4e-0f6c362ee4fe",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "8793bfff-9926-4f3b-ad2c-4fb5b2deadbc"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
