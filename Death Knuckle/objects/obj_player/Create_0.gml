@@ -25,6 +25,7 @@ fistTime = 10
 global.fists = 0
 staggerTime = 0
 startingStaggerTime = 20
+grappleheld=0
 //upgrades
 hpcontainervalue = 10
 rocketFist=1

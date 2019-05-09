@@ -19,7 +19,7 @@ vertFollowPlayer = 0
 
 
 x += (mouse_x - x  + (obj_player.x-x)*2)/spd2
-y += (mouse_y - y + (obj_player.y-y-200)*2)/spd2
+y += (mouse_y - y + (obj_player.y-y)*2)/spd2
 xOrigin = x +hspeed
 yOrigin = y +vspeed
 if screenshake > 0{

@@ -87,8 +87,8 @@ if momentumTime>0{
 	show_debug_message(string(momentx)+" "+string(momenty)+" "+string(momentumDir))
 	if !place_meeting(x+momentx,y+momenty,obj_obstacle){
 	
-	x+=momentx
-	y+=momenty*(momentumTime/30)
+	x+=momentx*(momentumTime/40)
+	y+=momenty*(momentumTime/40)
 	
 	momentumTime--
 	} else {
@@ -103,8 +103,8 @@ momentumSpd=0
 #endregion
 #region grapple fist
 if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
-	
-	var targetSpot = instance_nearest(mouse_x,mouse_y,obj_grappleSpot)//checks for a grappleable thing
+	grappleheld=0
+	var targetSpot = instance_nearest(x,y,obj_grappleSpot)//checks for a grappleable thing
 	
 	if distance_to_object(targetSpot)<500{
 
@@ -128,7 +128,7 @@ vspeed=ytarg
 	momentumDir=point_direction(x,y,x+xtarg,y+ytarg)
 	
 	momentumTime=40
-ymom=0
+ymom=1
 }
 #endregion
 
@@ -150,14 +150,23 @@ if grappled=1{
 	vspeed=ytarg
 		momentumSpd=point_distance(x,y,xtarg,ytarg)
 		momentumDir=point_direction(x,y,xtarg,ytarg)
-		momentumTime=20
+		momentumTime=0
 	}else{
 	x+=xtarg
 	y+=ytarg
 	}
-	var dirInput = -(-keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey)))
-	if dirInput!=0 then spdDecay= max(2,spdDecay-0.1)
-	grapplespd+=(dirInput)*1.2+grapplegrav2
+	var dirInput = -(-keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey)))//directional input
+	if dirInput!=0 {//if left or right held
+		
+		spdDecay= max(2,spdDecay-0.1)
+		if sign(dirInput)==sign(grapplegrav2){ // if direction and gravity are working together
+			
+			grappleheld = min(30,grappleheld+1)
+		}
+	}else{
+	grappleheld = max(floor(grappleheld-1),1)	
+	}
+	grapplespd+=(dirInput)*(grappleheld/30)+grapplegrav2
 	grapplespd=min(abs(grapplespd),10)*sign(grapplespd)
 	grapplegrav+=(90-grappledir)/180
 	grapplegrav=min(abs(grapplegrav),1)*sign(grapplegrav)
@@ -183,14 +192,14 @@ if grappled=1{
 
 #endregion
 #endregion 
-
+/*
 #region Ryan's Grapple
 if(mouse_check_button_pressed(mb_right) && attacking = 0){
 	var grapID = instance_nearest(mouse_x,mouse_y,obj_grapplePoint)
 	grapID.grapTrig=1
 	}
 #endregion
-
+*/
 #region old rocketfist
 
 	//if rocketFist =1 {
