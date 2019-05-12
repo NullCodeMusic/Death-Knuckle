@@ -1,17 +1,19 @@
+
+
 x=xOrigin
 y=yOrigin
 
 hspeed = min(abs((obj_player.x-x)/spd),10) * sign(obj_player.x-x)
 vspeed = min(abs((obj_player.y-y-200)/spd),10) * sign(obj_player.y-y-200)
 
-//if horizFollowPlayer = 1 {
-//hspeed = ((obj_player.x-x)/spd)
-//}
-////
-//if vertFollowPlayer = 1 {
-//vspeed = ((obj_player.y-y)/spd)	
-//}
+if horizFollowPlayer = 1 {
+hspeed = ((obj_player.x-x)/spd)
+}
 //
+if vertFollowPlayer = 1 {
+vspeed = ((obj_player.y-y)/spd)	
+}
+
 horizFollowPlayer = 0
 vertFollowPlayer = 0
 

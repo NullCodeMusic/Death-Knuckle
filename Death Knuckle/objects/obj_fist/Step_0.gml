@@ -98,7 +98,7 @@ part_emitter_region(global.partSys,global.partEmtSmallBurst,enemyID.x-enemyID.sp
 
 #region breakables
 if place_meeting(x,y,prnt_breakable)&&tick>0{
-	obj_cameraFollowing.screenshake=3
+	obj_cameraFollowing.screenshake=4
 	if place_meeting(x,y,obj_breakableWall){
 		var doorID= instance_place(x,y,obj_breakableWall)
 		doorID.hits++
@@ -106,6 +106,7 @@ if place_meeting(x,y,prnt_breakable)&&tick>0{
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)
 		part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypRubble,50)		
 			instance_destroy(doorID)
+			obj_cameraFollowing.screenshake+=15
 		} else{
 		//part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-2,doorID.x+2,doorID.y-2,doorID.y+2,ps_shape_ellipse,ps_distr_gaussian)
 		part_emitter_region(global.partSys,global.partEmtSmallBurst,doorID.x-doorID.sprite_width/2,doorID.x+doorID.sprite_width/2,doorID.y-doorID.sprite_height/2,doorID.y+doorID.sprite_height/2,ps_shape_rectangle,ps_distr_linear)

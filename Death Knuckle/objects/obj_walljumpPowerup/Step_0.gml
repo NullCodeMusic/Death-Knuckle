@@ -23,11 +23,7 @@ while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
-var jtID = instance_nearest(x,y,obj_jumpThru)
-while(place_meeting(x,y+vspeed,jtID)&&vspeed!=0&&/*!place_meeting(x,y,jtID)&&*/y+55<jtID.y){
-vspeed-= vspeed/abs(vspeed)
-ymom=0
-}
+
 
 if(ymom<=ymax){ymom++}
 

@@ -1,4 +1,4 @@
-if place_meeting(x,y,obj_cameraFollowing){
+if (DrawIfOnScreen(100,100)){
 	draw_self()
 }
 

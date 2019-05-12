@@ -107,7 +107,7 @@ if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 	var targetSpot = instance_nearest(x,y,obj_grappleSpot)//checks for a grappleable thing
 	
 	if distance_to_object(targetSpot)<500{
-
+	grappledist=200
 		attacking =2	
 		var grapplefist = instance_create_depth(x,y,-1,obj_grapplefist)
 		grapplefist.targetSpot=targetSpot
@@ -140,10 +140,12 @@ if grappled=1{
 	var targGrappleY = obj_grapplefist.y + sin(grappledirRad)*grappledist
 
 	
+	grappledist= clamp(grappledist + (keyboard_check(ord(downKey))-keyboard_check(ord(upKey))),50,350)
 	xtarg= (targGrappleX-x) /5
 	ytarg= (targGrappleY-y) /5
 	
 	if place_meeting(x+xtarg,y+ytarg,obj_obstacle){
+	/*
 	grappled=0
 	obj_grapplefist.comeBack=1
 	hspeed=xtarg
@@ -151,10 +153,19 @@ if grappled=1{
 		momentumSpd=point_distance(x,y,xtarg,ytarg)
 		momentumDir=point_direction(x,y,xtarg,ytarg)
 		momentumTime=0
-	}else{
+		*/
+		while place_meeting(x+xtarg,y+ytarg,obj_obstacle){
+		xtarg-=	cos(grappledirRad)
+		ytarg-= sin(grappledirRad)
+		}
+		
+		
+	//}else{
+	
+	}
 	x+=xtarg
 	y+=ytarg
-	}
+	
 	var dirInput = -(-keyboard_check(ord(leftKey))+keyboard_check(ord(rightKey)))//directional input
 	if dirInput!=0 {//if left or right held
 		
