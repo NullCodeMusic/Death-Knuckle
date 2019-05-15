@@ -82,15 +82,16 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 
 if momentumTime>0{
 	
-	var momentx = lengthdir_x(momentumSpd*momentumTime/80,momentumDir)
-	var momenty = lengthdir_y(momentumSpd*momentumTime/80,momentumDir)
-	show_debug_message(string(momentx)+" "+string(momenty)+" "+string(momentumDir))
+	var momentx = lengthdir_x(momentumSpd*momentumTime/40,momentumDir)
+	var momenty = lengthdir_y(momentumSpd*momentumTime/40,momentumDir)
+	show_debug_message("x"+string(momentx)+" y"+string(momenty)+" "+string(momentumDir)+" time"+string(momentumTime))
 	if !place_meeting(x+momentx,y+momenty,obj_obstacle){
 	
-	x+=momentx*(momentumTime/40)
-	y+=momenty*(momentumTime/40)
+	x+=momentx*.75
+	y+=momenty*.75
 	
 	momentumTime--
+	
 	} else {
 	momentumTime=0	
 	}
@@ -103,12 +104,19 @@ momentumSpd=0
 #endregion
 #region grapple fist
 if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
-	grappleheld=0
-	var targetSpot = instance_nearest(x,y,obj_grappleSpot)//checks for a grappleable thing
+	grappletime=10
+	grappleheld=10
+	if grappletomouse=1{
+	var targetSpot = instance_nearest(mouse_x,mouse_y,obj_grappleSpot)//checks for a grappleable spot relative to mouse
+	} else{
+	var targetSpot = instance_nearest(x,y,obj_grappleSpot)//checks for a grappleable spot relative to player	
+	}
 	
-	if distance_to_object(targetSpot)<500{
+	if distance_to_object(targetSpot)<500&&!collision_line(x,y,targetSpot.x,targetSpot.y,obj_obstacle,true,false){
 	grappledist=200
-		attacking =2	
+		attacking =2
+		if targetSpot.type=1 then attacking=3
+		
 		var grapplefist = instance_create_depth(x,y,-1,obj_grapplefist)
 		grapplefist.targetSpot=targetSpot
 		var grappleDir = point_direction(x,y,targetSpot.x,targetSpot.y)*pi/180
@@ -118,9 +126,10 @@ if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 		spdDecay=2
 	}
 	
-} else if attacking=2 && !mouse_check_button(mb_right) {//if let go
+} else if attacking=2 && !mouse_check_button(mb_right) &&obj_grapplefist.grappled=1{//if let go
 obj_grapplefist.comeBack=1
 grappled=0
+if obj_grapplefist.grappled=1{
 hspeed=xtarg
 vspeed=ytarg
 //do something to make sure that the momentum carries
@@ -129,16 +138,20 @@ vspeed=ytarg
 	
 	momentumTime=40
 ymom=1
+obj_grapplefist.grappled=0
+}else{
+momentumSpd=0	
+}
 }
 #endregion
 
 #region grappled
 
-if grappled=1{
+if grappled=1&&grappletime=0{
 	var grappledirRad = grappledir*pi/180
 	var targGrappleX = obj_grapplefist.x + cos(grappledirRad)*grappledist
 	var targGrappleY = obj_grapplefist.y + sin(grappledirRad)*grappledist
-
+draw_sprite(spr_checkpoint,0,targGrappleX,targGrappleY)
 	
 	grappledist= clamp(grappledist + (keyboard_check(ord(downKey))-keyboard_check(ord(upKey))),50,350)
 	xtarg= (targGrappleX-x) /5
@@ -199,6 +212,47 @@ if grappled=1{
 	grappledir	=possibledir
 	}
 	show_debug_message(string(grappledir)+string(possibledir))
+	
+	
+} else if grappletime>0&&instance_exists(obj_grapplefist)&&obj_grapplefist.comeBack=0&&attacking=2{ //stationary point
+	var grappledirRad = grappledir*pi/180
+	var targGrappleX = obj_grapplefist.x + cos(grappledirRad)*grappledist
+	var targGrappleY = obj_grapplefist.y + sin(grappledirRad)*grappledist
+	
+	
+	var hgrapple= (targGrappleX-x)/max(grappletime,1)
+	var vgrapple= (targGrappleY-y)/max(grappletime,1)
+	if !place_meeting(x+hgrapple,y+vgrapple,obj_obstacle){
+	x+=hgrapple	
+	y+=vgrapple
+	}
+	grappletime--
+}else if attacking=3&&obj_grapplefist.grappled=1{//grabs point
+	ymom=0
+	var hgrapple= (obj_grapplefist.x-x)/10
+	var vgrapple= (obj_grapplefist.y-y)/10
+	if !place_meeting(x+hgrapple,y+vgrapple,obj_obstacle){
+	x+=hgrapple	
+	y+=vgrapple
+	}
+	if attacking=3 && !mouse_check_button(mb_right) {//if let go
+obj_grapplefist.comeBack=1
+grappled=0
+if obj_grapplefist.grappled=1{
+	obj_grapplefist.grappled=0
+hspeed=hgrapple*40
+vspeed=vgrapple*40
+//hgrapple*=4
+///vgrapple*=4
+//do something to make sure that the momentum carries
+	momentumSpd=point_distance(x,y,x+hgrapple,y+vgrapple)
+	momentumDir=point_direction(x,y,x+hgrapple,y+vgrapple)
+	
+	momentumTime=40
+ymom=1}else{
+momentumSpd=0	
+}
+}
 }
 
 #endregion
@@ -312,12 +366,55 @@ hspeed-= sign(hspeed)}
 #endregion
 
 #region vertical movement
-if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||(ignorewall=0&&walljump=1&& (walljumpframes>0))){ extraFrames=7
-	} else if extraFrames>0 { extraFrames--}
-yInput = -(keyboard_check_pressed(ord(upKey))*(extraFrames>0))
-if yInput !=0 then walljumpframes=0
+if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||(ignorewall=0&&walljump=1&& (walljumpframes>0))){ //touching ground
+	extraFrames=15
+	
+	
+	
+	
+	///!!!
+	
+	
+	
+	
+	
+	
+	
+	
+	///!!!
+	
+	
+	//if extra jump is unlocked then extraJump=1							
+	
+	
+	
+	///!!!
+	
+	
+	
+	
+	
+	
+	
+	///!!!
+	} else if extraFrames>0 { extraFrames-- 
+		show_debug_message(string(extraFrames))}
+	
+	
+	
+yInput = -(keyboard_check_pressed(ord(upKey)))
+if yInput !=0 {
+	if extraFrames=7 then extraFrames=1
+	walljumpframes=0
+if extraFrames=0 && extraJump=0 { yInput=0
+}else if extraFrames>0{
+extraFrames=0	
+}else if extraJump>0{
+extraJump--	
+}
+}
 if hp<=0||grappled=1 then yInput =0
-if(yInput!=0){ymom=yInput*jump}
+if(yInput!=0){ymom=yInput*jumpheight}
 	//if yInput <0 then extraFrames = 0
 	//}
 	

@@ -13,7 +13,7 @@ keyboard_set_map(vk_space,ord("W"))
 spd = 9
 ymom = 0
 ymax = 20
-jump = 20
+jumpheight = 20
 diagonal = 0
 timeHeld = 0
 lastxInput=1
@@ -29,6 +29,9 @@ grappleheld=0
 //upgrades
 hpcontainervalue = 10
 rocketFist=1
+
+grappletime=0
+extraJump=0
 
 momentumTime=0
 momentumDir=0
@@ -61,7 +64,7 @@ facingwall=0
 attackDamage=20 // full damage of a charged fist
 
 
-
+grappletomouse=1
 
 
 boolcheck1=0

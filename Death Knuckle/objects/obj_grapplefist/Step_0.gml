@@ -8,7 +8,7 @@ obj_player.attacking=0
 instance_destroy()
 }
 }else if grappled =0{
-	
+	//obj_player.grappletime--
 	direction=point_direction(x,y,targetSpot.x,targetSpot.y)
 	speed=point_distance(x,y,targetSpot.x,targetSpot.y)/2
 	

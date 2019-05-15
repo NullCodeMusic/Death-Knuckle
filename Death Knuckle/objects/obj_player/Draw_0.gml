@@ -20,3 +20,9 @@ if setHitAnim=1 && staggerTime>0{
 draw_self()
 
 
+if grappled=1&&grappletime=0{
+	var grappledirRad = grappledir*pi/180
+	var targGrappleX = obj_grapplefist.x + cos(grappledirRad)*grappledist
+	var targGrappleY = obj_grapplefist.y + sin(grappledirRad)*grappledist
+
+draw_sprite(spr_checkpoint,0,targGrappleX,targGrappleY)}
