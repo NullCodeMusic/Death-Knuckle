@@ -65,8 +65,8 @@ attackDamage=20 // full damage of a charged fist
 
 
 grappletomouse=1
-
-
+cursor_sprite=sp_cursor0
+window_set_cursor(cr_none)
 boolcheck1=0
 frame1done=0
 fadein = 80
