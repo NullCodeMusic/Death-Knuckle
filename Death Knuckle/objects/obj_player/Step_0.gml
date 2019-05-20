@@ -102,7 +102,10 @@ momenutmDir=0
 momentumSpd=0
 */
 #endregion
+if(instance_exists(obj_grappleSpot)){
 #region grapple fist
+
+
 if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 	grappletime=10
 	grappleheld=10
@@ -125,7 +128,7 @@ if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 		grapplefist.y += sin(grappleDir)*5
 		spdDecay=2
 	}
-	
+
 } else if attacking=2 && !mouse_check_button(mb_right) &&obj_grapplefist.grappled=1{//if let go
 obj_grapplefist.comeBack=1
 grappled=0
@@ -256,6 +259,7 @@ momentumSpd=0
 }
 
 #endregion
+}
 #endregion 
 /*
 #region Ryan's Grapple
