@@ -66,7 +66,7 @@ if place_meeting(x,y,prnt_enemy){
 	}
 	
 	if enemyID.invulTime<=0||place_meeting(x,y,obj_enemyBossBeastMother){
-		enemyID.staggerTime =10
+		enemyID.staggerTime =7
 		enemyID.invulTime=5
 		enemyID.ymom=-10
 		enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)

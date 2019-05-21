@@ -370,8 +370,8 @@ hspeed-= sign(hspeed)}
 #endregion
 
 #region vertical movement
-if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))||(ignorewall=0&&walljump=1&& (walljumpframes>0))){ //touching ground
-	extraFrames=15
+if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspeed)+5,obj_jumpThru))&&vspeed<=0){ //touching ground   ||(ignorewall=0&&walljump=1&& (walljumpframes>0))
+	extraFrames=10
 	
 	
 	
@@ -408,7 +408,7 @@ if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspee
 	
 yInput = -(keyboard_check_pressed(ord(upKey)))
 if yInput !=0 {
-	if extraFrames=7 then extraFrames=1
+	
 	walljumpframes=0
 if extraFrames=0 && extraJump=0 { yInput=0
 }else if extraFrames>0{
@@ -416,6 +416,7 @@ extraFrames=0
 }else if extraJump>0{
 extraJump--	
 }
+if extraFrames!=0 then extraFrames=0
 }
 if hp<=0||grappled=1 then yInput =0
 if(yInput!=0){ymom=yInput*jumpheight}
@@ -493,7 +494,6 @@ if(place_meeting(x,y,obj_boss_projectile_vert)){
 		invulTime = 60
 		staggerTime = 10
 		setHitAnim = 1
-		if place_meeting(x,y,obj_boss_projectile_vert){
 		var enemyid = instance_place(x,y,obj_boss_projectile_vert)
 		if (enemyid.x-x)!=0{
 			hitDirection = (enemyid.x-x)/abs(enemyid.x - x)} else hitDirection=0
@@ -501,6 +501,18 @@ if(place_meeting(x,y,obj_boss_projectile_vert)){
 		red=0
 		ymom=ymom-15
 		}
+
+if place_meeting(x,y,prnt_projectile){
+var hitID=instance_nearest(x,y,prnt_projectile)
+	var hitDT = hitID.damage
+	var hitKB = hitID.knockback
+	var hitST = hitID.stagger
+		EnemyCollision(hitID,40,hitST,hitDT,hitKB)
+		obj_cameraFollowing.screenshake = random_range(hitDT,hitDT+10)
+		
+	audio_sound_pitch(snd_ouchie,1+random_range(-0.1,+0.1))
+	audio_play_sound(snd_ouchie,1,0)
+		
 }
 //else flash = 0
 //if flash =0 then image_alpha=1
@@ -542,6 +554,12 @@ ini_open("save.data")
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
 		ini_write_string("data","usedHPcontainers",ds_list_write(obj_checkpointList.hpList))
 		hp = 100 + extraHPContainers * hpcontainervalue
+		if instance_exists(prnt_enemy){
+		instance_destroy(prnt_enemy)
+		}
+		if instance_exists(prnt_trigger_summon){
+			prnt_trigger_summon.activated=0
+		}
 		//get number of health objects then make an array using their ID's and their uniqe ID's given in creation code
 ini_close()
 if !instance_exists(obj_checkpointLight){
