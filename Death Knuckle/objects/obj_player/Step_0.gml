@@ -482,12 +482,13 @@ if place_meeting(x,y,prnt_enemy){
 }
 if(place_meeting(x,y,obj_killzone)){hp -=10
 	red=0}
-if(place_meeting(x,y,obj_fall)){
+if(place_meeting(x+hspeed,y+vspeed,obj_fall)){
 hp-=10
 x=fallRecx
-y=fallRecy-10
+y=fallRecy-15
 red=0
-staggerTime=50
+invulTime=5
+//staggerTime=50
 fadein=55
 }
 if(place_meeting(x,y,obj_boss_projectile_vert)){
@@ -503,6 +504,7 @@ if(place_meeting(x,y,obj_boss_projectile_vert)){
 		}
 
 if place_meeting(x,y,prnt_projectile){
+	red=0
 var hitID=instance_nearest(x,y,prnt_projectile)
 	var hitDT = hitID.damage
 	var hitKB = hitID.knockback
