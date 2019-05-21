@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "55704a1f-fbb8-4854-867c-a9288b45698b",
+            "Value": {
+                "id": "652fedb2-3cfe-4fe3-9e74-db5ecff786f3",
+                "resourcePath": "objects\\obj_trigger_summonCrawler\\obj_trigger_summonCrawler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "565a7680-2b32-42d9-90a7-9ce1ee38b083",
             "Value": {
                 "id": "850fb12b-936c-4c0a-8827-ae2f6c311872",
