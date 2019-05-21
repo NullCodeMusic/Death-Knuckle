@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 room_speed = 60
+fallRecx=x
+fallRecy=y
+fallRecTimer=0
 upKey = "W";
 downKey = "S";
 leftKey = "A";
@@ -29,7 +32,7 @@ grappleheld=0
 //upgrades
 hpcontainervalue = 10
 rocketFist=1
-
+red=0
 grappletime=0
 extraJump=0
 

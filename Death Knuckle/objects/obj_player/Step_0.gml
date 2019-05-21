@@ -115,7 +115,7 @@ if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 	var targetSpot = instance_nearest(x,y,obj_grappleSpot)//checks for a grappleable spot relative to player	
 	}
 	
-	if distance_to_object(targetSpot)<500&&!collision_line(x,y,targetSpot.x,targetSpot.y,obj_obstacle,true,false){
+	if distance_to_object(targetSpot)<400&&!collision_line(x,y,targetSpot.x,targetSpot.y,obj_obstacle,true,false){
 	grappledist=200
 		attacking =2
 		if targetSpot.type=1 then attacking=3
@@ -466,6 +466,7 @@ if place_meeting(x,y,prnt_enemy){
 	// arg 2 = stagger time
 	// arg 3 damage to hp
 	// arg 4 ymom 
+	red=0
 	var hitID=instance_nearest(x,y,prnt_enemy)
 	var hitDT = hitID.damage
 	var hitKB = hitID.knockback
@@ -478,7 +479,16 @@ if place_meeting(x,y,prnt_enemy){
 	audio_play_sound(snd_ouchie,1,0)
 
 }
-if(place_meeting(x,y,obj_killzone)){hp -=10}
+if(place_meeting(x,y,obj_killzone)){hp -=10
+	red=0}
+if(place_meeting(x,y,obj_fall)){
+hp-=10
+x=fallRecx
+y=fallRecy-10
+red=0
+staggerTime=50
+fadein=55
+}
 if(place_meeting(x,y,obj_boss_projectile_vert)){
 		invulTime = 60
 		staggerTime = 10
@@ -488,6 +498,7 @@ if(place_meeting(x,y,obj_boss_projectile_vert)){
 		if (enemyid.x-x)!=0{
 			hitDirection = (enemyid.x-x)/abs(enemyid.x - x)} else hitDirection=0
 		hp=hp-20
+		red=0
 		ymom=ymom-15
 		}
 }
@@ -627,3 +638,12 @@ wport	The width (in pixels) of the view port
 hport	The height (in pixels) of the view port
 */
 if keyboard_check(vk_up) {x+=(mouse_x-x)/2;y+=(mouse_y-y)/2}
+
+if fallRecTimer=0&&place_meeting(x,y+3,obj_obstacle)&&!place_meeting(x+hspeed,y+vspeed,obj_fall){ //checks if player is on ground and timer is out
+fallRecx=x
+fallRecy=y
+fallRecTimer=300
+
+} else if fallRecTimer>0 then fallRecTimer--
+
+show_debug_message(string(fallRecTimer))

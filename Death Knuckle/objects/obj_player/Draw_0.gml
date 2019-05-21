@@ -16,8 +16,12 @@ if setHitAnim=1 && staggerTime>0{
 	
 	if(xInput!=0){sprite_index = sp_player_walk}else{sprite_index =sp_player}
 }
+//default red 150 goes down
 
+if red<255{image_blend =make_color_rgb(255,red,red)
+	red+= (255-red)/80}
 draw_self()
+
 
 
 if grappled=1&&grappletime=0{
