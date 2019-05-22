@@ -1,4 +1,4 @@
-spd =50
+spd =20
 spd2= 50
 horizFollowPlayer = 0
 vertFollowPlayer = 0

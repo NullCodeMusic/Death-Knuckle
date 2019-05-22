@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 mask_index=sp_bug
-
+sprite_index=sp_bug
+animateTime=-1
 xInput=1
 damage = 10
 knockback = 10

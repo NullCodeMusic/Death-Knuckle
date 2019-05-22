@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "256f7b99-0f03-407b-8c1d-9fcd975ccdd6",
+            "Value": {
+                "id": "0bfdc599-6656-44e5-8c58-c56cae465877",
+                "resourcePath": "objects\\obj_trigger_summonSpitter\\obj_trigger_summonSpitter.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "25bf9693-996d-4215-91f5-c3a98806e7b2",
             "Value": {
                 "id": "52fcf89a-9566-4884-bc09-e64f1ade7e8f",
@@ -371,6 +379,14 @@
             "Value": {
                 "id": "0d5460e5-75a1-42eb-b1a4-b7de35980aab",
                 "resourcePath": "sprites\/sp_cursor6\/sp_cursor6.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2dd85f8a-96d7-4ab1-b358-f4137d0347eb",
+            "Value": {
+                "id": "882ac950-d73a-478e-ad18-83aa03c02cea",
+                "resourcePath": "sprites\\sp_hook\\sp_hook.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -572,6 +588,14 @@
                 "id": "3f3df382-2c99-4cf9-8704-da43f439fc57",
                 "resourcePath": "scripts\/Respawn\/Respawn.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4ea06f9a-4334-4b5e-9052-8760999845c2",
+            "Value": {
+                "id": "7f500e8b-f4ce-4a09-aa8e-971abeae7273",
+                "resourcePath": "objects\\obj_spitter_projectile\\obj_spitter_projectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1044,6 +1068,14 @@
                 "id": "325b6a41-3791-43c0-941c-5ebf5137b637",
                 "resourcePath": "sprites\/spr_squareR\/spr_squareR.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9e70504b-0280-4049-80e0-0ddaa0558d3d",
+            "Value": {
+                "id": "61269038-2a79-4ed2-aa8c-0cd324dcfe0b",
+                "resourcePath": "objects\\obj_enemy_spitter\\obj_enemy_spitter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
