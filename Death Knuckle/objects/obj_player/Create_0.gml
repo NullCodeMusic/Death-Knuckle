@@ -90,6 +90,10 @@ jojosmode = 0
 ini_open("save.data")
 	 walljump = ini_read_real("unlocks","walljump",0)
 	 extraHPContainers = ini_read_real("unlocks","hpcontainers",0)
+	// extraJump
+	// grapple hook
+	// swing hook
+	
 ini_close()
 
 
