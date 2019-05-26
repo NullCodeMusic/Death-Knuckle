@@ -15,3 +15,8 @@ speed=1
 while(instance_place(x+hspeed,y,obj_obstacle)){hspeed-=sign(hspeed)}
 while(instance_place(x,y+vspeed,obj_obstacle)){vspeed-=sign(vspeed)}
 }
+
+if place_meeting(x,y,obj_pathDirection){
+	var dirobj = instance_place(x,y,obj_pathDirection)
+	direction=dirobj.image_angle
+}
