@@ -3,6 +3,9 @@
 mask_index = sp_player
 if ignorewall=1 { walljumpframes=0}
 
+var plat = instance_nearest(x,y,obj_movingPlatform)
+if distance_to_object(plat)>1 then plat=0
+
 if hp<=0 then {staggerTime = 1
 
 	global.deathx = (x - camera_get_view_x(view_camera[0]))
@@ -344,6 +347,10 @@ if ignorewall=1 { walljumpframes=0; }
 
 
 #region inital horiz collision 
+//moving platform
+if plat!=0{
+	
+}
 if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&vspeed<5{//&&place_meeting(x,y+2,obj_obstacle)
 	yy= vspeed
 	for (i=0;i<17;i=i+1){
@@ -363,6 +370,8 @@ facingwall=sign(hspeed)
 	if walljumpframes>0 { walljumpframes-- ymom=2;
 		walljump=1 fuk
 		}}*/
+		if plat!=0 {
+		hspeed+=plat.hspeed}
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= sign(hspeed)}
 
@@ -402,7 +411,7 @@ if((place_meeting(x,y+abs(hspeed)+5,obj_obstacle) || place_meeting(x,y+abs(hspee
 	
 	///!!!
 	} else if extraFrames>0 { extraFrames-- 
-		show_debug_message(string(extraFrames))}
+		}
 	
 	
 	
@@ -429,6 +438,7 @@ if staggerTime>0 then yInput =0
 
 
 vspeed = ymom
+if plat!=0 then vspeed+=plat.vspeed
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
