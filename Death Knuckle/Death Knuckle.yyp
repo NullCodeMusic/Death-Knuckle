@@ -1215,6 +1215,14 @@
             }
         },
         {
+            "Key": "b8246f90-5728-43b7-a7e3-e573ac85e132",
+            "Value": {
+                "id": "2029edb2-e699-4b62-b69f-7a7ecef24fca",
+                "resourcePath": "sprites\\sp_movingPlatform\\sp_movingPlatform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b8260766-8aa2-4c69-8f2e-96bf72f9e0a1",
             "Value": {
                 "id": "0ea052eb-0ec7-4e9f-a98d-21531505e743",
@@ -1244,6 +1252,14 @@
                 "id": "6907f218-77f8-4cf4-9211-5cdfd800ade4",
                 "resourcePath": "sounds\/snd_bossfight\/snd_bossfight.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "bc7dcb85-bc5e-4714-b801-39cc88492a25",
+            "Value": {
+                "id": "ee0a5016-c66e-4e90-adc4-8cca6f82d6c5",
+                "resourcePath": "objects\\obj_spikes\\obj_spikes.yy",
+                "resourceType": "GMObject"
             }
         },
         {

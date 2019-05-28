@@ -492,6 +492,15 @@ if place_meeting(x,y,prnt_enemy){
 }
 if(place_meeting(x,y,obj_killzone)){hp -=10
 	red=0}
+if(place_meeting(x,y,obj_spikes)){
+hp-=20
+red=0
+invulTime=60
+ymom=-10
+staggerTime=20
+setHitAnim = 1
+hitDirection=-sign(hspeed)
+}
 if(place_meeting(x+hspeed,y+vspeed,obj_fall)){
 hp-=10
 x=fallRecx
