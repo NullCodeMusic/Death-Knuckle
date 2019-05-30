@@ -647,6 +647,14 @@
             }
         },
         {
+            "Key": "5b6c3fac-f3d8-4220-a92d-40d79b50c86f",
+            "Value": {
+                "id": "6eb11c1b-af0b-491b-8180-7a14adf24fe9",
+                "resourcePath": "objects\\obj_miniBossBug_projectile\\obj_miniBossBug_projectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5f1e6088-f0a4-449b-92c6-5b9c1caff1dd",
             "Value": {
                 "id": "ef3cf5e8-5bfa-47c7-a8f8-2a7d24e4646e",
@@ -1311,6 +1319,14 @@
             }
         },
         {
+            "Key": "c0f1e424-83f3-4a40-95ca-a11e4ee7863f",
+            "Value": {
+                "id": "0802af14-ec16-4384-9bd7-f69e93ef4b4b",
+                "resourcePath": "objects\\obj_enemy_miniBossBug\\obj_enemy_miniBossBug.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2f46e24-0058-4ae4-933c-7e8a883175bf",
             "Value": {
                 "id": "e6d6df3b-8196-4aa9-be08-c55cf658e737",
@@ -1732,6 +1748,14 @@
                 "id": "05c65ad3-9ce6-42f8-b617-9ccb78408001",
                 "resourcePath": "sprites\\sp_tutoral\\sp_tutoral.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f27646ed-d4d2-4032-8862-2858ac751620",
+            "Value": {
+                "id": "b18b5ce3-fcd4-4798-996d-b9de47907854",
+                "resourcePath": "objects\\obj_enemy_bugBoss\\obj_enemy_bugBoss.yy",
+                "resourceType": "GMObject"
             }
         },
         {
