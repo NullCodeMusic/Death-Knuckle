@@ -47,7 +47,8 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	if distPercentage > 1 then distPercentage = 1
 	Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
 	if Dist > maxDist then Dist = maxDist
-	fistID.tick = Dist
+	fistID.tick = Dist*.75
+	fistID.startingDist=Dist
 	fistID.distance = Dist
 	atkTimeHeld = 0
 	}

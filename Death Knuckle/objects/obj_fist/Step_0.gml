@@ -65,7 +65,7 @@ if place_meeting(x,y,prnt_enemy){
 	audio_play_sound(snd_wargHurt,1,0)	
 	}
 	
-	if enemyID.invulTime<=0||place_meeting(x,y,obj_enemyBossBeastMother){
+	if enemyID.invulTime<=0{//||place_meeting(x,y,obj_enemyBossBeastMother)
 		enemyID.staggerTime =7
 		enemyID.invulTime=5
 		enemyID.ymom=-10
