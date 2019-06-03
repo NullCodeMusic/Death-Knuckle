@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0331c43d-33fd-449c-8ee8-03ffe064ab41",
+            "Value": {
+                "id": "cec09d3b-7047-4b34-914a-ee2f1794f04f",
+                "resourcePath": "sprites\\sp_wood\\sp_wood.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "03b1151f-05d1-4d64-a51f-f39ffec4fcd5",
             "Value": {
                 "id": "aab399a3-299e-4ac6-bd89-f765764eac93",
@@ -607,6 +615,14 @@
             }
         },
         {
+            "Key": "527b9e21-35c4-443f-becd-31940efd87e2",
+            "Value": {
+                "id": "03b14da8-c454-46ea-a1a5-d6329f2716d6",
+                "resourcePath": "sprites\\sp_movingPlatform1\\sp_movingPlatform1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "55704a1f-fbb8-4854-867c-a9288b45698b",
             "Value": {
                 "id": "652fedb2-3cfe-4fe3-9e74-db5ecff786f3",
@@ -772,6 +788,14 @@
                 "id": "8bfd624b-025e-44da-9769-b7d52e5eed43",
                 "resourcePath": "sprites\/sp_backgroundSmolFall\/sp_backgroundSmolFall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "70a43368-1754-450e-abdd-88297f92d402",
+            "Value": {
+                "id": "921dcc70-8978-4988-a723-585b1b2be236",
+                "resourcePath": "objects\\obj_breakingPlatfrom\\obj_breakingPlatfrom.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1052,6 +1076,14 @@
                 "id": "d5d96caa-fba9-416b-9a4e-8cb79b50b25e",
                 "resourcePath": "objects\/obj_breakableWall\/obj_breakableWall.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9aa4aa73-2a37-4bde-bdfa-9154c20c23a5",
+            "Value": {
+                "id": "bd5fc958-8b64-424d-880a-d0127f4f9eae",
+                "resourcePath": "sprites\\sp_null\\sp_null.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1660,6 +1692,14 @@
                 "id": "056430c1-aa3e-475b-8706-236fa8b13c37",
                 "resourcePath": "sprites\\spr_square1\\spr_square1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dcded63f-a3ba-4910-bb20-966b6d783cb3",
+            "Value": {
+                "id": "adf5c041-8a11-4d2d-ac12-69baae0db837",
+                "resourcePath": "objects\\obj_crumblingPlatform\\obj_crumblingPlatform.yy",
+                "resourceType": "GMObject"
             }
         },
         {
