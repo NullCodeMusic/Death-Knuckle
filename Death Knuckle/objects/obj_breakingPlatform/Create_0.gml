@@ -1,3 +1,2 @@
-str=30
+str=40
 refresh=0
-touched=0

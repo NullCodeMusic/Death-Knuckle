@@ -1,7 +1,7 @@
 if refresh>0{
 	
 refresh--
-sprite_index=sp_null
+sprite_index=noone
 if refresh=0 { refresh=-1
 	str=30
 	touched=0}
