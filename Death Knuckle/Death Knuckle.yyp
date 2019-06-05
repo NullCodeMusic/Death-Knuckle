@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "0ef56aac-c207-4e91-9373-11a81f71f67f",
+            "Value": {
+                "id": "6d0fe061-26d2-4f48-9b03-92b8486dd0fa",
+                "resourcePath": "objects\\obj_enemy_wallJumpCrawler\\obj_enemy_wallJumpCrawler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0f351ee2-a655-4ce6-a5d3-e8cc214e61a6",
             "Value": {
                 "id": "880afe04-ac5c-4950-9588-ddcf826894ec",
@@ -396,6 +404,14 @@
                 "id": "5340bc0d-7867-4f54-85de-819e501406ed",
                 "resourcePath": "sprites\\sp_arrow\\sp_arrow.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2fa5f4fc-2b9a-4218-bb93-79dee8b96000",
+            "Value": {
+                "id": "b06af6e9-487e-4d36-888c-44cabf9dce8c",
+                "resourcePath": "objects\\obj_trigger_summonWallJumpCrawler\\obj_trigger_summonWallJumpCrawler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1787,14 +1803,6 @@
             "Value": {
                 "id": "1b6df3d9-ec0e-47ba-9f08-ea370800f8f5",
                 "resourcePath": "objects\\obj_crumblingPlatform\\obj_crumblingPlatform.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "f27646ed-d4d2-4032-8862-2858ac751620",
-            "Value": {
-                "id": "b18b5ce3-fcd4-4798-996d-b9de47907854",
-                "resourcePath": "objects\\obj_enemy_bugBoss\\obj_enemy_bugBoss.yy",
                 "resourceType": "GMObject"
             }
         },
