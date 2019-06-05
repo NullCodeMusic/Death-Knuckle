@@ -28,3 +28,19 @@ if cursortick>cursorspeed{
 }
 
 
+
+if place_meeting(x,y+1,obj_breakingPlatform){
+var plat = instance_place(x,y+1,obj_breakingPlatform)	
+plat.str --
+if plat.str<=0{
+plat.refresh=180
+part_type_sprite(global.partTypEnemyRubble,spr_particle_rubble,1,1,0)
+with(plat){
+part_emitter_region(global.partSys,global.partEmtSmallBurst,x-sprite_width/2,x+sprite_width/2,y-sprite_height,y,ps_shape_rectangle,ps_distr_linear)
+	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypEnemyRubble,5)
+}
+}
+}else if place_meeting(x,y+1,obj_crumblingPlatform){
+var plat= instance_place(x,y+1,obj_crumblingPlatform)
+plat.touched=1
+}
