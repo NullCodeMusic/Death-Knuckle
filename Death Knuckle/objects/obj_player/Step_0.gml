@@ -3,9 +3,13 @@
 mask_index = sp_player
 if ignorewall=1 { walljumpframes=0}
 
-var plat = instance_nearest(x,y,obj_movingPlatform)
-if distance_to_object(plat)>1 then plat=0
 
+
+	var platform = instance_place(x,y+vspeed+1,obj_movingPlatform)
+if platform=noone then platform=0 else{
+}
+
+//if platform!=0{ymom=platform.vspeed}
 if hp<=0 then {staggerTime = 1
 
 	global.deathx = (x - camera_get_view_x(view_camera[0]))
@@ -349,7 +353,7 @@ if ignorewall=1 { walljumpframes=0; }
 
 #region inital horiz collision 
 //moving platform
-if plat!=0{
+if platform!=0{
 	
 }
 if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&vspeed<5{//&&place_meeting(x,y+2,obj_obstacle)
@@ -371,8 +375,8 @@ facingwall=sign(hspeed)
 	if walljumpframes>0 { walljumpframes-- ymom=2;
 		walljump=1 fuk
 		}}*/
-		if plat!=0 {
-		hspeed+=plat.hspeed}
+		if platform!=0 {
+		hspeed+=platform.hspeed}
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= sign(hspeed)}
 
@@ -439,7 +443,7 @@ if staggerTime>0 then yInput =0
 
 
 vspeed = ymom
-if plat!=0 then vspeed+=plat.vspeed
+
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
@@ -452,6 +456,15 @@ ymom=0
 
 if(ymom<=ymax){ymom++}
 
+if platform!=0 {
+	with (platform){
+			//obj_player.vspeed+=vspeed
+			obj_player.y+=vspeed
+			//if vspeed>0 then 
+			
+		
+	}
+}
 
 #region vetical collsion
 

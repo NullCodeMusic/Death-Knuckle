@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 motion_add(direction,speed)
 speed+=accel
 speed=min(maxspeed,speed)
@@ -16,7 +18,7 @@ while(instance_place(x+hspeed,y,obj_obstacle)){hspeed-=sign(hspeed)}
 while(instance_place(x,y+vspeed,obj_obstacle)){vspeed-=sign(vspeed)}
 }
 
-if place_meeting(x,y,obj_pathDirection){
-	var dirobj = instance_place(x,y,obj_pathDirection)
+if place_meeting(x+hspeed,y+vspeed,obj_pathDirection){
+	var dirobj = instance_place(x+hspeed,y+vspeed,obj_pathDirection)
 	direction=dirobj.image_angle
 }

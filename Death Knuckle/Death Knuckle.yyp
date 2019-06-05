@@ -410,7 +410,7 @@
             "Key": "2fa5f4fc-2b9a-4218-bb93-79dee8b96000",
             "Value": {
                 "id": "b06af6e9-487e-4d36-888c-44cabf9dce8c",
-                "resourcePath": "objects\\obj_trigger_summonWallJumpCrawler\\obj_trigger_summonWallJumpCrawler.yy",
+                "resourcePath": "objects\\obj_trigger_summon_miniBossBug\\obj_trigger_summon_miniBossBug.yy",
                 "resourceType": "GMObject"
             }
         },
