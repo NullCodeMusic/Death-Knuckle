@@ -35,6 +35,8 @@ rocketFist=1
 red=0
 grappletime=0
 extraJump=0
+cooldown=0
+
 
 momentumTime=0
 momentumDir=0

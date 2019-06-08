@@ -51,3 +51,17 @@ if place_meeting(x,y+1,obj_crumblingPlatform){
 var plat= instance_place(x,y+1,obj_crumblingPlatform)
 plat.touched=1
 }
+
+
+//if place_meeting(x,y,obj_movingPlatform){
+	
+//	for(var count=0; place_meeting(x,y,obj_movingPlatform)&&count<50;count++){
+//if place_meeting(x,y-1,obj_movingPlatform){
+//	y--
+//}
+
+//}
+
+
+
+//}

@@ -21,7 +21,7 @@ if droptime>0&&distance_to_object(obj_player)<600 then droptime--
 if animateTime=0{
 	sprite_index=sp_bug
 	animateTime=-1
-	droptime=irandom_range(60,200)
+	droptime=irandom_range(60,120)
 	var proj = instance_create_depth(x,y,0,obj_miniBossBug_projectile)
 	proj.pointv = y-obj_player.y
 	proj.pointh = -x+obj_player.x

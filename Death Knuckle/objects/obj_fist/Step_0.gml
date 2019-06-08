@@ -168,6 +168,7 @@ tick =  - distance *0.2
 //if tick <= -distance {
 if place_meeting(x+hspeed,y+vspeed,obj_player) && tick< 0{
 obj_player.attacking = 0
+obj_player.cooldown=setcooldown
 //if tooEarly = 1 {obj_player.staggerTime = obj_player.startingStaggerTime}
 instance_destroy()
 }

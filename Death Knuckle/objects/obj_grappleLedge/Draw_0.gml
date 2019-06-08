@@ -1,2 +1,2 @@
 draw_self()
-draw_circle(x,y,400,1)
+draw_circle(x,y,450,1)
