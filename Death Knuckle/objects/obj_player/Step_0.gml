@@ -366,7 +366,7 @@ hspeed = timeHeld*jumpInput
 }
 
 
-if place_meeting(x,y+1,obj_obstacle)&&ignorewall!=0{ignorewall=1} else ignorewall=1
+if place_meeting(x,y+3,obj_obstacle)&&ignorewall!=0{ignorewall=1} else ignorewall=1
 if vspeed>0 then ignorewall=0
 	
 //if place_meeting(x,y+1,obj_obstacle) { walljumpframes=0;ignorewall=1}else ignorewall=0;//WHERE I LAST LEFT OFF FSDAFADJSKLFSDJFJAS;FJAS;LFJ;ADSLKFASDFSDFDSF
@@ -378,13 +378,21 @@ if ignorewall=1 { walljumpframes=0; }
 if platform!=0{
 	
 }
+
+#region moving up slopes
 if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&vspeed<5{//&&place_meeting(x,y+2,obj_obstacle)
 	yy= vspeed
+	
 	for (i=0;i<17;i=i+1){
 		
-		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {y= y+yy; break;} else yy--
+		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {
+			
+			y= y+yy;
+			break;
+			} else yy--
 	}
 }
+#endregion
 
 if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0&&walljump=1){
 	ymom=2
@@ -406,8 +414,8 @@ hspeed-= sign(hspeed)}
 #endregion
 
 #region vertical movement
-if((place_meeting(x,y+1,obj_obstacle) || place_meeting(x,y+1,obj_jumpThru))&&vspeed<=0){ //touching ground   ||(ignorewall=0&&walljump=1&& (walljumpframes>0))
-	extraFrames=60
+if((place_meeting(x,y+3,obj_obstacle) || place_meeting(x,y+3,obj_jumpThru))&&vspeed<=0){ //touching ground   ||(ignorewall=0&&walljump=1&& (walljumpframes>0))
+	extraFrames=8
 	
 	
 	
@@ -734,3 +742,5 @@ hspeed=0
 vspeed=0
 }
 }
+
+if place_meeting(x,y+ymom,obj_obstacle) then extraFrames=10
