@@ -31,36 +31,42 @@ if invulTime>0 {invulTime--}
 #region attacks
 
 if staggerTime=0{
-if attacking = 1 and !instance_exists(obj_fist)&&cooldown=0{
-	atkTimeHeld = atkTimeHeld + 1
+if attacking = 1 && atkTimeHeld<60*3 && !instance_exists(obj_fist)&&cooldown=0{
+	atkTimeHeld++
 	
 }
-if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the treshold needed
-	if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
-	if(global.fists<5){
-	mousex = mouse_x ;
-	mousey = mouse_y;
-	mouseAngle = point_direction(x,y,mousex,mousey);
-	fistID = instance_create_depth(x,y,-1,obj_fist);
-	fistID.dir = mouseAngle
-	fistID.spd = 30
-	fistID.direction = mouseAngle;
-	fistID.image_angle = mouseAngle;
-	fistID.time = fistTime
-	distPercentage = atkTimeHeld/60
-	if distPercentage > 1 then distPercentage = 1
-	Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
-	if Dist > maxDist then Dist = maxDist
-	fistID.tick = Dist*.75
-	fistID.startingDist=Dist
-	fistID.distance = Dist
-	atkTimeHeld = 0
-	}
-	}
-}else if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0
-{
+
+
+
+//if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the treshold needed
+//	//if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
+//	//if(global.fists<5){
+//	//mousex = mouse_x ;
+//	//mousey = mouse_y;
+//	//mouseAngle = point_direction(x,y,mousex,mousey);
+//	//fistID = instance_create_depth(x,y,-1,obj_fist);
+//	//fistID.charged=1
+//	//fistID.dir = mouseAngle
+//	//fistID.spd = 30
+//	//fistID.direction = mouseAngle;
+//	//fistID.image_angle = mouseAngle;
+//	//fistID.time = fistTime
+//	//distPercentage = atkTimeHeld/60
+//	//if distPercentage > 1 then distPercentage = 1
+//	//Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
+//	//if Dist > maxDist then Dist = maxDist
+//	//fistID.tick = Dist*.75
+//	//fistID.startingDist=Dist
+//	//fistID.distance = Dist
+//	//atkTimeHeld = 0
+//	//}
+//	//}
+//}else 
+if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0{
+	
 	attacking = 1;
 	atkTimeHeld = 15;
+	
 }else if attacking = 1 && !mouse_check_button(mb_left) && atkTimeHeld >=30 { //charged fist
 	if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
 	if(global.fists<5){
@@ -68,6 +74,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	mousey = mouse_y;
 	mouseAngle = point_direction(x,y,mousex,mousey);
 	fistID = instance_create_depth(x,y,-1,obj_fist);
+	
 	fistID.dir = mouseAngle
 	fistID.spd = 15
 	fistID.direction = mouseAngle;
@@ -77,6 +84,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	if distPercentage > 1 then distPercentage = 1
 	Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
 	if Dist > maxDist then Dist = maxDist
+	fistID.damage=obj_player.attackDamage+obj_player.attackDamage*atkTimeHeld/60*1.25
 	fistID.tick = Dist
 	fistID.distance = Dist
 	atkTimeHeld = 0
@@ -90,8 +98,9 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	//mousey = mouse_y;
 	mouseAngle = point_direction(0,0,sign(mousex-obj_player.x)*1,-0.3);
 	fistID = instance_create_depth(x,y,-1,obj_fist);
+	fistID.damage=obj_player.attackDamage
 	fistID.dir = mouseAngle
-	fistID.spd = 20
+	fistID.spd = 15
 	fistID.direction = mouseAngle;
 	fistID.image_angle = mouseAngle;
 	fistID.time = fistTime
@@ -99,7 +108,7 @@ if mouse_check_button_released(mb_left) && atkTimeHeld>29{ // time is over the t
 	//distPercentage = atkTimeHeld/60
 	//if distPercentage > 1 then distPercentage = 1
 	
-	fistID.tick = 20
+	fistID.tick = 25
 	fistID.distance = 150
 	atkTimeHeld = 0
 	}
@@ -458,7 +467,7 @@ if yInput =-1 {
 	//if extraFrames!=0 then extraFrames=0
 }
 
-show_debug_message(string(extraFrames))
+
 
 if hp<=0||grappled=1 then yInput =0
 if(yInput!=0){ymom=yInput*jumpheight}

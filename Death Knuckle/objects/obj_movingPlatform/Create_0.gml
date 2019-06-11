@@ -3,5 +3,5 @@
 accel = 1
 maxspeed= 5
 speed = 1
-dir=0
+
 direction=0

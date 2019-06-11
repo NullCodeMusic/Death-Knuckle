@@ -23,7 +23,7 @@ lastxInput=1
 attacking = 0
 atkTimeHeld=0
 distPercentage=1
-maxDist=250
+maxDist=230
 fistTime = 10
 global.fists = 0
 staggerTime = 0
@@ -66,7 +66,7 @@ ignorewall=0
 //lastxInput=0
 //xInput=0
 facingwall=0
-attackDamage=20 // full damage of a charged fist
+attackDamage=12 // full damage of a charged fist
 
 
 grappletomouse=1

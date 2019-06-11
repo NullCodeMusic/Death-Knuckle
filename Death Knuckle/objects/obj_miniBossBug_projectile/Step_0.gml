@@ -1,6 +1,6 @@
-i=i+.5
+i=i+.025
 image_angle+=i
-	time = time +abs(h)/(spd*sign(h))
+time += h/(spd)
 
 targety=  ((4*v)/(h*h))*(-time*(time-h +(pointh/2)*(v<0))) *-sign(v) 
 vspeed = round( targety+startingy -y)
@@ -15,7 +15,12 @@ hspeed =round(  startingx+time -x)
 //image_index = ceil(abs(time)*FRAMES IN ANIMATION)/abs(pointh)
 // image_angle = direction
 if abs(time) > abs(pointh)  {
-	instance_create_depth(x,y,-1,obj_enemy_bug)
+	if irandom(1)=1{
+	instance_create_depth(x,y,-1,obj_enemy_bug)}else{
+	instance_create_depth(x,y,-1,obj_enemy_floorBug)}
 instance_destroy()	
 }
 
+if !instance_exists(obj_enemy_miniBossBug){
+instance_destroy()	
+}
