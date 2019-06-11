@@ -1239,6 +1239,14 @@
             }
         },
         {
+            "Key": "adb74865-1fe3-4d79-94b5-ec13fc9e5c56",
+            "Value": {
+                "id": "1918ffb0-0801-4479-8b36-a8b9884aab3e",
+                "resourcePath": "sprites\\sp_ceilingCrawler\\sp_ceilingCrawler.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ae242e0f-a7a2-41bf-846a-14949de4675f",
             "Value": {
                 "id": "3a9f2103-9187-4353-81ca-4d2ada1a8644",
