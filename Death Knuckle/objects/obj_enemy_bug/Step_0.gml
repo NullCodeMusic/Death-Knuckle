@@ -142,3 +142,7 @@ if hspeed!=0{
 image_xscale = -sign(hspeed)
 //if bounceh || bouncev then image_angle = sign(hspeed)
 } else image_xscale=1
+
+while(place_meeting(x,y,obj_movingPlatform)){
+y++	
+}

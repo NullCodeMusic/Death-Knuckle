@@ -80,3 +80,6 @@ hspeed=-hspeed
 }
 
 
+while(place_meeting(x,y,obj_movingPlatform)){
+y++	
+}
