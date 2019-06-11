@@ -8,7 +8,7 @@
 
 if droptime=0{
 	//SET ANIMATION HERE
-	sprite_index=sp_bugAtk
+	sprite_index=sp_bugHiveAttack
 	image_index=0
 	image_speed=1
 	//make sure animation lasts 30 frames
@@ -19,7 +19,7 @@ if droptime>0&&distance_to_object(obj_player)<600 then droptime--
 }
 
 if animateTime=0{
-	sprite_index=sp_bug
+	sprite_index=sp_bugHive
 	animateTime=-1
 	droptime=irandom_range(60,120)
 	var proj = instance_create_depth(x,y,0,obj_miniBossBug_projectile)

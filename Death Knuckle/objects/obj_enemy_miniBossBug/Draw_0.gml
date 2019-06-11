@@ -6,3 +6,7 @@ if place_meeting(x,y,obj_cameraFollowing){
 	draw_self()
 
 }
+
+if red<255{image_blend =make_color_rgb(255,red,red)
+	red+= (255-red)/80}
+draw_self()
