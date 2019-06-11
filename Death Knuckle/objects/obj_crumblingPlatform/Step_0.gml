@@ -6,10 +6,11 @@ if refresh=0 { refresh=-1
 	str=30
 	touched=0}
 }else{
-sprite_index=sp_wood	
+sprite_index=sp_breakingPlatform
 }
 
 if touched=1 {
+	image_speed=5
 	if str>0 {str--}else{
 	str=-1
 	refresh=360

@@ -95,12 +95,13 @@ if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0{
 	if !instance_exists(obj_fist) && !instance_exists(obj_rocketFist){
 	if(global.fists<5){
 	mousex = mouse_x ;
-	//mousey = mouse_y;
-	mouseAngle = point_direction(0,0,sign(mousex-obj_player.x)*1,-0.3);
+	mousey = mouse_y;
+	mouseAngle = point_direction(x,y,mousex,mousey);
+	
 	fistID = instance_create_depth(x,y,-1,obj_fist);
 	fistID.damage=obj_player.attackDamage
 	fistID.dir = mouseAngle
-	fistID.spd = 15
+	fistID.spd = 20
 	fistID.direction = mouseAngle;
 	fistID.image_angle = mouseAngle;
 	fistID.time = fistTime
@@ -108,8 +109,8 @@ if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0{
 	//distPercentage = atkTimeHeld/60
 	//if distPercentage > 1 then distPercentage = 1
 	
-	fistID.tick = 25
-	fistID.distance = 150
+	fistID.tick = 15
+	fistID.distance = 160
 	atkTimeHeld = 0
 	}
 	}

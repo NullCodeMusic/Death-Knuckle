@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+x=sin(pi*time/40)*30*sin(pi*time/20)+xOrigin
+y=sin(pi*time/60)*20+yOrigin
+time+= timespd
+if time=240 then time=0
+
 #region drop projectile
 
 //sets a timer, when it hits zero plays a startup animation before spawning
@@ -21,13 +27,16 @@ if droptime>0&&distance_to_object(obj_player)<600 then droptime--
 if animateTime=0{
 	sprite_index=sp_bugHive
 	animateTime=-1
-	droptime=irandom_range(60,120)
+	droptime=irandom_range(25,40)+round(60*hp/maxhp)
+	show_debug_message(string(droptime))
 	var proj = instance_create_depth(x,y,0,obj_miniBossBug_projectile)
 	proj.pointv = y-obj_player.y
 	proj.pointh = -x+obj_player.x
 }else if animateTime>0{
 	animateTime--
-}
+	timespd+=0.15
+} else if timespd>1 then timespd--
+if timespd<1 then timespd=1
 
 
 #endregion

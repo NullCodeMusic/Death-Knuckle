@@ -1,14 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-mask_index=sp_bug
-sprite_index=sp_bug
+mask_index=sp_bugHive
+sprite_index=sp_bugHive
 animateTime=-1
 xInput=1
 damage = 10
 knockback = 10
 stagger = 10
-hp = 200
-
+hp = 300
+maxhp=hp
+time=0
+timespd=1
 xOrigin=x
 yOrigin=y
 
