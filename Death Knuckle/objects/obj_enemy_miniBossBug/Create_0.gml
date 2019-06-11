@@ -19,6 +19,8 @@ invulTime=0
 atkAnim=0
 maxAtkAnim=15
 
+red = 255
+
 maxSpd=irandom_range(2,5)
 
 lastYScale=1
