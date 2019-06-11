@@ -871,6 +871,14 @@
             }
         },
         {
+            "Key": "79ee8b2c-396c-4acc-b353-740a08e5955a",
+            "Value": {
+                "id": "f24c5ab4-9568-4a9e-b322-f63bf74e0f22",
+                "resourcePath": "sprites\\sp_bugHiveAttack\\sp_bugHiveAttack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7a0d91e1-ad09-4827-b8f9-50adb29b972f",
             "Value": {
                 "id": "82e08908-46a7-4a65-8c0a-ac10cf3ecd5f",
