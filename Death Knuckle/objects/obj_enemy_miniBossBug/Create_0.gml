@@ -10,6 +10,7 @@ stagger = 10
 hp = 300
 maxhp=hp
 time=0
+steadytime=0
 timespd=1
 xOrigin=x
 yOrigin=y

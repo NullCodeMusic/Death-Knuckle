@@ -2,9 +2,11 @@
 // You can write your code in this editor
 
 
-x=sin(pi*time/40)*30*sin(pi*time/20)+xOrigin
+x=sin(pi*time/40)*30*sin(pi*time/20)+xOrigin+sin(pi*steadytime/80)*120
 y=sin(pi*time/60)*20+yOrigin
 time+= timespd
+steadytime++
+if steadytime=480 then steadytime=0
 if time=240 then time=0
 
 #region drop projectile

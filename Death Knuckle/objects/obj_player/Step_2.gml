@@ -34,9 +34,10 @@ for(var i = 0;i<ds_list_size(platlist);i++){
 	
 	plat=ds_list_find_value(platlist,i)
 	plat.str --
+	plat.offtime=30
 if plat.str<=0{
-plat.refresh=180
-plat.str=40
+plat.refresh=240
+plat.str=plat.startingstr
 part_type_sprite(global.partTypEnemyRubble,spr_particle_rubble,1,1,0)
 with(plat){
 part_emitter_region(global.partSys,global.partEmtSmallBurst,x-sprite_width/2,x+sprite_width/2,y-sprite_height,y,ps_shape_rectangle,ps_distr_linear)
