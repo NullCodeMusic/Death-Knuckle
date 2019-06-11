@@ -11,7 +11,7 @@ speed=min(maxspeed,speed)
 //	x+=moverID.hspeed
 //	y+=moverID.vspeed
 //	}}
-if(instance_place(x+hspeed,y+vspeed,obj_obstacle)){
+if(instance_place(x+hspeed,y+vspeed,obj_obstacle))&&!instance_place(x+hspeed,y+vspeed,obj_movingPlatform)&&!instance_place(x,y,obj_obstacle){
 direction=direction+180
 speed=1
 while(instance_place(x+hspeed,y,obj_obstacle)){hspeed-=sign(hspeed)}

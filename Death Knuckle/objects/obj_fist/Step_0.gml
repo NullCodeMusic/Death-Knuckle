@@ -55,8 +55,8 @@ for (var i=0;i<= ds_list_size(obj_interactableController.interactableList);i++){
 #endregion
 #region hitting enemy
 if place_meeting(x,y,prnt_enemy){
-	var damage =  floor(obj_player.attackDamage*(distance/obj_player.maxDist)+2)
-	
+	 damage =  floor(damage) 
+	show_debug_message("hit for"+string(damage))
 	 var enemyID= instance_place(x,y,prnt_enemy)
 	//object_get_name(enemyID)
 	

@@ -431,6 +431,14 @@
             }
         },
         {
+            "Key": "30ae3009-0380-40fe-870e-69c9c930b4dc",
+            "Value": {
+                "id": "e4184900-8958-4435-9a70-0c6cd2b2fcfc",
+                "resourcePath": "objects\\obj_enemy_floorBug\\obj_enemy_floorBug.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "32832a26-4859-4ea4-8375-358dd59be783",
             "Value": {
                 "id": "1d290e61-ea00-435d-8af1-c585ec98e8fc",

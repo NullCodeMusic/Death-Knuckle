@@ -13,3 +13,5 @@ depth= obj_player.depth-(targ.x<mouse_x)*2
 }
 
 
+
+
