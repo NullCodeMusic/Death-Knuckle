@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+toolselected=0
+
+
+
 room_speed = 60
 fallRecx=x
 fallRecy=y
@@ -66,7 +71,7 @@ ignorewall=0
 //lastxInput=0
 //xInput=0
 facingwall=0
-attackDamage=12 // full damage of a charged fist
+attackDamage=8 // full damage of a charged fist
 
 
 grappletomouse=1
@@ -92,10 +97,13 @@ jojosmode = 0
 ini_open("save.data")
 	 walljump = ini_read_real("unlocks","walljump",0)
 	 extraHPContainers = ini_read_real("unlocks","hpcontainers",0)
+	 extraJumps = ini_read_real("unlocks","jumps",0)
+	 grapple = ini_read_real("unlocks","grapple",0)
+	 aoeMelee = ini_read_real("unlocks","aoeMelee",0)
 	// extraJump
 	// grapple hook
 	// swing hook
-	
+	// large melee
 ini_close()
 
 
