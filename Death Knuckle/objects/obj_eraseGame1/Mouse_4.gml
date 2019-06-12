@@ -4,6 +4,12 @@ ini_open("save.data")
 	 ini_write_real("data","checkpoint",1)
 	 ini_write_real("unlocks","walljump",0)
 	 ini_write_real("unlocks","hpcontainers",0)
+	 
+	 ini_write_real("unlocks","jumps",0)
+	 ini_write_real("unlocks","grapple",0)
+	 ini_write_real("unlocks","aoeMelee",0)
+	 
+	 
 	 var emptyList = ds_list_create()
 	 ds_list_add(emptyList,0)
 

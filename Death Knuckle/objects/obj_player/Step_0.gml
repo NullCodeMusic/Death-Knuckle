@@ -1,5 +1,27 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+#region changing selected tool with 1 2 or F
+
+if keyboard_check_pressed(ord("1"))&&aoeMelee=1 then toolselected=1 // large melee
+else if keyboard_check_pressed(ord("2"))&&grapple=1 then toolselected=2 //grappling hook
+
+if keyboard_check_pressed("F"){
+switch(toolselected+1){
+case 1:
+	if aoeMelee=1 then toolselected++ else toolselected=0
+	break;
+case 2:
+	if grapple=1 then toolselected++ else toolselected=1
+	break;
+case 3:
+	if aoeMelee=1 then toolselected=1 else toolselected=2
+	break;
+
+}
+}
+#endregion
+
 mask_index = sp_player
 if ignorewall=1 { walljumpframes=0}
 
@@ -84,9 +106,9 @@ if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0{
 	if distPercentage > 1 then distPercentage = 1
 	Dist = (point_distance(x,y,x+maxDist,y+maxDist)/((fistID.time/2)))*(distPercentage)
 	if Dist > maxDist then Dist = maxDist
-	fistID.damage=obj_player.attackDamage+obj_player.attackDamage*atkTimeHeld/60*1.25
-	fistID.tick = Dist
-	fistID.distance = Dist
+	fistID.damage=obj_player.attackDamage*2+obj_player.attackDamage*atkTimeHeld/60*1.25
+	fistID.tick = Dist*2
+	fistID.distance = Dist/4
 	atkTimeHeld = 0
 	fistID.setcooldown=5
 	}
@@ -101,16 +123,16 @@ if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0{
 	fistID = instance_create_depth(x,y,-1,obj_fist);
 	fistID.damage=obj_player.attackDamage
 	fistID.dir = mouseAngle
-	fistID.spd = 20
+	fistID.spd = 80
 	fistID.direction = mouseAngle;
 	fistID.image_angle = mouseAngle;
 	fistID.time = fistTime
-	fistID.setcooldown=10
+	fistID.setcooldown=5
 	//distPercentage = atkTimeHeld/60
 	//if distPercentage > 1 then distPercentage = 1
 	
-	fistID.tick = 15
-	fistID.distance = 160
+	fistID.tick = 80
+	fistID.distance = 15
 	atkTimeHeld = 0
 	}
 	}
@@ -142,7 +164,7 @@ momenutmDir=0
 momentumSpd=0
 */
 #endregion
-if(instance_exists(obj_grappleSpot)){
+if(instance_exists(obj_grappleSpot))&&grapple=1&&toolselected=2{ //if tool is selected and grapple is unlocked
 #region grapple fist
 
 
@@ -436,7 +458,7 @@ if((place_meeting(x,y+3,obj_obstacle) || place_meeting(x,y+3,obj_jumpThru))&&vsp
 	
 	
 	//if extra jump is unlocked then extraJump=1							
-	
+	if extraJumps!=0 then extraJump=extraJumps
 	
 	
 	///!!!
@@ -629,6 +651,11 @@ ini_open("save.data")
 		ini_write_string("data","roomName",string(room))
 		ini_write_string("unlocks","walljump",walljump)
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
+		
+		ini_write_real("unlocks","jumps",extraJumps)
+	    ini_write_real("unlocks","grapple",grapple)
+	    ini_write_real("unlocks","aoeMelee",aoeMelee)
+	 
 		ini_write_string("data","usedHPcontainers",ds_list_write(obj_checkpointList.hpList))
 		hp = 100 + extraHPContainers * hpcontainervalue
 		if instance_exists(prnt_enemy){
