@@ -1,25 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-#region changing selected tool with 1 2 or F
+#region Tool Select
 
-if keyboard_check_pressed(ord("1"))&&aoeMelee=1 then toolselected=1 // large melee
-else if keyboard_check_pressed(ord("2"))&&grapple=1 then toolselected=2 //grappling hook
+/*
+Code in tool select
+Step 1: Check if tools file exists
+	If it exists load from it
+	If it doesn't exist
+Step 2: Set selector variable
+	Default 0
+	Scroll wheel up increases
+	Scroll wheel down decreases
+Step 3: Save list if changed
 
-if keyboard_check_pressed("F"){
-switch(toolselected+1){
-case 1:
-	if aoeMelee=1 then toolselected++ else toolselected=0
-	break;
-case 2:
-	if grapple=1 then toolselected++ else toolselected=1
-	break;
-case 3:
-	if aoeMelee=1 then toolselected=1 else toolselected=2
-	break;
+Code in individual tools
+Step 1:Check if item index of selector variable is used item
+	If true then run tool code
+	
+Draw code
+Step 1: Draw list of tool icons using loop
+	Draw selection box around selected one
+*/
 
-}
-}
 #endregion
 
 mask_index = sp_player
@@ -164,7 +167,7 @@ momenutmDir=0
 momentumSpd=0
 */
 #endregion
-if(instance_exists(obj_grappleSpot))&&grapple=1&&toolselected=2{ //if tool is selected and grapple is unlocked
+if(instance_exists(obj_grappleSpot))&&RYANADDEXPRESSION{ //if tool is selected and grapple is unlocked
 #region grapple fist
 
 
