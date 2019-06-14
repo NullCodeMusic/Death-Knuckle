@@ -6,8 +6,6 @@
 if(toolsSelect>ds_list_size(toolsList)){toolsSelect=0}
 if(toolsSelect<0){toolsSelect=ds_list_size(toolsList)}
 /*
-Step 3: Save list if changed
-	
 Draw code
 Step 1: Draw list of tool icons using loop
 	Draw selection box around selected one
