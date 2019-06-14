@@ -15,6 +15,7 @@ ini_open("save.data")
 
 
 	 ini_write_string("data","usedHPcontainers",ds_list_write(emptyList))
+	 ini_write_string("unlocks","tools",ds_list_write(emptyList))
 ini_close()
 show_debug_message("save reset")
 image_index = 2
