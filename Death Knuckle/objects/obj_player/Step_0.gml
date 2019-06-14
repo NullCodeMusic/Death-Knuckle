@@ -3,20 +3,10 @@
 
 #region Tool Select
 
+if(toolsSelect>ds_list_size(toolsList)){toolsSelect=0}
+if(toolsSelect<0){toolsSelect=ds_list_size(toolsList)}
 /*
-Code in tool select
-Step 1: Check if tools file exists
-	If it exists load from it
-	If it doesn't exist
-Step 2: Set selector variable
-	Default 0
-	Scroll wheel up increases
-	Scroll wheel down decreases
 Step 3: Save list if changed
-
-Code in individual tools
-Step 1:Check if item index of selector variable is used item
-	If true then run tool code
 	
 Draw code
 Step 1: Draw list of tool icons using loop
@@ -167,7 +157,7 @@ momenutmDir=0
 momentumSpd=0
 */
 #endregion
-if(instance_exists(obj_grappleSpot))&&RYANADDEXPRESSION{ //if tool is selected and grapple is unlocked
+if(instance_exists(obj_grappleSpot))&&(ds_list_find_value(toolsList,toolsSelect)="grapple"){ //if tool is selected and grapple is unlocked
 #region grapple fist
 
 
@@ -656,8 +646,7 @@ ini_open("save.data")
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
 		
 		ini_write_real("unlocks","jumps",extraJumps)
-	    ini_write_real("unlocks","grapple",grapple)
-	    ini_write_real("unlocks","aoeMelee",aoeMelee)
+	    ini_write_real("unlocks","tools",ds_list_write(toolsList))
 	 
 		ini_write_string("data","usedHPcontainers",ds_list_write(obj_checkpointList.hpList))
 		hp = 100 + extraHPContainers * hpcontainervalue

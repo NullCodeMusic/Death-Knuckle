@@ -55,7 +55,6 @@ grappledir=0
 grapplespd=0
 grappled=0
 hpAlpha=0
-flash = 0
 invulTime = 0
 hitDirection = 0
 extraFrames=0
@@ -81,27 +80,25 @@ cursorspeed=40
 frame=0
 cursortick=0
 
-ticka=0
-tickb=0
-framerate=0
-
 randomize()
 borg = 0
 jojosmode = 0
 
+ini_open("save.data")
+	 roomName = ini_read_real("data","roomName",rm_Cave2)
 
 ini_open("save.data")
 	 walljump = ini_read_real("unlocks","walljump",0)
 	 extraHPContainers = ini_read_real("unlocks","hpcontainers",0)
 	 extraJumps = ini_read_real("unlocks","jumps",0)
-	 grapple = ini_read_real("unlocks","grapple",0)
-	 aoeMelee = ini_read_real("unlocks","aoeMelee",0)
+	 toolsList = ds_list_read(ini_read_real("unlocks", "tools", "2E01000000000000"))
 	// extraJump
 	// grapple hook
 	// swing hook
 	// large melee
 ini_close()
 
+toolsSelect = 0
 
 hp = 100 + extraHPContainers * hpcontainervalue
 
