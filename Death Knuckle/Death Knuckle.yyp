@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "0fff2bf9-571b-47bd-b95f-0497d2ac1c9b",
+            "Value": {
+                "id": "10263264-8463-4546-8eb8-fab0f93ecc91",
+                "resourcePath": "objects\\obj_pathDirectionGrapple\\obj_pathDirectionGrapple.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "101fa9cf-33c6-4f41-9867-8a5292932f32",
             "Value": {
                 "id": "6f1fc640-5c25-430e-ada1-658c09819c94",
@@ -204,6 +212,14 @@
                 "id": "25addc7e-1b18-4465-bd09-c4d282b2fe6e",
                 "resourcePath": "sprites\/sp_wargAtk\/sp_wargAtk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "15456b28-c501-47a5-b4b3-2f6a2d089c2a",
+            "Value": {
+                "id": "864f5dd9-41c9-4a5c-916d-bdf7bf8eadc6",
+                "resourcePath": "objects\\obj_grappleTarget_Moving\\obj_grappleTarget_Moving.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1644,6 +1660,14 @@
                 "id": "84fc210b-133f-44be-a1a5-9351fbe32797",
                 "resourcePath": "sprites\/sp_health\/sp_health.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d73f40d7-6052-46a9-bfad-5f15dfc91cba",
+            "Value": {
+                "id": "c84f3ea4-4b74-4520-9733-6bb12628f53c",
+                "resourcePath": "objects\\obj_grappleLedge_Moving\\obj_grappleLedge_Moving.yy",
+                "resourceType": "GMObject"
             }
         },
         {
