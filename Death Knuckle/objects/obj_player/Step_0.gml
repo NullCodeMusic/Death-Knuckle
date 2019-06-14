@@ -670,6 +670,15 @@ hp = 100 + extraHPContainers * hpcontainervalue
 
 #region pickups
 while place_meeting(x,y,prnt_pickup){
+	
+	#region upgrades items
+
+	if place_meeting(x,y,obj_grappleItem){
+		var itemID = instance_place(x,y,obj_grappleItem)	
+	}
+
+	#endregion
+	
 	if place_meeting(x,y,obj_pickup_smallHealth){
 		var pickupID = instance_place(x,y,obj_pickup_smallHealth)
 		hpAlpha=1
@@ -771,3 +780,6 @@ vspeed=0
 }
 
 if place_meeting(x,y+ymom,obj_obstacle) then extraFrames=10
+
+
+

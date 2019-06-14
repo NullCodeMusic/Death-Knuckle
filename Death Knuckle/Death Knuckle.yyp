@@ -887,6 +887,14 @@
             }
         },
         {
+            "Key": "75dfe3d3-fadb-42fa-a603-aed28ecd5d2b",
+            "Value": {
+                "id": "9ee1ad9f-af0b-4006-9a02-6d6e1fdc2438",
+                "resourcePath": "objects\\obj_grappleItem\\obj_grappleItem.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "765a761b-68a5-4f3f-a66a-1c69a02131f1",
             "Value": {
                 "id": "5e2e1638-4be1-4289-b392-579cda3a8fef",
