@@ -91,7 +91,7 @@ ini_open("save.data")
 	 walljump = ini_read_real("unlocks","walljump",0)
 	 extraHPContainers = ini_read_real("unlocks","hpcontainers",0)
 	 extraJumps = ini_read_real("unlocks","jumps",0)
-	 toolsList = ds_list_read(ini_read_real("unlocks", "tools", "2E01000000000000"))
+	 toolsList = ds_list_read(ini_read_real("unlocks", "tools", " "))
 	// extraJump
 	// grapple hook
 	// swing hook
