@@ -675,6 +675,7 @@ while place_meeting(x,y,prnt_pickup){
 
 	if place_meeting(x,y,obj_grappleItem){
 		var itemID = instance_place(x,y,obj_grappleItem)	
+		ds_list_add(toolsList,"grapple")
 	}
 
 	#endregion
