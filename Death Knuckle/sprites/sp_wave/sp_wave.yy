@@ -298,7 +298,7 @@
     ],
     "origin": 3,
     "originLocked": false,
-    "playbackSpeed": 80,
+    "playbackSpeed": 40,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,

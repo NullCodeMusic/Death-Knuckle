@@ -75,6 +75,14 @@ if attacking = 1 && atkTimeHeld<60*3 && !instance_exists(obj_fist)&&cooldown=0{
 //	//}
 //	//}
 //}else 
+
+if mouse_check_button(mb_right)&&(ds_list_find_value(toolsList,toolsSelect)="fistWave") && attacking=0 && cooldown=0{
+instance_create_depth(x,y,0,obj_fistWave)
+instance_destroy(obj_followhand)
+cooldown=25
+}
+
+
 if mouse_check_button(mb_left) and attacking = 0 &&cooldown=0{
 	
 	attacking = 1;
@@ -777,6 +785,14 @@ vspeed+=10
 if place_meeting(x+hspeed,y+vspeed,obj_obstacle){
 hspeed=0
 vspeed=0
+}
+
+while place_meeting(x,y,obj_movingPlatform){
+y++
+if place_meeting(x,y,obj_obstacle){
+y--
+break;
+}
 }
 }
 

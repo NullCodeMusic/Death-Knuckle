@@ -8,7 +8,7 @@ repeat(ds_list_size(colList)){
 var hitID=ds_list_find_value(colList,i)
 if(hitID.invulTime<1){
 hitID.invulTime=20
-hitID.hp-=5
+hitID.hp-=round(obj_player.attackDamage*1.5)
 }
 i++
 }
