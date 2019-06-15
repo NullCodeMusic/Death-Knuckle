@@ -7,5 +7,6 @@ i=0
 repeat(ds_list_size(colList)){
 var hitID=ds_list_find_value(colList,i)
 hitID.hp-=5
+hitID.iframes=20
 i++
 }
