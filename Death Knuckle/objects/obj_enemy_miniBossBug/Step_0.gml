@@ -84,6 +84,7 @@ xInput=-xInput
 hspeed=-hspeed
 }
 
+if(iframes>0){iframes--}
 
 hspeed=0
 vspeed=0
