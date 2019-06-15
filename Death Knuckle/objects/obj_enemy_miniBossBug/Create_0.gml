@@ -17,7 +17,6 @@ yOrigin=y
 
 staggerTime=0
 invulTime=0
-iframes=0
 atkAnim=0
 maxAtkAnim=15
 
