@@ -607,6 +607,14 @@
             }
         },
         {
+            "Key": "452466cb-70eb-4f41-abc7-895b4dc7a975",
+            "Value": {
+                "id": "a9628b04-3740-45bb-8b98-568bd0211c8b",
+                "resourcePath": "sprites\\sp_grappleIcon\\sp_grappleIcon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "454169af-e531-4680-a385-4d63662fbe38",
             "Value": {
                 "id": "0cded161-e3ec-44a7-8abb-09c030a854ee",
@@ -1636,6 +1644,14 @@
                 "id": "d0ecf5df-f1ec-438e-a030-bd25a9d1506e",
                 "resourcePath": "objects\/obj_checkpoint\/obj_checkpoint.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d3925de0-dbbd-44d5-9929-68e2b7eddc60",
+            "Value": {
+                "id": "45f494a4-9365-4613-b7a4-e5c23503f945",
+                "resourcePath": "sprites\\sp_waveIcon\\sp_waveIcon.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

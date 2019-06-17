@@ -29,3 +29,28 @@ draw_rectangle(topx-5,viewportarray[4]/20-5,botx+5,size + viewheight/20+5,0)
 draw_set_colour(c_white);
 draw_rectangle(topx-5,viewportarray[4]/20-5,botx+5,size + viewheight/20+5,1)
 draw_sprite(sp_marker,0,topx+size*obj_player.x/room_width,50 + size*obj_player.y/room_height)
+
+#region tools
+
+i=0
+iVOffset = 0
+repeat(ds_list_size(toolsList)){
+var drawTool = 9999
+switch(ds_list_find_value(toolsList,i)){
+case "grapple" :
+drawTool = sp_grappleIcon
+break
+case "fistWave" :
+drawTool = sp_waveIcon
+break
+}
+
+if(sprite_exists(drawTool)){
+iVOffset+=72
+if(i=toolsSelect){draw_sprite(spr_interactHitbox,1,display_get_gui_width()-64,display_get_height()-iVOffset)}
+draw_sprite(drawTool,1,display_get_gui_width()-64,display_get_height()-iVOffset)
+}
+i++
+
+}
+#endregion

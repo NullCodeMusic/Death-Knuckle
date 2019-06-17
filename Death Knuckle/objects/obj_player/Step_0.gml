@@ -3,12 +3,11 @@
 
 #region Tool Select
 
-if(toolsSelect>ds_list_size(toolsList)){toolsSelect=0}
-if(toolsSelect<0){toolsSelect=ds_list_size(toolsList)}
+if(toolsSelect>ds_list_size(toolsList)-1){toolsSelect=0}
+if(toolsSelect<0){toolsSelect=ds_list_size(toolsList)-1}
+if(mouse_wheel_up()){toolsSelect++}
+if(mouse_wheel_down()){toolsSelect--}
 /*
-Draw code
-Step 1: Draw list of tool icons using loop
-	Draw selection box around selected one
 */
 
 #endregion
