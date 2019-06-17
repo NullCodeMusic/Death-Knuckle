@@ -578,6 +578,12 @@ setHitAnim = 1
 hitDirection=-sign(hspeed)
 }
 if(place_meeting(x+hspeed,y+vspeed,obj_fall)){
+	
+	if instance_exists(obj_grapplefist){
+	obj_grapplefist.comeBack=1	
+	grappled=0	
+	obj_grapplefist.grappled=0
+	}
 hp-=10
 x=fallRecx
 y=fallRecy-15
@@ -683,6 +689,7 @@ while place_meeting(x,y,prnt_pickup){
 	if place_meeting(x,y,obj_grappleItem){
 		var itemID = instance_place(x,y,obj_grappleItem)	
 		ds_list_add(toolsList,"grapple")
+		instance_destroy(itemID)
 	}
 
 	#endregion
@@ -769,7 +776,7 @@ hport	The height (in pixels) of the view port
 */
 if keyboard_check(vk_up) {x+=(mouse_x-x)/2;y+=(mouse_y-y)/2}
 
-if fallRecTimer=0&&place_meeting(x,y+1,obj_obstacle)&&!place_meeting(x,y+1,obj_crumblingPlatform)&&!place_meeting(x,y+1,obj_breakingPlatform)&&!place_meeting(x+hspeed,y+vspeed,obj_fall)&&!place_meeting(x,y+1,obj_movingPlatform){ //checks if player is on ground and timer is out
+if fallRecTimer=0&&!place_meeting(x,y,obj_obstacle)&&place_meeting(x,y+1,obj_obstacle)&&!place_meeting(x,y+1,obj_crumblingPlatform)&&!place_meeting(x,y+1,obj_breakingPlatform)&&!place_meeting(x+hspeed,y+vspeed,obj_fall)&&!place_meeting(x,y+1,obj_movingPlatform){ //checks if player is on ground and timer is out
 fallRecx=x
 fallRecy=y
 fallRecTimer=300
@@ -798,5 +805,5 @@ break;
 
 if place_meeting(x,y+ymom,obj_obstacle) then extraFrames=10
 
-
+if place_meeting(x,y,obj_obstacle){y--}
 

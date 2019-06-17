@@ -19,3 +19,10 @@ instance_destroy()
 	}
 	
 }
+
+if grappled=1{
+	
+x=targetSpot.x
+y=targetSpot.y
+
+}

@@ -218,7 +218,7 @@
             "Key": "15456b28-c501-47a5-b4b3-2f6a2d089c2a",
             "Value": {
                 "id": "864f5dd9-41c9-4a5c-916d-bdf7bf8eadc6",
-                "resourcePath": "objects\\obj_grappleTarget_Moving\\obj_grappleTarget_Moving.yy",
+                "resourcePath": "objects\\obj_grappleSpot_Moving\\obj_grappleSpot_Moving.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -411,6 +411,14 @@
             "Value": {
                 "id": "e7b76d3c-18ed-405a-b891-3cb5f8e483f4",
                 "resourcePath": "sprites\/spr_null\/spr_null.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2befa72f-348d-42b9-906c-88a8b8ceb41a",
+            "Value": {
+                "id": "b051193f-28d2-4f83-a3f0-a5512086efa7",
+                "resourcePath": "sprites\\sp_minibossBG\\sp_minibossBG.yy",
                 "resourceType": "GMSprite"
             }
         },
