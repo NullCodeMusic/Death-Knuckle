@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "012312e1-0f0e-4a44-8888-790179ab277f",
+            "Value": {
+                "id": "a970fa35-bd53-4d95-ad94-e6f2105874b9",
+                "resourcePath": "sprites\\sp_bgTile\\sp_bgTile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "01ebb41a-9fa4-4439-8713-9a7fa6ddf0eb",
             "Value": {
                 "id": "ee0a980a-2fba-4487-9c09-a732a56dc8c9",
@@ -747,6 +755,14 @@
             "Value": {
                 "id": "85f18529-2590-44ed-9d74-c94358a42917",
                 "resourcePath": "sprites\/sp_options\/sp_options.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "62037b9c-a335-450c-aaa4-392b2eec515c",
+            "Value": {
+                "id": "80d3c2c7-090a-4bbf-9d4c-490f5d4372ec",
+                "resourcePath": "sprites\\sp_minibossBG\\sp_minibossBG.yy",
                 "resourceType": "GMSprite"
             }
         },
