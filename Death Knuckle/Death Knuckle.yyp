@@ -231,14 +231,6 @@
             }
         },
         {
-            "Key": "15456b28-c501-47a5-b4b3-2f6a2d089c2a",
-            "Value": {
-                "id": "864f5dd9-41c9-4a5c-916d-bdf7bf8eadc6",
-                "resourcePath": "objects\\obj_grappleTarget_Moving\\obj_grappleTarget_Moving.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "15c53c57-006e-4680-948a-a70acddb89e0",
             "Value": {
                 "id": "fd2261ea-151e-4af8-b68b-aeb46b15c7e5",
@@ -879,6 +871,22 @@
             }
         },
         {
+            "Key": "69b2a717-852e-4db3-ae36-8bc9c203c0f7",
+            "Value": {
+                "id": "441642fc-ae5f-4c51-aad2-e57c9d050bf6",
+                "resourcePath": "objects\\obj_minibossFall\\obj_minibossFall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "69b5b461-ca8d-47ff-af33-8ff9bc0fa8b3",
+            "Value": {
+                "id": "ac58be6f-4d01-4a94-ab6b-b55c737e08ff",
+                "resourcePath": "objects\\obj_grappleSpot_Moving\\obj_grappleSpot_Moving.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6a3982b3-7a33-4ad9-8814-7e231664ce5f",
             "Value": {
                 "id": "abe65ab8-c2e3-4f36-9992-08362338b5d9",
@@ -1243,6 +1251,14 @@
             "Value": {
                 "id": "d5d96caa-fba9-416b-9a4e-8cb79b50b25e",
                 "resourcePath": "objects\/obj_breakableWall\/obj_breakableWall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9ade4d08-27cd-4a80-8572-c4fdf8b2164f",
+            "Value": {
+                "id": "29884dde-fbdf-4068-905a-dd5f91230199",
+                "resourcePath": "objects\\obj_resetMiniboss\\obj_resetMiniboss.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1923,6 +1939,14 @@
             "Value": {
                 "id": "d8731df5-4542-4e0e-9bf6-5a687aa0e828",
                 "resourcePath": "objects\/obj_obstacleRotated\/obj_obstacleRotated.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e30ed9bc-f342-4f9a-9e5d-a0193b921831",
+            "Value": {
+                "id": "83533be1-6fb0-4160-9e0b-d3f2ee8217f7",
+                "resourcePath": "objects\\obj_waveItem\\obj_waveItem.yy",
                 "resourceType": "GMObject"
             }
         },

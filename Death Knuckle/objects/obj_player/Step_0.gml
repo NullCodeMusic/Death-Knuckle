@@ -719,6 +719,9 @@ while place_meeting(x,y,prnt_pickup){
 }
 #endregion
 
+if place_meeting(x,y,obj_resetMiniboss)&&instance_exists(obj_enemy_miniBossBug){
+obj_enemy_miniBossBug.hp=300	
+}
 
 if place_meeting(x,y,obj_DarkRoom){
 //var darkList = ds_list_create()
