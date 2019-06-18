@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "0c5c5402-9fae-4eae-965a-7d520fae589f",
+            "Value": {
+                "id": "80bc86a8-72f2-4fde-974a-717abb066b62",
+                "resourcePath": "sprites\\sp_ceilingCrawlerStill\\sp_ceilingCrawlerStill.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0ccc8c09-6c57-4ac4-bc9f-938bc7270f80",
             "Value": {
                 "id": "607ee8ef-f307-4107-9aeb-0cb586196f83",
@@ -275,6 +283,14 @@
             "Value": {
                 "id": "3b394229-8ef2-4b01-9d03-88f208512bfe",
                 "resourcePath": "sprites\/sp_continuegame\/sp_continuegame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1cbae26e-6d22-42dc-b9c7-28b87058f8af",
+            "Value": {
+                "id": "396c7410-b88a-4c02-b15b-cb3493b0ec67",
+                "resourcePath": "sprites\\sp_ceilingCrawlerAttack\\sp_ceilingCrawlerAttack.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -500,6 +516,14 @@
                 "id": "e4184900-8958-4435-9a70-0c6cd2b2fcfc",
                 "resourcePath": "objects\\obj_enemy_floorBug\\obj_enemy_floorBug.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "30afb708-991b-4949-9faf-854235e22cdf",
+            "Value": {
+                "id": "a6a8a1cc-f78f-4619-9d53-4aa673dafe3e",
+                "resourcePath": "sprites\\sp_acidProjectile\\sp_acidProjectile.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
