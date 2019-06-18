@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-mask_index=sp_bug
-sprite_index=sp_bug
+mask_index=sp_ceilingCrawler
+sprite_index=sp_ceilingCrawler
 animateTime=-1
 xInput=1
 damage = 10

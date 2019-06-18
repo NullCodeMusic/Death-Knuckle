@@ -1,2 +1,2 @@
 direction=90
-speed=3
+speed=5
