@@ -1247,6 +1247,14 @@
             }
         },
         {
+            "Key": "a3a368f2-0021-4b53-b070-fe7d7805ab5b",
+            "Value": {
+                "id": "f3fae659-dc45-45e9-b1ce-dae91572cd70",
+                "resourcePath": "sprites\\sp_supportBeam\\sp_supportBeam.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a54a1d7b-bd61-4018-901b-5c818b1cff2f",
             "Value": {
                 "id": "9f9735d3-dd83-425f-abae-16186c2188d3",
