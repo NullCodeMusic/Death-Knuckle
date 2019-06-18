@@ -13,7 +13,7 @@ ini_open("save.data")
 	 var emptyList = ds_list_create()
 	 ds_list_add(emptyList,0)
 
-
+     ini_write_string("unlocks","doorsList",ds_list_write(emptyList))
 	 ini_write_string("data","usedHPcontainers",ds_list_write(emptyList))
 	 ini_write_string("unlocks","tools",ds_list_write(emptyList))
 ini_close()

@@ -39,6 +39,16 @@ y = y+vspeed
 #region punchables
 if place_meeting(x,y,prnt_punchable)&&tick>0{
 	obj_cameraFollowing.screenshake=3
+#region hitting secret break
+
+if place_meeting(x,y,obj_secretBreak){
+var secretbreak = instance_place(x,y,obj_secretBreak)
+if secretbreak.hits!=3&&secretbreak.hits!=4{
+secretbreak.hits++
+show_debug_message(string(secretbreak.hits))
+}
+}
+#endregion
 #region hitting button
 
 if place_meeting(x,y,obj_interactableButton){
