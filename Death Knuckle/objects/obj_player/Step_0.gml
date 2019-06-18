@@ -411,18 +411,27 @@ if platform!=0{
 }
 
 #region moving up slopes
-if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&vspeed<5{//&&place_meeting(x,y+2,obj_obstacle)
-	yy= vspeed
-	
-	for (i=0;i<17;i=i+1){
-		
-		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {
-			
-			y= y+yy;
-			break;
-			} else yy--
+if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&place_meeting(x,y+4,obj_obstacle){//&&place_meeting(x,y+2,obj_obstacle)
+	//yy= vspeed
+	var originaldir = direction
+	for (var i=0;i<41&&place_meeting(x+hspeed,y+vspeed,obj_obstacle);i++){
+		if direction>=0&&direction<90{
+		direction++	
+		}else if direction>90&&direction<=180{
+		direction--	
+		}
+		if i=41 then direction=originaldir
 	}
+	
 }
+//for (i=0;i<17;i=i+1){
+		
+	//	if !place_meeting(x+hspeed,y+yy,obj_obstacle) {
+			
+	//		y= y+yy;
+	//		break;
+	//		} else yy--
+	//}
 #endregion
 
 if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0&&walljump=1){
