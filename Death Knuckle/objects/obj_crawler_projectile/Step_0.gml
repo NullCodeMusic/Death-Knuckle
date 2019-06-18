@@ -4,3 +4,5 @@ if vspeed<5 { vspeed++
 if place_meeting(x,y,obj_obstacle)||place_meeting(x,y,obj_fall){
 KillMe(spr_part_bugRubble)
 }
+image_angle=direction
+image_xscale=speed/5
