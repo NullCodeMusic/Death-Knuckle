@@ -650,6 +650,7 @@ ini_open("save.data")
 		ini_write_string("data","roomName",string(room))
 		ini_write_string("unlocks","walljump",walljump)
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
+		ini_write_string("unlocks","doorsList", ds_list_write(obj_checkpointList.doorsList)  )
 		
 		ini_write_real("unlocks","jumps",extraJumps)
 	    ini_write_real("unlocks","tools",ds_list_write(toolsList))

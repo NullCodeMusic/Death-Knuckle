@@ -31,7 +31,22 @@ ini_close()
 
 
 
-
+for (var i=0; i <  ds_list_size(obj_checkpointList.doorsList); i++){
+	show_debug_message("doorsList "+string(ds_list_find_value(obj_checkpointList.doorsList,i)))
+	
+	for (var ii =0; ii< ds_list_size(obj_checkpointList.alldoorsList);ii++){
+		show_debug_message("alldoorslist "+string(ds_list_find_value(obj_checkpointList.alldoorsList,ii)))
+	var tempObj = ds_list_find_value(obj_checkpointList.alldoorsList,ii)
+	//if variable_instance_exists(tempObj,obj_hpContainer){
+	if tempObj=noone then break;
+	if ds_list_find_value(obj_checkpointList.doorsList,i) = noone then break;
+	show_debug_message("wants "+string(ds_list_find_value(obj_checkpointList.doorsList,i)) + " got "+ string(tempObj.pointID))
+	if string(tempObj.pointID) = string(ds_list_find_value(obj_checkpointList.doorsList,i)){
+	tempObj.used=1
+	}
+	//}
+	}
+}	
 
 //for each item in the list, checks all checkpoint items and deletes the ones on it
 for (var i=0; i <  ds_list_size(obj_checkpointList.hpList); i++){
@@ -49,9 +64,10 @@ for (var i=0; i <  ds_list_size(obj_checkpointList.hpList); i++){
 	}
 	//}
 	}
-	
-	
-	
+}
+	//Doorslist is opened doors
+	// alldoorslist is all doors
+
 	
 /*
 	 var checkpointID = ds_list_find_value(obj_checkpointList.hpList,i)
@@ -87,6 +103,6 @@ for (var i=0; i <  ds_list_size(obj_checkpointList.hpList); i++){
 		
 	}
 	}*/
-}
+
 frame1done=1
 }
