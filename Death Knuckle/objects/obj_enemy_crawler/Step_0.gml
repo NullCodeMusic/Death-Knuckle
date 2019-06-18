@@ -6,20 +6,20 @@
 //sets a timer, when it hits zero plays a startup animation before spawning
 // projectile
 
-if droptime=0||(droptime<80&&abs(x-obj_player.x)<200&&sign(x-obj_player.x)=-xInput){
+if droptime=0||(droptime<80&&abs(x-obj_player.x)<200&&sign(x-obj_player.x)=-xInput&&droptime!=-1){
 	//SET ANIMATION HERE
-	sprite_index=sp_bugAtk
+	sprite_index=sp_ceilingCrawlerAttack
 	image_index=0
-	image_speed=1
+	
 	//make sure animation lasts 30 frames
-	animateTime=30
+	animateTime=13
 	droptime=-1
 }else{
 if droptime>0 then droptime--	
 }
 
 if animateTime=0{
-	sprite_index=sp_bug
+	sprite_index=sp_ceilingCrawler
 	animateTime=-1
 	droptime=irandom_range(60,100)
 	instance_create_depth(x,y,0,obj_crawler_projectile)
