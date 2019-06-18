@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "13dd31e9-05a4-4dae-97ca-4f61ca48452a",
+            "Value": {
+                "id": "a514c177-dbb6-4e65-8be6-d77c1e3ce2a9",
+                "resourcePath": "sprites\\sp_craggedyrocks\\sp_craggedyrocks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "14d18232-5553-496f-a58b-c0ce28e200e9",
             "Value": {
                 "id": "25addc7e-1b18-4465-bd09-c4d282b2fe6e",
