@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "24af049f-025c-4bc5-9df5-2ad433eca124",
+            "Value": {
+                "id": "8f3314e9-8d44-46d6-93d3-b9f8ffd022a2",
+                "resourcePath": "objects\\obj_trigger_summonFloorBug\\obj_trigger_summonFloorBug.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "253f023d-968f-4a89-8580-e34a5dee0547",
             "Value": {
                 "id": "e1a62d1a-c663-4110-aa0e-32624fa7b7be",
@@ -380,6 +388,14 @@
                 "id": "44befb20-6ca6-4d5d-8ac4-46d631db5cb2",
                 "resourcePath": "sprites\/spr_crappyTitle\/spr_crappyTitle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "27d1c92f-2e48-4766-af4a-e3c53fa89b29",
+            "Value": {
+                "id": "b45ffd44-911c-4aec-b1df-84ce9af5599c",
+                "resourcePath": "objects\\obj_trigger_summonWallJumpCrawler\\obj_trigger_summonWallJumpCrawler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -775,6 +791,14 @@
             }
         },
         {
+            "Key": "5f9a7051-9394-4e9d-a86e-cd41b8cfaee0",
+            "Value": {
+                "id": "7f32e21b-6c99-4e45-8ab6-90492137a3b7",
+                "resourcePath": "views\\5f9a7051-9394-4e9d-a86e-cd41b8cfaee0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "61cba476-db25-4172-9686-7f5086f8a69e",
             "Value": {
                 "id": "85f18529-2590-44ed-9d74-c94358a42917",
@@ -1031,6 +1055,14 @@
             }
         },
         {
+            "Key": "8702223f-662c-43e5-be70-c23432864072",
+            "Value": {
+                "id": "c1b79f1d-fed3-4b34-aed3-4fb053233673",
+                "resourcePath": "views\\8702223f-662c-43e5-be70-c23432864072.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8793bfff-9926-4f3b-ad2c-4fb5b2deadbc",
             "Value": {
                 "id": "3d158343-2cf7-434f-bbe5-957695424551",
@@ -1156,6 +1188,14 @@
                 "id": "a8362379-c411-4210-98cc-c5fbfc463a8d",
                 "resourcePath": "sprites\/sp_bugAtk\/sp_bugAtk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "93917e4b-3c26-4cd3-becc-5516f772633a",
+            "Value": {
+                "id": "713e9302-13dc-4eb6-9382-ec412707dfa7",
+                "resourcePath": "views\\93917e4b-3c26-4cd3-becc-5516f772633a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
