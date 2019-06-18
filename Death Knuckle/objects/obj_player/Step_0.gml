@@ -411,8 +411,9 @@ if platform!=0{
 }
 
 #region moving up slopes
-if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&place_meeting(x,y+5,obj_obstacle)&&vspeed<3{//&&place_meeting(x,y+2,obj_obstacle)
+if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&vspeed<5{//&&place_meeting(x,y+2,obj_obstacle)
 	yy= vspeed
+	
 	for (i=0;i<17;i=i+1){
 		
 		if !place_meeting(x+hspeed,y+yy,obj_obstacle) {
@@ -421,9 +422,7 @@ if (place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0)&&place_meeting(x,y+5,obj_
 			break;
 			} else yy--
 	}
-	
 }
-
 #endregion
 
 if (place_meeting(x+hspeed,y,obj_obstacle)&&ignorewall=0&&walljump=1){
@@ -720,9 +719,6 @@ while place_meeting(x,y,prnt_pickup){
 }
 #endregion
 
-if place_meeting(x,y,obj_resetMiniboss)&&instance_exists(obj_enemy_miniBossBug){
-obj_enemy_miniBossBug.hp=300	
-}
 
 if place_meeting(x,y,obj_DarkRoom){
 //var darkList = ds_list_create()
