@@ -22,7 +22,7 @@ for(var hspd=hspeed; place_meeting(x+hspeed,y,obj_obstacle);hspd--){
 }
 
 
-if(jumping=0&&cooldown=0&&(abs(obj_player.y-y)<50)&&!collision_line(x,obj_player.y,obj_player.x,obj_player.y,obj_obstacle,true,false)){
+if(jumping=0&&cooldown=0&&(abs(obj_player.y-y)<50)&&!collision_line(x,obj_player.y,obj_player.x,obj_player.y,obj_obstacle,true,false))||place_meeting(x,y,obj_walljumpCrawlerJumpTrigger){
 	
 	jumping=1
 	
@@ -82,7 +82,7 @@ image_yscale = -sign(vspeed)
 } 
 
 
-if place_meeting(x,y+vspeed,obj_trigger_crawlerBoundry){ //hitting boundry, turn around
+if place_meeting(x,y+vspeed+5*sign(vspeed),obj_trigger_crawlerBoundry){ //hitting boundry, turn around
 spdup=0
 yInput=-yInput
 vspeed=-vspeed

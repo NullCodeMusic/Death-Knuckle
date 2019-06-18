@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-mask_index=sp_bug
-sprite_index=sp_bug
+
+sprite_index=sp_fireball
 animateTime=-1
 yInput=1
 damage = 10

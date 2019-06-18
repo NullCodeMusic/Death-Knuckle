@@ -2231,6 +2231,14 @@
             }
         },
         {
+            "Key": "fd80dd29-b413-4b00-a1d7-30975a3b0eef",
+            "Value": {
+                "id": "007091db-0e23-47ce-9fc1-845c10367ccc",
+                "resourcePath": "objects\\obj_walljumpCrawlerJumpTrigger\\obj_walljumpCrawlerJumpTrigger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fd9a58a2-de38-4154-a81a-5c76f5ffe8a5",
             "Value": {
                 "id": "a59de336-f017-4d81-91bd-b698491b324c",
