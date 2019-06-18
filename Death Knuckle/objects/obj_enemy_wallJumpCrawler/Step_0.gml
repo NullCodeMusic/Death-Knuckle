@@ -9,13 +9,13 @@ if jumping=1{
 	horizspd++
 
 	
- if(place_meeting(x+hspeed,y,obj_obstacle)){
+ if(!place_meeting(x+hspeed,y,obj_movingPlatform))&&(place_meeting(x+hspeed,y,obj_obstacle)){
 	 hspeed=0
 facing=-facing
 horizspd=0
 jumping=0
 cooldown=20
-for(var hspd=hspeed; place_meeting(x+hspeed,y,obj_obstacle);hspd--){
+for(var hspd=hspeed; place_meeting(x+hspeed,y,obj_obstacle)&&(!place_meeting(x+hspeed,y,obj_movingPlatform));hspd--){
 	hspeed-=sign(hspeed)
 }
  }
