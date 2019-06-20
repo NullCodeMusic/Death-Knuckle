@@ -7,7 +7,7 @@ xInput=1
 damage = 10
 knockback = 10
 stagger = 10
-hp = 15
+hp = 40
 
 xOrigin=x
 yOrigin=y
