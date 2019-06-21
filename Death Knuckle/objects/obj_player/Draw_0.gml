@@ -14,7 +14,13 @@ if setHitAnim=1 && staggerTime>0{
 	if sprite_index!=sp_playerHurt then sprite_index=sp_playerHurt
 } else {
 	
-	if(xInput!=0){sprite_index = sp_player_walk}else{sprite_index =sp_player}
+	if(xInput!=0){sprite_index = sp_player_walk; image_speed = 1
+		if(!place_meeting(x,y+5,obj_obstacle)&&!place_meeting(x,y+5,obj_jumpThru)){image_speed=0}
+		}else{sprite_index =sp_player}
+}
+if(grappled=1){
+
+	sprite_index=sp_player_jump
 }
 //default red 150 goes down
 
