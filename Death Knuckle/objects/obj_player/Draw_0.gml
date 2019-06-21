@@ -31,8 +31,8 @@ if grappled=1&&grappletime=0{
 
 draw_sprite(spr_checkpoint,0,targGrappleX,targGrappleY)}
 
-draw_set_alpha(toolAlpha)
-toolAlpha-=0.1*toolAlpha
+draw_set_alpha(min(toolAlpha*3,1))
+toolAlpha/=1.03
 #region tools
 
 i=0
