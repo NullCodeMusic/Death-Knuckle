@@ -21,7 +21,5 @@ while(instance_place(x,y+vspeed,obj_obstacle)){vspeed-=sign(vspeed)}
 if place_meeting(x+hspeed,y+vspeed,obj_pathDirection){
 	var dirobj = instance_place(x+hspeed,y+vspeed,obj_pathDirection)
 	direction=dirobj.image_angle
-	while(place_meeting(x,y,obj_player)){
-	obj_player.y--	
-	}
+	
 }

@@ -22,7 +22,7 @@ for(var hspd=hspeed; place_meeting(x+hspeed,y,obj_obstacle)&&(!place_meeting(x+h
 }
 
 
-if(jumping=0&&cooldown=0&&(abs(obj_player.y-y)<50)&&!collision_line(x,obj_player.y,obj_player.x,obj_player.y,obj_obstacle,true,false))||place_meeting(x,y,obj_walljumpCrawlerJumpTrigger){
+if(jumping=0&&cooldown=0&&(abs(obj_player.y-y)<50)&&!collision_line(x,y,obj_player.x,obj_player.y,obj_obstacle,true,false))||place_meeting(x,y,obj_walljumpCrawlerJumpTrigger){
 	
 	jumping=1
 	

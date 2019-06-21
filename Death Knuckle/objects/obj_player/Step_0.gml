@@ -364,6 +364,11 @@ if hp<=0 || grappled=1 then xInput = 0
 if staggerTime > 0 {
 	xInput = -hitDirection
 	lastxInput= -hitDirection
+	if grappled=1 {
+		grappled=0
+		cooldown=2
+	obj_grapplefist.comeBack=1	
+	}
 	if boolcheck1 = 0 {
 	timeHeld = 10
 	spd = 15
@@ -791,16 +796,12 @@ vspeed+=10
 if place_meeting(x+hspeed,y+vspeed,obj_obstacle){
 hspeed=0
 vspeed=0
+}}
+
+while (place_meeting(x,y,obj_movingPlatform)|| place_meeting(x,y,obj_obstacle)){
+y--
 }
 
-while place_meeting(x,y,obj_movingPlatform){
-y++
-if place_meeting(x,y,obj_obstacle){
-y--
-break;
-}
-}
-}
 
 if place_meeting(x,y+ymom,obj_obstacle) then extraFrames=10
 

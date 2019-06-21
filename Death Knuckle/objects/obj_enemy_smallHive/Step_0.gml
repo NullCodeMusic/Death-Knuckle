@@ -15,7 +15,7 @@ if droptime=0{
 	animateTime=13
 	droptime=-1
 }else{
-if DrawIfOnScreen(100,100) &&droptime>0 then droptime--	
+if distance_to_object(obj_player)<600&&!collision_line(x,y,obj_player.x,obj_player.y,obj_obstacle,1,1)&&droptime>0 then droptime--	
 }
 
 if animateTime=0{

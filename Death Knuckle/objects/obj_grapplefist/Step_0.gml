@@ -1,3 +1,9 @@
+
+if !(ds_list_find_value(obj_player.toolsList,obj_player.toolsSelect)="grapple") {
+	comeBack=1
+obj_player.cooldown=10
+obj_player.grappled=0
+}
 if comeBack=1 { 
 
 direction=point_direction(x,y,obj_player.x,obj_player.y)

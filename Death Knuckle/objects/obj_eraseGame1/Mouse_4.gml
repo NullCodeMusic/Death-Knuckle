@@ -8,7 +8,7 @@ ini_open("save.data")
 	 ini_write_real("unlocks","jumps",0)
 	 ini_write_real("unlocks","grapple",0)
 	 ini_write_real("unlocks","aoeMelee",0)
-	 
+	 ini_write_real("unlocks","minibosskilled",0)
 	 
 	 var emptyList = ds_list_create()
 	 ds_list_add(emptyList,0)

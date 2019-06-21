@@ -43,9 +43,15 @@ if place_meeting(x,y,prnt_punchable)&&tick>0{
 
 if place_meeting(x,y,obj_secretBreak){
 var secretbreak = instance_place(x,y,obj_secretBreak)
+
+part_type_sprite(global.partTypEnemyRubble,spr_part_wargRubble,1,1,0)
+part_emitter_region(global.partSys,global.partEmtSmallBurst,secretbreak.x-secretbreak.sprite_width/2,secretbreak.x+secretbreak.sprite_width/2,secretbreak.y-secretbreak.sprite_height,secretbreak.y,ps_shape_rectangle,ps_distr_linear)
+	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypEnemyRubble,5)
+
 if secretbreak.hits!=3&&secretbreak.hits!=4{
 secretbreak.hits++
 show_debug_message(string(secretbreak.hits))
+
 }
 }
 #endregion
