@@ -90,3 +90,4 @@ vspeed=-vspeed
 
 
 show_debug_message("vspeed"+string(vspeed)+"hspeed"+string(hspeed))
+if(hspeed!=0){logHspeed= hspeed}
