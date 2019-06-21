@@ -527,7 +527,7 @@ ymom=0
 
 if(ymom<=ymax){ymom++}
 
-if platform!=0 {
+if platform!=0&&yInput=05 {
 //	y=platform.y
 
 	ymom=platform.vspeed
@@ -800,7 +800,7 @@ if place_meeting(x,y,obj_movingPlatform){
 var platform = instance_place(x,y,obj_movingPlatform)
 var platHspeed =sign(platform.hspeed)*(abs(platform.hspeed))
 var platVspeed =sign(platform.vspeed)*(abs(platform.vspeed))
-platVspeed+=10
+
 if place_meeting(x+platHspeed,y+platVspeed,obj_obstacle){
 platform.direction+=180
 }else{hspeed+=platHspeed
