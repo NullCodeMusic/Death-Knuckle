@@ -1,4 +1,9 @@
 
+if grappled=1{
+x=targetSpot.x
+y=targetSpot.y
+}
+
 if !(ds_list_find_value(obj_player.toolsList,obj_player.toolsSelect)="grapple") {
 	comeBack=1
 obj_player.cooldown=10
