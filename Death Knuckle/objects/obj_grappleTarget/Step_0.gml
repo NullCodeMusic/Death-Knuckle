@@ -9,4 +9,4 @@ image_xscale=image_yscale
 image_angle+=8/max((point_distance(mouse_x,mouse_y,targetspot.x,targetspot.y)-100)/50,1)	
 }
 
-if obj_player.grappled=1 then image_alpha=0
+if obj_player.grappled=1||(ds_list_find_value(obj_player.toolsList,obj_player.toolsSelect)="grapple")then image_alpha=0
