@@ -15,3 +15,7 @@ if keyboard_check_pressed(ord("M")) {
 	room_set_viewport(room,0,1,0,0,display_get_width(),display_get_height())
 	}
 }
+
+image_angle= 10*(sin((pi*tick)/240))
+image_xscale=2+0.20*(sin((pi*tick)/480))
+image_yscale=image_xscale

@@ -1663,6 +1663,14 @@
             }
         },
         {
+            "Key": "c577062a-ff44-4bf1-8855-782b0ef9451b",
+            "Value": {
+                "id": "23f8776e-a3c0-419b-8119-a64e451e3507",
+                "resourcePath": "objects\\obj_titleScreenDark\\obj_titleScreenDark.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c5aa9dd3-dbd1-4834-8ec6-090a9d841817",
             "Value": {
                 "id": "e382e59f-865f-4506-9330-6255a126ecb4",
