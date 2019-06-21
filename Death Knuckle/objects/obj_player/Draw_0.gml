@@ -30,3 +30,32 @@ if grappled=1&&grappletime=0{
 	var targGrappleY = obj_grapplefist.y + sin(grappledirRad)*grappledist
 
 draw_sprite(spr_checkpoint,0,targGrappleX,targGrappleY)}
+
+draw_set_alpha(min(toolAlpha*3,1))
+toolAlpha/=1.03
+#region tools
+
+i=0
+iVOffset = 0
+repeat(ds_list_size(toolsList)){
+var drawTool = 9999
+switch(ds_list_find_value(toolsList,i)){
+case "grapple" :
+drawTool = sp_grappleIcon
+break
+case "fistWave" :
+drawTool = sp_waveIcon
+break
+}
+
+if(sprite_exists(drawTool)){
+iVOffset+=72
+if(i=toolsSelect){draw_sprite(sp_selectedIcon,1,display_get_gui_width()-64,display_get_height()-iVOffset)}
+draw_sprite(drawTool,1,display_get_gui_width()-64,display_get_height()-iVOffset)
+}
+i++
+
+}
+#endregion
+
+draw_set_alpha(1)

@@ -38,6 +38,7 @@ grappletime=0
 extraJump=0
 cooldown=0
 
+toolAlpha=1
 
 momentumTime=0
 momentumDir=0
