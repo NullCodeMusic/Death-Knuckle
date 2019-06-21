@@ -526,13 +526,10 @@ ymom=0
 if(ymom<=ymax){ymom++}
 
 if platform!=0 {
-	with (platform){
-			//obj_player.vspeed+=vspeed
-			obj_player.y+=vspeed
-			//if vspeed>0 then 
-			
-		
-	}
+//	y=platform.y
+
+	ymom=platform.vspeed
+
 }
 
 #region vetical collsion
