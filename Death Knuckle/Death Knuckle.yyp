@@ -999,6 +999,14 @@
             }
         },
         {
+            "Key": "7479f9c8-5942-42ef-a516-15cc01850385",
+            "Value": {
+                "id": "5f9a2546-12e3-4f37-bb8b-62898ef82125",
+                "resourcePath": "sprites\\sp_selectedIcon\\sp_selectedIcon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7522edcd-11d8-4009-8bcd-a9d3d7ec3a3f",
             "Value": {
                 "id": "3916cb6e-d755-480f-9e02-a0a7e4c9d999",
