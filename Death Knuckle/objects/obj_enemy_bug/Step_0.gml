@@ -109,7 +109,7 @@ x-=hspeed
 
 if (bounceh) then hspeed = -hspeed
 if (bouncev) then vspeed = -vspeed
-if hp <=0 {
+if hp <=0 ||place_meeting(x,y,obj_fall){
 	if irandom(4)=3{ var pickup = instance_create_depth(-1,x,y,obj_pickup_smallHealth)
 	pickup.dir = irandom_range(-1,1)}
 	audio_play_sound(snd_boog,1,0)

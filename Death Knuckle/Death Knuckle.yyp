@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "20387769-4f7e-4dba-a434-a1c11b879ad9",
+            "Value": {
+                "id": "5b7a4425-ebd0-4bbe-acc0-66312ce1fe50",
+                "resourcePath": "sprites\\sp_bugHiveSmall\\sp_bugHiveSmall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "22353fe0-e11c-4d2b-92bb-94985f9e92c8",
             "Value": {
                 "id": "cc10fe8f-77c2-4e62-8731-a350b0f22560",
@@ -1431,6 +1439,14 @@
             }
         },
         {
+            "Key": "abb7f532-a49e-4dcb-a771-6d5b61c99a44",
+            "Value": {
+                "id": "f33ff654-0928-43ac-b81c-80b4f03b81f9",
+                "resourcePath": "sprites\\sp_bugHiveAttackSmall\\sp_bugHiveAttackSmall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad711bc8-6b1c-43e7-91e6-8df7473232fc",
             "Value": {
                 "id": "f7f49b70-3eb2-4df3-88f4-d178da54593e",
@@ -1735,6 +1751,14 @@
             }
         },
         {
+            "Key": "cd1f35d3-dce9-42d0-b7f0-d1c8f4f8e7d6",
+            "Value": {
+                "id": "19846683-1c3b-4ac4-b989-1acefbb524f1",
+                "resourcePath": "objects\\obj_enemy_smallHive\\obj_enemy_smallHive.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d07b3c13-d4dd-4459-a010-4c1433708fe5",
             "Value": {
                 "id": "db73f384-7063-44f3-8760-6d6aecd60fcf",
@@ -2011,6 +2035,14 @@
             "Value": {
                 "id": "8b619a65-7cca-4569-8287-be5cdbf124d3",
                 "resourcePath": "objects\\obj_secretBreak\\obj_secretBreak.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e752cbc7-739e-4931-8934-e7681bf2fe79",
+            "Value": {
+                "id": "9a8f3d9a-3d0e-44be-af3f-8eb0d6d28322",
+                "resourcePath": "objects\\obj_trigger_summonBugHiveSmall\\obj_trigger_summonBugHiveSmall.yy",
                 "resourceType": "GMObject"
             }
         },
