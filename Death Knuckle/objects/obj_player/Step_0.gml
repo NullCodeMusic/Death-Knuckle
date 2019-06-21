@@ -517,7 +517,9 @@ vspeed = ymom
 
 while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
+if(!platTimer>0){
 ymom=0
+}
 }
 jtID = instance_nearest(x,y,obj_jumpThru)
 while(place_meeting(x,y+vspeed,jtID)&&vspeed!=0&&/*!place_meeting(x,y,jtID)&&*/y+55<jtID.y){
@@ -797,20 +799,20 @@ fallRecTimer=300
 
 
 if place_meeting(x,y,obj_movingPlatform){
+platTimer=1
 var platform = instance_place(x,y,obj_movingPlatform)
 var platHspeed =sign(platform.hspeed)*(abs(platform.hspeed))
 var platVspeed =sign(platform.vspeed)*(abs(platform.vspeed))
 
 if place_meeting(x+platHspeed,y+platVspeed,obj_obstacle){
 platform.direction+=180
+platform.y+=platform.vspeed
 }else{hspeed+=platHspeed
 	vspeed+=platVspeed
+	
 }}
-/*
-while place_meeting(x,y,obj_obstacle){
-y--
-}
 
+/*
 if place_meeting(x,y,obj_movingPlatform){
 while place_meeting(x,y,obj_movingPlatform){
 y--

@@ -39,6 +39,7 @@ extraJump=0
 cooldown=0
 
 toolAlpha=1
+platTimer = 0
 
 momentumTime=0
 momentumDir=0
