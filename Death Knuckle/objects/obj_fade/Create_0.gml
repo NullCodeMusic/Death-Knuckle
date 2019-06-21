@@ -1,4 +1,6 @@
 fade = 0
 image_alpha=0
-image_xscale= window_get_width()/sprite_width
+image_xscale=window_get_width()/sprite_width
 image_yscale=window_get_height()/sprite_height
+x=room_width/2
+y=room_height/2
