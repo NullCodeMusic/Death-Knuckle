@@ -1,3 +1,5 @@
 if !instance_exists(obj_enemy_miniBossBug){
-instance_destroy()	
+image_index=noone
+}else{
+image_index=spr_squareR	
 }
