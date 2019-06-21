@@ -10,4 +10,7 @@ if (DrawIfOnScreen(100,100)){
 	bluralpha = sin((time*pi)/(5*spd))
 	
 	y = startingy+2*sin((time*pi)/(2*spd))+1
+	if ds_list_find_index(obj_player.toolsList,"grapple")!=-1{
+	instance_destroy()	
+	}
 }
