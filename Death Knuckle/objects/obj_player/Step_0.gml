@@ -798,8 +798,18 @@ hspeed=0
 vspeed=0
 }}
 
-while (place_meeting(x,y,obj_movingPlatform)|| place_meeting(x,y,obj_obstacle)){
+while place_meeting(x,y,obj_obstacle){
 y--
+}
+
+if place_meeting(x,y,obj_movingPlatform){
+while place_meeting(x,y,obj_movingPlatform){
+y--
+ymom++
+}
+while !place_meeting(x,y+1,obj_movingPlatform){
+	y++
+}
 }
 
 
