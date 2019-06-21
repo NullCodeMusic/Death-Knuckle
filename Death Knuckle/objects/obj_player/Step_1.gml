@@ -1,4 +1,9 @@
 if frame1done =0{
+	ini_open("save.data")
+	ds_list_read(toolsList,ini_read_string("unlocks","toolsList",noone))
+	ini_close()
+	
+	
 for (var i=0; i !=  ds_list_size(obj_checkpointList.checkpointList); i++){
 
 	 var checkpointID = ds_list_find_value(obj_checkpointList.checkpointList,i)

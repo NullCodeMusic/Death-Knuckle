@@ -656,7 +656,7 @@ ini_open("save.data")
 		ini_write_string("unlocks","walljump",walljump)
 		ini_write_real("unlocks","hpcontainers",extraHPContainers)
 		ini_write_string("unlocks","doorsList", ds_list_write(obj_checkpointList.doorsList)  )
-		
+		ini_write_string("unlocks","toolsList", ds_list_write(toolsList))
 		ini_write_real("unlocks","jumps",extraJumps)
 	    ini_write_real("unlocks","tools",ds_list_write(toolsList))
 	 
@@ -690,8 +690,17 @@ while place_meeting(x,y,prnt_pickup){
 	if place_meeting(x,y,obj_grappleItem){
 		var itemID = instance_place(x,y,obj_grappleItem)	
 		ds_list_add(toolsList,"grapple")
+		with(itemID){
+		KillMe(spr_particle_sparks)	
+		}
 	}
-
+	if place_meeting(x,y,obj_waveItem){
+		var itemID = instance_place(x,y,obj_waveItem)	
+		ds_list_add(toolsList,"fistWave")
+		with(itemID){
+		KillMe(spr_particle_sparks)	
+		}
+	}
 	#endregion
 	
 	if place_meeting(x,y,obj_pickup_smallHealth){
