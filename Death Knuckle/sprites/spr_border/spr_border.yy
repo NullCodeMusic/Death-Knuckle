@@ -6,9 +6,9 @@
     "For3D": false,
     "HTile": true,
     "VTile": true,
-    "bbox_bottom": 63,
+    "bbox_bottom": 0,
     "bbox_left": 0,
-    "bbox_right": 104,
+    "bbox_right": 0,
     "bbox_top": 0,
     "bboxmode": 0,
     "colkind": 5,
@@ -62,6 +62,13 @@
                     "mvc": "1.0",
                     "FrameId": "f586b600-8287-4d28-aed9-da7c85a5214b",
                     "LayerId": "da59735e-7a8d-4dc4-8b4c-3197e210f9e9"
+                },
+                {
+                    "id": "3078dada-ea75-4503-af19-03f085cd2839",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "f586b600-8287-4d28-aed9-da7c85a5214b",
+                    "LayerId": "421f2a47-ae25-4f9e-b011-07df654b9cad"
                 }
             ]
         }
@@ -71,6 +78,17 @@
     "height": 64,
     "layers": [
         {
+            "id": "421f2a47-ae25-4f9e-b011-07df654b9cad",
+            "modelName": "GMImageLayer",
+            "mvc": "1.0",
+            "SpriteId": "0cf8cc83-279d-4b5d-9403-320a7e671e68",
+            "blendMode": 0,
+            "isLocked": false,
+            "name": "Layer 5",
+            "opacity": 100,
+            "visible": true
+        },
+        {
             "id": "da59735e-7a8d-4dc4-8b4c-3197e210f9e9",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
@@ -79,7 +97,7 @@
             "isLocked": false,
             "name": "Layer 4",
             "opacity": 100,
-            "visible": true
+            "visible": false
         },
         {
             "id": "3f853845-686a-49fe-a012-ca0de8c32278",
@@ -90,7 +108,7 @@
             "isLocked": false,
             "name": "Layer 3",
             "opacity": 100,
-            "visible": true
+            "visible": false
         },
         {
             "id": "094d6a63-f471-42c0-945c-e0285dfa73ac",
@@ -112,7 +130,7 @@
             "isLocked": false,
             "name": "Layer 1",
             "opacity": 100,
-            "visible": true
+            "visible": false
         },
         {
             "id": "71475df4-518b-45b5-8ed5-8779a142e620",

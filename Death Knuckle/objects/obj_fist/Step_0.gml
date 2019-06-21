@@ -195,3 +195,6 @@ frame1done = 1
 //y=y+vspeed
 visible = 1
 }
+
+image_angle=direction
+image_xscale=max(1,speed/50)

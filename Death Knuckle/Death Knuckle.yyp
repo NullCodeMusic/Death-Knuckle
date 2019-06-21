@@ -1055,6 +1055,14 @@
             }
         },
         {
+            "Key": "7a68d18b-da68-44ff-ab2a-16f832a70f09",
+            "Value": {
+                "id": "810612c4-620d-4d4d-801b-1253b5061d8e",
+                "resourcePath": "sprites\\sp_minibossBGSlices\\sp_minibossBGSlices.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7c4fff9a-a0ed-4071-83af-ce6f159d76e0",
             "Value": {
                 "id": "121db811-e9c3-49fa-a586-494eff2de471",
@@ -1639,6 +1647,14 @@
             }
         },
         {
+            "Key": "c3268faa-e2c0-421c-a28f-70ab29e8868e",
+            "Value": {
+                "id": "bc02d085-8808-47c1-b3cb-9a79bf0edb32",
+                "resourcePath": "sprites\\sp_grappleRing\\sp_grappleRing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c5aa9dd3-dbd1-4834-8ec6-090a9d841817",
             "Value": {
                 "id": "e382e59f-865f-4506-9330-6255a126ecb4",
@@ -2051,6 +2067,14 @@
             "Value": {
                 "id": "d72beb26-9013-4f1d-98da-29413cbe4f51",
                 "resourcePath": "sprites\/sp_cursor8\/sp_cursor8.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e85d7fd5-1e57-489e-9bb6-2ef6520d3bed",
+            "Value": {
+                "id": "88e53d89-a160-409f-827a-cd1fc4ab6aa6",
+                "resourcePath": "sprites\\sp_grapplePoint\\sp_grapplePoint.yy",
                 "resourceType": "GMSprite"
             }
         },
