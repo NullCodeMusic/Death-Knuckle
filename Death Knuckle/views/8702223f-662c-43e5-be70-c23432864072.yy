@@ -19,11 +19,7 @@
         "71ddd765-c8f8-4c37-8bf6-f633420ba0cf",
         "f0c118df-9633-458b-9d6b-e91ea00082e3",
         "e5769377-0253-4845-9213-d1eed8763be5",
-        "2c422605-2366-4914-a98a-1c937a377e11",
-        "8793bfff-9926-4f3b-ad2c-4fb5b2deadbc",
-        "69b5b461-ca8d-47ff-af33-8ff9bc0fa8b3",
-        "c9286a91-c286-4371-bfe1-faef935b2a7f",
-        "d73f40d7-6052-46a9-bfad-5f15dfc91cba"
+        "2c422605-2366-4914-a98a-1c937a377e11"
     ],
     "filterType": "GMObject",
     "folderName": "Collision",
