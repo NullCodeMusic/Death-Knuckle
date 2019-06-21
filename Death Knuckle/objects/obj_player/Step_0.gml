@@ -798,6 +798,7 @@ fallRecTimer=300
 } else if fallRecTimer>0 then fallRecTimer--
 
 
+
 if place_meeting(x,y,obj_movingPlatform){
 platTimer=1
 var platform = instance_place(x,y,obj_movingPlatform)
@@ -811,7 +812,10 @@ platform.y+=platform.vspeed
 	vspeed+=platVspeed
 	
 }}
-
+if !place_meeting(x,y+15,obj_movingPlatform)&&platTimer=1{
+platTimer=0
+ymom=0
+}
 /*
 if place_meeting(x,y,obj_movingPlatform){
 while place_meeting(x,y,obj_movingPlatform){
