@@ -50,8 +50,8 @@ break
 
 if(sprite_exists(drawTool)){
 iVOffset+=72
-if(i=toolsSelect){draw_sprite(sp_selectedIcon,1,display_get_gui_width()-64,display_get_height()-iVOffset)}
-draw_sprite(drawTool,1,display_get_gui_width()-64,display_get_height()-iVOffset)
+if(i=toolsSelect){draw_sprite(sp_selectedIcon,1,x-64,y-iVOffset)}
+draw_sprite(drawTool,1,x-64,y-iVOffset)
 }
 i++
 
