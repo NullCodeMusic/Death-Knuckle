@@ -798,6 +798,7 @@ fallRecTimer=300
 
 if place_meeting(x,y,obj_movingPlatform){
 var platform = instance_place(x,y,obj_movingPlatform)
+<<<<<<< HEAD
 var platHspeed =sign(platform.hspeed)*(abs(platform.hspeed))
 var platVspeed =sign(platform.vspeed)*(abs(platform.vspeed))
 
@@ -805,8 +806,16 @@ if place_meeting(x+platHspeed,y+platVspeed,obj_obstacle){
 platform.direction+=180
 }else{hspeed+=platHspeed
 	vspeed+=platVspeed
+=======
+hspeed+=sign(platform.hspeed)*(abs(platform.hspeed))
+vspeed+=sign(platform.vspeed)*(abs(platform.vspeed))
+vspeed+=10
+if place_meeting(x+hspeed,y+vspeed,obj_obstacle){
+hspeed=0
+vspeed=0
+>>>>>>> parent of 85f88c4... xczvzcx
 }}
-/*
+
 while place_meeting(x,y,obj_obstacle){
 y--
 }
@@ -820,7 +829,7 @@ while !place_meeting(x,y+1,obj_movingPlatform){
 	y++
 }
 }
-*/
+
 
 if place_meeting(x,y+ymom,obj_obstacle) then extraFrames=10
 

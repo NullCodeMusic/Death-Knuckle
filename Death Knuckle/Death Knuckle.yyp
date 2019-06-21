@@ -575,14 +575,6 @@
             }
         },
         {
-            "Key": "345ff700-a493-4b4c-846c-93f4fcd35911",
-            "Value": {
-                "id": "58faa65c-339e-4663-8bf3-b140c6adc57e",
-                "resourcePath": "sprites\\sp_wallCrawler\\sp_wallCrawler.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "34829921-8ad4-438f-aab3-2e4f335b26a5",
             "Value": {
                 "id": "7740514d-51f5-42e6-b31f-baf9f40ae46d",
@@ -1791,14 +1783,6 @@
             }
         },
         {
-            "Key": "cc947e0a-718b-4914-9762-2a347d8dcc98",
-            "Value": {
-                "id": "2c299e1e-060f-4418-adbf-f3ffe6ca763c",
-                "resourcePath": "sprites\\sp_fist1\\sp_fist1.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "88754f6b-6e38-40e5-baee-7f7cc2f15fb6",
@@ -2043,14 +2027,6 @@
             "Value": {
                 "id": "c1bf99aa-b1b2-47ea-a446-726c8026f246",
                 "resourcePath": "sprites\/spr_pushButton\/spr_pushButton.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "e1e07776-36fb-416a-803e-e72717a80a3b",
-            "Value": {
-                "id": "96986ae1-92cf-4a7a-a7da-417964f480ce",
-                "resourcePath": "sprites\\sp_spiral\\sp_spiral.yy",
                 "resourceType": "GMSprite"
             }
         },
