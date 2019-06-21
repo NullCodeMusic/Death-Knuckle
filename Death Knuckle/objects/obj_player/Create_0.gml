@@ -108,5 +108,3 @@ changingHPrange = 100+hpcontainervalue*extraHPContainers
 changingHP = 100+hpcontainervalue*extraHPContainers
 
 if(ds_list_find_value(toolsList,0)=0){ds_list_delete(toolsList,0)}
-ds_list_add(toolsList,"grapple")
-ds_list_add(toolsList,"fistWave")
