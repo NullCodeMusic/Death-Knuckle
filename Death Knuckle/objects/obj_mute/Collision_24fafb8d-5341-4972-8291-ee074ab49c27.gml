@@ -1,4 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_stop_sound(snd_level)
-audio_stop_sound(snd_bossfight)
+audio_stop_all()

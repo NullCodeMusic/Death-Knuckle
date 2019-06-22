@@ -160,8 +160,8 @@ if keyboard_check(ord("J"))&&keyboard_check(ord("P")) then hp=hp-100
 
 
 //death
-if hp <=0 {var pickup = instance_create_depth(x,y-50,-500,obj_walljumpPowerup);
+if hp <=0 {
 	KillMe(spr_part_wargRubble);
-	pickup.dir = irandom_range(-1,1)}
+	}
 
 show_debug_message("HP"+string(hp))

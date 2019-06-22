@@ -71,6 +71,7 @@ if hp <=0 {
 	ini_write_real("unlocks","minibosskilled",1)
 	ini_close()
 	instance_destroy(obj_minibossFall)
+	audio_stop_sound(snd_bossfight)
 	KillMe(spr_part_bugRubble)
 }
 

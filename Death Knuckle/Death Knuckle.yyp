@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "31bb0eba-b4d2-4b09-9b66-df1670228df1",
+            "Value": {
+                "id": "f2637a4b-3530-4739-b80f-ad2e59937d06",
+                "resourcePath": "sounds\\snd_save\\snd_save.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "32832a26-4859-4ea4-8375-358dd59be783",
             "Value": {
                 "id": "1d290e61-ea00-435d-8af1-c585ec98e8fc",
