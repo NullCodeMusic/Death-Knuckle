@@ -532,11 +532,15 @@ ymom=0
 
 if(ymom<=ymax){ymom++}
 
-//if platform!=0&&yInput=0 {
-////	y=platform.y
+if platform!=0&&yInput=0 {
+	//y=platform.y-100
 
-//	ymom=platform.vspeed //ffffffffffffffffffffffffffffff
-
+	vspeed+=platform.vspeed
+	//ffffffffffffffffffffffffffffff
+	//if place_meeting(x,y,platform){
+	//y--	
+	//}
+}
 //}
 
 #region vetical collsion
@@ -803,7 +807,8 @@ fallRecTimer=300
 
 
 if place_meeting(x,y,obj_movingPlatform){
-	platform.direction+=180
+	//if platform.vspeed>=0{ platform.direction+=180}
+	
 //platTimer=1
 //instance_place_list(x,y,obj_movingPlatform,platList,0)
 //repeat(ds_list_size(platList)-1){
