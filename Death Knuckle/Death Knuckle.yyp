@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "11276340-a12b-44e0-b261-a3160bd7c430",
+            "Value": {
+                "id": "32efae6d-295b-4e13-bf53-176fc9b2522d",
+                "resourcePath": "sprites\\sp_minimap\\sp_minimap.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "11394b9e-71b3-4109-bc2f-0fdde38ce022",
             "Value": {
                 "id": "68f487b4-1ea8-4b34-b461-aff3253eacb8",

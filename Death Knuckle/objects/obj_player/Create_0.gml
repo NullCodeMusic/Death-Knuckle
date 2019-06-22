@@ -38,6 +38,7 @@ grappletime=0
 extraJump=0
 cooldown=0
 
+platList=ds_list_create()
 toolAlpha=1
 platTimer = 0
 

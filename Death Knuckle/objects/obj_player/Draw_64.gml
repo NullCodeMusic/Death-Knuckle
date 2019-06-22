@@ -28,6 +28,7 @@ draw_set_colour(c_black);
 draw_rectangle(topx-5,viewportarray[4]/20-5,botx+5,size + viewheight/20+5,0)
 draw_set_colour(c_white);
 draw_rectangle(topx-5,viewportarray[4]/20-5,botx+5,size + viewheight/20+5,1)
-draw_sprite(sp_marker,0,topx+size*obj_player.x/room_width,50 + size*obj_player.y/room_height)
+draw_sprite_stretched(sp_minimap,0,topx+5,viewportarray[4]/20,size,size)
+draw_sprite(sp_marker,0,topx+5+size*obj_player.x/room_width,50 + 5+size*obj_player.y/room_height)
 
 
