@@ -456,7 +456,7 @@ hspeed-= sign(hspeed)}
 #endregion
 
 #region vertical movement
-if((place_meeting(x,y+3,obj_obstacle) || place_meeting(x,y+3,obj_jumpThru))&&vspeed<=0){ //touching ground   ||(ignorewall=0&&walljump=1&& (walljumpframes>0))
+if(((place_meeting(x,y+3,obj_obstacle) || place_meeting(x,y+3,obj_jumpThru))&&vspeed<=0)||platform!=0){ //touching ground   ||(ignorewall=0&&walljump=1&& (walljumpframes>0))
 	extraFrames=8
 	
 	
@@ -540,7 +540,7 @@ if platform!=0&&yInput=0 {
 	//if place_meeting(x,y,platform){
 	//y--	
 	//}
-}
+} 
 //}
 
 #region vetical collsion

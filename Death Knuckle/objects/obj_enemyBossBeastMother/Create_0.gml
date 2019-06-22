@@ -1,4 +1,4 @@
-DrawIfOnScreen()
+timeInAir=0
 
 ymom = 0
 xInput = 0

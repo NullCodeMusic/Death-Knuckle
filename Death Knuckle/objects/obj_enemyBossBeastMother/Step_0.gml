@@ -1,5 +1,11 @@
 
-
+if !place_meeting(x,y+1,obj_boss1Wall){timeInAir++
+	if timeInAir >=60{
+	invulTime=60
+	vspeed+=2
+	chargeWarmup=1
+	}
+}else { timeInAir=0}
 
 #region move x
 if bounce =1 {
@@ -17,15 +23,15 @@ hspeed = (tempX - x)/(abs(tempX - x))*15
 
 #region state1
 if state = 1{
-if chargeWarmup <=0 {
+if chargeWarmup <=0 &&place_meeting(x,y+1,obj_obstacle){
 	
 	hspeed += chargeInput*5 
 	if vspeed=0 && jump=1 &&place_meeting(x,y+1,obj_obstacle){ ymom = round(heightDif/12); jump = 0;}
 	image_index = 0
 	image_speed = 1
 } else {
-if place_meeting(x,y+1,obj_obstacle)&&hspeed = 0 then chargeWarmup--	
-
+if hspeed = 0&&chargeWarmup>0 then chargeWarmup--	
+if invulTime>0{invulTime--}
 if chargeWarmup== 1{
 	if obj_player.x = x then chargeInput = -1 else{
 	chargeInput = (obj_player.x - x)/(abs(obj_player.x - x))}
@@ -35,8 +41,9 @@ if chargeWarmup== 1{
 	show_debug_message(heightDif)
 	
 	
-	if staggerTime>0 then staggerTime--
-	invulTime--
+	if staggerTime>0 then staggerTime-=2
+	if staggerTime<0 then staggerTime=0
+	
 	
 	
 	
@@ -73,7 +80,7 @@ image_xscale = sign((tempX - x)/(abs(tempX - x)))
 hspeed = hspeed - sign(hspeed)
 //if image_xscale > 1
 
- var increment = (abs(x-obj_cameraFollowing.x)+camera_get_view_width(view_camera[0])/2)/8//8 sections on each side
+ var increment = (abs(x-obj_cameraFollowing.x)+1000/2)/8//8 sections on each side
 var dontuse = irandom_range(0,8)
 var dontuse2 = irandom_range(0,8)
 var dontuse3 = irandom_range(0,8)
@@ -83,7 +90,7 @@ while dontuse2 = dontuse {
 while dontuse3 = dontuse || dontuse3 = dontuse{
 var dontuse3 = irandom_range(0,8)	
 }
- var height = camera_get_view_height(view_camera[0])/2
+ var height = 500/2
  var camX = camera_get_view_x(view_camera[0])
 //set pointv and pointh
 	for ( var i = 1;i<8;i++){
