@@ -1,0 +1,2 @@
+hitDirection=xInput
+staggerTime=10

@@ -31,32 +31,24 @@ if jumpIn > -1{
 #region horizontal movement
 
 if(instance_exists(obj_player)){
-	if (obj_player.x-x)/(abs(obj_player.x-x)) !=0{
+	if (obj_player.x-x) !=0{
 		distanceToPlayer = abs(obj_player.x-x)
-xInput = (obj_player.x - x)/(abs(obj_player.x - x))*0.5
+xInput = sign(obj_player.x - x)
 if distanceToPlayer>1152 then xInput=0}
-} else xInput = 1
-
+} else xInput = 0
+show_debug_message(string(staggerTime))
 if staggerTime > 0 {
 	xInput = -hitDirection
 	lastxInput= -hitDirection
 	if boolcheck1 = 0 {
-	timeHeld = 10
-	hspeed =xInput*15
-	
 
-	boolcheck1 =1 }
-} else {
-	boolcheck1=0
-	if distanceToPlayer<300 then hspeed += xInput*0.5
-	else {
-	if abs(xInput*3/floor(distanceToPlayer/100)) < 1 then hspeed +=xInput
-	else { hspeed +=xInput*3/floor(distanceToPlayer/100)}
-	}
-if(hspeed>=5){hspeed = 5}
-if(hspeed<=-5){hspeed = -5}
-hspeed+=hspeed*irandom(5)/10
+	hspeed +=xInput*20
 }
+} 
+
+while abs(hspeed)>maxSpd{hspeed-=sign(hspeed)}
+if staggerTime=0{hspeed+=xInput*irandom(5)/5}
+
 
 
 
@@ -94,7 +86,7 @@ ymom=0
 
 if(ymom<=ymax){ymom++}
 
-while((place_meeting(x+hspeed,y+vspeed,obj_obstacle)||place_meeting(x+hspeed,y+vspeed,obj_enemyOnlyWall))&&hspeed!=0){
+while((place_meeting(x+hspeed,y,obj_obstacle)||place_meeting(x+hspeed,y,obj_enemyOnlyWall))&&hspeed!=0){
 hspeed-= sign(hspeed)
 }
 }

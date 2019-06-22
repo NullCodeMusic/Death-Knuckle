@@ -76,11 +76,22 @@ if place_meeting(x,y,prnt_enemy){
 	 var enemyID= instance_place(x,y,prnt_enemy)
 	//object_get_name(enemyID)
 	
-	if enemyID = instance_place(x,y,obj_enemy_warg){
+	if enemyID = instance_place(x,y,obj_enemyBossBeastMother){
 	audio_sound_pitch(snd_wargHurt,1+random_range(-0.2,+0.2))
 	audio_play_sound(snd_wargHurt,1,0)	
 	}
-	
+	if enemyID = instance_place(x,y,obj_enemyBossBeastMother){
+		
+		if enemyID.invulTime<=0{//||place_meeting(x,y,obj_enemyBossBeastMother)
+		//enemyID.staggerTime =5
+		enemyID.invulTime=5
+		enemyID.ymom=-2
+		//enemyID.hitDirection = (x-enemyID.x)/abs(x - enemyID.x)
+		enemyID.hp -= damage
+		show_debug_message("hp"+string(enemyID.hp))
+		obj_cameraFollowing.screenshake = random_range((damage)/3,(damage+10)/3)
+		}
+	}else{
 	if enemyID.invulTime<=0{//||place_meeting(x,y,obj_enemyBossBeastMother)
 		enemyID.staggerTime =7
 		enemyID.invulTime=5
@@ -92,8 +103,11 @@ if place_meeting(x,y,prnt_enemy){
 		//enemyID.hp -= //obj_player.attackDamage
 
 }
+}
+	
 part_emitter_region(global.partSys,global.partEmtSmallBurst,enemyID.x-enemyID.sprite_width/2,enemyID.x+enemyID.sprite_width/2,enemyID.y-enemyID.sprite_height,enemyID.y,ps_shape_rectangle,ps_distr_linear)
 	part_emitter_burst(global.partSys,global.partEmtSmallBurst,global.partTypSparks,1)
+
 }
 #endregion
 

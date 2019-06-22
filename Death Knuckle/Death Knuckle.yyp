@@ -855,6 +855,14 @@
             }
         },
         {
+            "Key": "60c34f96-9717-40c4-9897-5247852defd0",
+            "Value": {
+                "id": "5a72b3db-88bc-42fe-bb4f-2abc87a1c81c",
+                "resourcePath": "sprites\\sp_tutorial2\\sp_tutorial2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "61cba476-db25-4172-9686-7f5086f8a69e",
             "Value": {
                 "id": "85f18529-2590-44ed-9d74-c94358a42917",
@@ -1380,6 +1388,14 @@
                 "id": "bba527a9-19ca-48e5-b061-4ce23c119d60",
                 "resourcePath": "objects\/obj_usedHPContainer\/obj_usedHPContainer.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a290fceb-9c0e-440c-b26c-08948169c6a4",
+            "Value": {
+                "id": "397041bb-1c50-4a37-b853-f11ebbb56393",
+                "resourcePath": "sprites\\sp_wargBossRed\\sp_wargBossRed.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
