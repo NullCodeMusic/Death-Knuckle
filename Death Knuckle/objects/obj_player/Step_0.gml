@@ -414,7 +414,9 @@ if ignorewall=1 { walljumpframes=0; }
 #region inital horiz collision 
 //moving platform
 if platform!=0{
+	if !place_meeting(x,y+1,obj_movingPlatform){
 	
+	}
 }
 
 #region moving up slopes
@@ -445,7 +447,8 @@ facingwall=sign(hspeed)
 		walljump=1 fuk
 		}}*/
 		if platform!=0 {
-		hspeed+=platform.hspeed}
+		hspeed+=platform.hspeed //fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+		}
 while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 hspeed-= sign(hspeed)}
 
@@ -529,12 +532,12 @@ ymom=0
 
 if(ymom<=ymax){ymom++}
 
-if platform!=0&&yInput=05 {
-//	y=platform.y
+//if platform!=0&&yInput=0 {
+////	y=platform.y
 
-	ymom=platform.vspeed
+//	ymom=platform.vspeed //ffffffffffffffffffffffffffffff
 
-}
+//}
 
 #region vetical collsion
 
@@ -800,22 +803,28 @@ fallRecTimer=300
 
 
 if place_meeting(x,y,obj_movingPlatform){
-platTimer=1
-instance_place_list(x,y,obj_movingPlatform,platList,0)
-repeat(ds_list_size(platList)-1){
-var platform=ds_list_find_value(platList,1)
-var platHspeed =platform.hspeed
-var platVspeed =platform.vspeed
+	platform.direction+=180
+//platTimer=1
+//instance_place_list(x,y,obj_movingPlatform,platList,0)
+//repeat(ds_list_size(platList)-1){
+//var platform=ds_list_find_value(platList,1)
+//var platHspeed =platform.hspeed
+//var platVspeed =platform.vspeed
 
-if place_meeting(x+platHspeed,y+platVspeed,obj_obstacle){
-platform.direction+=180
-platform.y+=platform.vspeed
-}else{hspeed+=platHspeed
-	vspeed+=platVspeed
+//if place_meeting(x+platHspeed,y+platVspeed,obj_obstacle){
+//platform.direction+=180
+//platform.y+=platform.vspeed
+//}else{ hspeed+=platHspeed
+//	vspeed+=platVspeed
 	
-}
-ds_list_delete(platList,0)
-}
+//	//if y-49<platform.y{
+//	//	show_debug_message("fat")
+//	//	vspeed+=20
+//	//}
+	
+//}
+//ds_list_delete(platList,0)
+//}
 
 }
 if((!place_meeting(x,y+15,obj_movingPlatform)&&platTimer=1)){
