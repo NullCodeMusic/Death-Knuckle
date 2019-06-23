@@ -639,6 +639,14 @@
             }
         },
         {
+            "Key": "3f734cc6-3fb0-4835-8b16-13b7f83c048a",
+            "Value": {
+                "id": "6ae3f1c8-39ce-4950-bc6f-c1edb2cefce7",
+                "resourcePath": "sprites\\sp_acidProjectile_2\\sp_acidProjectile_2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3f90faaa-263b-4cf4-b036-ba759c356f4b",
             "Value": {
                 "id": "62b93936-3511-4b61-b626-6f0e8520fd9a",
