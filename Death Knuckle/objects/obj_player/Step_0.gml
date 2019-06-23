@@ -530,7 +530,7 @@ instance_place_list(x,y+vspeed,obj_jumpThru,jumplist,1)
 
 for (var b = ds_list_size(jumplist);b>0;b--){
 	
-	var jumpid = ds_list_find_value(jumplist,b)
+	var jumpid = ds_list_find_value(jumplist,b-1)
 	while(place_meeting(x,y+vspeed,obj_jumpThru)&&vspeed!=0&&y+55<jumpid.y){
 	vspeed-= vspeed/abs(vspeed)
 	ymom=0
