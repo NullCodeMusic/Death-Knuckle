@@ -524,10 +524,20 @@ if(!platTimer>0){
 ymom=0
 }
 }
-jtID = instance_nearest(x,y,obj_jumpThru)
-while(place_meeting(x,y+vspeed,jtID)&&vspeed!=0&&/*!place_meeting(x,y,jtID)&&*/y+55<jtID.y){
-vspeed-= vspeed/abs(vspeed)
-ymom=0
+
+ds_list_clear(jumplist)
+instance_place_list(x,y+vspeed,obj_jumpThru,jumplist,1)
+
+for (var b = ds_list_size(jumplist);b>0;b--){
+	
+	var jumpid = ds_list_find_value(jumplist,b)
+	while(place_meeting(x,y+vspeed,obj_jumpThru)&&vspeed!=0&&y+55<jumpid.y){
+	vspeed-= vspeed/abs(vspeed)
+	ymom=0
+		if place_meeting(x,y,jumpid){
+			break;	
+		}
+	}
 }
 
 if(ymom<=ymax){ymom++}

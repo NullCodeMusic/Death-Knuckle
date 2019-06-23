@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 toolsList= ds_list_create()
-
+jumplist = ds_list_create()
 room_speed = 60
 fallRecx=x
 fallRecy=y
