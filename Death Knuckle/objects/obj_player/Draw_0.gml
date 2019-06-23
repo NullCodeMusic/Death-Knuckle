@@ -15,8 +15,9 @@ if setHitAnim=1 && staggerTime>0{
 } else {
 	
 	if(xInput!=0){sprite_index = sp_player_walk; image_speed = 1
-		if(!place_meeting(x,y+5,obj_obstacle)&&!place_meeting(x,y+5,obj_jumpThru)){image_speed=0}
 		}else{sprite_index =sp_player}
+	if(!place_meeting(x,y+5,obj_obstacle)&&!place_meeting(x,y+5,obj_jumpThru)){image_speed=0
+			sprite_index=sp_player_jump}
 }
 if(grappled=1){
 
