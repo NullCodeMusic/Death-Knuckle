@@ -1,4 +1,4 @@
-mask_index=sp_bug
+mask_index=sp_warg
 
 #region reset
 
@@ -22,9 +22,8 @@ if invulTime>0{
 
 if atkAnim>0{
 	atkAnim--
-sprite_index=sp_bugAtk
 image_speed=1
-} else sprite_index=sp_bug
+} else sprite_index=sp_warg
 
 if jumpIn > -1{
 	jumpIn--}

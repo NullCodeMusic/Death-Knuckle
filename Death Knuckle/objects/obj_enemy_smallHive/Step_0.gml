@@ -23,7 +23,7 @@ if animateTime=0{
 	animateTime=-1
 	droptime=irandom_range(60,120)
 	if irandom(3)=1{
-		instance_create_depth(x,y,0,obj_enemy_floorBug)
+		instance_create_depth(x,y,0,obj_enemy_bug)
 	}else instance_create_depth(x,y,0,obj_enemy_bug)
 	
 }else if animateTime>0{

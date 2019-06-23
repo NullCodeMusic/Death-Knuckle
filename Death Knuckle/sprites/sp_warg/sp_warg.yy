@@ -277,7 +277,7 @@
             "isLocked": false,
             "name": "default",
             "opacity": 33,
-            "visible": true
+            "visible": false
         }
     ],
     "origin": 7,

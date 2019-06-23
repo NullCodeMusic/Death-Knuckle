@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "04d32d91-4431-46f2-8d59-4b71745ac388",
-            "Value": {
-                "id": "88fd9d76-f631-428d-af6d-37a9e1017365",
-                "resourcePath": "sprites\/sp_wargBoss\/sp_wargBoss.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "050a1a94-0a7e-419a-97fd-3f991127a3c7",
             "Value": {
                 "id": "caf50530-f066-46aa-9c5d-c454906f9cbc",
@@ -84,6 +76,14 @@
                 "id": "212075bd-e59a-4a3c-94f9-7a862e812035",
                 "resourcePath": "objects\/obj_rocketFist\/obj_rocketFist.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "06327561-dcef-4cfe-82ba-1e63b2292b89",
+            "Value": {
+                "id": "e73c4db1-ac19-4652-94a1-e648a4be36a9",
+                "resourcePath": "sprites\\sp_wargBoss\\sp_wargBoss.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
