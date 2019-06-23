@@ -605,7 +605,7 @@ hitDirection=-sign(hspeed)
 if(place_meeting(x+hspeed,y+vspeed,obj_fall)){
 hp-=10
 x=fallRecx
-y=fallRecy-15
+y=fallRecy
 red=0
 invulTime=5
 //staggerTime=50
@@ -807,7 +807,7 @@ hport	The height (in pixels) of the view port
 */
 if keyboard_check(vk_up) {x+=(mouse_x-x)/2;y+=(mouse_y-y)/2}
 
-if fallRecTimer=0&&place_meeting(x,y+1,obj_obstacle)&&!place_meeting(x,y+1,obj_crumblingPlatform)&&!place_meeting(x,y+1,obj_breakingPlatform)&&!place_meeting(x+hspeed,y+vspeed,obj_fall)&&!place_meeting(x,y+1,obj_movingPlatform){ //checks if player is on ground and timer is out
+if fallRecTimer=0&&vspeed=0&&place_meeting(x,y+1,obj_obstacle)&&!place_meeting(x,y+1,obj_crumblingPlatform)&&!place_meeting(x,y+1,obj_breakingPlatform)&&!place_meeting(x,y,obj_fall)&&!place_meeting(x+hspeed,y+vspeed,obj_fall)&&!place_meeting(x,y+1,obj_movingPlatform){ //checks if player is on ground and timer is out
 fallRecx=x
 fallRecy=y
 fallRecTimer=300
