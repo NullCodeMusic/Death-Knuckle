@@ -2255,6 +2255,14 @@
             }
         },
         {
+            "Key": "f133906a-2d33-4811-b7d3-c68a3b660398",
+            "Value": {
+                "id": "3c22faa1-0ccd-49ae-9d5a-911188e30b19",
+                "resourcePath": "sprites\\sp_wingame\\sp_wingame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f24ca53f-62bb-4f2d-a223-e6b8863b657a",
             "Value": {
                 "id": "c1f988ea-ddf1-478b-bf78-1c8de564ed85",

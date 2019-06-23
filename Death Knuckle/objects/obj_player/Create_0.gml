@@ -2,6 +2,8 @@
 // You can write your code in this editor
 toolsList= ds_list_create()
 jumplist = ds_list_create()
+
+
 room_speed = 60
 fallRecx=x
 fallRecy=y
@@ -69,7 +71,7 @@ ignorewall=0
 //lastxInput=0
 //xInput=0
 facingwall=0
-attackDamage=8 // full damage of a charged fist
+attackDamage=9 // full damage of a charged fist 8
 
 
 grappletomouse=1

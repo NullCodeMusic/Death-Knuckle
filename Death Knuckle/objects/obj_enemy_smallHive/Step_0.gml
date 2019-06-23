@@ -21,7 +21,7 @@ if distance_to_object(obj_player)<600&&!collision_line(x,y,obj_player.x,obj_play
 if animateTime=0{
 	sprite_index=sp_bugHiveSmall
 	animateTime=-1
-	droptime=irandom_range(60,120)
+	droptime=irandom_range(80,200)
 	if irandom(3)=1{
 		instance_create_depth(x,y,0,obj_enemy_bug)
 	}else instance_create_depth(x,y,0,obj_enemy_bug)

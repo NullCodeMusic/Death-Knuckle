@@ -4,6 +4,10 @@ if frame1done =0{
 	ini_close()
 	
 	
+
+	
+	
+	
 for (var i=0; i !=  ds_list_size(obj_checkpointList.checkpointList); i++){
 
 	 var checkpointID = ds_list_find_value(obj_checkpointList.checkpointList,i)

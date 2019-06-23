@@ -15,6 +15,8 @@ timespd=1
 xOrigin=x
 yOrigin=y
 
+newhp=hp
+
 staggerTime=0
 invulTime=0
 atkAnim=0

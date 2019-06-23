@@ -1,13 +1,13 @@
 
 if mode=2{
-chargemax=30
-damage=15
+chargemax=10
+damage=20
 }
 
 if hp<=100 then mode=2
 
-if !place_meeting(x,y+1,obj_boss1Wall){timeInAir++
-	if timeInAir >=60{
+if !place_meeting(x,y+1,obj_obstacle){timeInAir++
+	if timeInAir >=120{
 	invulTime=60
 	vspeed+=2
 	chargeWarmup=1
@@ -74,6 +74,7 @@ chargeInput= sign((tempX - x)/(abs(tempX - x)))
 
 if  chargeWarmup=chargemax-1 { 
 	if mode=2{
+		sprite_index=sp_wargBossRed
 	if irandom(4) >1 then state = 2
 	}else{
 		if irandom(2) =2 then state = 2
@@ -145,14 +146,14 @@ yInput = 0
 //move y
 vspeed = ymom
 //vspeed collision
-while(place_meeting(x,y+vspeed,obj_boss1Wall)&&vspeed!=0){
+while(place_meeting(x,y+vspeed,obj_obstacle)&&vspeed!=0){
 vspeed-= vspeed/abs(vspeed)
 ymom=0
 }
 
-while(place_meeting(x,y,obj_boss1Wall)){
-x-= round(image_xscale)	
-}
+//while(place_meeting(x,y,obj_boss1Wall)){
+//x-= round(image_xscale)	
+//}
 //momenutum
 if ymom < -ymax*1.25 then ymom = -ymax*1.25
 if ymom < ymax then ymom ++
@@ -160,7 +161,7 @@ if ymom < ymax then ymom ++
 
 
 y+=vspeed
-while(place_meeting(x+hspeed,y,obj_boss1Wall)&&hspeed!=0){
+while(place_meeting(x+hspeed,y,obj_obstacle)&&hspeed!=0){
 	//for (var i = 0; i < abs(hspeed)+1; i++){
 if hspeed != 0{hspeed-=hspeed/abs(hspeed)} else{
 //ymom = -12

@@ -31,10 +31,13 @@ if animateTime=0{
 #endregion
 
 
-
+if xInput!=0 {lastxInput=xInput}
 if staggerTime>0 {
 	xInput=0
-staggerTime --} 
+staggerTime --} else if staggerTime=0{
+staggerTime=-1
+xInput=lastxInput
+}
 if invulTime>0{
 	invulTime--}
 

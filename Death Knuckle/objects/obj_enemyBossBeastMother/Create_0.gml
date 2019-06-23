@@ -4,13 +4,13 @@ ymom = 0
 xInput = 0
 yInput = 0
 ymax = 20
-spdmax=15
+spdmax=20
 hp = 300
 chargeWarmup = 50
 slowdown = 0
-
+newhp = hp
 bounce=0
-damage=10
+damage=15
 knockback = -10
 stagger=10
 maxAtkAnim=3

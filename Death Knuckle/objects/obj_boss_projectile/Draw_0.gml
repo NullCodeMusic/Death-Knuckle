@@ -1,8 +1,8 @@
 
-hscl =0.25*sin((time2*pi)/10)+.25
-vscl =0.25*sin((time2*pi)/10)+.25
+hscl =0.5*sin((time2*pi)/10)+.5
+vscl =0.5*sin((time2*pi)/10)+.5
 
-alp = 0.25*sin((time2*pi)/10)
+alp = 0.25*sin((time2*pi)/10)+.5
 
 time2++
 
