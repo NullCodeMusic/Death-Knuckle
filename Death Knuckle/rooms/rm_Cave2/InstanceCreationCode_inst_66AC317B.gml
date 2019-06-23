@@ -1,1 +1,1 @@
-activSnd=snd_level
+activSnd=snd_alt
