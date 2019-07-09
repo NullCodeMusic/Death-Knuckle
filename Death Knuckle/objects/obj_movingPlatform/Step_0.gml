@@ -14,8 +14,8 @@ speed=min(maxspeed,speed)
 if(instance_place(x+hspeed,y+vspeed,obj_obstacle))&&!instance_place(x+hspeed,y+vspeed,obj_movingPlatform)&&!instance_place(x,y,obj_obstacle){
 direction=direction+180
 speed=1
-while(instance_place(x+hspeed,y,obj_obstacle)){hspeed-=sign(hspeed)}
-while(instance_place(x,y+vspeed,obj_obstacle)){vspeed-=sign(vspeed)}
+while(instance_place(x+hspeed,y,obj_obstacle)&&round(abs(hspeed))!=0){hspeed-=sign(hspeed)}
+while(instance_place(x,y+vspeed,obj_obstacle)&&round(abs(vspeed))!=0){vspeed-=sign(vspeed)}
 }
 
 if place_meeting(x+hspeed,y+vspeed,obj_pathDirection){

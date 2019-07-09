@@ -1,6 +1,6 @@
 
 if mode=2{
-chargemax=10
+chargemax=18
 damage=20
 }
 
@@ -73,12 +73,11 @@ chargeInput= sign((tempX - x)/(abs(tempX - x)))
 
 
 if  chargeWarmup=chargemax-1 { 
-	if mode=2{
+	
 		sprite_index=sp_wargBossRed
-	if irandom(4) >1 then state = 2
-	}else{
-		if irandom(2) =2 then state = 2
-	}
+	
+		if irandom(3) =2 then state = 2
+	
 	
 }
 
@@ -173,6 +172,12 @@ break;
 }
 y-=vspeed
 
+if place_meeting(x+hspeed,y+vspeed,obj_obstacle){
+hspeed=0
+vspeed=0
+}
+
+
 //emergency debug kill
 if keyboard_check(ord("J"))&&keyboard_check(ord("P")) then hp=hp-100
 
@@ -183,3 +188,8 @@ if hp <=0 {
 	}
 
 show_debug_message("HP"+string(hp))
+
+if place_meeting(x,y,obj_obstacle){
+x+=sign(obj_player.x-x)	
+y+=sign(obj_player.y-y)	
+}

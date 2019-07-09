@@ -12,9 +12,9 @@ draw_sprite_stretched(spr_squareR,0,(1920-300*perc)/2,800,newhp*perc,30)
 draw_sprite_stretched(spr_square,0,(1920-300*perc)/2,800,hp*perc,30)
 
 draw_set_color(c_black)
-draw_text_transformed((1920)/2,818,"Bug Hive: "+string(hp)+"/"+string(200),2,2,0)
+draw_text_transformed((1920)/2,818,"Bug Hive: "+string(hp)+"/"+string(300),2,2,0)
 draw_set_color(c_white)
-draw_text_transformed((1920)/2,814,"Bug Hive: "+string(hp)+"/"+string(200),2,2,0)
+draw_text_transformed((1920)/2,814,"Bug Hive: "+string(hp)+"/"+string(300),2,2,0)
 
 
 

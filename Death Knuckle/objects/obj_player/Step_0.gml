@@ -165,7 +165,7 @@ momenutmDir=0
 momentumSpd=0
 */
 #endregion
-if(instance_exists(obj_grappleSpot))&&(ds_list_find_value(toolsList,toolsSelect)="grapple"){ //if tool is selected and grapple is unlocked
+if(instance_exists(obj_grappleSpot))&&(ds_list_find_value(toolsList,toolsSelect)="grapple")&&staggerTime=0{ //if tool is selected and grapple is unlocked
 #region grapple fist
 
 
@@ -192,7 +192,7 @@ if mouse_check_button_pressed(mb_right) && attacking = 0 { //if can attack
 		spdDecay=2
 	}
 
-} else if attacking=2 && !mouse_check_button(mb_right) &&obj_grapplefist.grappled=1{//if let go
+} else if attacking=2 && (!mouse_check_button(mb_right)||staggerTime>0) &&obj_grapplefist.grappled=1{//if let go
 obj_grapplefist.comeBack=1
 grappled=0
 if obj_grapplefist.grappled=1{
@@ -366,11 +366,7 @@ if hp<=0 || grappled=1 then xInput = 0
 if staggerTime > 0 {
 	xInput = -hitDirection
 	lastxInput= -hitDirection
-	if grappled=1 {
-		grappled=0
-		cooldown=2
-	obj_grapplefist.comeBack=1	
-	}
+
 	if boolcheck1 = 0 {
 	timeHeld = 10
 	spd = 15
@@ -606,6 +602,13 @@ if(place_meeting(x+hspeed,y+vspeed,obj_fall)){
 hp-=10
 x=fallRecx
 y=fallRecy
+hspeed=0
+vspeed=0
+ymom=0
+y+=10
+while place_meeting(x,y,obj_obstacle){
+y--	
+}
 red=0
 invulTime=5
 //staggerTime=50

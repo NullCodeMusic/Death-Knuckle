@@ -31,8 +31,8 @@ staggerTime=15
 */
 
 if(instance_exists(obj_player)){
-	
-xInput = (obj_player.x - x)/(abs(obj_player.x - x))
+	if (obj_player.x - x)/(abs(obj_player.x - x))!=noone{
+xInput = (obj_player.x - x)/(abs(obj_player.x - x))}else xInput=1
 yInput = (obj_player.y-40 - y)/(abs(obj_player.y-40 - y))
 if staggerTime>0 {
 xInput = -xInput 

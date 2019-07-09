@@ -2,8 +2,15 @@
 // You can write your code in this editor
 toolsList= ds_list_create()
 jumplist = ds_list_create()
+/*
 
 
+DEBUG ADDING TOOLS
+ds_list_clear(toolsList)
+ds_list_add(toolsList,"fistWave")
+ds_list_add(toolsList,"grapple")
+
+*/
 room_speed = 60
 fallRecx=x
 fallRecy=y
